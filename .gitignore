@@ -1,3 +1,6 @@
 *.dat
 *.txt
 *.v16.2.*
+CKServer_ForHY/.vs/CKServer/v15/.suo
+CKServer_ForHY/.vs/CKServer/v15/Server/sqlite3/storage.ide
+CKServer_ForHY/CKServer/obj/Debug/CKServer.csproj.CoreCompileInputs.cache
