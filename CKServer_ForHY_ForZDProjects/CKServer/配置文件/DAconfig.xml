@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <add key="DA_Channel_0" value="5.00" name="DA通道1" />
+  <add key="DA_Channel_1" value="5.00" name="DA通道2" />
+  <add key="DA_Channel_2" value="5.00" name="DA通道3" />
+  <add key="DA_Channel_3" value="5.00" name="DA通道4" />
+  <add key="DA_Channel_4" value="5.00" name="DA通道5" />
+  <add key="DA_Channel_5" value="5.00" name="DA通道6" />
+  <add key="DA_Channel_6" value="5.00" name="DA通道7" />
+  <add key="DA_Channel_7" value="5.00" name="DA通道8" />
+
+  <add key="DA_Channel_8" value="5.00" name="DA通道9" />
+  <add key="DA_Channel_9" value="5.00" name="DA通道10" />
+  <add key="DA_Channel_10" value="5.00" name="DA通道11" />
+  <add key="DA_Channel_11" value="5.00" name="DA通道12" />
+  <add key="DA_Channel_12" value="5.00" name="DA通道13" />
+  <add key="DA_Channel_13" value="5.00" name="DA通道14" />
+
+</configuration>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <add key="OC_Channel_0" value="80000" name="控制按钮1" />
+  <add key="OC_Channel_1" value="80000" name="控制按钮2" />
+  <add key="OC_Channel_2" value="80000" name="控制按钮3" />
+  <add key="OC_Channel_3" value="80000" name="控制按钮4" />
+  <add key="OC_Channel_4" value="80000" name="控制按钮5" />
+  <add key="OC_Channel_5" value="80000" name="控制按钮6" />
+  <add key="OC_Channel_6" value="80000" name="控制按钮7" />
+  <add key="OC_Channel_7" value="80000" name="控制按钮8" />
+
+  <add key="OC_Channel_8" value="80000" name="控制按钮9" />
+  <add key="OC_Channel_9" value="80000" name="控制按钮10" />
+  <add key="OC_Channel_10" value="80000" name="控制按钮11" />
+  <add key="OC_Channel_11" value="80000" name="控制按钮12" />
+  <add key="OC_Channel_12" value="80000" name="控制按钮13" />
+  <add key="OC_Channel_13" value="80000" name="控制按钮14" />
+
+ </configuration>
