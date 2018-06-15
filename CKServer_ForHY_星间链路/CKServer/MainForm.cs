@@ -94,6 +94,7 @@ namespace CKServer
             USB.usbDevices.DeviceRemoved += new EventHandler(UsbDevices_DeviceRemoved);
 
             USB.Init();
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -103,12 +104,17 @@ namespace CKServer
             InitDataTable();//初始化datadable
             Function.Init();//初始化DA参数
 
+            dockPanel_RegCtl.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+
         }
 
         private void InitDataTable()
         {
             try
             {
+                Register.Init();
+                dataGridView_Reg.DataSource = Register.dt_Reg;
+                dataGridView_Reg.AllowUserToAddRows = false;
 
                 Func_AD.Init_Table();
                 dataGridView_AD.DataSource = Func_AD.dt_AD;
@@ -975,13 +981,40 @@ namespace CKServer
                 {
                     MessageBox.Show("地址设置在0x80~0xff,参数设置在0x00~0x7f之间!\n" + ex.Message);
                 }
+            }
+        }
 
+        private void btn_RegCtl_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            dockPanel_RegCtl.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+        }
 
+        private void dataGridView_Reg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex > 3 && (string)Register.dt_Reg.Rows[e.RowIndex][e.ColumnIndex] != "/")
+                {
+                    string temp_addr = (string)Register.dt_Reg.Rows[e.RowIndex]["地址"];
+                    byte addr = Convert.ToByte(temp_addr, 16);
 
+                    string TextName = (string)Register.dt_Reg.Rows[e.RowIndex][e.ColumnIndex];
+                    string[] tempList = TextName.Split(':');
+                    int bitpos = Register.dt_Reg.Columns.Count - e.ColumnIndex - 1;//共11列的时候，Count=11,最后一列的ColumnIndex=10,所以要多-1
 
-
-
-
+                    if (tempList[0] == "0")
+                    {
+                        Register.dt_Reg.Rows[e.RowIndex][e.ColumnIndex] = "1:" + tempList[1];
+                        Register.RegDictionary[addr] = (byte)(Register.RegDictionary[addr] | (byte)(0x01 << bitpos));
+                    }
+                    else
+                    {
+                        Register.dt_Reg.Rows[e.RowIndex][e.ColumnIndex] = "0:" + tempList[1];
+                        Register.RegDictionary[addr] = (byte)(Register.RegDictionary[addr] & (byte)(0x7f - (byte)(0x01 << bitpos)));
+                    }
+                    Trace.WriteLine(addr.ToString("x2") + ":" + Register.RegDictionary[addr].ToString("x2"));
+                    USB.SendCMD(Data.Cardid, addr, Register.RegDictionary[addr]);
+                }
             }
 
         }

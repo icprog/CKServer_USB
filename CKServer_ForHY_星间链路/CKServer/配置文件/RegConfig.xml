@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <add key="80" name="系统初始化" property="使能寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="USB接收使能" bit1="USB读写控制" bit0="总复位"/>
+  <add key="81" name="异步422 RAM清0" property="RAM清0寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="422Ram4" bit2="422Ram3" bit1="422Ram2" bit0="422Ram1"/>
+  <add key="82" name="同步422 RAM清0" property="RAM清0寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="83" name="同步LVDS RAM清0" property="RAM清0寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="LVDSRam4" bit2="LVDSRam3" bit1="LVDSRam2" bit0="LVDSRam1"/>
+  <add key="84" name="同步LVDS RAM清1" property="RAM清0寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="85" name="时钟分频参数0" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="86" name="时钟分频参数1" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="87" name="时钟分频参数2" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="88" name="时钟分频参数3" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="89" name="时钟分频参数4" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="8A" name="时钟分频参数5" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="8B" name="时钟分频参数6" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="8C" name="时钟分频参数7" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="8D" name="OC输出控制" property="功能设置寄存器" bit7="0" bit6="OC_Channel_6" bit5="OC_Channel_5" bit4="OC_Channel_4" bit3="OC_Channel_3" bit2="OC_Channel_2" bit1="OC_Channel_1" bit0="OC_Channel_0"/>
+  <add key="8E" name="OC输出控制" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="OC_Channel_7"/>
+  <add key="8F" name="保留" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+  <add key="90" name="保留" property="功能设置寄存器" bit7="0" bit6="/" bit5="/" bit4="/" bit3="/" bit2="/" bit1="/" bit0="/"/>
+</configuration>

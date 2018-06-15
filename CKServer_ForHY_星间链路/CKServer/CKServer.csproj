@@ -197,6 +197,9 @@
     <Content Include="配置文件\OCconfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="配置文件\RegConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Start_btn.png" />
     <None Include="Resources\Stop_btn.png" />
     <Content Include="配置文件\ADconfig.xml">

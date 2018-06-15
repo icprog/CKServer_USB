@@ -1120,7 +1120,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;ribbonControl1.Name" xml:space="preserve">
     <value>ribbonControl1</value>
@@ -1132,7 +1132,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ribbonControl1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 17</value>
@@ -1428,48 +1428,6 @@
   <data name="&gt;&gt;dockPanel_OC.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="dockPanel3_Container.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="dockPanel3_Container.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 132</value>
-  </data>
-  <data name="dockPanel3_Container.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dockPanel3_Container.Name" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;dockPanel3_Container.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dockPanel3_Container.Parent" xml:space="preserve">
-    <value>dockPanel_422</value>
-  </data>
-  <data name="&gt;&gt;dockPanel3_Container.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dockPanel_422.Location" type="System.Drawing.Point, System.Drawing">
-    <value>853, 421</value>
-  </data>
-  <data name="dockPanel_422.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 160</value>
-  </data>
-  <data name="dockPanel_422.Text" xml:space="preserve">
-    <value>422功能区</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_422.Name" xml:space="preserve">
-    <value>dockPanel_422</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_422.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_422.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_422.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1558,7 +1516,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dockPanel_AD.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="dockPanel1_Container.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
@@ -1600,7 +1558,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dockPanel_LOG.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -2640,7 +2598,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dockPanel_LVDS.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>USB3.0通用测试设备</value>
@@ -3599,6 +3557,72 @@
   <data name="&gt;&gt;repositoryItemSpinEdit6.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;名称.Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="&gt;&gt;名称.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;地址.Name" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="&gt;&gt;地址.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;属性.Name" xml:space="preserve">
+    <value>属性</value>
+  </data>
+  <data name="&gt;&gt;属性.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column4.Name" xml:space="preserve">
+    <value>Column4</value>
+  </data>
+  <data name="&gt;&gt;Column4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column6.Name" xml:space="preserve">
+    <value>Column6</value>
+  </data>
+  <data name="&gt;&gt;Column6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column7.Name" xml:space="preserve">
+    <value>Column7</value>
+  </data>
+  <data name="&gt;&gt;Column7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column8.Name" xml:space="preserve">
+    <value>Column8</value>
+  </data>
+  <data name="&gt;&gt;Column8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column9.Name" xml:space="preserve">
+    <value>Column9</value>
+  </data>
+  <data name="&gt;&gt;Column9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column10.Name" xml:space="preserve">
+    <value>Column10</value>
+  </data>
+  <data name="&gt;&gt;Column10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column11.Name" xml:space="preserve">
+    <value>Column11</value>
+  </data>
+  <data name="&gt;&gt;Column11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column12.Name" xml:space="preserve">
+    <value>Column12</value>
+  </data>
+  <data name="&gt;&gt;Column12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
   </data>
@@ -3974,6 +3998,174 @@
     <value>dockPanel2</value>
   </data>
   <data name="&gt;&gt;dockPanel2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="dockPanel3_Container.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="dockPanel3_Container.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 132</value>
+  </data>
+  <data name="dockPanel3_Container.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dockPanel3_Container.Name" xml:space="preserve">
+    <value>dockPanel3_Container</value>
+  </data>
+  <data name="&gt;&gt;dockPanel3_Container.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dockPanel3_Container.Parent" xml:space="preserve">
+    <value>dockPanel_422</value>
+  </data>
+  <data name="&gt;&gt;dockPanel3_Container.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dockPanel_422.Location" type="System.Drawing.Point, System.Drawing">
+    <value>853, 421</value>
+  </data>
+  <data name="dockPanel_422.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 160</value>
+  </data>
+  <data name="dockPanel_422.Text" xml:space="preserve">
+    <value>422功能区</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_422.Name" xml:space="preserve">
+    <value>dockPanel_422</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_422.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <metadata name="名称.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="名称.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <metadata name="地址.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="地址.HeaderText" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="地址.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="属性.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="属性.HeaderText" xml:space="preserve">
+    <value>属性</value>
+  </data>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column4.HeaderText" xml:space="preserve">
+    <value>bit7</value>
+  </data>
+  <data name="Column4.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column6.HeaderText" xml:space="preserve">
+    <value>bit6</value>
+  </data>
+  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column7.HeaderText" xml:space="preserve">
+    <value>bit5</value>
+  </data>
+  <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column8.HeaderText" xml:space="preserve">
+    <value>bit4</value>
+  </data>
+  <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column9.HeaderText" xml:space="preserve">
+    <value>bit3</value>
+  </data>
+  <metadata name="Column10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column10.HeaderText" xml:space="preserve">
+    <value>bit2</value>
+  </data>
+  <metadata name="Column11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column11.HeaderText" xml:space="preserve">
+    <value>bit1</value>
+  </data>
+  <metadata name="Column12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column12.HeaderText" xml:space="preserve">
+    <value>bit0</value>
+  </data>
+  <data name="dataGridView_Reg.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView_Reg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dataGridView_Reg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1062, 503</value>
+  </data>
+  <data name="dataGridView_Reg.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_Reg.Name" xml:space="preserve">
+    <value>dataGridView_Reg</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_Reg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_Reg.Parent" xml:space="preserve">
+    <value>controlContainer2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_Reg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="controlContainer2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="controlContainer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1062, 503</value>
+  </data>
+  <data name="controlContainer2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;controlContainer2.Name" xml:space="preserve">
+    <value>controlContainer2</value>
+  </data>
+  <data name="&gt;&gt;controlContainer2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;controlContainer2.Parent" xml:space="preserve">
+    <value>dockPanel_RegCtl</value>
+  </data>
+  <data name="&gt;&gt;controlContainer2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dockPanel_RegCtl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-32768, -32768</value>
+  </data>
+  <data name="dockPanel_RegCtl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1070, 531</value>
+  </data>
+  <data name="dockPanel_RegCtl.Text" xml:space="preserve">
+    <value>寄存器控制</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_RegCtl.Name" xml:space="preserve">
+    <value>dockPanel_RegCtl</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_RegCtl.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
