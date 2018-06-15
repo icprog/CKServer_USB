@@ -4,3 +4,10 @@
 CKServer_ForHY/.vs/CKServer/v15/.suo
 CKServer_ForHY/.vs/CKServer/v15/Server/sqlite3/storage.ide
 CKServer_ForHY/CKServer/obj/Debug/CKServer.csproj.CoreCompileInputs.cache
+*/.vs/*
+CKServer_ForHY_星间链路/CKServer/.vs/*
+CKServer_ForHY_星间链路/CKServer/obj/*
+CKServer_ForHY_星间链路/CKServer/bin/*
+CKServer_GZComputer_徐捷/CKServer/.vs/*
+CKServer_GZComputer_徐捷/CKServer/obj/*
+CKServer_GZComputer_徐捷/CKServer/bin/*
