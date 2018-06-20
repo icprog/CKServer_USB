@@ -1136,7 +1136,7 @@
             // 
             resources.ApplyResources(this.barEdit_set, "barEdit_set");
             this.barEdit_set.Edit = this.repositoryItemSpinEdit6;
-            this.barEdit_set.EditValue = "4.900";
+            this.barEdit_set.EditValue = "5.000";
             this.barEdit_set.Id = 152;
             this.barEdit_set.Name = "barEdit_set";
             this.barEdit_set.EditValueChanged += new System.EventHandler(this.barEdit_set_EditValueChanged);
@@ -1155,7 +1155,7 @@
             0,
             65536});
             this.repositoryItemSpinEdit6.MaxValue = new decimal(new int[] {
-            5,
+            10,
             0,
             0,
             0});
@@ -1959,6 +1959,7 @@
             this.dataGridView_DA1.Name = "dataGridView_DA1";
             this.dataGridView_DA1.RowHeadersVisible = false;
             this.dataGridView_DA1.RowTemplate.Height = 23;
+            this.dataGridView_DA1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_DA1_CellEndEdit);
             // 
             // Column4
             // 
@@ -1997,6 +1998,7 @@
             this.dataGridView_DA2.Name = "dataGridView_DA2";
             this.dataGridView_DA2.RowHeadersVisible = false;
             this.dataGridView_DA2.RowTemplate.Height = 23;
+            this.dataGridView_DA2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_DA2_CellEndEdit);
             // 
             // dataGridViewTextBoxColumn9
             // 

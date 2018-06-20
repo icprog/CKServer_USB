@@ -827,7 +827,7 @@ namespace CKServer
                 string tmpFilter = openFileDialog1.Filter;
                 string title = openFileDialog1.Title;
                 openFileDialog1.Title = "选择要注入的码表文件";
-                openFileDialog1.Filter = "dat files (*.dat)|*.dat|All files (*.*) | *.*";
+                openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*) | *.*";
 
                 if (openFileDialog1.ShowDialog() == DialogResult.OK) //selecting bitstream
                 {
@@ -836,6 +836,48 @@ namespace CKServer
                     MyLog.Info("选取" + msgstr + "文件成功");
                     Function.SetConfigValue(ConfigPath, editor.Text);
 
+                    FileStream file = new FileStream(editor.Text, FileMode.Open, FileAccess.Read);
+
+                    //int fileBytes = (int)file.Length + 8;//为何要+8??
+                    int fileBytes = (int)file.Length;
+                    byte[] read_file_buf = new byte[fileBytes];
+                    for (int i = 0; i < fileBytes; i++) read_file_buf[i] = 0xff;
+                    file.Read(read_file_buf, 0, fileBytes);
+
+                    //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
+                    byte[] FinalSendBytes = new byte[fileBytes + 20];
+                    byte[] head = new byte[2] { 0x1D, FrameHeadLastByte };
+                    byte[] len = new byte[2] { 0, 0 };
+                    len[0] = (byte)((byte)(fileBytes & 0xff00) >> 8);
+                    len[1] = (byte)(fileBytes & 0xff);
+                    byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+
+                    head.CopyTo(FinalSendBytes, 0);
+                    len.CopyTo(FinalSendBytes, 2);
+                    read_file_buf.CopyTo(FinalSendBytes, 4);
+
+
+                    int AddToFour = fileBytes % 4;
+                    if (AddToFour != 0)
+                    {
+                        byte[] add_buf = new byte[4 - AddToFour];//4-余数才是要补的数据
+                        for (int t = 0; t < add_buf.Count(); t++)
+                        {
+                            add_buf[t] = 0x0;
+                        }
+                        add_buf.CopyTo(FinalSendBytes, fileBytes + 4);
+                        end.CopyTo(FinalSendBytes, fileBytes + 4 + add_buf.Count());
+                    }
+                    else
+                    {
+                        end.CopyTo(FinalSendBytes, fileBytes + 4);
+                    }
+
+                    file.Close();
+
+                    string temp = null;
+                    for (int i = 0; i < FinalSendBytes.Length; i++) temp += FinalSendBytes[i].ToString("x2");
+                    mytxtbox.AppendText(temp);
                 }
                 else
                 {
@@ -845,57 +887,18 @@ namespace CKServer
                 }
             }
             else
-            {
-                FileStream file = new FileStream(editor.Text, FileMode.Open, FileAccess.Read);
-
-                //int fileBytes = (int)file.Length + 8;//为何要+8??
-                int fileBytes = (int)file.Length;
-                byte[] read_file_buf = new byte[fileBytes];
-                for (int i = 0; i < fileBytes; i++) read_file_buf[i] = 0xff;
-                file.Read(read_file_buf, 0, fileBytes);
-
-                //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
-                byte[] FinalSendBytes = new byte[fileBytes + 20];
-                byte[] head = new byte[2] { 0x1D, FrameHeadLastByte };
-                byte[] len = new byte[2] { 0, 0 };
-                len[0] = (byte)((byte)(fileBytes & 0xff00) >> 8);
-                len[1] = (byte)(fileBytes & 0xff);
-                byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
-
-                head.CopyTo(FinalSendBytes, 0);
-                len.CopyTo(FinalSendBytes, 2);
-                read_file_buf.CopyTo(FinalSendBytes, 4);
-
-
-                int AddToFour = fileBytes % 4;
-                if (AddToFour != 0)
-                {
-                    byte[] add_buf = new byte[4 - AddToFour];//4-余数才是要补的数据
-                    for (int t = 0; t < add_buf.Count(); t++)
-                    {
-                        add_buf[t] = 0x0;
-                    }
-                    add_buf.CopyTo(FinalSendBytes, fileBytes + 4);
-                    end.CopyTo(FinalSendBytes, fileBytes + 4 + add_buf.Count());
-                }
-                else
-                {
-                    end.CopyTo(FinalSendBytes, fileBytes + 4);
-                }
-
-                file.Close();
+            {            
 
                 if (USB.MyDeviceList[Data.OnlyID] != null)
                 {
                     USB.SendCMD(Data.OnlyID, 0x82, (byte)(0x01 << FrameHeadLastByte));
                     USB.SendCMD(Data.OnlyID, 0x82, 0x00);
 
-                    USB.SendData(Data.OnlyID, FinalSendBytes);
+                    byte[] SendBuf = Function.StrToHexByte(mytxtbox.Text);
 
+                    USB.SendData(Data.OnlyID, SendBuf);
 
-                    string temp = null;
-                    for (int i = 0; i < FinalSendBytes.Length; i++) temp += FinalSendBytes[i].ToString("x2");
-                    mytxtbox.AppendText(temp);
+                  
                 }
                 else
                 {

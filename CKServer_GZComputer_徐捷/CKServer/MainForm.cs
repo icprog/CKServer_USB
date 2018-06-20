@@ -76,40 +76,51 @@ namespace CKServer
         }
         public MainForm()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
 
-            startDT = System.DateTime.Now;
-            Data.Path = Program.GetStartupPath();
-            //启动日志
-            MyLog.richTextBox1 = richTextBox1;
-            MyLog.path = Program.GetStartupPath() + @"LogData\";
-            MyLog.lines = 50;
-            MyLog.start();
+                startDT = System.DateTime.Now;
+                Data.Path = Program.GetStartupPath();
+                //启动日志
+                MyLog.richTextBox1 = richTextBox1;
+                MyLog.path = Program.GetStartupPath() + @"LogData\";
+                MyLog.lines = 50;
+                MyLog.start();
 
-            // Create the list of USB devices attached to the CyUSB3.sys driver.
-            USB.usbDevices = new USBDeviceList(CyConst.DEVICES_CYUSB);
+                // Create the list of USB devices attached to the CyUSB3.sys driver.
+                USB.usbDevices = new USBDeviceList(CyConst.DEVICES_CYUSB);
 
-            //Assign event handlers for device attachment and device removal.
-            USB.usbDevices.DeviceAttached += new EventHandler(UsbDevices_DeviceAttached);
-            USB.usbDevices.DeviceRemoved += new EventHandler(UsbDevices_DeviceRemoved);
+                //Assign event handlers for device attachment and device removal.
+                USB.usbDevices.DeviceAttached += new EventHandler(UsbDevices_DeviceAttached);
+                USB.usbDevices.DeviceRemoved += new EventHandler(UsbDevices_DeviceRemoved);
 
-            USB.Init();
+                USB.Init();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            try { 
             SetDevice(false);
             barStaticItem1.Caption = "存储路径" + Data.Path;
             InitDataTable();//初始化datadable
             Function.Init();//初始化DA参数
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void InitDataTable()
         {
             try
             {
-
                 Func_AD.Init_Table();
                 dataGridView_AD.DataSource = Func_AD.dt_AD;
                 dataGridView_AD.AllowUserToAddRows = false;
@@ -119,6 +130,14 @@ namespace CKServer
                 dataGridView_OC.AllowUserToAddRows = false;
 
                 Func_DA.Init_Table();
+             //   BindingSource bs1 = new BindingSource();
+             //   bs1.DataSource = Func_DA.dt_DA1;
+             //   dataGridView_DA1.DataSource = bs1;
+
+            //    BindingSource bs2 = new BindingSource();
+            //    bs2.DataSource = Func_DA.dt_DA2;
+            //    dataGridView_DA2.DataSource = bs2;
+
                 dataGridView_DA1.DataSource = Func_DA.dt_DA1;
                 dataGridView_DA2.DataSource = Func_DA.dt_DA2;
                 dataGridView_DA1.AllowUserToAddRows = false;
@@ -233,16 +252,16 @@ namespace CKServer
                 Data.DA1_value_a[i] = (int)dtModifyDA1.Rows[i]["a"];
                 Data.DA1_value_b[i] = (int)dtModifyDA1.Rows[i]["b"];
 
-                Data.SaveConfig(Data.DAconfigPath, "DAModify_Board1_A" + (i).ToString(), dtModifyDA1.Rows[i]["a"].ToString());
-                Data.SaveConfig(Data.DAconfigPath, "DAModify_Board1_B" + (i).ToString(), dtModifyDA1.Rows[i]["b"].ToString());
+       //         Data.SaveConfig(Data.DAconfigPath, "DAModify_Board1_A" + (i).ToString(), dtModifyDA1.Rows[i]["a"].ToString());
+       //         Data.SaveConfig(Data.DAconfigPath, "DAModify_Board1_B" + (i).ToString(), dtModifyDA1.Rows[i]["b"].ToString());
 
                 Data.DA2_value_a[i] = (int)dtModifyDA2.Rows[i]["a"];
                 Data.DA2_value_b[i] = (int)dtModifyDA2.Rows[i]["b"];
 
-                Data.SaveConfig(Data.DAconfigPath, "DAModify_Board2_A" + (i).ToString(), dtModifyDA2.Rows[i]["a"].ToString());
-                Data.SaveConfig(Data.DAconfigPath, "DAModify_Board2_B" + (i).ToString(), dtModifyDA2.Rows[i]["b"].ToString());
+       //         Data.SaveConfig(Data.DAconfigPath, "DAModify_Board2_A" + (i).ToString(), dtModifyDA2.Rows[i]["a"].ToString());
+       //         Data.SaveConfig(Data.DAconfigPath, "DAModify_Board2_B" + (i).ToString(), dtModifyDA2.Rows[i]["b"].ToString());
             }
-            MessageBox.Show("参数修正已成功，可以关闭此窗口！");
+      //      MessageBox.Show("参数修正已成功，可以关闭此窗口！");
         }
 
         private void btn_modify_load_Click(object sender, EventArgs e)
@@ -962,7 +981,9 @@ namespace CKServer
             {
                 for (int i = 0; i < 80; i++)
                 {
-                    double value = (double)Func_DA.dt_DA1.Rows[i]["电压"];
+                    double value = 0;
+                    if(j==0)value = (double)Func_DA.dt_DA1.Rows[i]["电压"];
+                    if (j == 1) value = (double)Func_DA.dt_DA2.Rows[i]["电压"];
                     if (value < -5 || value > 5)
                     {
                         //Deal with exception
@@ -1021,14 +1042,20 @@ namespace CKServer
                 {
                     double bef_value = (double)dr["电压"];
                     double aft_value = bef_value + value;
-                    dr["电压"] = aft_value;
+                    if (aft_value >= 0 && aft_value <= 10)
+                        dr["电压"] = aft_value;
+                    else
+                        dr["电压"] = 10;
                 }
 
                 foreach (DataRow dr in Func_DA.dt_DA2.Rows)
                 {
                     double bef_value = (double)dr["电压"];
                     double aft_value = bef_value + value;
-                    dr["电压"] = aft_value;
+                    if (aft_value >= 0 && aft_value <= 10)
+                        dr["电压"] = aft_value;
+                    else
+                        dr["电压"] = 10;
                 }
             }
         }
@@ -1043,14 +1070,20 @@ namespace CKServer
                 {
                     double bef_value = (double)dr["电压"];
                     double aft_value = bef_value - value;
-                    dr["电压"] = aft_value;
+                    if(aft_value>=0 && aft_value<=10)
+                        dr["电压"] = aft_value;
+                    else
+                        dr["电压"] = 0;
                 }
 
                 foreach (DataRow dr in Func_DA.dt_DA2.Rows)
                 {
                     double bef_value = (double)dr["电压"];
                     double aft_value = bef_value - value;
-                    dr["电压"] = aft_value;
+                    if (aft_value >= 0 && aft_value <= 10)
+                        dr["电压"] = aft_value;
+                    else
+                        dr["电压"] = 0;
                 }
             }
         }
@@ -1071,10 +1104,56 @@ namespace CKServer
                 {
                     dr["电压"] = value;
                 }
-
             }
 
+        }
 
+        private void dataGridView_DA1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (e.RowIndex >= 0)
+            {
+                string temp = dgv.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                bool ret = false;
+                double value = 0;
+                ret = double.TryParse(temp, out value);
+                if (ret)
+                {
+                    if (value <= 0 || value > 5)
+                    {
+                        dgv.Rows[e.RowIndex].Cells[2].Value = "5";
+                    }
+              //      Func_DA.dt_DA1.Rows[e.RowIndex]["电压"] = dgv.Rows[e.RowIndex].Cells[2].Value;
+                }
+                else
+                {
+                    dgv.Rows[e.RowIndex].Cells[2].Value = "5";
+                }
+            }
+        }
+
+        private void dataGridView_DA2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (e.RowIndex >= 0)
+            {
+                string temp = dgv.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                bool ret = false;
+                double value = 0;
+                ret = double.TryParse(temp, out value);
+                if (ret)
+                {
+                    if (value <= 0 || value > 5)
+                    {
+                        dgv.Rows[e.RowIndex].Cells[2].Value = "5";
+                    }
+               //     Func_DA.dt_DA2.Rows[e.RowIndex]["电压"] = dgv.Rows[e.RowIndex].Cells[2].Value;
+                }
+                else
+                {
+                    dgv.Rows[e.RowIndex].Cells[2].Value = "5";
+                }
+            }
         }
     }
 }
