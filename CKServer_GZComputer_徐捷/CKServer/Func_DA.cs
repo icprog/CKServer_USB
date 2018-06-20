@@ -58,8 +58,8 @@ namespace CKServer
         public static void clcDAValue(int card, int row, double value)
         {
             double SendValue = 0;
-            if (card == 0) SendValue = Data.DA1_value_a[row] + (value / 5.0) * Data.DA1_value_b[row];//第一块卡参数修正
-            if (card == 1) SendValue = Data.DA2_value_a[row] + (value / 5.0) * Data.DA2_value_b[row];//第二块卡参数修正
+            if (card == 0) SendValue = Data.DA1_value_a[row] + (value / 10.0) * Data.DA1_value_b[row];//第一块卡参数修正
+            if (card == 1) SendValue = Data.DA2_value_a[row] + (value / 10.0) * Data.DA2_value_b[row];//第二块卡参数修正
 
             Int16 temp = Convert.ToInt16(SendValue);
 

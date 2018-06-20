@@ -11,14 +11,49 @@ namespace CKServer
 {
     class Data
     {
+        public struct ChanStatus_Struct
+        {
+            public bool ChanActive;
+            public DevExpress.XtraBars.BarButtonItem Chanbtn;
+
+            public void init()
+            {
+                this.ChanActive = false;
+                this.Chanbtn.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                this.Chanbtn.ImageOptions.LargeImage = Properties.Resources.red;
+            }
+        }
+        public static ChanStatus_Struct Status_FF00 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_FF01 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_FF02 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_FF03 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_FF04 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_FF05 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_FF06 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_FF07 = new ChanStatus_Struct();
+
+        public static ChanStatus_Struct Status_FF08 = new ChanStatus_Struct();
+
+        public static ChanStatus_Struct Status_1D00 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_1D01 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_1D02 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_1D03 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_1D04 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_1D05 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_1D06 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_1D07 = new ChanStatus_Struct();
+        public static ChanStatus_Struct Status_1D08 = new ChanStatus_Struct();
+
+        public static ChanStatus_Struct Status_1D0F = new ChanStatus_Struct();
+
+        public static ChanStatus_Struct[] Status_List; 
         public static int SCid = 1;
         public static int OCid = 2;
         public static int DAid = 1;
         public static int DYid = 10;
 
         public static int OnlyID = 1;
-
-
+                
         public static string Path = null;                       //程序运行目录
 
         public static int Cardid = int.Parse(ConfigurationManager.AppSettings["CardID"]);
@@ -37,11 +72,8 @@ namespace CKServer
         public static double[] DA2_value_b = new double[128];                         //DA板卡2修正参数b
         public static double[] DA3_value_c = new double[128];                         //DA板卡2修正参数c
 
-
-
         //   public static object synObj_dq0 = new object();
         public static object synObj_sc1 = new object();
-
 
         public static Queue<byte[]> DataQueue1 = new Queue<byte[]>();   //For FrameEPDU deal with 同步下行1
         public static Queue<byte[]> DataQueue2 = new Queue<byte[]>();   //For FrameEPDU deal with 同步下行2
@@ -69,40 +101,8 @@ namespace CKServer
         public static bool MOXAChanUsed = false;
 
         public static int SCRecvCounts = 0;
-        public static void init(int channel)
+        public static void init()
         {
-            switch (channel) {
-                case 1:
-                    AlreadyOnApid.Clear();
-                    APIDList.Clear();
-
-                    foreach (var item in Apid_EPDU_Dictionary)
-                    {
-                        item.Value.Clear();
-                    }
-                    Apid_EPDU_Dictionary.Clear();
-                    break;
-                case 2:
-                    AlreadyOnApid2.Clear();
-                    APIDList2.Clear();
-
-                    foreach (var item in Apid_EPDU_Dictionary2)
-                    {
-                        item.Value.Clear();
-                    }
-                    Apid_EPDU_Dictionary2.Clear();
-                    break;
-                case 3:
-                    AlreadyOnApid3.Clear();
-                    APIDList3.Clear();
-
-                    foreach (var item in Apid_EPDU_Dictionary3)
-                    {
-                        item.Value.Clear();
-                    }
-                    Apid_EPDU_Dictionary3.Clear();
-                    break;
-            }
 
         }
 

@@ -69,7 +69,7 @@ namespace CKServer
                     USB.MyDeviceList[key] = (CyUSBDevice)fxDevice;
 
                     MyLog.Info(USB.MyDeviceList[key].FriendlyName + ConfigurationManager.AppSettings[USB.MyDeviceList[key].FriendlyName] + "板卡连接");
-
+                    Data.OnlyID = key;
                 }
             }
 
@@ -97,19 +97,65 @@ namespace CKServer
 
                 USB.Init();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
+
         private void MainForm_Load(object sender, EventArgs e)
         {
-            try { 
-            SetDevice(false);
-            barStaticItem1.Caption = "存储路径" + Data.Path;
-            InitDataTable();//初始化datadable
-            Function.Init();//初始化DA参数
+            try
+            {
+                SetDevice(false);
+                barStaticItem1.Caption = "存储路径" + Data.Path;
+                InitDataTable();//初始化datadable
+                Function.Init();//初始化DA参数      
+                Data.init();
+
+                Data.Status_FF00.Chanbtn = btn_Long_FF00;
+                Data.Status_FF00.init();
+
+                Data.Status_FF01.Chanbtn = btn_Long_FF01;
+                Data.Status_FF01.init();
+
+                Data.Status_FF02.Chanbtn = btn_Long_FF02;
+                Data.Status_FF02.init();
+
+                Data.Status_FF03.Chanbtn = btn_Long_FF03;
+                Data.Status_FF03.init();
+
+
+                Data.Status_FF08.Chanbtn = btn_Long_FF08;
+                Data.Status_FF08.init();
+
+
+                Data.Status_1D00.Chanbtn = btn_Short_1D00;
+                Data.Status_1D00.init();
+
+                Data.Status_1D01.Chanbtn = btn_Short_1D01;
+                Data.Status_1D01.init();
+
+                Data.Status_1D02.Chanbtn = btn_Short_1D02;
+                Data.Status_1D02.init();
+
+                Data.Status_1D03.Chanbtn = btn_Short_1D03;
+                Data.Status_1D03.init();
+
+                Data.Status_1D08.Chanbtn = btn_Short_1D08;
+                Data.Status_1D08.init();
+
+                Data.Status_1D0F.Chanbtn = btn_Short_1D0F;
+                Data.Status_1D0F.init();
+
+
+                //初始化DA的128个通道
+                for (int i = 0; i < 128; i++)
+                {
+                    Func_DA.clcDAValue(0, i, 0);//DA子板0
+                    Func_DA.clcDAValue(1, i, 0);//DA子板1
+                }
             }
             catch (Exception ex)
             {
@@ -126,18 +172,17 @@ namespace CKServer
                 dataGridView_AD.AllowUserToAddRows = false;
 
                 Func_OC.Init_Table();
-                dataGridView_OC.DataSource = Func_OC.dt_OC;
-                dataGridView_OC.AllowUserToAddRows = false;
+                dataGridView_OC_Out.DataSource = Func_OC.dt_OC;
+                dataGridView_OC_Out.AllowUserToAddRows = false;
+
+                dataGridView_OC_In1.DataSource = Func_OC.dt_OC_In1;
+                dataGridView_OC_In2.DataSource = Func_OC.dt_OC_In2;
+                dataGridView_OC_In3.DataSource = Func_OC.dt_OC_In3;
+                dataGridView_OC_In1.AllowUserToAddRows = false;
+                dataGridView_OC_In2.AllowUserToAddRows = false;
+                dataGridView_OC_In3.AllowUserToAddRows = false;
 
                 Func_DA.Init_Table();
-             //   BindingSource bs1 = new BindingSource();
-             //   bs1.DataSource = Func_DA.dt_DA1;
-             //   dataGridView_DA1.DataSource = bs1;
-
-            //    BindingSource bs2 = new BindingSource();
-            //    bs2.DataSource = Func_DA.dt_DA2;
-            //    dataGridView_DA2.DataSource = bs2;
-
                 dataGridView_DA1.DataSource = Func_DA.dt_DA1;
                 dataGridView_DA2.DataSource = Func_DA.dt_DA2;
                 dataGridView_DA1.AllowUserToAddRows = false;
@@ -151,7 +196,7 @@ namespace CKServer
                     DataRow dr = dtModifyDA1.NewRow();
                     dr["ID"] = i + 1;
                     dr["a"] = 130;
-                    dr["b"] = 7800;
+                    dr["b"] = 15600;
                     dtModifyDA1.Rows.Add(dr);
                 }
                 dataGridView1.DataSource = dtModifyDA1;
@@ -165,7 +210,7 @@ namespace CKServer
                     DataRow dr = dtModifyDA2.NewRow();
                     dr["ID"] = i + 1;
                     dr["a"] = 130;
-                    dr["b"] = 7800;
+                    dr["b"] = 15600;
                     dtModifyDA2.Rows.Add(dr);
                 }
                 dataGridView2.DataSource = dtModifyDA2;
@@ -252,16 +297,16 @@ namespace CKServer
                 Data.DA1_value_a[i] = (int)dtModifyDA1.Rows[i]["a"];
                 Data.DA1_value_b[i] = (int)dtModifyDA1.Rows[i]["b"];
 
-       //         Data.SaveConfig(Data.DAconfigPath, "DAModify_Board1_A" + (i).ToString(), dtModifyDA1.Rows[i]["a"].ToString());
-       //         Data.SaveConfig(Data.DAconfigPath, "DAModify_Board1_B" + (i).ToString(), dtModifyDA1.Rows[i]["b"].ToString());
+                //         Data.SaveConfig(Data.DAconfigPath, "DAModify_Board1_A" + (i).ToString(), dtModifyDA1.Rows[i]["a"].ToString());
+                //        Data.SaveConfig(Data.DAconfigPath, "DAModify_Board1_B" + (i).ToString(), dtModifyDA1.Rows[i]["b"].ToString());
 
                 Data.DA2_value_a[i] = (int)dtModifyDA2.Rows[i]["a"];
                 Data.DA2_value_b[i] = (int)dtModifyDA2.Rows[i]["b"];
 
-       //         Data.SaveConfig(Data.DAconfigPath, "DAModify_Board2_A" + (i).ToString(), dtModifyDA2.Rows[i]["a"].ToString());
-       //         Data.SaveConfig(Data.DAconfigPath, "DAModify_Board2_B" + (i).ToString(), dtModifyDA2.Rows[i]["b"].ToString());
+                //               Data.SaveConfig(Data.DAconfigPath, "DAModify_Board2_A" + (i).ToString(), dtModifyDA2.Rows[i]["a"].ToString());
+                //             Data.SaveConfig(Data.DAconfigPath, "DAModify_Board2_B" + (i).ToString(), dtModifyDA2.Rows[i]["b"].ToString());
             }
-      //      MessageBox.Show("参数修正已成功，可以关闭此窗口！");
+            //       MessageBox.Show("参数修正已成功，可以关闭此窗口！");
         }
 
         private void btn_modify_load_Click(object sender, EventArgs e)
@@ -415,6 +460,67 @@ namespace CKServer
             {
                 Func_AD.dt_AD.Rows[i]["测量值"] = dataRe_AD[i];
             }
+
+            DisplayStatusLed(ref Data.Status_FF01);
+            DisplayStatusLed(ref Data.Status_FF08);
+            DisplayStatusLed(ref Data.Status_1D00);
+            DisplayStatusLed(ref Data.Status_1D0F);
+        }
+
+        /// <summary>
+        /// 显示Led，根据需要增减
+        /// </summary>
+        private void DisplayStatusLed(ref Data.ChanStatus_Struct myStatus)
+        {
+            if (myStatus.ChanActive)
+            {
+                myStatus.ChanActive = false;
+                myStatus.Chanbtn.ImageOptions.LargeImage = Properties.Resources.green;
+            }
+            else
+            {
+                myStatus.Chanbtn.ImageOptions.LargeImage = Properties.Resources.red;
+            }
+
+            //if (Data.Status_FF01.ChanActive)
+            //{
+            //    Data.Status_FF01.ChanActive = false;
+            //    Data.Status_FF01.Chanbtn.ImageOptions.LargeImage = Properties.Resources.green;
+            //}
+            //else
+            //{
+            //    Data.Status_FF01.Chanbtn.ImageOptions.LargeImage = Properties.Resources.red;
+            //}
+
+            //if (Data.Status_FF08.ChanActive)
+            //{
+            //    Data.Status_FF08.ChanActive = false;
+            //    Data.Status_FF08.Chanbtn.ImageOptions.LargeImage = Properties.Resources.green;
+            //}
+            //else
+            //{
+            //    Data.Status_FF08.Chanbtn.ImageOptions.LargeImage = Properties.Resources.red;
+            //}
+
+            //if (Data.Status_1D08.ChanActive)
+            //{
+            //    Data.Status_1D08.ChanActive = false;
+            //    Data.Status_1D08.Chanbtn.ImageOptions.LargeImage = Properties.Resources.green;
+            //}
+            //else
+            //{
+            //    Data.Status_1D08.Chanbtn.ImageOptions.LargeImage = Properties.Resources.red;
+            //}
+
+            //if (Data.Status_1D0F.ChanActive)
+            //{
+            //    Data.Status_1D0F.ChanActive = false;
+            //    Data.Status_1D0F.Chanbtn.ImageOptions.LargeImage = Properties.Resources.green;
+            //}
+            //else
+            //{
+            //    Data.Status_1D0F.Chanbtn.ImageOptions.LargeImage = Properties.Resources.red;
+            //}
         }
 
         private void btn_Modify_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -560,6 +666,7 @@ namespace CKServer
 
             if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x00)
             {
+                Data.Status_FF00.ChanActive = true;
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
                 SaveFile.Lock_2.EnterWriteLock();
@@ -568,6 +675,7 @@ namespace CKServer
             }
             if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x01)
             {
+                Data.Status_FF01.ChanActive = true;
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
                 SaveFile.Lock_3.EnterWriteLock();
@@ -576,6 +684,7 @@ namespace CKServer
             }
             if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x02)
             {
+                Data.Status_FF02.ChanActive = true;
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
                 SaveFile.Lock_4.EnterWriteLock();
@@ -584,6 +693,7 @@ namespace CKServer
             }
             if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x03)
             {
+                Data.Status_FF03.ChanActive = true;
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
                 SaveFile.Lock_5.EnterWriteLock();
@@ -592,6 +702,7 @@ namespace CKServer
             }
             if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x08)
             {
+                Data.Status_FF08.ChanActive = true;
                 //FF08为短帧通道
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
@@ -625,6 +736,8 @@ namespace CKServer
                     }
                     else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x08)//1D08:AD数据
                     {
+                        Data.Status_1D08.ChanActive = true;
+
                         int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
                         byte[] buf1D0x = new byte[num];
                         Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
@@ -684,6 +797,7 @@ namespace CKServer
                     else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x0f)
                     {
                         //空闲帧
+                        Data.Status_1D0F.ChanActive = true;
                     }
                     else
                     {
@@ -930,8 +1044,11 @@ namespace CKServer
                 case "CheckEnable_AD":
                     panel = this.dockPanel_AD;
                     break;
-                case "CheckEnable_OC":
-                    panel = this.dockPanel_OC;
+                case "CheckEnable_OC_Out":
+                    panel = this.dockPanel_OC_Out;
+                    break;
+                case "CheckEnable_OC_In":
+                    panel = this.dockPanel_OC_In;
                     break;
                 case "CheckEnable_LOG":
                     panel = this.dockPanel_LOG;
@@ -966,7 +1083,7 @@ namespace CKServer
 
         private void btn_OpenPath_Storage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            System.Diagnostics.Process.Start("Explorer", Program.GetStartupPath() + @"接收机箱数据\");
+            System.Diagnostics.Process.Start("Explorer", Program.GetStartupPath() + @"LogData\");
         }
 
         private void btn_DAOut_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -982,9 +1099,9 @@ namespace CKServer
                 for (int i = 0; i < 80; i++)
                 {
                     double value = 0;
-                    if(j==0)value = (double)Func_DA.dt_DA1.Rows[i]["电压"];
+                    if (j == 0) value = (double)Func_DA.dt_DA1.Rows[i]["电压"];
                     if (j == 1) value = (double)Func_DA.dt_DA2.Rows[i]["电压"];
-                    if (value < -5 || value > 5)
+                    if (value < 0 || value > 10)
                     {
                         //Deal with exception
                         MyLog.Error("有一路DA值不合理，请检查！！");
@@ -999,10 +1116,8 @@ namespace CKServer
                 {
                     byte[] DASend = new byte[128 + 8];
                     DASend[0] = 0x1D;
-
                     //1D20 1D21 1D22 1D23对应4个DA芯片
                     //1D24 1D25 1D26 1D27对应4个DA芯片
-
                     DASend[1] = (byte)(0x0 + i + 4 * j);
                     DASend[2] = 0x00;
                     DASend[3] = 0x80;//0x0080 = 128
@@ -1014,7 +1129,7 @@ namespace CKServer
                     DASend[134] = 0xC0;
                     DASend[135] = 0xDE;
 
-                    if ((i + 4 * j)==7)
+                    if ((i + 4 * j) == 7)
                     {
                         USB.SendCMD(Data.OnlyID, 0x82, 0x01);
                         USB.SendCMD(Data.OnlyID, 0x82, 0x00);
@@ -1070,7 +1185,7 @@ namespace CKServer
                 {
                     double bef_value = (double)dr["电压"];
                     double aft_value = bef_value - value;
-                    if(aft_value>=0 && aft_value<=10)
+                    if (aft_value >= 0 && aft_value <= 10)
                         dr["电压"] = aft_value;
                     else
                         dr["电压"] = 0;
@@ -1123,7 +1238,7 @@ namespace CKServer
                     {
                         dgv.Rows[e.RowIndex].Cells[2].Value = "5";
                     }
-              //      Func_DA.dt_DA1.Rows[e.RowIndex]["电压"] = dgv.Rows[e.RowIndex].Cells[2].Value;
+                    //      Func_DA.dt_DA1.Rows[e.RowIndex]["电压"] = dgv.Rows[e.RowIndex].Cells[2].Value;
                 }
                 else
                 {
@@ -1147,7 +1262,7 @@ namespace CKServer
                     {
                         dgv.Rows[e.RowIndex].Cells[2].Value = "5";
                     }
-               //     Func_DA.dt_DA2.Rows[e.RowIndex]["电压"] = dgv.Rows[e.RowIndex].Cells[2].Value;
+                    //     Func_DA.dt_DA2.Rows[e.RowIndex]["电压"] = dgv.Rows[e.RowIndex].Cells[2].Value;
                 }
                 else
                 {
