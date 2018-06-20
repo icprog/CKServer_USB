@@ -172,7 +172,7 @@ namespace CKServer
                 dataGridView_AD.AllowUserToAddRows = false;
 
                 Func_OC.Init_Table();
-                dataGridView_OC_Out.DataSource = Func_OC.dt_OC;
+                dataGridView_OC_Out.DataSource = Func_OC.dt_OC_Out;
                 dataGridView_OC_Out.AllowUserToAddRows = false;
 
                 dataGridView_OC_In1.DataSource = Func_OC.dt_OC_In1;
@@ -908,7 +908,7 @@ namespace CKServer
                     {
                         //扩展
                     }
-                    MyLog.Info("指令输出:" + Func_OC.dt_OC.Rows[e.RowIndex]["名称"]);
+                    MyLog.Info("指令输出:" + Func_OC.dt_OC_Out.Rows[e.RowIndex]["名称"]);
 
 
 
@@ -1267,6 +1267,58 @@ namespace CKServer
                 else
                 {
                     dgv.Rows[e.RowIndex].Cells[2].Value = "5";
+                }
+            }
+        }
+
+        private void barEdit_OCout_set_EditValueChanged(object sender, EventArgs e)
+        {
+            if (null != barEdit_OCout_set.EditValue)
+            {
+                string ValueSet = barEdit_OCout_set.EditValue.ToString();
+                int value = int.Parse(ValueSet);
+
+                foreach (DataRow dr in Func_OC.dt_OC_Out.Rows)
+                {
+                    dr["脉宽"] = value;
+                }
+
+            }
+        }
+
+        private void btn_oc_add_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (null != barEdit_OCout_mdy.EditValue)
+            {
+                string ValueSet = barEdit_OCout_mdy.EditValue.ToString();
+                int value = int.Parse(ValueSet);
+                foreach (DataRow dr in Func_OC.dt_OC_Out.Rows)
+                {
+                    int bef_value = (int)dr["脉宽"];
+                    int aft_value = bef_value + value;
+                    if (aft_value >= 0 && aft_value <= 65535)
+                        dr["脉宽"] = aft_value;
+                    else
+                        dr["脉宽"] = 10;
+                }
+
+            }
+        }
+
+        private void btn_oc_dec_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (null != barEdit_OCout_mdy.EditValue)
+            {
+                string ValueSet = barEdit_OCout_mdy.EditValue.ToString();
+                int value = int.Parse(ValueSet);
+                foreach (DataRow dr in Func_OC.dt_OC_Out.Rows)
+                {
+                    int bef_value = (int)dr["脉宽"];
+                    int aft_value = bef_value - value;
+                    if (aft_value >= 0 && aft_value <= 65535)
+                        dr["脉宽"] = aft_value;
+                    else
+                        dr["脉宽"] = 10;
                 }
             }
         }

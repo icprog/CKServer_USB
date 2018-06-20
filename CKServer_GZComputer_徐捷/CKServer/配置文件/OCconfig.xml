@@ -1,11 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration>
-  <add key="OC_Channel_0" value="80000" name="A机复位" />
-  <add key="OC_Channel_1" value="80000" name="A机发射机开" />
-  <add key="OC_Channel_2" value="80000" name="A机O发射机关" />
-  <add key="OC_Channel_3" value="80000" name="A机速率控制" />
-  <add key="OC_Channel_4" value="80000" name="B机复位" />
-  <add key="OC_Channel_5" value="80000" name="B机发射机开" />
-  <add key="OC_Channel_6" value="80000" name="B机O发射机关" />
-  <add key="OC_Channel_7" value="80000" name="B机速率控制" />
+  <add key="OC_Channel_0" value="80" name="OC通道1" />
+  <add key="OC_Channel_1" value="80" name="OC通道2" />
+  <add key="OC_Channel_2" value="80" name="OC通道3" />
+  <add key="OC_Channel_3" value="80" name="OC通道4" />
+  <add key="OC_Channel_4" value="80" name="OC通道5" />
+  <add key="OC_Channel_5" value="80" name="OC通道6" />
+  <add key="OC_Channel_6" value="80" name="OC通道7" />
+  <add key="OC_Channel_7" value="80" name="OC通道8" />
+  <add key="OC_Channel_8" value="80" name="OC通道9" />
+  <add key="OC_Channel_9" value="80" name="OC通道10" />
+  <add key="OC_Channel_10" value="80" name="OC通道11" />
+  <add key="OC_Channel_11" value="80" name="OC通道12" />
+  <add key="OC_Channel_12" value="80" name="OC通道13" />
+  <add key="OC_Channel_13" value="80" name="OC通道14" />
+  <add key="OC_Channel_14" value="80" name="OC通道15" />
+  <add key="OC_Channel_15" value="80" name="OC通道16" />
+  <add key="OC_Channel_16" value="80" name="OC通道17" />
+  <add key="OC_Channel_17" value="80" name="OC通道18" />
+  <add key="OC_Channel_18" value="80" name="OC通道19" />
+  <add key="OC_Channel_19" value="80" name="OC通道20" />
+  <add key="OC_Channel_20" value="80" name="OC通道21" />
+  <add key="OC_Channel_21" value="80" name="OC通道22" />
+  <add key="OC_Channel_22" value="80" name="OC通道23" />
+  <add key="OC_Channel_23" value="80" name="OC通道24" />
+  <add key="OC_Channel_24" value="80" name="OC通道25" />
+  <add key="OC_Channel_25" value="80" name="OC通道26" />
+  <add key="OC_Channel_26" value="80" name="OC通道27" />
+  <add key="OC_Channel_27" value="80" name="OC通道28" />
+  <add key="OC_Channel_28" value="80" name="OC通道29" />
+  <add key="OC_Channel_29" value="80" name="OC通道30" />
+  <add key="OC_Channel_30" value="80" name="OC通道31" />
+  <add key="OC_Channel_31" value="80" name="OC通道32" />
  </configuration>
