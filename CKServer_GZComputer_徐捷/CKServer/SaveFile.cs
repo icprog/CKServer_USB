@@ -120,18 +120,18 @@ namespace CKServer
             if (!Directory.Exists(MaBen_path))
                 Directory.CreateDirectory(MaBen_path);
   
-            FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\源码\", out file_SC1);
-            FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF01\", out file_SC2);
-            FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF02\", out file_SC3);
-            FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF03\", out file_SC4);
-            FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF04\", out file_SC5);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\AD机箱数据\源码\", out file_SC1);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\AD机箱数据\FF01\", out file_SC2);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\AD机箱数据\FF02\", out file_SC3);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\AD机箱数据\FF03\", out file_SC4);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\AD机箱数据\FF04\", out file_SC5);
 
-            FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF08\", out file_SC6);
-            FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF08\1D00\", out file_SC7);
-            FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF08\1D01\", out file_SC8);
-            FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF08\1D08\", out file_SC9);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\AD机箱数据\FF08\", out file_SC6);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\AD机箱数据\FF08\1D00\", out file_SC7);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\AD机箱数据\FF08\1D01\", out file_SC8);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\AD机箱数据\FF08\1D08\", out file_SC9);
 
-          //  FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF08\", out file_SC10);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\OC机箱数据\源码\", out file_SC10);
 
             //FileCreateDat(Program.GetStartupPath() + @"数传机箱数据\同步422数据\通道2", out file_SC11);
             //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道12\", out file_SC12);
@@ -262,7 +262,7 @@ namespace CKServer
             new Thread(() => { WriteToFileSC(6, file_SC7, ref DataQueue_SC7, ref Lock_7); }).Start();
             new Thread(() => { WriteToFileSC(7, file_SC8, ref DataQueue_SC8, ref Lock_8); }).Start();
             new Thread(() => { WriteToFileSC(8, file_SC9, ref DataQueue_SC9, ref Lock_9); }).Start();
-            //new Thread(() => { WriteToFileSC(9, file_SC10, ref DataQueue_SC10, ref Lock_10); }).Start();
+            new Thread(() => { WriteToFileSC(9, file_SC10, ref DataQueue_SC10, ref Lock_10); }).Start();
 
             //new Thread(() => { WriteToFileSC(10, file_SC11, ref DataQueue_SC11, ref Lock_11); }).Start();
             //new Thread(() => { WriteToFileSC(11, file_SC12, ref DataQueue_SC12, ref Lock_12); }).Start();

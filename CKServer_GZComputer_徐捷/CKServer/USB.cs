@@ -41,7 +41,7 @@ namespace CKServer
         }
 
 
-        public static void SendCMD(int id, byte ReqCode, byte Value)
+        public static bool SendCMD(int id, byte ReqCode, byte Value)
         {
             if (MyDeviceList[id] != null)
             {
@@ -62,12 +62,18 @@ namespace CKServer
                         CtrlEndPt.XferData(ref buf, ref len);
 
                         MyLog.Info("向USB机箱" + id.ToString() + "发送指令0x" + ReqCode.ToString("x2") + " 0x" + Value.ToString("x2") + "成功");
+                        return true;
                     }
+                }
+                else
+                {
+                    return false;
                 }
             }
             else
             {
                 MyLog.Error("USB设备未连接！");
+                return false;
             }
         }
 

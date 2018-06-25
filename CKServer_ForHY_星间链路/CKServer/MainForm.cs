@@ -124,6 +124,12 @@ namespace CKServer
                 dataGridView_OC.DataSource = Func_OC.dt_OC;
                 dataGridView_OC.AllowUserToAddRows = false;
 
+                Func_YC.Init_Table();
+                dataGridView_YC1.DataSource = Func_YC.dt_YC1;
+                dataGridView_YC1.AllowUserToAddRows = false;
+                dataGridView_YC2.DataSource = Func_YC.dt_YC2;
+                dataGridView_YC2.AllowUserToAddRows = false;
+
                 dtModifyDA1.Columns.Add("ID", typeof(Int32));
                 dtModifyDA1.Columns.Add("a", typeof(Int32));
                 dtModifyDA1.Columns.Add("b", typeof(Int32));
@@ -587,6 +593,10 @@ namespace CKServer
                         SaveFile.Lock_7.EnterWriteLock();
                         SaveFile.DataQueue_SC7.Enqueue(buf1D0x);
                         SaveFile.Lock_7.ExitWriteLock();
+                        lock (YCList_A)
+                        {//将422的A遥测数据放入YCList_A,在另一个线程中解析
+                            for (int j = 0; j < buf1D0x.Length; j++) YCList_A.Add(buf1D0x[j]);
+                        }
                     }
                     else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x01)//1D01:第2路422
                     {
@@ -596,6 +606,10 @@ namespace CKServer
                         SaveFile.Lock_8.EnterWriteLock();
                         SaveFile.DataQueue_SC8.Enqueue(buf1D0x);
                         SaveFile.Lock_8.ExitWriteLock();
+                        lock (YCList_B)
+                        {//将422的A遥测数据放入YCList_A,在另一个线程中解析
+                            for (int j = 0; j < buf1D0x.Length; j++) YCList_B.Add(buf1D0x[j]);
+                        }
                     }
                     else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x08)//1D08:AD数据
                     {
@@ -664,6 +678,24 @@ namespace CKServer
                         Trace.WriteLine("FF08通道出错!");
                     }
                 }
+            }
+        }
+
+        List<byte> YCList_A = new List<byte>();
+        string[] dataRe_YCA1 = new string[64];
+        string[] dataRe_YCA2 = new string[64];//64大于实际路数
+
+        List<byte> YCList_B = new List<byte>();
+        string[] dataRe_YCB1 = new string[64];
+        string[] dataRe_YCB2 = new string[64];//64大于实际路数
+
+        private void DealWithYCFun()
+        {
+            while (_BoxIsStarted)
+            {
+                bool ret1 = Func_YC.Return_YCValue(ref YCList_A, 1, ref dataRe_YCA1, ref dataRe_YCA2);
+                bool ret2 = Func_YC.Return_YCValue(ref YCList_B, 2, ref dataRe_YCB1, ref dataRe_YCB2);
+                if (ret1 == false && ret2 == false) Thread.Sleep(500);
             }
         }
 
@@ -781,40 +813,46 @@ namespace CKServer
             ButtonEdit editor = (ButtonEdit)sender;
             EditorButton Button = e.Button;
             TextBox mytxtbox;
+            System.Windows.Forms.ComboBox myFreqEdit;
             String msgstr = "未选择文件";
             String ConfigPath = "PATH_DAT_01";
-            byte FrameHeadLastByte = 0x00;
+            byte FrameHeadLastByte = 0x08;
             switch (editor.Name)
             {
                 case "buttonEdit1":
                     msgstr = "通道1";
                     ConfigPath = "PATH_DAT_01";
-                    FrameHeadLastByte = 0x00;
+                    FrameHeadLastByte = 0x08;
                     mytxtbox = textBox_Send_1;
+                    myFreqEdit = comboBox1;
                     break;
                 case "buttonEdit2":
                     msgstr = "通道2";
                     ConfigPath = "PATH_DAT_02";
-                    FrameHeadLastByte = 0x01;
+                    FrameHeadLastByte = 0x09;
                     mytxtbox = textBox_Send_2;
+                    myFreqEdit = comboBox2;
                     break;
                 case "buttonEdit3":
                     msgstr = "通道3";
                     ConfigPath = "PATH_DAT_03";
-                    FrameHeadLastByte = 0x02;
+                    FrameHeadLastByte = 0x0A;
                     mytxtbox = textBox_Send_3;
+                    myFreqEdit = comboBox3;
                     break;
                 case "buttonEdit4":
                     msgstr = "通道4";
                     ConfigPath = "PATH_DAT_04";
-                    FrameHeadLastByte = 0x03;
+                    FrameHeadLastByte = 0x0B;
                     mytxtbox = textBox_Send_4;
+                    myFreqEdit = comboBox4;
                     break;
                 default:
                     msgstr = "通道1";
                     ConfigPath = "PATH_DAT_01";
-                    FrameHeadLastByte = 0x00;
+                    FrameHeadLastByte = 0x08;
                     mytxtbox = textBox_Send_1;
+                    myFreqEdit = comboBox1;
                     break;
             }
 
@@ -848,8 +886,8 @@ namespace CKServer
                     byte[] FinalSendBytes = new byte[fileBytes + 20];
                     byte[] head = new byte[2] { 0x1D, FrameHeadLastByte };
                     byte[] len = new byte[2] { 0, 0 };
-                    len[0] = (byte)((byte)(fileBytes & 0xff00) >> 8);
-                    len[1] = (byte)(fileBytes & 0xff);
+                    len[0] = (byte)(fileBytes / 256);
+                    len[1] = (byte)(fileBytes % 256);
                     byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
 
                     head.CopyTo(FinalSendBytes, 0);
@@ -887,24 +925,36 @@ namespace CKServer
                 }
             }
             else
-            {            
-
-                if (USB.MyDeviceList[Data.OnlyID] != null)
+            {
+                String freqstr = myFreqEdit.Text;
+                int freqint = 0;
+                bool ret = int.TryParse(freqstr.Substring(0, 2), out freqint);
+                if (ret)
                 {
-                    USB.SendCMD(Data.OnlyID, 0x82, (byte)(0x01 << FrameHeadLastByte));
-                    USB.SendCMD(Data.OnlyID, 0x82, 0x00);
+                    byte freqcode = (byte)(60 / freqint);
 
-                    byte[] SendBuf = Function.StrToHexByte(mytxtbox.Text);
+                    if (USB.MyDeviceList[Data.OnlyID] != null)
+                    {
+                        USB.SendCMD(Data.OnlyID, (byte)(0x85 + (FrameHeadLastByte - 0x08)), freqcode);
 
-                    USB.SendData(Data.OnlyID, SendBuf);
+                        USB.SendCMD(Data.OnlyID, 0x83, (byte)(0x01 << (byte)(FrameHeadLastByte - 0x08)));
+                        USB.SendCMD(Data.OnlyID, 0x83, 0x00);
 
-                  
+                        byte[] SendBuf = Function.StrToHexByte(mytxtbox.Text);
+
+                        USB.SendData(Data.OnlyID, SendBuf);
+
+
+                    }
+                    else
+                    {
+                        MyLog.Error("向设备" + msgstr + "注入码表失败，请检查设置及连接！");
+                    }
                 }
                 else
                 {
-                    MyLog.Error("向设备" + msgstr + "注入码表失败，请检查设置及连接！");
+                    MessageBox.Show("输入正确的频率！！");
                 }
-
 
             }
         }

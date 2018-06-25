@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+  <add key="编解码模块刷新允许/禁止" len="1"/>
+  <add key="编码数据帧格式正确输入遥测" len="2"/>
+  <add key="解调数据帧格式正确输入遥测" len="2"/>
+  <add key="发射码速率状态" len="3"/>
+  <add key="中频解调模块刷新允许/禁止" len="1"/>
+  <add key="接收码速率状态" len="3"/>
+  <add key="捕获状态" len="1"/>
+  <add key="锁相环锁定状态" len="1"/>
+  <add key="位同步锁定状态" len="1"/>
+  <add key="帧同步锁定状态" len="1"/>
+  <add key="频率偏移" len="16"/>
+  <add key="Eb/N0估算值" len="8"/>
+  <add key="发射输出功率" len="8"/>
+  <add key="接收AGC电平" len="8"/>
+  <add key="接收本振锁定" len="1"/>
+  <add key="发射本振锁定" len="1"/>
+  <add key="发射工作状态" len="1"/>
+  <add key="预留1" len="5"/>
+  <add key="最近一次遥控包的检验结果" len="4"/>
+  <add key="最近一次遥控包APID符合性检查结果" len="4"/>
+  <add key="已接收遥控包计数" len="8"/>
+</configuration>

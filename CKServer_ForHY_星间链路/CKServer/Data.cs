@@ -102,6 +102,8 @@ namespace CKServer
         public static string RconfigPath = Program.GetStartupPath() + @"配置文件\Rconfig.xml";
         public static string OCconfigPath = Program.GetStartupPath() + @"配置文件\OCconfig.xml";
         public static string RegconfigPath = Program.GetStartupPath() + @"配置文件\Regconfig.xml";
+        public static string YCconfigPath = Program.GetStartupPath() + @"配置文件\YCconfig.xml";
+
         public static void SaveConfig(string Path,string key ,string value)
         {
             XDocument xDoc = XDocument.Load(Path);

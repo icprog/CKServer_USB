@@ -46,14 +46,15 @@ namespace CKServer
 
         public static ChanStatus_Struct Status_1D0F = new ChanStatus_Struct();
 
-        public static ChanStatus_Struct[] Status_List; 
-        public static int SCid = 1;
-        public static int OCid = 2;
-        public static int DAid = 1;
-        public static int DYid = 10;
+        public static ChanStatus_Struct[] Status_List;
 
-        public static int OnlyID = 1;
-                
+        public static int DAid = 1;
+        public static int OCid = 2;
+        public static int SC422id = 3;
+        public static int LVDSid = 4;
+
+// public static int OnlyID = 1;
+
         public static string Path = null;                       //程序运行目录
 
         public static int Cardid = int.Parse(ConfigurationManager.AppSettings["CardID"]);

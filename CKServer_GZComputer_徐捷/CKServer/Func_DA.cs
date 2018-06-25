@@ -11,8 +11,8 @@ namespace CKServer
         public static DataTable dt_DA1 = new DataTable();
         public static DataTable dt_DA2 = new DataTable();
 
-        public static int DABoard1Nums = 80;
-        public static int DABoard2Nums = 80;
+        public static int DABoard1Nums = 128;
+        public static int DABoard2Nums = 128;
 
         //每块板卡有4个DA芯片，每个芯片有32路，每1路用4Byte表示，DAByteA~DAByteD分别表示4个DA芯片
         public static byte[] DAByteA = new byte[128];
@@ -40,7 +40,7 @@ namespace CKServer
             for (int i = 0; i < DABoard2Nums; i++)
             {
                 DataRow dr = dt_DA2.NewRow();
-                dr["序号"] = i + 81;
+                dr["序号"] = i + 1+ DABoard1Nums;
                 dr["名称"] = Function.GetConfigStr(Data.DAconfigPath, "add", "DA_Channel_" + (i+DABoard1Nums).ToString(), "name");
                 dr["电压"] = 0;
                 dt_DA2.Rows.Add(dr);

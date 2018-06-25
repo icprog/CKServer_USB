@@ -248,6 +248,29 @@ namespace CKServer
 
 
         /// <summary>
+        /// 获取所有的key的名称
+        /// </summary>
+        /// <param name="Path"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static List<string> GetConfigNormal(string Path, string type)
+        {
+            XDocument xDoc = XDocument.Load(Path);
+            XmlReader reader = xDoc.CreateReader();
+
+            var query = from p in xDoc.Root.Elements(type)
+                        select p.Attribute("key").Value;
+
+            List<string> list = new List<string>();
+            foreach (string s in query)
+            {
+                list.Add(s);
+            }
+            return list;
+        }
+
+
+        /// <summary>
         /// 十六进制String转化为BYTE数组
         /// </summary>
         /// <param name="hexString">参数：输入的十六进制String</param>

@@ -249,5 +249,23 @@ namespace CKServer
             xDoc.Save(Path);
         }
 
+        /// <summary>
+        /// 十六进制String转化为BYTE数组
+        /// </summary>
+        /// <param name="hexString">参数：输入的十六进制String</param>
+        /// <returns>BYTE数组</returns>
+        public static byte[] StrToHexByte(string hexString)
+        {
+            hexString = hexString.Replace(" ", "").Replace("\r", "").Replace("\n", "");
+            if ((hexString.Length % 2) != 0)
+                hexString += " ";
+
+            byte[] returnBytes = new byte[hexString.Length / 2];
+
+            for (int i = 0; i < returnBytes.Length; i++)
+                returnBytes[i] = Convert.ToByte(hexString.Substring(i * 2, 2), 16);
+            return returnBytes;
+
+        }
     }
 }

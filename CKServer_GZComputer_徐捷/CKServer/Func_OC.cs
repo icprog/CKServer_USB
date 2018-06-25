@@ -69,6 +69,63 @@ namespace CKServer
             }
         }
 
-        
+        public static void Send2OCBD(byte[] OCData)
+        {
+            byte[] Send2OCBd = new byte[45];
+            Send2OCBd[0] = 0x1D;
+            Send2OCBd[1] = 0x00;
+            Send2OCBd[2] = 0x00;
+            Send2OCBd[3] = 0x25;//32+5 1D000025是机箱帧头
+            Send2OCBd[4] = 0xBD;
+            Send2OCBd[5] = 0x1D;
+            Send2OCBd[6] = 0x00;
+            Send2OCBd[7] = 0x0C;//BD1D000C代表OC数据格式
+            Send2OCBd[8] = 0x00;//00/01/02/03代表通道，此处使用OC
+            OCData.CopyTo(Send2OCBd, 9);
+            Send2OCBd[41] = 0xC0;
+            Send2OCBd[42] = 0xDE;
+            Send2OCBd[43] = 0xC0;
+            Send2OCBd[44] = 0xDE;
+
+            USB.SendData(Data.OCid, Send2OCBd);
+
+        }
+
+
+        public static bool Return_OCValue(ref List<byte> OCList, ref int[] dataRe_OC)
+        {
+            int OCFrame = 656;//162channel 648bytes,+4head,+4end
+            int NChans = 162 * 4;//162channel=648bytes
+            int _StartPos = OCList.IndexOf(0xB0);
+
+            if (_StartPos >= 0 && OCList.Count >= (_StartPos + OCFrame))
+            {
+                if (OCList[_StartPos + 1] == 0xFA && OCList[_StartPos + OCFrame - 4] == 0xE0 && OCList[_StartPos + OCFrame - 3] == 0xF5)
+                {
+                    for (int t = 0; t < NChans/2; t++)
+                    {
+                        dataRe_OC[t] = OCList[_StartPos + 4 + 2*t]*256+ OCList[_StartPos + 4 + 2*t+1];
+                    }
+                    lock (OCList)
+                    {
+                        OCList.RemoveRange(0, _StartPos + OCFrame);
+                    }
+                }
+                return true;
+            }
+            else
+            {
+                if (OCList.Count >= 8192)
+                {
+                    lock (OCList)
+                    {
+                        OCList.Clear();
+                    }
+                }
+                return false;
+            }
+
+        }
+
     }
 }

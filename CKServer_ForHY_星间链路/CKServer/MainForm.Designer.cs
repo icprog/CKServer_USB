@@ -31,6 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -59,16 +69,6 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -207,6 +207,23 @@
             this.barButtonItem36 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem37 = new DevExpress.XtraBars.BarButtonItem();
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
+            this.dockPanel_OC = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel4_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dataGridView_OC = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
+            this.dockPanel_AD = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dataGridView_AD = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hideContainerBottom = new DevExpress.XtraBars.Docking.AutoHideContainer();
+            this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -224,8 +241,6 @@
             this.btn_modify_save2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_modify_load2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_modify_save1 = new DevExpress.XtraEditors.SimpleButton();
-            this.dockPanel_422 = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel_RegCtl = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer2 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dataGridView_Reg = new System.Windows.Forms.DataGridView();
@@ -240,8 +255,26 @@
             this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dockPanel_422 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dataGridView_YC2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView_YC1 = new System.Windows.Forms.DataGridView();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dockPanel_LVDS = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox_Send_1 = new System.Windows.Forms.TextBox();
@@ -263,20 +296,6 @@
             this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEdit3 = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEdit2 = new DevExpress.XtraEditors.ButtonEdit();
-            this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.dockPanel_AD = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.dataGridView_AD = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dockPanel_OC = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel4_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.dataGridView_OC = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.通道名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.控制 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -321,15 +340,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
+            this.hideContainerRight.SuspendLayout();
+            this.dockPanel_OC.SuspendLayout();
+            this.dockPanel4_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OC)).BeginInit();
+            this.hideContainerLeft.SuspendLayout();
+            this.dockPanel_AD.SuspendLayout();
+            this.dockPanel5_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AD)).BeginInit();
+            this.hideContainerBottom.SuspendLayout();
+            this.dockPanel_LOG.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
             this.dockPanel2.SuspendLayout();
             this.dockPanel2_Container.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.dockPanel_422.SuspendLayout();
             this.dockPanel_RegCtl.SuspendLayout();
             this.controlContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Reg)).BeginInit();
+            this.dockPanel_422.SuspendLayout();
+            this.dockPanel3_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).BeginInit();
             this.dockPanel_LVDS.SuspendLayout();
             this.controlContainer1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -345,14 +378,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).BeginInit();
-            this.dockPanel_LOG.SuspendLayout();
-            this.dockPanel1_Container.SuspendLayout();
-            this.dockPanel_AD.SuspendLayout();
-            this.dockPanel5_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AD)).BeginInit();
-            this.dockPanel_OC.SuspendLayout();
-            this.dockPanel4_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1508,16 +1533,17 @@
             // 
             // dockManager1
             // 
+            this.dockManager1.AutoHideContainers.AddRange(new DevExpress.XtraBars.Docking.AutoHideContainer[] {
+            this.hideContainerRight,
+            this.hideContainerLeft,
+            this.hideContainerBottom});
             this.dockManager1.Form = this;
             this.dockManager1.HiddenPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.dockPanel2,
-            this.dockPanel_422,
             this.dockPanel_RegCtl});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanel_LVDS,
-            this.dockPanel_LOG,
-            this.dockPanel_AD,
-            this.dockPanel_OC});
+            this.dockPanel_422,
+            this.dockPanel_LVDS});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -1529,6 +1555,195 @@
             "DevExpress.XtraBars.Navigation.OfficeNavigationBar",
             "DevExpress.XtraBars.Navigation.TileNavPane",
             "DevExpress.XtraBars.TabFormControl"});
+            // 
+            // hideContainerRight
+            // 
+            this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.hideContainerRight.Controls.Add(this.dockPanel_OC);
+            resources.ApplyResources(this.hideContainerRight, "hideContainerRight");
+            this.hideContainerRight.Name = "hideContainerRight";
+            // 
+            // dockPanel_OC
+            // 
+            this.dockPanel_OC.Controls.Add(this.dockPanel4_Container);
+            this.dockPanel_OC.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.dockPanel_OC.FloatSize = new System.Drawing.Size(334, 322);
+            this.dockPanel_OC.FloatVertical = true;
+            this.dockPanel_OC.ID = new System.Guid("33b8ddeb-d01d-4235-9b86-4643140871e6");
+            resources.ApplyResources(this.dockPanel_OC, "dockPanel_OC");
+            this.dockPanel_OC.Name = "dockPanel_OC";
+            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(154, 288);
+            this.dockPanel_OC.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.dockPanel_OC.SavedIndex = 0;
+            this.dockPanel_OC.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            // 
+            // dockPanel4_Container
+            // 
+            this.dockPanel4_Container.Controls.Add(this.dataGridView_OC);
+            resources.ApplyResources(this.dockPanel4_Container, "dockPanel4_Container");
+            this.dockPanel4_Container.Name = "dockPanel4_Container";
+            // 
+            // dataGridView_OC
+            // 
+            this.dataGridView_OC.AllowUserToAddRows = false;
+            this.dataGridView_OC.AllowUserToDeleteRows = false;
+            this.dataGridView_OC.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView_OC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView_OC.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 9F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_OC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView_OC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_OC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.Column5});
+            resources.ApplyResources(this.dataGridView_OC, "dataGridView_OC");
+            this.dataGridView_OC.Name = "dataGridView_OC";
+            this.dataGridView_OC.RowHeadersVisible = false;
+            this.dataGridView_OC.RowTemplate.Height = 23;
+            this.dataGridView_OC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "序号";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "名称";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle9;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.NullValue = "输出";
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle10;
+            resources.ApplyResources(this.Column5, "Column5");
+            this.Column5.Name = "Column5";
+            this.Column5.Text = "输出控制";
+            // 
+            // hideContainerLeft
+            // 
+            this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.hideContainerLeft.Controls.Add(this.dockPanel_AD);
+            resources.ApplyResources(this.hideContainerLeft, "hideContainerLeft");
+            this.hideContainerLeft.Name = "hideContainerLeft";
+            // 
+            // dockPanel_AD
+            // 
+            this.dockPanel_AD.Controls.Add(this.dockPanel5_Container);
+            this.dockPanel_AD.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel_AD.ID = new System.Guid("277b4796-f1d3-44ac-9aab-bf8085b99d6f");
+            resources.ApplyResources(this.dockPanel_AD, "dockPanel_AD");
+            this.dockPanel_AD.Name = "dockPanel_AD";
+            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(309, 200);
+            this.dockPanel_AD.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel_AD.SavedIndex = 3;
+            this.dockPanel_AD.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            // 
+            // dockPanel5_Container
+            // 
+            this.dockPanel5_Container.Controls.Add(this.dataGridView_AD);
+            resources.ApplyResources(this.dockPanel5_Container, "dockPanel5_Container");
+            this.dockPanel5_Container.Name = "dockPanel5_Container";
+            // 
+            // dataGridView_AD
+            // 
+            this.dataGridView_AD.AllowUserToAddRows = false;
+            this.dataGridView_AD.AllowUserToDeleteRows = false;
+            this.dataGridView_AD.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView_AD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_AD.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_AD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_AD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_AD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            resources.ApplyResources(this.dataGridView_AD, "dataGridView_AD");
+            this.dataGridView_AD.Name = "dataGridView_AD";
+            this.dataGridView_AD.RowHeadersVisible = false;
+            this.dataGridView_AD.RowTemplate.Height = 23;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "序号";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "名称";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "测量值";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N3";
+            dataGridViewCellStyle5.NullValue = "0.000";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
+            resources.ApplyResources(this.Column3, "Column3");
+            this.Column3.Name = "Column3";
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // hideContainerBottom
+            // 
+            this.hideContainerBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.hideContainerBottom.Controls.Add(this.dockPanel_LOG);
+            resources.ApplyResources(this.hideContainerBottom, "hideContainerBottom");
+            this.hideContainerBottom.Name = "hideContainerBottom";
+            // 
+            // dockPanel_LOG
+            // 
+            this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
+            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
+            this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
+            resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
+            this.dockPanel_LOG.Name = "dockPanel_LOG";
+            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(192, 163);
+            this.dockPanel_LOG.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel_LOG.SavedIndex = 2;
+            this.dockPanel_LOG.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            // 
+            // dockPanel1_Container
+            // 
+            this.dockPanel1_Container.Controls.Add(this.richTextBox1);
+            resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
+            this.dockPanel1_Container.Name = "dockPanel1_Container";
             // 
             // dockPanel2
             // 
@@ -1696,23 +1911,6 @@
             this.btn_modify_save1.Name = "btn_modify_save1";
             this.btn_modify_save1.Click += new System.EventHandler(this.btn_modify_save_Click);
             // 
-            // dockPanel_422
-            // 
-            this.dockPanel_422.Controls.Add(this.dockPanel3_Container);
-            this.dockPanel_422.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
-            this.dockPanel_422.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
-            resources.ApplyResources(this.dockPanel_422, "dockPanel_422");
-            this.dockPanel_422.Name = "dockPanel_422";
-            this.dockPanel_422.OriginalSize = new System.Drawing.Size(200, 160);
-            this.dockPanel_422.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
-            this.dockPanel_422.SavedIndex = 3;
-            this.dockPanel_422.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-            // 
-            // dockPanel3_Container
-            // 
-            resources.ApplyResources(this.dockPanel3_Container, "dockPanel3_Container");
-            this.dockPanel3_Container.Name = "dockPanel3_Container";
-            // 
             // dockPanel_RegCtl
             // 
             this.dockPanel_RegCtl.Controls.Add(this.controlContainer2);
@@ -1847,6 +2045,116 @@
             this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // dockPanel_422
+            // 
+            this.dockPanel_422.Controls.Add(this.dockPanel3_Container);
+            this.dockPanel_422.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.dockPanel_422.FloatSize = new System.Drawing.Size(683, 512);
+            this.dockPanel_422.FloatVertical = true;
+            this.dockPanel_422.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
+            resources.ApplyResources(this.dockPanel_422, "dockPanel_422");
+            this.dockPanel_422.Name = "dockPanel_422";
+            this.dockPanel_422.OriginalSize = new System.Drawing.Size(879, 160);
+            // 
+            // dockPanel3_Container
+            // 
+            this.dockPanel3_Container.Controls.Add(this.dataGridView_YC2);
+            this.dockPanel3_Container.Controls.Add(this.dataGridView_YC1);
+            resources.ApplyResources(this.dockPanel3_Container, "dockPanel3_Container");
+            this.dockPanel3_Container.Name = "dockPanel3_Container";
+            // 
+            // dataGridView_YC2
+            // 
+            this.dataGridView_YC2.AllowUserToResizeRows = false;
+            this.dataGridView_YC2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_YC2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            resources.ApplyResources(this.dataGridView_YC2, "dataGridView_YC2");
+            this.dataGridView_YC2.Name = "dataGridView_YC2";
+            this.dataGridView_YC2.RowHeadersVisible = false;
+            this.dataGridView_YC2.RowTemplate.Height = 23;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "序号";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "名称";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "占位";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "值";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "解析值";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridView_YC1
+            // 
+            this.dataGridView_YC1.AllowUserToResizeRows = false;
+            this.dataGridView_YC1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_YC1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column13,
+            this.Column14,
+            this.Column17,
+            this.Column15,
+            this.Column16});
+            resources.ApplyResources(this.dataGridView_YC1, "dataGridView_YC1");
+            this.dataGridView_YC1.Name = "dataGridView_YC1";
+            this.dataGridView_YC1.RowHeadersVisible = false;
+            this.dataGridView_YC1.RowTemplate.Height = 23;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "序号";
+            resources.ApplyResources(this.Column13, "Column13");
+            this.Column13.Name = "Column13";
+            // 
+            // Column14
+            // 
+            this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column14.DataPropertyName = "名称";
+            resources.ApplyResources(this.Column14, "Column14");
+            this.Column14.Name = "Column14";
+            // 
+            // Column17
+            // 
+            this.Column17.DataPropertyName = "占位";
+            resources.ApplyResources(this.Column17, "Column17");
+            this.Column17.Name = "Column17";
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "值";
+            resources.ApplyResources(this.Column15, "Column15");
+            this.Column15.Name = "Column15";
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "解析值";
+            resources.ApplyResources(this.Column16, "Column16");
+            this.Column16.Name = "Column16";
+            // 
             // dockPanel_LVDS
             // 
             this.dockPanel_LVDS.Controls.Add(this.controlContainer1);
@@ -1855,10 +2163,14 @@
             this.dockPanel_LVDS.ID = new System.Guid("613b1802-fd1d-4b73-91c5-831cb04cde38");
             resources.ApplyResources(this.dockPanel_LVDS, "dockPanel_LVDS");
             this.dockPanel_LVDS.Name = "dockPanel_LVDS";
-            this.dockPanel_LVDS.OriginalSize = new System.Drawing.Size(544, 200);
+            this.dockPanel_LVDS.OriginalSize = new System.Drawing.Size(190, 200);
             // 
             // controlContainer1
             // 
+            this.controlContainer1.Controls.Add(this.comboBox4);
+            this.controlContainer1.Controls.Add(this.comboBox3);
+            this.controlContainer1.Controls.Add(this.comboBox2);
+            this.controlContainer1.Controls.Add(this.comboBox1);
             this.controlContainer1.Controls.Add(this.tableLayoutPanel1);
             this.controlContainer1.Controls.Add(this.buttonEdit4);
             this.controlContainer1.Controls.Add(this.buttonEdit1);
@@ -1866,6 +2178,54 @@
             this.controlContainer1.Controls.Add(this.buttonEdit2);
             resources.ApplyResources(this.controlContainer1, "controlContainer1");
             this.controlContainer1.Name = "controlContainer1";
+            // 
+            // comboBox4
+            // 
+            resources.ApplyResources(this.comboBox4, "comboBox4");
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            resources.GetString("comboBox4.Items"),
+            resources.GetString("comboBox4.Items1"),
+            resources.GetString("comboBox4.Items2"),
+            resources.GetString("comboBox4.Items3"),
+            resources.GetString("comboBox4.Items4")});
+            this.comboBox4.Name = "comboBox4";
+            // 
+            // comboBox3
+            // 
+            resources.ApplyResources(this.comboBox3, "comboBox3");
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            resources.GetString("comboBox3.Items"),
+            resources.GetString("comboBox3.Items1"),
+            resources.GetString("comboBox3.Items2"),
+            resources.GetString("comboBox3.Items3"),
+            resources.GetString("comboBox3.Items4")});
+            this.comboBox3.Name = "comboBox3";
+            // 
+            // comboBox2
+            // 
+            resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            resources.GetString("comboBox2.Items"),
+            resources.GetString("comboBox2.Items1"),
+            resources.GetString("comboBox2.Items2"),
+            resources.GetString("comboBox2.Items3"),
+            resources.GetString("comboBox2.Items4")});
+            this.comboBox2.Name = "comboBox2";
+            // 
+            // comboBox1
+            // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2"),
+            resources.GetString("comboBox1.Items3"),
+            resources.GetString("comboBox1.Items4")});
+            this.comboBox1.Name = "comboBox1";
             // 
             // tableLayoutPanel1
             // 
@@ -2028,164 +2388,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit2.Properties.Buttons12"))), resources.GetString("buttonEdit2.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit2.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit2.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit2.Properties.Buttons19"))), resources.GetString("buttonEdit2.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, resources.GetString("buttonEdit2.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit2.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit2.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons24"))))});
             this.buttonEdit2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
             // 
-            // dockPanel_LOG
-            // 
-            this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
-            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
-            this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
-            this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
-            resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
-            this.dockPanel_LOG.Name = "dockPanel_LOG";
-            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(192, 163);
-            // 
-            // dockPanel1_Container
-            // 
-            this.dockPanel1_Container.Controls.Add(this.richTextBox1);
-            resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
-            this.dockPanel1_Container.Name = "dockPanel1_Container";
-            // 
-            // dockPanel_AD
-            // 
-            this.dockPanel_AD.Controls.Add(this.dockPanel5_Container);
-            this.dockPanel_AD.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.dockPanel_AD.ID = new System.Guid("277b4796-f1d3-44ac-9aab-bf8085b99d6f");
-            resources.ApplyResources(this.dockPanel_AD, "dockPanel_AD");
-            this.dockPanel_AD.Name = "dockPanel_AD";
-            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(309, 200);
-            // 
-            // dockPanel5_Container
-            // 
-            this.dockPanel5_Container.Controls.Add(this.dataGridView_AD);
-            resources.ApplyResources(this.dockPanel5_Container, "dockPanel5_Container");
-            this.dockPanel5_Container.Name = "dockPanel5_Container";
-            // 
-            // dataGridView_AD
-            // 
-            this.dataGridView_AD.AllowUserToAddRows = false;
-            this.dataGridView_AD.AllowUserToDeleteRows = false;
-            this.dataGridView_AD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView_AD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView_AD.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 9F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_AD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView_AD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_AD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            resources.ApplyResources(this.dataGridView_AD, "dataGridView_AD");
-            this.dataGridView_AD.Name = "dataGridView_AD";
-            this.dataGridView_AD.RowHeadersVisible = false;
-            this.dataGridView_AD.RowTemplate.Height = 23;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "序号";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle8;
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "名称";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle9;
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "测量值";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Format = "N3";
-            dataGridViewCellStyle10.NullValue = "0.000";
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle10;
-            resources.ApplyResources(this.Column3, "Column3");
-            this.Column3.Name = "Column3";
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dockPanel_OC
-            // 
-            this.dockPanel_OC.Controls.Add(this.dockPanel4_Container);
-            this.dockPanel_OC.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
-            this.dockPanel_OC.FloatSize = new System.Drawing.Size(334, 322);
-            this.dockPanel_OC.ID = new System.Guid("33b8ddeb-d01d-4235-9b86-4643140871e6");
-            resources.ApplyResources(this.dockPanel_OC, "dockPanel_OC");
-            this.dockPanel_OC.Name = "dockPanel_OC";
-            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(400, 288);
-            // 
-            // dockPanel4_Container
-            // 
-            this.dockPanel4_Container.Controls.Add(this.dataGridView_OC);
-            resources.ApplyResources(this.dockPanel4_Container, "dockPanel4_Container");
-            this.dockPanel4_Container.Name = "dockPanel4_Container";
-            // 
-            // dataGridView_OC
-            // 
-            this.dataGridView_OC.AllowUserToAddRows = false;
-            this.dataGridView_OC.AllowUserToDeleteRows = false;
-            this.dataGridView_OC.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView_OC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView_OC.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_OC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView_OC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_OC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.Column5});
-            resources.ApplyResources(this.dataGridView_OC, "dataGridView_OC");
-            this.dataGridView_OC.Name = "dataGridView_OC";
-            this.dataGridView_OC.RowHeadersVisible = false;
-            this.dataGridView_OC.RowTemplate.Height = 23;
-            this.dataGridView_OC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "序号";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "名称";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle4;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.NullValue = "输出";
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle5;
-            resources.ApplyResources(this.Column5, "Column5");
-            this.Column5.Name = "Column5";
-            this.Column5.Text = "输出控制";
-            // 
             // ID
             // 
             resources.ApplyResources(this.ID, "ID");
@@ -2267,10 +2469,11 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dockPanel_OC);
-            this.Controls.Add(this.dockPanel_AD);
-            this.Controls.Add(this.dockPanel_LOG);
             this.Controls.Add(this.dockPanel_LVDS);
+            this.Controls.Add(this.dockPanel_422);
+            this.Controls.Add(this.hideContainerBottom);
+            this.Controls.Add(this.hideContainerLeft);
+            this.Controls.Add(this.hideContainerRight);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
@@ -2311,15 +2514,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
+            this.hideContainerRight.ResumeLayout(false);
+            this.dockPanel_OC.ResumeLayout(false);
+            this.dockPanel4_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OC)).EndInit();
+            this.hideContainerLeft.ResumeLayout(false);
+            this.dockPanel_AD.ResumeLayout(false);
+            this.dockPanel5_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AD)).EndInit();
+            this.hideContainerBottom.ResumeLayout(false);
+            this.dockPanel_LOG.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.dockPanel_422.ResumeLayout(false);
             this.dockPanel_RegCtl.ResumeLayout(false);
             this.controlContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Reg)).EndInit();
+            this.dockPanel_422.ResumeLayout(false);
+            this.dockPanel3_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).EndInit();
             this.dockPanel_LVDS.ResumeLayout(false);
             this.controlContainer1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -2343,14 +2560,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).EndInit();
-            this.dockPanel_LOG.ResumeLayout(false);
-            this.dockPanel1_Container.ResumeLayout(false);
-            this.dockPanel_AD.ResumeLayout(false);
-            this.dockPanel5_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AD)).EndInit();
-            this.dockPanel_OC.ResumeLayout(false);
-            this.dockPanel4_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2578,6 +2787,25 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column10;
         private System.Windows.Forms.DataGridViewButtonColumn Column11;
         private System.Windows.Forms.DataGridViewButtonColumn Column12;
+        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerRight;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerBottom;
+        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
+        private System.Windows.Forms.DataGridView dataGridView_YC1;
+        private System.Windows.Forms.DataGridView dataGridView_YC2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
     }
 }
 
