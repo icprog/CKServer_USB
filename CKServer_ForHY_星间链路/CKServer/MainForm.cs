@@ -23,6 +23,8 @@ namespace CKServer
         DAmodify myDAmodifyForm = new DAmodify();
         SaveFile FileThread;
 
+        RS422FrameProduceForm myRs422FrameProduceForm;
+
         public DateTime startDT;
         // private DataTable dt_AD = new DataTable();
         //  private DataTable dt_OC = new DataTable();
@@ -103,6 +105,8 @@ namespace CKServer
             barStaticItem1.Caption = "存储路径" + Data.Path;
             InitDataTable();//初始化datadable
             Function.Init();//初始化DA参数
+
+            myRs422FrameProduceForm = new RS422FrameProduceForm(this);
 
             dockPanel_RegCtl.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
 
@@ -456,6 +460,10 @@ namespace CKServer
                 new Thread(() => { RecvFun(Data.OnlyID); }).Start();
                 ADList.Clear();
                 new Thread(() => { DealWithADFun(); }).Start();
+
+                YCList_A.Clear();
+                YCList_B.Clear();
+                new Thread(() => { DealWithYCFun(); }).Start();
             }
             else
             {
@@ -1070,6 +1078,85 @@ namespace CKServer
                 }
             }
 
+        }
+
+        private void btn_Start422_A_Click(object sender, EventArgs e)
+        {
+            byte[] SendData = new byte[6] { 0xeb,0x90,0x05,0x02,0x01,0x82};
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+            byte[] FinalSend = new byte[28];
+
+            FinalSend[0] = 0x1D;
+            FinalSend[1] = 0x00;
+            FinalSend[2] = 0x00;
+            FinalSend[3] = 0x06;
+            SendData.CopyTo(FinalSend, 4);
+
+            FinalSend[10] = 0x00;
+            FinalSend[11] = 0x00;
+
+            end.CopyTo(FinalSend, 12);
+
+            USB.SendData(Data.OnlyID, FinalSend);
+        }
+
+        public string Rs422_Channel_Name;           //
+        private void btn_Send422_A_Click(object sender, EventArgs e)
+        {
+            byte[] SendBuf = Function.StrToHexByte(textBox_Send422_A.Text);
+
+            if (SendBuf.Length > 10)
+                USB.SendData(Data.OnlyID, SendBuf);
+            else
+                MyLog.Error("输入正确的遥控注数数据！");
+        }
+
+        private void textBox_Send422_A_Click(object sender, EventArgs e)
+        {
+            Rs422_Channel_Name = ((TextBox)sender).Name;
+            if (myRs422FrameProduceForm != null)
+            {
+                myRs422FrameProduceForm.Activate();
+            }
+            else
+            {
+                myRs422FrameProduceForm = new RS422FrameProduceForm(this);
+            }
+            myRs422FrameProduceForm.ShowDialog();
+        }
+
+        private void btn_Start422_B_Click(object sender, EventArgs e)
+        {
+            byte[] SendData = new byte[6] { 0xeb, 0x90, 0x05, 0x02, 0x01, 0x82 };
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+            byte[] FinalSend = new byte[28];
+
+            FinalSend[0] = 0x1D;
+            FinalSend[1] = 0x01;
+            FinalSend[2] = 0x00;
+            FinalSend[3] = 0x06;
+            SendData.CopyTo(FinalSend, 4);
+
+            FinalSend[10] = 0x00;
+            FinalSend[11] = 0x00;
+
+            end.CopyTo(FinalSend, 12);
+
+            USB.SendData(Data.OnlyID, FinalSend);
+        }
+
+        private void btn_Send422_B_Click(object sender, EventArgs e)
+        {
+            Rs422_Channel_Name = ((TextBox)sender).Name;
+            if (myRs422FrameProduceForm != null)
+            {
+                myRs422FrameProduceForm.Activate();
+            }
+            else
+            {
+                myRs422FrameProduceForm = new RS422FrameProduceForm(this);
+            }
+            myRs422FrameProduceForm.ShowDialog();
         }
     }
 }

@@ -41,14 +41,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -69,6 +61,14 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -221,7 +221,33 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hideContainerBottom = new DevExpress.XtraBars.Docking.AutoHideContainer();
+            this.dockPanel_LVDS = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox_Send_1 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox_Send_2 = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox_Send_3 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox_Send_4 = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBox_Result_1 = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox_Result_2 = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.textBox_Result_3 = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.textBox_Result_4 = new System.Windows.Forms.TextBox();
+            this.buttonEdit4 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEdit3 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEdit2 = new DevExpress.XtraEditors.ButtonEdit();
             this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
@@ -257,6 +283,12 @@
             this.Column12 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dockPanel_422 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.textBox_Send422_B = new System.Windows.Forms.TextBox();
+            this.btn_Start422_B = new System.Windows.Forms.Button();
+            this.textBox_Send422_A = new System.Windows.Forms.TextBox();
+            this.btn_Send422_B = new System.Windows.Forms.Button();
+            this.btn_Start422_A = new System.Windows.Forms.Button();
+            this.btn_Send422_A = new System.Windows.Forms.Button();
             this.dataGridView_YC2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -269,33 +301,6 @@
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dockPanel_LVDS = new DevExpress.XtraBars.Docking.DockPanel();
-            this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox_Send_1 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox_Send_2 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox_Send_3 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox_Send_4 = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox_Result_1 = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox_Result_2 = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textBox_Result_3 = new System.Windows.Forms.TextBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox_Result_4 = new System.Windows.Forms.TextBox();
-            this.buttonEdit4 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit3 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit2 = new DevExpress.XtraEditors.ButtonEdit();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.通道名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.控制 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -348,21 +353,6 @@
             this.dockPanel_AD.SuspendLayout();
             this.dockPanel5_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AD)).BeginInit();
-            this.hideContainerBottom.SuspendLayout();
-            this.dockPanel_LOG.SuspendLayout();
-            this.dockPanel1_Container.SuspendLayout();
-            this.dockPanel2.SuspendLayout();
-            this.dockPanel2_Container.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.dockPanel_RegCtl.SuspendLayout();
-            this.controlContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Reg)).BeginInit();
-            this.dockPanel_422.SuspendLayout();
-            this.dockPanel3_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).BeginInit();
             this.dockPanel_LVDS.SuspendLayout();
             this.controlContainer1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -378,6 +368,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).BeginInit();
+            this.dockPanel_LOG.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
+            this.dockPanel2.SuspendLayout();
+            this.dockPanel2_Container.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.dockPanel_RegCtl.SuspendLayout();
+            this.controlContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Reg)).BeginInit();
+            this.dockPanel_422.SuspendLayout();
+            this.dockPanel3_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1535,15 +1539,14 @@
             // 
             this.dockManager1.AutoHideContainers.AddRange(new DevExpress.XtraBars.Docking.AutoHideContainer[] {
             this.hideContainerRight,
-            this.hideContainerLeft,
-            this.hideContainerBottom});
+            this.hideContainerLeft});
             this.dockManager1.Form = this;
             this.dockManager1.HiddenPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.dockPanel2,
             this.dockPanel_RegCtl});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanel_422,
-            this.dockPanel_LVDS});
+            this.dockPanel_LOG,
+            this.dockPanel_422});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -1642,6 +1645,7 @@
             // 
             this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
             this.hideContainerLeft.Controls.Add(this.dockPanel_AD);
+            this.hideContainerLeft.Controls.Add(this.dockPanel_LVDS);
             resources.ApplyResources(this.hideContainerLeft, "hideContainerLeft");
             this.hideContainerLeft.Name = "hideContainerLeft";
             // 
@@ -1719,25 +1723,252 @@
             this.Column3.Name = "Column3";
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // hideContainerBottom
+            // dockPanel_LVDS
             // 
-            this.hideContainerBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.hideContainerBottom.Controls.Add(this.dockPanel_LOG);
-            resources.ApplyResources(this.hideContainerBottom, "hideContainerBottom");
-            this.hideContainerBottom.Name = "hideContainerBottom";
+            this.dockPanel_LVDS.Controls.Add(this.controlContainer1);
+            this.dockPanel_LVDS.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel_LVDS.FloatSize = new System.Drawing.Size(1920, 1040);
+            this.dockPanel_LVDS.ID = new System.Guid("613b1802-fd1d-4b73-91c5-831cb04cde38");
+            resources.ApplyResources(this.dockPanel_LVDS, "dockPanel_LVDS");
+            this.dockPanel_LVDS.Name = "dockPanel_LVDS";
+            this.dockPanel_LVDS.OriginalSize = new System.Drawing.Size(580, 200);
+            this.dockPanel_LVDS.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel_LVDS.SavedIndex = 1;
+            this.dockPanel_LVDS.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            // 
+            // controlContainer1
+            // 
+            this.controlContainer1.Controls.Add(this.comboBox4);
+            this.controlContainer1.Controls.Add(this.comboBox3);
+            this.controlContainer1.Controls.Add(this.comboBox2);
+            this.controlContainer1.Controls.Add(this.comboBox1);
+            this.controlContainer1.Controls.Add(this.tableLayoutPanel1);
+            this.controlContainer1.Controls.Add(this.buttonEdit4);
+            this.controlContainer1.Controls.Add(this.buttonEdit1);
+            this.controlContainer1.Controls.Add(this.buttonEdit3);
+            this.controlContainer1.Controls.Add(this.buttonEdit2);
+            resources.ApplyResources(this.controlContainer1, "controlContainer1");
+            this.controlContainer1.Name = "controlContainer1";
+            // 
+            // comboBox4
+            // 
+            resources.ApplyResources(this.comboBox4, "comboBox4");
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            resources.GetString("comboBox4.Items"),
+            resources.GetString("comboBox4.Items1"),
+            resources.GetString("comboBox4.Items2"),
+            resources.GetString("comboBox4.Items3"),
+            resources.GetString("comboBox4.Items4")});
+            this.comboBox4.Name = "comboBox4";
+            // 
+            // comboBox3
+            // 
+            resources.ApplyResources(this.comboBox3, "comboBox3");
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            resources.GetString("comboBox3.Items"),
+            resources.GetString("comboBox3.Items1"),
+            resources.GetString("comboBox3.Items2"),
+            resources.GetString("comboBox3.Items3"),
+            resources.GetString("comboBox3.Items4")});
+            this.comboBox3.Name = "comboBox3";
+            // 
+            // comboBox2
+            // 
+            resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            resources.GetString("comboBox2.Items"),
+            resources.GetString("comboBox2.Items1"),
+            resources.GetString("comboBox2.Items2"),
+            resources.GetString("comboBox2.Items3"),
+            resources.GetString("comboBox2.Items4")});
+            this.comboBox2.Name = "comboBox2";
+            // 
+            // comboBox1
+            // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2"),
+            resources.GetString("comboBox1.Items3"),
+            resources.GetString("comboBox1.Items4")});
+            this.comboBox1.Name = "comboBox1";
+            // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox5, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox6, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox7, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox8, 1, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox_Send_1);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // textBox_Send_1
+            // 
+            resources.ApplyResources(this.textBox_Send_1, "textBox_Send_1");
+            this.textBox_Send_1.Name = "textBox_Send_1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox_Send_2);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // textBox_Send_2
+            // 
+            resources.ApplyResources(this.textBox_Send_2, "textBox_Send_2");
+            this.textBox_Send_2.Name = "textBox_Send_2";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox_Send_3);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // textBox_Send_3
+            // 
+            resources.ApplyResources(this.textBox_Send_3, "textBox_Send_3");
+            this.textBox_Send_3.Name = "textBox_Send_3";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox_Send_4);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // textBox_Send_4
+            // 
+            resources.ApplyResources(this.textBox_Send_4, "textBox_Send_4");
+            this.textBox_Send_4.Name = "textBox_Send_4";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBox_Result_1);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // textBox_Result_1
+            // 
+            resources.ApplyResources(this.textBox_Result_1, "textBox_Result_1");
+            this.textBox_Result_1.Name = "textBox_Result_1";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.textBox_Result_2);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            // 
+            // textBox_Result_2
+            // 
+            resources.ApplyResources(this.textBox_Result_2, "textBox_Result_2");
+            this.textBox_Result_2.Name = "textBox_Result_2";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.textBox_Result_3);
+            resources.ApplyResources(this.groupBox7, "groupBox7");
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.TabStop = false;
+            // 
+            // textBox_Result_3
+            // 
+            resources.ApplyResources(this.textBox_Result_3, "textBox_Result_3");
+            this.textBox_Result_3.Name = "textBox_Result_3";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.textBox_Result_4);
+            resources.ApplyResources(this.groupBox8, "groupBox8");
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.TabStop = false;
+            // 
+            // textBox_Result_4
+            // 
+            resources.ApplyResources(this.textBox_Result_4, "textBox_Result_4");
+            this.textBox_Result_4.Name = "textBox_Result_4";
+            // 
+            // buttonEdit4
+            // 
+            resources.ApplyResources(this.buttonEdit4, "buttonEdit4");
+            this.buttonEdit4.Name = "buttonEdit4";
+            this.buttonEdit4.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit4.Properties.Appearance.Font")));
+            this.buttonEdit4.Properties.Appearance.Options.UseFont = true;
+            resources.ApplyResources(serializableAppearanceObject4, "serializableAppearanceObject4");
+            serializableAppearanceObject4.Options.UseBackColor = true;
+            this.buttonEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit4.Properties.Buttons"))), resources.GetString("buttonEdit4.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit4.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit4.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit4.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("buttonEdit4.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit4.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit4.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons11")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit4.Properties.Buttons12"))), resources.GetString("buttonEdit4.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit4.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit4.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit4.Properties.Buttons19"))), resources.GetString("buttonEdit4.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, serializableAppearanceObject5, resources.GetString("buttonEdit4.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit4.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit4.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons24"))))});
+            this.buttonEdit4.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
+            // 
+            // buttonEdit1
+            // 
+            resources.ApplyResources(this.buttonEdit1, "buttonEdit1");
+            this.buttonEdit1.Name = "buttonEdit1";
+            this.buttonEdit1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit1.Properties.Appearance.Font")));
+            this.buttonEdit1.Properties.Appearance.Options.UseFont = true;
+            resources.ApplyResources(serializableAppearanceObject9, "serializableAppearanceObject9");
+            serializableAppearanceObject9.Options.UseBackColor = true;
+            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit1.Properties.Buttons"))), resources.GetString("buttonEdit1.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit1.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit1.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit1.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, resources.GetString("buttonEdit1.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit1.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit1.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons11")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit1.Properties.Buttons12"))), resources.GetString("buttonEdit1.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit1.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit1.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit1.Properties.Buttons19"))), resources.GetString("buttonEdit1.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, serializableAppearanceObject8, serializableAppearanceObject9, serializableAppearanceObject10, resources.GetString("buttonEdit1.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit1.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit1.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons24"))))});
+            this.buttonEdit1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
+            // 
+            // buttonEdit3
+            // 
+            resources.ApplyResources(this.buttonEdit3, "buttonEdit3");
+            this.buttonEdit3.Name = "buttonEdit3";
+            this.buttonEdit3.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit3.Properties.Appearance.Font")));
+            this.buttonEdit3.Properties.Appearance.Options.UseFont = true;
+            resources.ApplyResources(serializableAppearanceObject14, "serializableAppearanceObject14");
+            serializableAppearanceObject14.Options.UseBackColor = true;
+            this.buttonEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit3.Properties.Buttons"))), resources.GetString("buttonEdit3.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit3.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit3.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit3.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, resources.GetString("buttonEdit3.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit3.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit3.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons11")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit3.Properties.Buttons12"))), resources.GetString("buttonEdit3.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit3.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit3.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit3.Properties.Buttons19"))), resources.GetString("buttonEdit3.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject12, serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, resources.GetString("buttonEdit3.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit3.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit3.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons24"))))});
+            this.buttonEdit3.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
+            // 
+            // buttonEdit2
+            // 
+            resources.ApplyResources(this.buttonEdit2, "buttonEdit2");
+            this.buttonEdit2.Name = "buttonEdit2";
+            this.buttonEdit2.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit2.Properties.Appearance.Font")));
+            this.buttonEdit2.Properties.Appearance.Options.UseFont = true;
+            resources.ApplyResources(serializableAppearanceObject19, "serializableAppearanceObject19");
+            serializableAppearanceObject19.Options.UseBackColor = true;
+            this.buttonEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit2.Properties.Buttons"))), resources.GetString("buttonEdit2.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit2.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit2.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit2.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject16, resources.GetString("buttonEdit2.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit2.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit2.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons11")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit2.Properties.Buttons12"))), resources.GetString("buttonEdit2.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit2.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit2.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit2.Properties.Buttons19"))), resources.GetString("buttonEdit2.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, resources.GetString("buttonEdit2.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit2.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit2.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons24"))))});
+            this.buttonEdit2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
             // 
             // dockPanel_LOG
             // 
             this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
-            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
+            this.dockPanel_LOG.FloatVertical = true;
             this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
             resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
             this.dockPanel_LOG.Name = "dockPanel_LOG";
-            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(192, 163);
-            this.dockPanel_LOG.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
-            this.dockPanel_LOG.SavedIndex = 2;
-            this.dockPanel_LOG.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(185, 163);
             // 
             // dockPanel1_Container
             // 
@@ -2048,20 +2279,65 @@
             // dockPanel_422
             // 
             this.dockPanel_422.Controls.Add(this.dockPanel3_Container);
-            this.dockPanel_422.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.dockPanel_422.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel_422.FloatSize = new System.Drawing.Size(683, 512);
-            this.dockPanel_422.FloatVertical = true;
             this.dockPanel_422.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
             resources.ApplyResources(this.dockPanel_422, "dockPanel_422");
             this.dockPanel_422.Name = "dockPanel_422";
-            this.dockPanel_422.OriginalSize = new System.Drawing.Size(879, 160);
+            this.dockPanel_422.OriginalSize = new System.Drawing.Size(884, 160);
             // 
             // dockPanel3_Container
             // 
+            this.dockPanel3_Container.Controls.Add(this.textBox_Send422_B);
+            this.dockPanel3_Container.Controls.Add(this.btn_Start422_B);
+            this.dockPanel3_Container.Controls.Add(this.textBox_Send422_A);
+            this.dockPanel3_Container.Controls.Add(this.btn_Send422_B);
+            this.dockPanel3_Container.Controls.Add(this.btn_Start422_A);
+            this.dockPanel3_Container.Controls.Add(this.btn_Send422_A);
             this.dockPanel3_Container.Controls.Add(this.dataGridView_YC2);
             this.dockPanel3_Container.Controls.Add(this.dataGridView_YC1);
             resources.ApplyResources(this.dockPanel3_Container, "dockPanel3_Container");
             this.dockPanel3_Container.Name = "dockPanel3_Container";
+            // 
+            // textBox_Send422_B
+            // 
+            resources.ApplyResources(this.textBox_Send422_B, "textBox_Send422_B");
+            this.textBox_Send422_B.Name = "textBox_Send422_B";
+            this.textBox_Send422_B.Click += new System.EventHandler(this.textBox_Send422_A_Click);
+            // 
+            // btn_Start422_B
+            // 
+            resources.ApplyResources(this.btn_Start422_B, "btn_Start422_B");
+            this.btn_Start422_B.Name = "btn_Start422_B";
+            this.btn_Start422_B.UseVisualStyleBackColor = true;
+            this.btn_Start422_B.Click += new System.EventHandler(this.btn_Start422_B_Click);
+            // 
+            // textBox_Send422_A
+            // 
+            resources.ApplyResources(this.textBox_Send422_A, "textBox_Send422_A");
+            this.textBox_Send422_A.Name = "textBox_Send422_A";
+            this.textBox_Send422_A.Click += new System.EventHandler(this.textBox_Send422_A_Click);
+            // 
+            // btn_Send422_B
+            // 
+            resources.ApplyResources(this.btn_Send422_B, "btn_Send422_B");
+            this.btn_Send422_B.Name = "btn_Send422_B";
+            this.btn_Send422_B.UseVisualStyleBackColor = true;
+            this.btn_Send422_B.Click += new System.EventHandler(this.btn_Send422_B_Click);
+            // 
+            // btn_Start422_A
+            // 
+            resources.ApplyResources(this.btn_Start422_A, "btn_Start422_A");
+            this.btn_Start422_A.Name = "btn_Start422_A";
+            this.btn_Start422_A.UseVisualStyleBackColor = true;
+            this.btn_Start422_A.Click += new System.EventHandler(this.btn_Start422_A_Click);
+            // 
+            // btn_Send422_A
+            // 
+            resources.ApplyResources(this.btn_Send422_A, "btn_Send422_A");
+            this.btn_Send422_A.Name = "btn_Send422_A";
+            this.btn_Send422_A.UseVisualStyleBackColor = true;
+            this.btn_Send422_A.Click += new System.EventHandler(this.btn_Send422_A_Click);
             // 
             // dataGridView_YC2
             // 
@@ -2155,239 +2431,6 @@
             resources.ApplyResources(this.Column16, "Column16");
             this.Column16.Name = "Column16";
             // 
-            // dockPanel_LVDS
-            // 
-            this.dockPanel_LVDS.Controls.Add(this.controlContainer1);
-            this.dockPanel_LVDS.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.dockPanel_LVDS.FloatSize = new System.Drawing.Size(1920, 1040);
-            this.dockPanel_LVDS.ID = new System.Guid("613b1802-fd1d-4b73-91c5-831cb04cde38");
-            resources.ApplyResources(this.dockPanel_LVDS, "dockPanel_LVDS");
-            this.dockPanel_LVDS.Name = "dockPanel_LVDS";
-            this.dockPanel_LVDS.OriginalSize = new System.Drawing.Size(190, 200);
-            // 
-            // controlContainer1
-            // 
-            this.controlContainer1.Controls.Add(this.comboBox4);
-            this.controlContainer1.Controls.Add(this.comboBox3);
-            this.controlContainer1.Controls.Add(this.comboBox2);
-            this.controlContainer1.Controls.Add(this.comboBox1);
-            this.controlContainer1.Controls.Add(this.tableLayoutPanel1);
-            this.controlContainer1.Controls.Add(this.buttonEdit4);
-            this.controlContainer1.Controls.Add(this.buttonEdit1);
-            this.controlContainer1.Controls.Add(this.buttonEdit3);
-            this.controlContainer1.Controls.Add(this.buttonEdit2);
-            resources.ApplyResources(this.controlContainer1, "controlContainer1");
-            this.controlContainer1.Name = "controlContainer1";
-            // 
-            // comboBox4
-            // 
-            resources.ApplyResources(this.comboBox4, "comboBox4");
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            resources.GetString("comboBox4.Items"),
-            resources.GetString("comboBox4.Items1"),
-            resources.GetString("comboBox4.Items2"),
-            resources.GetString("comboBox4.Items3"),
-            resources.GetString("comboBox4.Items4")});
-            this.comboBox4.Name = "comboBox4";
-            // 
-            // comboBox3
-            // 
-            resources.ApplyResources(this.comboBox3, "comboBox3");
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            resources.GetString("comboBox3.Items"),
-            resources.GetString("comboBox3.Items1"),
-            resources.GetString("comboBox3.Items2"),
-            resources.GetString("comboBox3.Items3"),
-            resources.GetString("comboBox3.Items4")});
-            this.comboBox3.Name = "comboBox3";
-            // 
-            // comboBox2
-            // 
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            resources.GetString("comboBox2.Items"),
-            resources.GetString("comboBox2.Items1"),
-            resources.GetString("comboBox2.Items2"),
-            resources.GetString("comboBox2.Items3"),
-            resources.GetString("comboBox2.Items4")});
-            this.comboBox2.Name = "comboBox2";
-            // 
-            // comboBox1
-            // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2"),
-            resources.GetString("comboBox1.Items3"),
-            resources.GetString("comboBox1.Items4")});
-            this.comboBox1.Name = "comboBox1";
-            // 
-            // tableLayoutPanel1
-            // 
-            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox5, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox6, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox7, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox8, 1, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox_Send_1);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
-            // textBox_Send_1
-            // 
-            resources.ApplyResources(this.textBox_Send_1, "textBox_Send_1");
-            this.textBox_Send_1.Name = "textBox_Send_1";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox_Send_2);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // textBox_Send_2
-            // 
-            resources.ApplyResources(this.textBox_Send_2, "textBox_Send_2");
-            this.textBox_Send_2.Name = "textBox_Send_2";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox_Send_3);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // textBox_Send_3
-            // 
-            resources.ApplyResources(this.textBox_Send_3, "textBox_Send_3");
-            this.textBox_Send_3.Name = "textBox_Send_3";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.textBox_Send_4);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // textBox_Send_4
-            // 
-            resources.ApplyResources(this.textBox_Send_4, "textBox_Send_4");
-            this.textBox_Send_4.Name = "textBox_Send_4";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBox_Result_1);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
-            // 
-            // textBox_Result_1
-            // 
-            resources.ApplyResources(this.textBox_Result_1, "textBox_Result_1");
-            this.textBox_Result_1.Name = "textBox_Result_1";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.textBox_Result_2);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.TabStop = false;
-            // 
-            // textBox_Result_2
-            // 
-            resources.ApplyResources(this.textBox_Result_2, "textBox_Result_2");
-            this.textBox_Result_2.Name = "textBox_Result_2";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.textBox_Result_3);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.TabStop = false;
-            // 
-            // textBox_Result_3
-            // 
-            resources.ApplyResources(this.textBox_Result_3, "textBox_Result_3");
-            this.textBox_Result_3.Name = "textBox_Result_3";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.textBox_Result_4);
-            resources.ApplyResources(this.groupBox8, "groupBox8");
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.TabStop = false;
-            // 
-            // textBox_Result_4
-            // 
-            resources.ApplyResources(this.textBox_Result_4, "textBox_Result_4");
-            this.textBox_Result_4.Name = "textBox_Result_4";
-            // 
-            // buttonEdit4
-            // 
-            resources.ApplyResources(this.buttonEdit4, "buttonEdit4");
-            this.buttonEdit4.Name = "buttonEdit4";
-            this.buttonEdit4.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit4.Properties.Appearance.Font")));
-            this.buttonEdit4.Properties.Appearance.Options.UseFont = true;
-            resources.ApplyResources(serializableAppearanceObject4, "serializableAppearanceObject4");
-            serializableAppearanceObject4.Options.UseBackColor = true;
-            this.buttonEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit4.Properties.Buttons"))), resources.GetString("buttonEdit4.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit4.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit4.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit4.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("buttonEdit4.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit4.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit4.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons11")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit4.Properties.Buttons12"))), resources.GetString("buttonEdit4.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit4.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit4.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit4.Properties.Buttons19"))), resources.GetString("buttonEdit4.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, serializableAppearanceObject5, resources.GetString("buttonEdit4.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit4.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit4.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons24"))))});
-            this.buttonEdit4.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
-            // 
-            // buttonEdit1
-            // 
-            resources.ApplyResources(this.buttonEdit1, "buttonEdit1");
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit1.Properties.Appearance.Font")));
-            this.buttonEdit1.Properties.Appearance.Options.UseFont = true;
-            resources.ApplyResources(serializableAppearanceObject9, "serializableAppearanceObject9");
-            serializableAppearanceObject9.Options.UseBackColor = true;
-            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit1.Properties.Buttons"))), resources.GetString("buttonEdit1.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit1.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit1.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit1.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, resources.GetString("buttonEdit1.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit1.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit1.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons11")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit1.Properties.Buttons12"))), resources.GetString("buttonEdit1.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit1.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit1.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit1.Properties.Buttons19"))), resources.GetString("buttonEdit1.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, serializableAppearanceObject8, serializableAppearanceObject9, serializableAppearanceObject10, resources.GetString("buttonEdit1.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit1.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit1.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons24"))))});
-            this.buttonEdit1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
-            // 
-            // buttonEdit3
-            // 
-            resources.ApplyResources(this.buttonEdit3, "buttonEdit3");
-            this.buttonEdit3.Name = "buttonEdit3";
-            this.buttonEdit3.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit3.Properties.Appearance.Font")));
-            this.buttonEdit3.Properties.Appearance.Options.UseFont = true;
-            resources.ApplyResources(serializableAppearanceObject14, "serializableAppearanceObject14");
-            serializableAppearanceObject14.Options.UseBackColor = true;
-            this.buttonEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit3.Properties.Buttons"))), resources.GetString("buttonEdit3.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit3.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit3.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit3.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, resources.GetString("buttonEdit3.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit3.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit3.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons11")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit3.Properties.Buttons12"))), resources.GetString("buttonEdit3.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit3.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit3.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit3.Properties.Buttons19"))), resources.GetString("buttonEdit3.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject12, serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, resources.GetString("buttonEdit3.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit3.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit3.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons24"))))});
-            this.buttonEdit3.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
-            // 
-            // buttonEdit2
-            // 
-            resources.ApplyResources(this.buttonEdit2, "buttonEdit2");
-            this.buttonEdit2.Name = "buttonEdit2";
-            this.buttonEdit2.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit2.Properties.Appearance.Font")));
-            this.buttonEdit2.Properties.Appearance.Options.UseFont = true;
-            resources.ApplyResources(serializableAppearanceObject19, "serializableAppearanceObject19");
-            serializableAppearanceObject19.Options.UseBackColor = true;
-            this.buttonEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit2.Properties.Buttons"))), resources.GetString("buttonEdit2.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit2.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit2.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit2.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject16, resources.GetString("buttonEdit2.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit2.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit2.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons11")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit2.Properties.Buttons12"))), resources.GetString("buttonEdit2.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit2.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit2.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit2.Properties.Buttons19"))), resources.GetString("buttonEdit2.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, resources.GetString("buttonEdit2.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit2.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit2.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons24"))))});
-            this.buttonEdit2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
-            // 
             // ID
             // 
             resources.ApplyResources(this.ID, "ID");
@@ -2469,9 +2512,8 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dockPanel_LVDS);
             this.Controls.Add(this.dockPanel_422);
-            this.Controls.Add(this.hideContainerBottom);
+            this.Controls.Add(this.dockPanel_LOG);
             this.Controls.Add(this.hideContainerLeft);
             this.Controls.Add(this.hideContainerRight);
             this.Controls.Add(this.ribbonStatusBar1);
@@ -2522,21 +2564,6 @@
             this.dockPanel_AD.ResumeLayout(false);
             this.dockPanel5_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AD)).EndInit();
-            this.hideContainerBottom.ResumeLayout(false);
-            this.dockPanel_LOG.ResumeLayout(false);
-            this.dockPanel1_Container.ResumeLayout(false);
-            this.dockPanel2.ResumeLayout(false);
-            this.dockPanel2_Container.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.dockPanel_RegCtl.ResumeLayout(false);
-            this.controlContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Reg)).EndInit();
-            this.dockPanel_422.ResumeLayout(false);
-            this.dockPanel3_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).EndInit();
             this.dockPanel_LVDS.ResumeLayout(false);
             this.controlContainer1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -2560,6 +2587,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).EndInit();
+            this.dockPanel_LOG.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
+            this.dockPanel2.ResumeLayout(false);
+            this.dockPanel2_Container.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.dockPanel_RegCtl.ResumeLayout(false);
+            this.controlContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Reg)).EndInit();
+            this.dockPanel_422.ResumeLayout(false);
+            this.dockPanel3_Container.ResumeLayout(false);
+            this.dockPanel3_Container.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2792,7 +2834,6 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerBottom;
         private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
         private System.Windows.Forms.DataGridView dataGridView_YC1;
         private System.Windows.Forms.DataGridView dataGridView_YC2;
@@ -2806,6 +2847,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.Button btn_Start422_A;
+        private System.Windows.Forms.Button btn_Send422_A;
+        public System.Windows.Forms.TextBox textBox_Send422_A;
+        public System.Windows.Forms.TextBox textBox_Send422_B;
+        private System.Windows.Forms.Button btn_Start422_B;
+        private System.Windows.Forms.Button btn_Send422_B;
     }
 }
 
