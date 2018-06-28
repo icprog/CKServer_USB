@@ -248,8 +248,6 @@
             this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEdit3 = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEdit2 = new DevExpress.XtraEditors.ButtonEdit();
-            this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -281,6 +279,8 @@
             this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel_422 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.textBox_Send422_B = new System.Windows.Forms.TextBox();
@@ -368,8 +368,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).BeginInit();
-            this.dockPanel_LOG.SuspendLayout();
-            this.dockPanel1_Container.SuspendLayout();
             this.dockPanel2.SuspendLayout();
             this.dockPanel2_Container.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -378,6 +376,8 @@
             this.dockPanel_RegCtl.SuspendLayout();
             this.controlContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Reg)).BeginInit();
+            this.dockPanel_LOG.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
             this.dockPanel_422.SuspendLayout();
             this.dockPanel3_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).BeginInit();
@@ -1959,23 +1959,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit2.Properties.Buttons12"))), resources.GetString("buttonEdit2.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit2.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit2.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit2.Properties.Buttons19"))), resources.GetString("buttonEdit2.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, resources.GetString("buttonEdit2.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit2.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit2.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons24"))))});
             this.buttonEdit2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
             // 
-            // dockPanel_LOG
-            // 
-            this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
-            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
-            this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
-            this.dockPanel_LOG.FloatVertical = true;
-            this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
-            resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
-            this.dockPanel_LOG.Name = "dockPanel_LOG";
-            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(185, 163);
-            // 
-            // dockPanel1_Container
-            // 
-            this.dockPanel1_Container.Controls.Add(this.richTextBox1);
-            resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
-            this.dockPanel1_Container.Name = "dockPanel1_Container";
-            // 
             // dockPanel2
             // 
             this.dockPanel2.Controls.Add(this.dockPanel2_Container);
@@ -2275,6 +2258,23 @@
             this.Column12.Name = "Column12";
             this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dockPanel_LOG
+            // 
+            this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
+            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
+            this.dockPanel_LOG.FloatVertical = true;
+            this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
+            resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
+            this.dockPanel_LOG.Name = "dockPanel_LOG";
+            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(185, 163);
+            // 
+            // dockPanel1_Container
+            // 
+            this.dockPanel1_Container.Controls.Add(this.richTextBox1);
+            resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
+            this.dockPanel1_Container.Name = "dockPanel1_Container";
             // 
             // dockPanel_422
             // 
@@ -2587,8 +2587,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).EndInit();
-            this.dockPanel_LOG.ResumeLayout(false);
-            this.dockPanel1_Container.ResumeLayout(false);
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -2597,6 +2595,8 @@
             this.dockPanel_RegCtl.ResumeLayout(false);
             this.controlContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Reg)).EndInit();
+            this.dockPanel_LOG.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
             this.dockPanel_422.ResumeLayout(false);
             this.dockPanel3_Container.ResumeLayout(false);
             this.dockPanel3_Container.PerformLayout();

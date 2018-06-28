@@ -9,12 +9,13 @@ namespace CKServer
     class Func_AD
     {
         public static DataTable dt_AD = new DataTable();
+        public static int ADNums = 12;
         public static void Init_Table()
         {
             dt_AD.Columns.Add("序号", typeof(Int32));
             dt_AD.Columns.Add("名称", typeof(String));
             dt_AD.Columns.Add("测量值", typeof(double));
-            for (int i = 0; i < 64; i++)
+            for (int i = 0; i < ADNums; i++)
             {
                 DataRow dr = dt_AD.NewRow();
                 dr["序号"] = i + 1;
@@ -45,7 +46,7 @@ namespace CKServer
                     {
                         buf[t] = ADList[_StartPos + 4 + t];
                     }
-                    for (int k = 0; k < (NChans/2); k++)
+                    for (int k = 0; k < ADNums; k++)
                     {
                         int temp = (buf[2 * k] & 0x7f) * 256 + buf[2 * k + 1];
                         double t = (double)(5 * temp) / (double)32767;
@@ -59,8 +60,13 @@ namespace CKServer
                     {
                         ADList.RemoveRange(0, _StartPos + ADFrame);
                     }
+                    return true;
                 }
-                return true;
+                else
+                {
+                    ADList.RemoveRange(0, _StartPos+1);
+                    return false;
+                }
             }
             else
             {

@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration>
-  <add key="OC_Channel_0" value="80" name="OC通道1" />
-  <add key="OC_Channel_1" value="80" name="OC通道2" />
-  <add key="OC_Channel_2" value="80" name="OC通道3" />
-  <add key="OC_Channel_3" value="80" name="OC通道4" />
-  <add key="OC_Channel_4" value="80" name="OC通道5" />
-  <add key="OC_Channel_5" value="80" name="OC通道6" />
-  <add key="OC_Channel_6" value="80" name="OC通道7" />
-  <add key="OC_Channel_7" value="80" name="OC通道8" />
-  <add key="OC_Channel_8" value="80" name="OC通道9" />
-  <add key="OC_Channel_9" value="80" name="OC通道10" />
-  <add key="OC_Channel_10" value="80" name="OC通道11" />
-  <add key="OC_Channel_11" value="80" name="OC通道12" />
-  <add key="OC_Channel_12" value="80" name="OC通道13" />
-  <add key="OC_Channel_13" value="80" name="OC通道14" />
-  <add key="OC_Channel_14" value="80" name="OC通道15" />
-  <add key="OC_Channel_15" value="80" name="OC通道16" />
-  <add key="OC_Channel_16" value="80" name="OC通道17" />
-  <add key="OC_Channel_17" value="80" name="OC通道18" />
-  <add key="OC_Channel_18" value="80" name="OC通道19" />
-  <add key="OC_Channel_19" value="80" name="OC通道20" />
-  <add key="OC_Channel_20" value="80" name="OC通道21" />
-  <add key="OC_Channel_21" value="80" name="OC通道22" />
+  <add key="OC_Channel_0" value="80" name="数管计算机开A开B"/>
+  <add key="OC_Channel_1" value="80" name="数管计算机开A关B"/>
+  <add key="OC_Channel_2" value="80" name="数管计算机关A开B"/>
+  <add key="OC_Channel_3" value="80" name="数管计算机赋A权"/>
+  <add key="OC_Channel_4" value="80" name="数管计算机赋B权"/>
+  <add key="OC_Channel_5" value="80" name="数管计算机准自主切换"/>
+  <add key="OC_Channel_6" value="80" name="数管计算机禁自主切换"/>
+  <add key="OC_Channel_7" value="80" name="数管计算机准SRAM在轨编程"/>
+  <add key="OC_Channel_8" value="80" name="数管计算机禁SRAM在轨编程"/>
+  <add key="OC_Channel_9" value="80" name="数管计算机准EEPROM在轨编程"/>
+  <add key="OC_Channel_10" value="80" name="数管计算机禁EEPROM在轨编程"/>
+  <add key="OC_Channel_11" value="80" name="数管计算机开A开B"/>
+  <add key="OC_Channel_12" value="80" name="数管计算机开A关B"/>
+  <add key="OC_Channel_13" value="80" name="数管计算机开B关A"/>
+  <add key="OC_Channel_14" value="80" name="数管计算机准自主切换"/>
+  <add key="OC_Channel_15" value="80" name="数管计算机禁自主切换"/>
+  <add key="OC_Channel_16" value="80" name="数管计算机存储单元开A开B"/>
+  <add key="OC_Channel_17" value="80" name="数管计算机存储单元开A关B"/>
+  <add key="OC_Channel_18" value="80" name="数管计算机存储单元关A开B"/>
+  <add key="OC_Channel_19" value="80" name="数管计算机存储单元关A关B"/>
+  <add key="OC_Channel_20" value="80" name="备用指令1"/>
+  <add key="OC_Channel_21" value="80" name="备用指令2"/>
   <add key="OC_Channel_22" value="80" name="OC通道23" />
   <add key="OC_Channel_23" value="80" name="OC通道24" />
   <add key="OC_Channel_24" value="80" name="OC通道25" />
@@ -32,4 +32,491 @@
   <add key="OC_Channel_29" value="80" name="OC通道30" />
   <add key="OC_Channel_30" value="80" name="OC通道31" />
   <add key="OC_Channel_31" value="80" name="OC通道32" />
- </configuration>
+
+  <OCborad_in1 key="OC_Channel_0" name="助推器蓄电池母线1转电开关接通"/>
+  <OCborad_in1 key="OC_Channel_1" name="助推器蓄电池母线1转电开关接通"/>
+  <OCborad_in1 key="OC_Channel_2" name="助推器蓄电池母线2转电开关接通"/>
+  <OCborad_in1 key="OC_Channel_3" name="助推器蓄电池母线2转电开关接通"/>
+  <OCborad_in1 key="OC_Channel_4" name="助推器综合控制单元主机开"/>
+  <OCborad_in1 key="OC_Channel_5" name="助推器综合控制单元主机开"/>
+  <OCborad_in1 key="OC_Channel_6" name="助推器综合控制单元主机关"/>
+  <OCborad_in1 key="OC_Channel_7" name="助推器综合控制单元主机关"/>
+  <OCborad_in1 key="OC_Channel_8" name="热刀安全开关1接通"/>
+  <OCborad_in1 key="OC_Channel_9" name="热刀安全开关1接通"/>
+  <OCborad_in1 key="OC_Channel_10" name="热刀安全开关2接通"/>
+  <OCborad_in1 key="OC_Channel_11" name="热刀安全开关2接通"/>
+  <OCborad_in1 key="OC_Channel_12" name="热刀安全开关3接通"/>
+  <OCborad_in1 key="OC_Channel_13" name="热刀安全开关3接通"/>
+  <OCborad_in1 key="OC_Channel_14" name="分离插头安全开关接通"/>
+  <OCborad_in1 key="OC_Channel_15" name="分离插头安全开关接通"/>
+  <OCborad_in1 key="OC_Channel_16" name="助推器综合控制单元电磁阀驱动加电"/>
+  <OCborad_in1 key="OC_Channel_17" name="助推器综合控制单元电磁阀驱动加电"/>
+  <OCborad_in1 key="OC_Channel_18" name="助推器综合控制单元电磁阀驱动断电"/>
+  <OCborad_in1 key="OC_Channel_19" name="助推器综合控制单元电磁阀驱动断电"/>
+  <OCborad_in1 key="OC_Channel_20" name="1A控制配电12加电"/>
+  <OCborad_in1 key="OC_Channel_21" name="1A控制配电12加电"/>
+  <OCborad_in1 key="OC_Channel_22" name="1A控制配电7隔离继电器加电"/>
+  <OCborad_in1 key="OC_Channel_23" name="1A控制配电7隔离继电器加电"/>
+  <OCborad_in1 key="OC_Channel_24" name="智慧星供电接通"/>
+  <OCborad_in1 key="OC_Channel_25" name="智慧星供电接通"/>
+  <OCborad_in1 key="OC_Channel_26" name="智慧星供电断开"/>
+  <OCborad_in1 key="OC_Channel_27" name="智慧星供电断开"/>
+  <OCborad_in1 key="OC_Channel_28" name="刚性臂中央控制器加电1"/>
+  <OCborad_in1 key="OC_Channel_29" name="刚性臂中央控制器加电1"/>
+  <OCborad_in1 key="OC_Channel_30" name="刚性臂中央控制器加电2"/>
+  <OCborad_in1 key="OC_Channel_31" name="刚性臂中央控制器加电2"/>
+  <OCborad_in1 key="OC_Channel_32" name="电推进管理器阀加电"/>
+  <OCborad_in1 key="OC_Channel_33" name="电推进管理器阀加电"/>
+  <OCborad_in1 key="OC_Channel_34" name="S对地功放a加电"/>
+  <OCborad_in1 key="OC_Channel_35" name="S对地功放a加电"/>
+  <OCborad_in1 key="OC_Channel_36" name="S对地功放b加电"/>
+  <OCborad_in1 key="OC_Channel_37" name="S对地功放b加电"/>
+  <OCborad_in1 key="OC_Channel_38" name="S中继功放a加电"/>
+  <OCborad_in1 key="OC_Channel_39" name="S中继功放a加电"/>
+  <OCborad_in1 key="OC_Channel_40" name="助推器综合控制单元DC/C42:C101DC加电"/>
+  <OCborad_in1 key="OC_Channel_41" name="助推器综合控制单元DC/DC加电"/>
+  <OCborad_in1 key="OC_Channel_42" name="重构探测相机b加电"/>
+  <OCborad_in1 key="OC_Channel_43" name="重构探测相机b加电"/>
+  <OCborad_in1 key="OC_Channel_44" name="电推进管理器DC/DC加电"/>
+  <OCborad_in1 key="OC_Channel_45" name="电推进管理器DC/DC加电"/>
+  <OCborad_in1 key="OC_Channel_46" name="力学采集单元加电"/>
+  <OCborad_in1 key="OC_Channel_47" name="力学采集单元加电"/>
+  <OCborad_in1 key="OC_Channel_48" name="重构探测相机a加电"/>
+  <OCborad_in1 key="OC_Channel_49" name="重构探测相机a加电"/>
+  <OCborad_in1 key="OC_Channel_50" name="1A控制配电6接通"/>
+  <OCborad_in1 key="OC_Channel_51" name="1A控制配电6接通"/>
+  <OCborad_in1 key="OC_Channel_52" name="助推器综合控制单元DC/DC隔离继电器加电"/>
+  <OCborad_in1 key="OC_Channel_53" name="助推器综合控制单元DC/DC隔离继电器加电"/>
+  <OCborad_in1 key="OC_Channel_54" name="8A控制配电4加电"/>
+  <OCborad_in1 key="OC_Channel_55" name="8A控制配电4加电"/>
+  <OCborad_in1 key="OC_Channel_56" name="8A控制配电5加电"/>
+  <OCborad_in1 key="OC_Channel_57" name="8A控制配电5加电"/>
+  <OCborad_in1 key="OC_Channel_58" name="8A控制配电6加电"/>
+  <OCborad_in1 key="OC_Channel_59" name="8A控制配电6加电"/>
+  <OCborad_in1 key="OC_Channel_60" name="S中继功放b加电"/>
+  <OCborad_in1 key="OC_Channel_61" name="S中继功放b加电"/>
+  <OCborad_in1 key="OC_Channel_62" name="3A控制配电5加电"/>
+  <OCborad_in1 key="OC_Channel_63" name="3A控制配电5加电"/>
+  <OCborad_in1 key="OC_Channel_64" name="3A控制配电6加点"/>
+  <OCborad_in1 key="OC_Channel_65" name="3A控制配电6加点"/>
+  <OCborad_in1 key="OC_Channel_66" name="1A控制配电7加电"/>
+  <OCborad_in1 key="OC_Channel_67" name="1A控制配电7加电"/>
+  <OCborad_in1 key="OC_Channel_68" name="1A控制配电8加电"/>
+  <OCborad_in1 key="OC_Channel_69" name="1A控制配电8加电"/>
+  <OCborad_in1 key="OC_Channel_70" name="1A控制配电9加电"/>
+  <OCborad_in1 key="OC_Channel_71" name="1A控制配电9加电"/>
+  <OCborad_in1 key="OC_Channel_72" name="1A控制配电10加电"/>
+  <OCborad_in1 key="OC_Channel_73" name="1A控制配电10加电"/>
+  <OCborad_in1 key="OC_Channel_74" name="1A控制配电11加电"/>
+  <OCborad_in1 key="OC_Channel_75" name="1A控制配电11加电"/>
+  <OCborad_in1 key="OC_Channel_76" name="总体电路控制器B主机开"/>
+  <OCborad_in1 key="OC_Channel_77" name="总体电路控制器B主机开"/>
+  <OCborad_in1 key="OC_Channel_78" name="总体电路控制器B主机关"/>
+  <OCborad_in1 key="OC_Channel_79" name="总体电路控制器B主机关"/>
+  <OCborad_in1 key="OC_Channel_80" name="总体电路控制器B备机开"/>
+  <OCborad_in1 key="OC_Channel_81" name="总体电路控制器B备机开"/>
+  <OCborad_in1 key="OC_Channel_82" name="总体电路控制器B备机关"/>
+  <OCborad_in1 key="OC_Channel_83" name="总体电路控制器B备机关"/>
+  <OCborad_in1 key="OC_Channel_84" name="助推器综合控制单元备机开"/>
+  <OCborad_in1 key="OC_Channel_85" name="助推器综合控制单元备机开"/>
+  <OCborad_in1 key="OC_Channel_86" name="助推器综合控制单元备机关"/>
+  <OCborad_in1 key="OC_Channel_87" name="助推器综合控制单元备机关"/>
+  <OCborad_in1 key="OC_Channel_88" name="指令45"/>
+  <OCborad_in1 key="OC_Channel_89" name="指令45"/>
+  <OCborad_in1 key="OC_Channel_90" name="指令46"/>
+  <OCborad_in1 key="OC_Channel_91" name="指令46"/>
+  <OCborad_in1 key="OC_Channel_92" name="指令47"/>
+  <OCborad_in1 key="OC_Channel_93" name="指令47"/>
+  <OCborad_in1 key="OC_Channel_94" name="指令48"/>
+  <OCborad_in1 key="OC_Channel_95" name="指令48"/>
+  <OCborad_in1 key="OC_Channel_96" name="重要指令1"/>
+  <OCborad_in1 key="OC_Channel_97" name="重要指令2"/>
+  <OCborad_in1 key="OC_Channel_98" name="重要指令3"/>
+  <OCborad_in1 key="OC_Channel_99" name="重要指令4"/>
+  <OCborad_in1 key="OC_Channel_100" name="重要指令5"/>
+  <OCborad_in1 key="OC_Channel_101" name="重要指令6"/>
+  <OCborad_in1 key="OC_Channel_102" name="重要指令7"/>
+  <OCborad_in1 key="OC_Channel_103" name="重要指令8"/>
+  <OCborad_in1 key="OC_Channel_104" name="重要指令9"/>
+  <OCborad_in1 key="OC_Channel_105" name="重要指令10"/>
+  <OCborad_in1 key="OC_Channel_106" name="重要指令11"/>
+  <OCborad_in1 key="OC_Channel_107" name="重要指令12"/>
+  <OCborad_in1 key="OC_Channel_108" name="重要指令13"/>
+  <OCborad_in1 key="OC_Channel_109" name="重要指令14"/>
+  <OCborad_in1 key="OC_Channel_110" name="重要指令15"/>
+  <OCborad_in1 key="OC_Channel_111" name="重要指令16"/>
+  <OCborad_in1 key="OC_Channel_112" name="保留(未使用)"/>
+  <OCborad_in1 key="OC_Channel_113" name="保留(未使用)"/>
+  <OCborad_in1 key="OC_Channel_114" name="保留(未使用)"/>
+  <OCborad_in1 key="OC_Channel_115" name="保留(未使用)"/>
+  <OCborad_in1 key="OC_Channel_116" name="保留(未使用)"/>
+  <OCborad_in1 key="OC_Channel_117" name="保留(未使用)"/>
+  <OCborad_in1 key="OC_Channel_118" name="保留(未使用)"/>
+  <OCborad_in1 key="OC_Channel_119" name="助推器自锁阀供电开"/>
+  <OCborad_in1 key="OC_Channel_120" name="助推器自锁阀供电开"/>
+  <OCborad_in1 key="OC_Channel_121" name="助推器自锁阀供电关"/>
+  <OCborad_in1 key="OC_Channel_122" name="助推器自锁阀供电关"/>
+  <OCborad_in1 key="OC_Channel_123" name="救援器主份电磁阀供电开"/>
+  <OCborad_in1 key="OC_Channel_124" name="救援器主份电磁阀供电开"/>
+  <OCborad_in1 key="OC_Channel_125" name="救援器主份电磁阀供电关"/>
+  <OCborad_in1 key="OC_Channel_126" name="救援器主份电磁阀供电关"/>
+  <OCborad_in1 key="OC_Channel_127" name="推进线路盒A开B关"/>
+  <OCborad_in1 key="OC_Channel_128" name="推进线路盒A开B关"/>
+  <OCborad_in1 key="OC_Channel_129" name="救援器大流量自锁阀LVj12,LVj13开"/>
+  <OCborad_in1 key="OC_Channel_130" name="救援器大流量自锁阀LVj12,LVj13开"/>
+  <OCborad_in1 key="OC_Channel_131" name="救援器大流量自锁阀LVj12,LVj13关"/>
+  <OCborad_in1 key="OC_Channel_132" name="救援器大流量自锁阀LVj12,LVj13关"/>
+  <OCborad_in1 key="OC_Channel_133" name="救援器大流量自锁阀LVj14,LVj15开"/>
+  <OCborad_in1 key="OC_Channel_134" name="救援器大流量自锁阀LVj14,LVj15开"/>
+  <OCborad_in1 key="OC_Channel_135" name="救援器大流量自锁阀LVj14,LVj15关"/>
+  <OCborad_in1 key="OC_Channel_136" name="救援器大流量自锁阀LVj14,LVj15关"/>
+  <OCborad_in1 key="OC_Channel_137" name="救援器高压自锁阀LVj1开"/>
+  <OCborad_in1 key="OC_Channel_138" name="救援器高压自锁阀LVj1开"/>
+  <OCborad_in1 key="OC_Channel_139" name="救援器高压自锁阀LVj2开"/>
+  <OCborad_in1 key="OC_Channel_140" name="救援器高压自锁阀LVj2开"/>
+  <OCborad_in1 key="OC_Channel_141" name="救援器大流量自锁阀LVj4,LVj16开"/>
+  <OCborad_in1 key="OC_Channel_142" name="救援器大流量自锁阀LVj4,LVj16开"/>
+  <OCborad_in1 key="OC_Channel_143" name="救援器大流量自锁阀LVj5,LVj17开"/>
+  <OCborad_in1 key="OC_Channel_144" name="救援器大流量自锁阀LVj5,LVj17开"/>
+  <OCborad_in1 key="OC_Channel_145" name="救援器大流量自锁阀LVj8,LVj10开"/>
+  <OCborad_in1 key="OC_Channel_146" name="救援器大流量自锁阀LVj8,LVj10开"/>
+  <OCborad_in1 key="OC_Channel_147" name="救援器大流量自锁阀LVj9,LVj11关"/>
+  <OCborad_in1 key="OC_Channel_148" name="救援器大流量自锁阀LVj9,LVj11关"/>
+  <OCborad_in1 key="OC_Channel_149" name="救援器自锁阀供电开"/>
+  <OCborad_in1 key="OC_Channel_150" name="救援器自锁阀供电开"/>
+  <OCborad_in1 key="OC_Channel_151" name="救援器自锁阀供电关"/>
+  <OCborad_in1 key="OC_Channel_152" name="救援器自锁阀供电关"/>
+  <OCborad_in1 key="OC_Channel_153" name="开助力器自锁阀LVt8"/>
+  <OCborad_in1 key="OC_Channel_154" name="开助力器自锁阀LVt8"/>
+  <OCborad_in1 key="OC_Channel_155" name="开助力器自锁阀LVt10"/>
+  <OCborad_in1 key="OC_Channel_156" name="开助力器自锁阀LVt10"/>
+  <OCborad_in1 key="OC_Channel_157" name="开助力器自锁阀LVt9"/>
+  <OCborad_in1 key="OC_Channel_158" name="开助力器自锁阀LVt9"/>
+  <OCborad_in1 key="OC_Channel_159" name="开助力器自锁阀LVt11"/>
+  <OCborad_in1 key="OC_Channel_160" name="开助力器自锁阀LVt11"/>
+  <OCborad_in1 key="OC_Channel_161" name="关助力器自锁阀LVt8-LVt11"/>
+  <OCborad_in2 key="OC_Channel_0" name="8A控制配电4加电"/>
+  <OCborad_in2 key="OC_Channel_1" name="8A控制配电4加电"/>
+  <OCborad_in2 key="OC_Channel_2" name="8A控制配电5加电"/>
+  <OCborad_in2 key="OC_Channel_3" name="8A控制配电5加电"/>
+  <OCborad_in2 key="OC_Channel_4" name="恒流源控制器31V加电"/>
+  <OCborad_in2 key="OC_Channel_5" name="恒流源控制器31V加电"/>
+  <OCborad_in2 key="OC_Channel_6" name="收口装置备份加电"/>
+  <OCborad_in2 key="OC_Channel_7" name="收口装置备份加电"/>
+  <OCborad_in2 key="OC_Channel_8" name="星网控制器电机主份加电"/>
+  <OCborad_in2 key="OC_Channel_9" name="星网控制器电机主份加电"/>
+  <OCborad_in2 key="OC_Channel_10" name="星网控制器电机备份加电"/>
+  <OCborad_in2 key="OC_Channel_11" name="星网控制器电机备份加电"/>
+  <OCborad_in2 key="OC_Channel_12" name="1A控制配电7加电"/>
+  <OCborad_in2 key="OC_Channel_13" name="1A控制配电7加电"/>
+  <OCborad_in2 key="OC_Channel_14" name="1A控制配电8加电"/>
+  <OCborad_in2 key="OC_Channel_15" name="1A控制配电8加电"/>
+  <OCborad_in2 key="OC_Channel_16" name="波导开关加电"/>
+  <OCborad_in2 key="OC_Channel_17" name="波导开关加电"/>
+  <OCborad_in2 key="OC_Channel_18" name="1A控制配电10加电"/>
+  <OCborad_in2 key="OC_Channel_19" name="1A控制配电10加电"/>
+  <OCborad_in2 key="OC_Channel_20" name="1A控制配电11加电"/>
+  <OCborad_in2 key="OC_Channel_21" name="1A控制配电11加电"/>
+  <OCborad_in2 key="OC_Channel_22" name="热刀安全开关1接通"/>
+  <OCborad_in2 key="OC_Channel_23" name="热刀安全开关1接通"/>
+  <OCborad_in2 key="OC_Channel_24" name="热刀安全开关2接通"/>
+  <OCborad_in2 key="OC_Channel_25" name="热刀安全开关2接通"/>
+  <OCborad_in2 key="OC_Channel_26" name="热刀安全开关3接通"/>
+  <OCborad_in2 key="OC_Channel_27" name="热刀安全开关3接通"/>
+  <OCborad_in2 key="OC_Channel_28" name="分离插头安全开关接通"/>
+  <OCborad_in2 key="OC_Channel_29" name="分离插头安全开关接通"/>
+  <OCborad_in2 key="OC_Channel_30" name="火工品起爆遥测复位"/>
+  <OCborad_in2 key="OC_Channel_31" name="火工品起爆遥测复位"/>
+  <OCborad_in2 key="OC_Channel_32" name="1A控制配电12加电"/>
+  <OCborad_in2 key="OC_Channel_33" name="1A控制配电12加电"/>
+  <OCborad_in2 key="OC_Channel_34" name="1A控制配电7隔离继电器加电"/>
+  <OCborad_in2 key="OC_Channel_35" name="1A控制配电7隔离继电器加电"/>
+  <OCborad_in2 key="OC_Channel_36" name="数传发射机功放a加电"/>
+  <OCborad_in2 key="OC_Channel_37" name="数传发射机功放a加电"/>
+  <OCborad_in2 key="OC_Channel_38" name="数传发射机功放b加电"/>
+  <OCborad_in2 key="OC_Channel_39" name="数传发射机功放b加电"/>
+  <OCborad_in2 key="OC_Channel_40" name="柔性臂驱动控制器驱动电源加电"/>
+  <OCborad_in2 key="OC_Channel_41" name="柔性臂驱动控制器驱动电源加电"/>
+  <OCborad_in2 key="OC_Channel_42" name="收口装置主份加电"/>
+  <OCborad_in2 key="OC_Channel_43" name="收口装置主份加电"/>
+  <OCborad_in2 key="OC_Channel_44" name="数传终端机A一次电源加电"/>
+  <OCborad_in2 key="OC_Channel_45" name="数传终端机A一次电源加电"/>
+  <OCborad_in2 key="OC_Channel_46" name="数传终端机B一次电源加电"/>
+  <OCborad_in2 key="OC_Channel_47" name="数传终端机B一次电源加电"/>
+  <OCborad_in2 key="OC_Channel_48" name="1A控制配电器1接通（预留）"/>
+  <OCborad_in2 key="OC_Channel_49" name="1A控制配电器1接通（预留）"/>
+  <OCborad_in2 key="OC_Channel_50" name="发射机前级A加电"/>
+  <OCborad_in2 key="OC_Channel_51" name="发射机前级A加电"/>
+  <OCborad_in2 key="OC_Channel_52" name="发射机前级B加电"/>
+  <OCborad_in2 key="OC_Channel_53" name="发射机前级B加电"/>
+  <OCborad_in2 key="OC_Channel_54" name="星网控制器主机加电"/>
+  <OCborad_in2 key="OC_Channel_55" name="星网控制器主机加电"/>
+  <OCborad_in2 key="OC_Channel_56" name="星网控制器备机加电"/>
+  <OCborad_in2 key="OC_Channel_57" name="星网控制器备机加电"/>
+  <OCborad_in2 key="OC_Channel_58" name="柔性臂驱动控制器控制电源加电"/>
+  <OCborad_in2 key="OC_Channel_59" name="柔性臂驱动控制器控制电源加电"/>
+  <OCborad_in2 key="OC_Channel_60" name="1A控制配电器1隔离继电器接通（预留）"/>
+  <OCborad_in2 key="OC_Channel_61" name="1A控制配电器1隔离继电器接通（预留）"/>
+  <OCborad_in2 key="OC_Channel_62" name="总体电路控制器A主机开"/>
+  <OCborad_in2 key="OC_Channel_63" name="总体电路控制器A主机开"/>
+  <OCborad_in2 key="OC_Channel_64" name="总体电路控制器A主机关"/>
+  <OCborad_in2 key="OC_Channel_65" name="总体电路控制器A主机关"/>
+  <OCborad_in2 key="OC_Channel_66" name="总体电路控制器A备机开"/>
+  <OCborad_in2 key="OC_Channel_67" name="总体电路控制器A备机开"/>
+  <OCborad_in2 key="OC_Channel_68" name="总体电路控制器A备机关"/>
+  <OCborad_in2 key="OC_Channel_69" name="总体电路控制器A备机关"/>
+  <OCborad_in2 key="OC_Channel_70" name="功率处理单元主份通"/>
+  <OCborad_in2 key="OC_Channel_71" name="功率处理单元主份通"/>
+  <OCborad_in2 key="OC_Channel_72" name="功率处理单元备份通"/>
+  <OCborad_in2 key="OC_Channel_73" name="功率处理单元备份通"/>
+  <OCborad_in2 key="OC_Channel_74" name="功率处理单元主备份断"/>
+  <OCborad_in2 key="OC_Channel_75" name="功率处理单元主备份断"/>
+  <OCborad_in2 key="OC_Channel_76" name="电推进管理器主份通"/>
+  <OCborad_in2 key="OC_Channel_77" name="电推进管理器主份通"/>
+  <OCborad_in2 key="OC_Channel_78" name="电推进管理器主份通"/>
+  <OCborad_in2 key="OC_Channel_79" name="电推进管理器主份通"/>
+  <OCborad_in2 key="OC_Channel_80" name="电推进管理器主备份通断"/>
+  <OCborad_in2 key="OC_Channel_81" name="电推进管理器主备份通断"/>
+  <OCborad_in2 key="OC_Channel_82" name="燃料补加紧急停止"/>
+  <OCborad_in2 key="OC_Channel_83" name="燃料补加紧急停止"/>
+  <OCborad_in2 key="OC_Channel_84" name="氧化剂补加紧急停止"/>
+  <OCborad_in2 key="OC_Channel_85" name="氧化剂补加紧急停止"/>
+  <OCborad_in2 key="OC_Channel_86" name="电推进紧急关机"/>
+  <OCborad_in2 key="OC_Channel_87" name="电推进紧急关机"/>
+  <OCborad_in2 key="OC_Channel_88" name="指令93"/>
+  <OCborad_in2 key="OC_Channel_89" name="指令93"/>
+  <OCborad_in2 key="OC_Channel_90" name="指令94"/>
+  <OCborad_in2 key="OC_Channel_91" name="指令94"/>
+  <OCborad_in2 key="OC_Channel_92" name="指令95"/>
+  <OCborad_in2 key="OC_Channel_93" name="指令95"/>
+  <OCborad_in2 key="OC_Channel_94" name="指令96"/>
+  <OCborad_in2 key="OC_Channel_95" name="指令96"/>
+  <OCborad_in2 key="OC_Channel_96" name="重要指令17"/>
+  <OCborad_in2 key="OC_Channel_97" name="重要指令18"/>
+  <OCborad_in2 key="OC_Channel_98" name="重要指令19"/>
+  <OCborad_in2 key="OC_Channel_99" name="重要指令20"/>
+  <OCborad_in2 key="OC_Channel_100" name="重要指令21"/>
+  <OCborad_in2 key="OC_Channel_101" name="重要指令22"/>
+  <OCborad_in2 key="OC_Channel_102" name="重要指令23"/>
+  <OCborad_in2 key="OC_Channel_103" name="重要指令24"/>
+  <OCborad_in2 key="OC_Channel_104" name="重要指令25"/>
+  <OCborad_in2 key="OC_Channel_105" name="重要指令26"/>
+  <OCborad_in2 key="OC_Channel_106" name="重要指令27"/>
+  <OCborad_in2 key="OC_Channel_107" name="重要指令28"/>
+  <OCborad_in2 key="OC_Channel_108" name="重要指令29"/>
+  <OCborad_in2 key="OC_Channel_109" name="重要指令30"/>
+  <OCborad_in2 key="OC_Channel_110" name="重要指令31"/>
+  <OCborad_in2 key="OC_Channel_111" name="重要指令32"/>
+  <OCborad_in2 key="OC_Channel_112" name="保留(未使用)"/>
+  <OCborad_in2 key="OC_Channel_113" name="保留(未使用)"/>
+  <OCborad_in2 key="OC_Channel_114" name="保留(未使用)"/>
+  <OCborad_in2 key="OC_Channel_115" name="保留(未使用)"/>
+  <OCborad_in2 key="OC_Channel_116" name="保留(未使用)"/>
+  <OCborad_in2 key="OC_Channel_117" name="保留(未使用)"/>
+  <OCborad_in2 key="OC_Channel_118" name="保留(未使用)"/>
+  <OCborad_in2 key="OC_Channel_119" name="关助力器自锁阀LVt8~LVt11"/>
+  <OCborad_in2 key="OC_Channel_120" name="开助力器自锁阀LVt1"/>
+  <OCborad_in2 key="OC_Channel_121" name="开助力器自锁阀LVt1"/>
+  <OCborad_in2 key="OC_Channel_122" name="开助力器自锁阀LVt2，LVt4"/>
+  <OCborad_in2 key="OC_Channel_123" name="开助力器自锁阀LVt2，LVt4"/>
+  <OCborad_in2 key="OC_Channel_124" name="开助力器自锁阀LVt3，LVt5"/>
+  <OCborad_in2 key="OC_Channel_125" name="开助力器自锁阀LVt3，LVt5"/>
+  <OCborad_in2 key="OC_Channel_126" name="推进线路盒A关B开"/>
+  <OCborad_in2 key="OC_Channel_127" name="推进线路盒A关B开"/>
+  <OCborad_in2 key="OC_Channel_128" name="助推器490N发动机自锁阀开（主指令）"/>
+  <OCborad_in2 key="OC_Channel_129" name="助推器490N发动机自锁阀开（主指令）"/>
+  <OCborad_in2 key="OC_Channel_130" name="助推器490N发动机自锁阀关（主指令）"/>
+  <OCborad_in2 key="OC_Channel_131" name="助推器490N发动机自锁阀关（主指令）"/>
+  <OCborad_in2 key="OC_Channel_132" name="助推器490N发动机自锁阀开（备指令）"/>
+  <OCborad_in2 key="OC_Channel_133" name="助推器490N发动机自锁阀开（备指令）"/>
+  <OCborad_in2 key="OC_Channel_134" name="助推器490N发动机自锁阀关（备指令）"/>
+  <OCborad_in2 key="OC_Channel_135" name="助推器490N发动机自锁阀关（备指令）"/>
+  <OCborad_in2 key="OC_Channel_136" name="指令175"/>
+  <OCborad_in2 key="OC_Channel_137" name="指令175"/>
+  <OCborad_in2 key="OC_Channel_138" name="放电开关AB接通"/>
+  <OCborad_in2 key="OC_Channel_139" name="放电开关AB接通"/>
+  <OCborad_in2 key="OC_Channel_140" name="放电开关A断开"/>
+  <OCborad_in2 key="OC_Channel_141" name="放电开关A断开"/>
+  <OCborad_in2 key="OC_Channel_142" name="放电开关A断开"/>
+  <OCborad_in2 key="OC_Channel_143" name="放电开关A断开"/>
+  <OCborad_in2 key="OC_Channel_144" name="电源控制器下位机主开备关"/>
+  <OCborad_in2 key="OC_Channel_145" name="电源控制器下位机主开备关"/>
+  <OCborad_in2 key="OC_Channel_146" name="电源控制器下位机备开主关"/>
+  <OCborad_in2 key="OC_Channel_147" name="电源控制器下位机备开主关"/>
+  <OCborad_in2 key="OC_Channel_148" name="电源控制器下位机复位"/>
+  <OCborad_in2 key="OC_Channel_149" name="电源控制器下位机复位"/>
+  <OCborad_in2 key="OC_Channel_150" name="蓄电池a欠压保护使能"/>
+  <OCborad_in2 key="OC_Channel_151" name="蓄电池a欠压保护使能"/>
+  <OCborad_in2 key="OC_Channel_152" name="蓄电池b欠压保护使能"/>
+  <OCborad_in2 key="OC_Channel_153" name="蓄电池b欠压保护使能"/>
+  <OCborad_in2 key="OC_Channel_154" name="A组变换器加电指令"/>
+  <OCborad_in2 key="OC_Channel_155" name="A组变换器加电指令"/>
+  <OCborad_in2 key="OC_Channel_156" name="B组变换器加电指令"/>
+  <OCborad_in2 key="OC_Channel_157" name="B组变换器加电指令"/>
+  <OCborad_in2 key="OC_Channel_158" name="功率处理单元主份配电加电指令"/>
+  <OCborad_in2 key="OC_Channel_159" name="功率处理单元主份配电加电指令"/>
+  <OCborad_in2 key="OC_Channel_160" name="功率处理单元主份配电断电指令"/>
+  <OCborad_in2 key="OC_Channel_161" name="功率处理单元主份配电断电指令"/>
+  <OCborad_in3 key="OC_Channel_0" name="GNC计算机开A开B"/>
+  <OCborad_in3 key="OC_Channel_1" name="GNC计算机开A开B"/>
+  <OCborad_in3 key="OC_Channel_2" name="GNC计算机开A关B"/>
+  <OCborad_in3 key="OC_Channel_3" name="GNC计算机开A关B"/>
+  <OCborad_in3 key="OC_Channel_4" name="GNC计算机关A开B"/>
+  <OCborad_in3 key="OC_Channel_5" name="GNC计算机关A开B"/>
+  <OCborad_in3 key="OC_Channel_6" name="GNC计算机赋A权"/>
+  <OCborad_in3 key="OC_Channel_7" name="GNC计算机赋A权"/>
+  <OCborad_in3 key="OC_Channel_8" name="GNC计算机赋B权"/>
+  <OCborad_in3 key="OC_Channel_9" name="GNC计算机赋B权"/>
+  <OCborad_in3 key="OC_Channel_10" name="GNC计算机准自主切换"/>
+  <OCborad_in3 key="OC_Channel_11" name="GNC计算机准自主切换"/>
+  <OCborad_in3 key="OC_Channel_12" name="GNC计算机禁自主切换"/>
+  <OCborad_in3 key="OC_Channel_13" name="GNC计算机禁自主切换"/>
+  <OCborad_in3 key="OC_Channel_14" name="指令104"/>
+  <OCborad_in3 key="OC_Channel_15" name="指令104"/>
+  <OCborad_in3 key="OC_Channel_16" name="指令105"/>
+  <OCborad_in3 key="OC_Channel_17" name="指令105"/>
+  <OCborad_in3 key="OC_Channel_18" name="GNC计算机准SRAM在轨编程"/>
+  <OCborad_in3 key="OC_Channel_19" name="GNC计算机准SRAM在轨编程"/>
+  <OCborad_in3 key="OC_Channel_20" name="GNC计算机禁SRAM在轨编程"/>
+  <OCborad_in3 key="OC_Channel_21" name="GNC计算机禁SRAM在轨编程"/>
+  <OCborad_in3 key="OC_Channel_22" name="GNC执行机A开B关"/>
+  <OCborad_in3 key="OC_Channel_23" name="GNC执行机A开B关"/>
+  <OCborad_in3 key="OC_Channel_24" name="GNC执行机A关B开"/>
+  <OCborad_in3 key="OC_Channel_25" name="GNC执行机A关B开"/>
+  <OCborad_in3 key="OC_Channel_26" name="反作用飞轮a开"/>
+  <OCborad_in3 key="OC_Channel_27" name="反作用飞轮a开"/>
+  <OCborad_in3 key="OC_Channel_28" name="反作用飞轮a关"/>
+  <OCborad_in3 key="OC_Channel_29" name="反作用飞轮a关"/>
+  <OCborad_in3 key="OC_Channel_30" name="反作用飞轮b开"/>
+  <OCborad_in3 key="OC_Channel_31" name="反作用飞轮b开"/>
+  <OCborad_in3 key="OC_Channel_32" name="反作用飞轮b关"/>
+  <OCborad_in3 key="OC_Channel_33" name="反作用飞轮b关"/>
+  <OCborad_in3 key="OC_Channel_34" name="反作用飞轮c开"/>
+  <OCborad_in3 key="OC_Channel_35" name="反作用飞轮c开"/>
+  <OCborad_in3 key="OC_Channel_36" name="反作用飞轮c关"/>
+  <OCborad_in3 key="OC_Channel_37" name="反作用飞轮c关"/>
+  <OCborad_in3 key="OC_Channel_38" name="反作用飞轮d开"/>
+  <OCborad_in3 key="OC_Channel_39" name="反作用飞轮d开"/>
+  <OCborad_in3 key="OC_Channel_40" name="反作用飞轮d关"/>
+  <OCborad_in3 key="OC_Channel_41" name="反作用飞轮d关"/>
+  <OCborad_in3 key="OC_Channel_42" name="指令118"/>
+  <OCborad_in3 key="OC_Channel_43" name="指令118"/>
+  <OCborad_in3 key="OC_Channel_44" name="指令119"/>
+  <OCborad_in3 key="OC_Channel_45" name="指令119"/>
+  <OCborad_in3 key="OC_Channel_46" name="指令120"/>
+  <OCborad_in3 key="OC_Channel_47" name="指令120"/>
+  <OCborad_in3 key="OC_Channel_48" name="指令121"/>
+  <OCborad_in3 key="OC_Channel_49" name="指令121"/>
+  <OCborad_in3 key="OC_Channel_50" name="指令122"/>
+  <OCborad_in3 key="OC_Channel_51" name="指令122"/>
+  <OCborad_in3 key="OC_Channel_52" name="指令123"/>
+  <OCborad_in3 key="OC_Channel_53" name="指令123"/>
+  <OCborad_in3 key="OC_Channel_54" name="指令124"/>
+  <OCborad_in3 key="OC_Channel_55" name="指令124"/>
+  <OCborad_in3 key="OC_Channel_56" name="指令125"/>
+  <OCborad_in3 key="OC_Channel_57" name="指令125"/>
+  <OCborad_in3 key="OC_Channel_58" name="指令126"/>
+  <OCborad_in3 key="OC_Channel_59" name="指令126"/>
+  <OCborad_in3 key="OC_Channel_60" name="指令127"/>
+  <OCborad_in3 key="OC_Channel_61" name="指令127"/>
+  <OCborad_in3 key="OC_Channel_62" name="一体化应答机a复位"/>
+  <OCborad_in3 key="OC_Channel_63" name="一体化应答机a复位"/>
+  <OCborad_in3 key="OC_Channel_64" name="一体化应答机b复位"/>
+  <OCborad_in3 key="OC_Channel_65" name="一体化应答机b复位"/>
+  <OCborad_in3 key="OC_Channel_66" name="一体化应答机码组选1"/>
+  <OCborad_in3 key="OC_Channel_67" name="一体化应答机码组选1"/>
+  <OCborad_in3 key="OC_Channel_68" name="一体化应答机码组选2"/>
+  <OCborad_in3 key="OC_Channel_69" name="一体化应答机码组选2"/>
+  <OCborad_in3 key="OC_Channel_70" name="一体化应答机遥控码速率2kbps"/>
+  <OCborad_in3 key="OC_Channel_71" name="一体化应答机遥控码速率2kbps"/>
+  <OCborad_in3 key="OC_Channel_72" name="一体化应答机遥控码速率8kbps"/>
+  <OCborad_in3 key="OC_Channel_73" name="一体化应答机遥控码速率8kbps"/>
+  <OCborad_in3 key="OC_Channel_74" name="加解密模块复位"/>
+  <OCborad_in3 key="OC_Channel_75" name="加解密模块复位"/>
+  <OCborad_in3 key="OC_Channel_76" name="信道关口模块遥控复位"/>
+  <OCborad_in3 key="OC_Channel_77" name="信道关口模块遥控复位"/>
+  <OCborad_in3 key="OC_Channel_78" name="遥控终端遥测切A权"/>
+  <OCborad_in3 key="OC_Channel_79" name="遥控终端遥测切A权"/>
+  <OCborad_in3 key="OC_Channel_80" name="遥控终端遥测切B权"/>
+  <OCborad_in3 key="OC_Channel_81" name="遥控终端遥测切B权"/>
+  <OCborad_in3 key="OC_Channel_82" name="遥控开A开B"/>
+  <OCborad_in3 key="OC_Channel_83" name="遥控开A开B"/>
+  <OCborad_in3 key="OC_Channel_84" name="遥控开A关B"/>
+  <OCborad_in3 key="OC_Channel_85" name="遥控开A关B"/>
+  <OCborad_in3 key="OC_Channel_86" name="遥控关A开B"/>
+  <OCborad_in3 key="OC_Channel_87" name="遥控关A开B"/>
+  <OCborad_in3 key="OC_Channel_88" name="指令141"/>
+  <OCborad_in3 key="OC_Channel_89" name="指令141"/>
+  <OCborad_in3 key="OC_Channel_90" name="指令142"/>
+  <OCborad_in3 key="OC_Channel_91" name="指令142"/>
+  <OCborad_in3 key="OC_Channel_92" name="指令143"/>
+  <OCborad_in3 key="OC_Channel_93" name="指令143"/>
+  <OCborad_in3 key="OC_Channel_94" name="指令144"/>
+  <OCborad_in3 key="OC_Channel_95" name="指令144"/>
+  <OCborad_in3 key="OC_Channel_96" name="重要指令33"/>
+  <OCborad_in3 key="OC_Channel_97" name="重要指令34"/>
+  <OCborad_in3 key="OC_Channel_98" name="重要指令35"/>
+  <OCborad_in3 key="OC_Channel_99" name="重要指令36"/>
+  <OCborad_in3 key="OC_Channel_100" name="重要指令37"/>
+  <OCborad_in3 key="OC_Channel_101" name="重要指令38"/>
+  <OCborad_in3 key="OC_Channel_102" name="重要指令39"/>
+  <OCborad_in3 key="OC_Channel_103" name="重要指令40"/>
+  <OCborad_in3 key="OC_Channel_104" name="重要指令41"/>
+  <OCborad_in3 key="OC_Channel_105" name="重要指令42"/>
+  <OCborad_in3 key="OC_Channel_106" name="重要指令43"/>
+  <OCborad_in3 key="OC_Channel_107" name="重要指令44"/>
+  <OCborad_in3 key="OC_Channel_108" name="重要指令45"/>
+  <OCborad_in3 key="OC_Channel_109" name="重要指令46"/>
+  <OCborad_in3 key="OC_Channel_110" name="重要指令47"/>
+  <OCborad_in3 key="OC_Channel_111" name="重要指令48"/>
+  <OCborad_in3 key="OC_Channel_112" name="保留(未使用)"/>
+  <OCborad_in3 key="OC_Channel_113" name="保留(未使用)"/>
+  <OCborad_in3 key="OC_Channel_114" name="保留(未使用)"/>
+  <OCborad_in3 key="OC_Channel_115" name="保留(未使用)"/>
+  <OCborad_in3 key="OC_Channel_116" name="保留(未使用)"/>
+  <OCborad_in3 key="OC_Channel_117" name="保留(未使用)"/>
+  <OCborad_in3 key="OC_Channel_118" name="保留(未使用)"/>
+  <OCborad_in3 key="OC_Channel_119" name="功率处理单元备份配电加电指令"/>
+  <OCborad_in3 key="OC_Channel_120" name="功率处理单元备份配电加电指令"/>
+  <OCborad_in3 key="OC_Channel_121" name="功率处理单元备份配电断电指令"/>
+  <OCborad_in3 key="OC_Channel_122" name="功率处理单元备份配电断电指令"/>
+  <OCborad_in3 key="OC_Channel_123" name="指令190"/>
+  <OCborad_in3 key="OC_Channel_124" name="指令190"/>
+  <OCborad_in3 key="OC_Channel_125" name="指令191"/>
+  <OCborad_in3 key="OC_Channel_126" name="指令191"/>
+  <OCborad_in3 key="OC_Channel_127" name="指令192"/>
+  <OCborad_in3 key="OC_Channel_128" name="指令192"/>
+  <OCborad_in3 key="OC_Channel_129" name="重要指令49"/>
+  <OCborad_in3 key="OC_Channel_130" name="重要指令50"/>
+  <OCborad_in3 key="OC_Channel_131" name="重要指令51"/>
+  <OCborad_in3 key="OC_Channel_132" name="重要指令52"/>
+  <OCborad_in3 key="OC_Channel_133" name="重要指令53"/>
+  <OCborad_in3 key="OC_Channel_134" name="重要指令54"/>
+  <OCborad_in3 key="OC_Channel_135" name="重要指令55"/>
+  <OCborad_in3 key="OC_Channel_136" name="重要指令56"/>
+  <OCborad_in3 key="OC_Channel_137" name="重要指令57"/>
+  <OCborad_in3 key="OC_Channel_138" name="重要指令58"/>
+  <OCborad_in3 key="OC_Channel_139" name="重要指令59"/>
+  <OCborad_in3 key="OC_Channel_140" name="重要指令60"/>
+  <OCborad_in3 key="OC_Channel_141" name="重要指令61"/>
+  <OCborad_in3 key="OC_Channel_142" name="重要指令62"/>
+  <OCborad_in3 key="OC_Channel_143" name="重要指令63"/>
+  <OCborad_in3 key="OC_Channel_144" name="重要指令64"/>
+  <OCborad_in3 key="OC_Channel_145" name="一体化应答机a开"/>
+  <OCborad_in3 key="OC_Channel_146" name="一体化应答机a关"/>
+  <OCborad_in3 key="OC_Channel_147" name="并发指令3"/>
+  <OCborad_in3 key="OC_Channel_148" name="并发指令4"/>
+  <OCborad_in3 key="OC_Channel_149" name="并发指令5"/>
+  <OCborad_in3 key="OC_Channel_150" name="并发指令6"/>
+  <OCborad_in3 key="OC_Channel_151" name="并发指令7"/>
+  <OCborad_in3 key="OC_Channel_152" name="并发指令8"/>
+  <OCborad_in3 key="OC_Channel_153" name="一体化应答机b开"/>
+  <OCborad_in3 key="OC_Channel_154" name="一体化应答机b关"/>
+  <OCborad_in3 key="OC_Channel_155" name="并发指令11"/>
+  <OCborad_in3 key="OC_Channel_156" name="并发指令12"/>
+  <OCborad_in3 key="OC_Channel_157" name="并发指令13"/>
+  <OCborad_in3 key="OC_Channel_158" name="并发指令14"/>
+  <OCborad_in3 key="OC_Channel_159" name="并发指令15"/>
+  <OCborad_in3 key="OC_Channel_160" name="并发指令16"/>
+  <OCborad_in3 key="OC_Channel_161" name="保留(未使用)"/>
+</configuration>

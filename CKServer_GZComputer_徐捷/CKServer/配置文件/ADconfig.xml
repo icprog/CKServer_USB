@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration>
-  <add key="AD_Channel_0" value="1" name="AD通道1" />
-  <add key="AD_Channel_1" value="1" name="AD通道2" />
-  <add key="AD_Channel_2" value="1" name="AD通道3" />
-  <add key="AD_Channel_3" value="1" name="AD通道4" />
-  <add key="AD_Channel_4" value="1" name="AD通道5" />
-  <add key="AD_Channel_5" value="1" name="AD通道6" />
-  <add key="AD_Channel_6" value="1" name="AD通道7" />
-  <add key="AD_Channel_7" value="1" name="AD通道8" />
-  <add key="AD_Channel_8" value="1" name="AD通道9" />
-  <add key="AD_Channel_9" value="1" name="AD通道10" />
-  <add key="AD_Channel_10" value="1" name="AD通道11" />
-  <add key="AD_Channel_11" value="1" name="AD通道12" />
+
+  <add key="AD_Channel_0" value="1" name="数管计算机温度"/>
+  <add key="AD_Channel_1" value="1" name="保留" />
+  <add key="AD_Channel_2" value="1" name="保留" />
+  <add key="AD_Channel_3" value="1" name="保留" />
+  <add key="AD_Channel_4" value="1" name="数管计算机A机12V遥测"/>
+  <add key="AD_Channel_5" value="1" name="数管计算机B机12V遥测"/>
+  <add key="AD_Channel_6" value="1" name="数管计算机权状态遥测"/>
+  <add key="AD_Channel_7" value="1" name="数管计算机准禁自主状态遥测"/>
+  <add key="AD_Channel_8" value="1" name="数管计算机SRAM编程状态遥测"/>
+  <add key="AD_Channel_9" value="1" name="数管计算机EEPROM编程状态遥测"/>
+  <add key="AD_Channel_10" value="1" name="数管计算机A机3.3V遥测"/>
+  <add key="AD_Channel_11" value="1" name="数管计算机B机3.3V遥测"/>
+  
   <add key="AD_Channel_12" value="1" name="AD通道13" />
   <add key="AD_Channel_13" value="1" name="AD通道14" />
   <add key="AD_Channel_14" value="1" name="AD通道15" />

@@ -781,6 +781,7 @@ namespace CKServer
                 _BoxIsStarted = false;
                 Thread.Sleep(200);
                 FileThread.FileClose();
+                
             }
             catch (Exception ex)
             {

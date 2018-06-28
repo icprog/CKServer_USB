@@ -1361,7 +1361,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;btn_Short_1D04.Name" xml:space="preserve">
     <value>btn_Short_1D04</value>
@@ -1373,7 +1373,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_Short_1D04.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 17</value>
@@ -1625,7 +1625,7 @@
     <value>3, 3</value>
   </data>
   <data name="dataGridView_OC_In1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 578</value>
+    <value>248, 578</value>
   </data>
   <data name="dataGridView_OC_In1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1679,10 +1679,10 @@
     <value>Fill</value>
   </data>
   <data name="dataGridView_OC_In2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 3</value>
+    <value>257, 3</value>
   </data>
   <data name="dataGridView_OC_In2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 578</value>
+    <value>249, 578</value>
   </data>
   <data name="dataGridView_OC_In2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1736,10 +1736,10 @@
     <value>Fill</value>
   </data>
   <data name="dataGridView_OC_In3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 3</value>
+    <value>512, 3</value>
   </data>
   <data name="dataGridView_OC_In3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 578</value>
+    <value>250, 578</value>
   </data>
   <data name="dataGridView_OC_In3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1766,7 +1766,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>658, 584</value>
+    <value>765, 584</value>
   </data>
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1790,7 +1790,7 @@
     <value>4, 23</value>
   </data>
   <data name="controlContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>658, 584</value>
+    <value>765, 584</value>
   </data>
   <data name="controlContainer3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1811,7 +1811,7 @@
     <value>20, 133</value>
   </data>
   <data name="dockPanel_OC_In.Size" type="System.Drawing.Size, System.Drawing">
-    <value>667, 611</value>
+    <value>774, 611</value>
   </data>
   <data name="dockPanel_OC_In.Text" xml:space="preserve">
     <value>OC采集</value>
@@ -1826,7 +1826,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dockPanel_OC_In.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="dockPanel1_Container.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 23</value>
@@ -1868,178 +1868,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dockPanel_LOG.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel3.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Column4.HeaderText" xml:space="preserve">
-    <value>通道</value>
-  </data>
-  <data name="Column4.Width" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Column6.HeaderText" xml:space="preserve">
-    <value>名称</value>
-  </data>
-  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Column7.HeaderText" xml:space="preserve">
-    <value>电压(V)</value>
-  </data>
-  <data name="Column7.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="dataGridView_DA1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView_DA1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="dataGridView_DA1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 578</value>
-  </data>
-  <data name="dataGridView_DA1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_DA1.Name" xml:space="preserve">
-    <value>dataGridView_DA1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_DA1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_DA1.Parent" xml:space="preserve">
-    <value>tableLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_DA1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>通道</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>名称</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>电压(V)</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn11.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="dataGridView_DA2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView_DA2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>258, 3</value>
-  </data>
-  <data name="dataGridView_DA2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 578</value>
-  </data>
-  <data name="dataGridView_DA2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_DA2.Name" xml:space="preserve">
-    <value>dataGridView_DA2</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_DA2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_DA2.Parent" xml:space="preserve">
-    <value>tableLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_DA2.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="tableLayoutPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tableLayoutPanel3.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>511, 584</value>
-  </data>
-  <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel3.Name" xml:space="preserve">
-    <value>tableLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel3.Parent" xml:space="preserve">
-    <value>controlContainer2</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridView_DA1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dataGridView_DA2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="controlContainer2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 23</value>
-  </data>
-  <data name="controlContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>511, 584</value>
-  </data>
-  <data name="controlContainer2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;controlContainer2.Name" xml:space="preserve">
-    <value>controlContainer2</value>
-  </data>
-  <data name="&gt;&gt;controlContainer2.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;controlContainer2.Parent" xml:space="preserve">
-    <value>dockPanel_DA</value>
-  </data>
-  <data name="&gt;&gt;controlContainer2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dockPanel_DA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="dockPanel_DA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>520, 611</value>
-  </data>
-  <data name="dockPanel_DA.Text" xml:space="preserve">
-    <value>DA功能区</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_DA.Name" xml:space="preserve">
-    <value>dockPanel_DA</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_DA.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_DA.Parent" xml:space="preserve">
-    <value>hideContainerLeft</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_DA.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2111,7 +1940,7 @@
     <value>0</value>
   </data>
   <data name="dockPanel_AD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>-430, 0</value>
   </data>
   <data name="dockPanel_AD.Size" type="System.Drawing.Size, System.Drawing">
     <value>430, 611</value>
@@ -2129,7 +1958,7 @@
     <value>hideContainerLeft</value>
   </data>
   <data name="&gt;&gt;dockPanel_AD.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="dockPanel3_Container.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
@@ -2171,7 +2000,7 @@
     <value>hideContainerLeft</value>
   </data>
   <data name="&gt;&gt;dockPanel_422.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2192,7 +2021,7 @@
     <value>True</value>
   </metadata>
   <data name="Column12.HeaderText" xml:space="preserve">
-    <value>脉宽</value>
+    <value>脉宽(ms)</value>
   </data>
   <data name="Column12.Width" type="System.Int32, mscorlib">
     <value>80</value>
@@ -2270,7 +2099,7 @@
     <value>hideContainerLeft</value>
   </data>
   <data name="&gt;&gt;dockPanel_OC_Out.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -3310,6 +3139,177 @@
     <value>hideContainerLeft</value>
   </data>
   <data name="&gt;&gt;dockPanel_LVDS.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tableLayoutPanel3.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column4.HeaderText" xml:space="preserve">
+    <value>通道</value>
+  </data>
+  <data name="Column4.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column6.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column7.HeaderText" xml:space="preserve">
+    <value>电压(V)</value>
+  </data>
+  <data name="Column7.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="dataGridView_DA1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView_DA1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="dataGridView_DA1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 578</value>
+  </data>
+  <data name="dataGridView_DA1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DA1.Name" xml:space="preserve">
+    <value>dataGridView_DA1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DA1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DA1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DA1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>通道</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+    <value>电压(V)</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn11.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="dataGridView_DA2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView_DA2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 3</value>
+  </data>
+  <data name="dataGridView_DA2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 578</value>
+  </data>
+  <data name="dataGridView_DA2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DA2.Name" xml:space="preserve">
+    <value>dataGridView_DA2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DA2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DA2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DA2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanel3.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 584</value>
+  </data>
+  <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel3.Name" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel3.Parent" xml:space="preserve">
+    <value>controlContainer2</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridView_DA1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dataGridView_DA2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="controlContainer2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="controlContainer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 584</value>
+  </data>
+  <data name="controlContainer2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;controlContainer2.Name" xml:space="preserve">
+    <value>controlContainer2</value>
+  </data>
+  <data name="&gt;&gt;controlContainer2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;controlContainer2.Parent" xml:space="preserve">
+    <value>dockPanel_DA</value>
+  </data>
+  <data name="&gt;&gt;controlContainer2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dockPanel_DA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dockPanel_DA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>542, 611</value>
+  </data>
+  <data name="dockPanel_DA.Text" xml:space="preserve">
+    <value>DA功能区</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_DA.Name" xml:space="preserve">
+    <value>dockPanel_DA</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_DA.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_DA.Parent" xml:space="preserve">
+    <value>hideContainerLeft</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_DA.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="hideContainerLeft.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -4434,42 +4434,6 @@
   <data name="&gt;&gt;dockManager1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Docking.DockManager, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;Column4.Name" xml:space="preserve">
-    <value>Column4</value>
-  </data>
-  <data name="&gt;&gt;Column4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column6.Name" xml:space="preserve">
-    <value>Column6</value>
-  </data>
-  <data name="&gt;&gt;Column6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column7.Name" xml:space="preserve">
-    <value>Column7</value>
-  </data>
-  <data name="&gt;&gt;Column7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn9</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn10</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn11.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn11</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;Column1.Name" xml:space="preserve">
     <value>Column1</value>
   </data>
@@ -4512,6 +4476,42 @@
   <data name="&gt;&gt;Column5.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;Column4.Name" xml:space="preserve">
+    <value>Column4</value>
+  </data>
+  <data name="&gt;&gt;Column4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column6.Name" xml:space="preserve">
+    <value>Column6</value>
+  </data>
+  <data name="&gt;&gt;Column6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column7.Name" xml:space="preserve">
+    <value>Column7</value>
+  </data>
+  <data name="&gt;&gt;Column7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn9</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn10</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn11.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn11</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn3</value>
   </data>
@@ -4546,6 +4546,54 @@
     <value>dataGridViewTextBoxColumn8</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column11.Name" xml:space="preserve">
+    <value>Column11</value>
+  </data>
+  <data name="&gt;&gt;Column11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column8.Name" xml:space="preserve">
+    <value>Column8</value>
+  </data>
+  <data name="&gt;&gt;Column8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column10.Name" xml:space="preserve">
+    <value>Column10</value>
+  </data>
+  <data name="&gt;&gt;Column10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column9.Name" xml:space="preserve">
+    <value>Column9</value>
+  </data>
+  <data name="&gt;&gt;Column9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn12.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn12</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn13.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn13</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn14.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn14</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn15.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn15</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn15.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn16.Name" xml:space="preserve">
@@ -4649,54 +4697,6 @@
   </data>
   <data name="&gt;&gt;barButtonItem59.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn12.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn12</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn13.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn13</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn14.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn14</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn15.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn15</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column11.Name" xml:space="preserve">
-    <value>Column11</value>
-  </data>
-  <data name="&gt;&gt;Column11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column8.Name" xml:space="preserve">
-    <value>Column8</value>
-  </data>
-  <data name="&gt;&gt;Column8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column10.Name" xml:space="preserve">
-    <value>Column10</value>
-  </data>
-  <data name="&gt;&gt;Column10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column9.Name" xml:space="preserve">
-    <value>Column9</value>
-  </data>
-  <data name="&gt;&gt;Column9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

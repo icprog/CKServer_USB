@@ -447,13 +447,13 @@ namespace CKServer
 
             if (_BoxIsStarted)
             {
-                for (int i = 0; i < 64; i++)
+                for (int i = 0; i < Func_AD.ADNums; i++)
                 {
                     Func_AD.dt_AD.Rows[i]["测量值"] = dataRe_AD[i];
                 }
 
                 //每1s更新一次
-                for (int i = 0; i < 160; i++)
+                for (int i = 0; i < 162; i++)
                 {
                     Func_OC.dt_OC_In1.Rows[i]["计数"] = dataRe_OC1[2 * i];
                     Func_OC.dt_OC_In1.Rows[i]["脉宽"] = dataRe_OC1[2 * i + 1];
@@ -529,7 +529,9 @@ namespace CKServer
                         {
                             USB.SendCMD(i, 0x80, 0x01);
                             USB.SendCMD(i, 0x80, 0x00);//复位
+
                             USB.MyDeviceList[i].Reset();
+
                             USB.SendCMD(i, 0x80, 0x04);//开启接收
                         }
                         else
@@ -544,6 +546,20 @@ namespace CKServer
             }
             else
             {
+
+                for (int i = 0; i < 0x0f; i++)
+                {
+                    if (USB.MyDeviceList[i] != null)
+                    {
+                        CyControlEndPoint CtrlEndPt = null;
+                        CtrlEndPt = USB.MyDeviceList[i].ControlEndPt;
+                        if (CtrlEndPt != null)
+                        {
+                            USB.SendCMD(i, 0x80, 0x00);//关闭接收
+                        }
+                    }
+                }
+
                 btn_Start.Caption = "一键开始";
                 btn_Start.ImageOptions.LargeImage = CKServer.Properties.Resources.Start_btn;
                 _BoxIsStarted = false;
@@ -596,15 +612,15 @@ namespace CKServer
                 MyDevice04_Enable = true;
 
 
+            byte[] Recv_MidBuf_8K_Box01 = new byte[8192];//8K中间缓存
+            int Pos_Recv_MidBuf_8K_Box01 = 0;//中间缓存数据存储到哪个位置
+
             while (_BoxIsStarted)
             {
-                RunCounts++;
                 if (MyDevice01_Enable && RunCounts < RunNums_DA)
                 {
                     if (MyDevice01.BulkInEndPt != null)
                     {
-                        byte[] Recv_MidBuf_8K = new byte[8192];//8K中间缓存
-                        int Pos_Recv_MidBuf_8K = 0;//中间缓存数据存储到哪个位置
 
                         byte[] RecvBoxBuf = new byte[4096];
                         int RecvBoxLen = 4096;
@@ -619,20 +635,20 @@ namespace CKServer
                             SaveFile.DataQueue_SC1.Enqueue(tempbuf);
                             SaveFile.Lock_1.ExitWriteLock();
 
-                            Array.Copy(tempbuf, 0, Recv_MidBuf_8K, Pos_Recv_MidBuf_8K, tempbuf.Length);
-                            Pos_Recv_MidBuf_8K += tempbuf.Length;
+                            Array.Copy(tempbuf, 0, Recv_MidBuf_8K_Box01, Pos_Recv_MidBuf_8K_Box01, tempbuf.Length);
+                            Pos_Recv_MidBuf_8K_Box01 += tempbuf.Length;
 
-                            while (Pos_Recv_MidBuf_8K >= 4096)
+                            while (Pos_Recv_MidBuf_8K_Box01 >= 4096)
                             {
-                                if (Recv_MidBuf_8K[0] == 0xff && (0x0 <= Recv_MidBuf_8K[1]) && (Recv_MidBuf_8K[1] < 0x11))
+                                if (Recv_MidBuf_8K_Box01[0] == 0xff && (0x0 <= Recv_MidBuf_8K_Box01[1]) && (Recv_MidBuf_8K_Box01[1] < 0x11))
                                 {
-                                    DealWithLongFrame(ref Recv_MidBuf_8K, ref Pos_Recv_MidBuf_8K);
+                                    DealWithLongFrame(ref Recv_MidBuf_8K_Box01, ref Pos_Recv_MidBuf_8K_Box01);
                                 }
                                 else
                                 {
                                     MyLog.Error("收到异常帧！");
-                                    Array.Clear(Recv_MidBuf_8K, 0, Pos_Recv_MidBuf_8K);
-                                    Pos_Recv_MidBuf_8K = 0;
+                                    Array.Clear(Recv_MidBuf_8K_Box01, 0, Pos_Recv_MidBuf_8K_Box01);
+                                    Pos_Recv_MidBuf_8K_Box01 = 0;
                                 }
                             }
                         }
@@ -700,6 +716,10 @@ namespace CKServer
 
                     }
                 }
+
+                RunCounts++;
+                if (RunCounts > 10)
+                    RunCounts = 0;
             }
         }
 
@@ -725,6 +745,7 @@ namespace CKServer
             {
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
+
                 SaveFile.Lock_6.EnterWriteLock();
                 SaveFile.DataQueue_SC6.Enqueue(bufsav);
                 SaveFile.Lock_6.ExitWriteLock();
@@ -869,63 +890,13 @@ namespace CKServer
                     else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x08)//1D08:AD数据
                     {
                         Data.Status_1D08.ChanActive = true;
-
                         int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
                         byte[] buf1D0x = new byte[num];
                         Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
                         SaveFile.Lock_9.EnterWriteLock();
                         SaveFile.DataQueue_SC9.Enqueue(buf1D0x);
                         SaveFile.Lock_9.ExitWriteLock();
-                        lock (ADList)
-                        {//将AD数据放入ADList,在另一个线程中解析
-                            for (int j = 0; j < buf1D0x.Length; j++) ADList.Add(buf1D0x[j]);
-                        }
                     }
-                    //else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x03)
-                    //{
-                    //    int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
-                    //    byte[] buf1D0x = new byte[num];
-                    //    Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                    //    SaveFile.Lock_10.EnterWriteLock();
-                    //    SaveFile.DataQueue_SC10.Enqueue(buf1D0x);
-                    //    SaveFile.Lock_10.ExitWriteLock();
-                    //}
-                    //else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x04)
-                    //{
-                    //    int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
-                    //    byte[] buf1D0x = new byte[num];
-                    //    Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                    //    SaveFile.Lock_11.EnterWriteLock();
-                    //    SaveFile.DataQueue_SC11.Enqueue(buf1D0x);
-                    //    SaveFile.Lock_11.ExitWriteLock();
-                    //}
-                    //else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x05)
-                    //{
-                    //    int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
-                    //    byte[] buf1D0x = new byte[num];
-                    //    Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                    //    SaveFile.Lock_12.EnterWriteLock();
-                    //    SaveFile.DataQueue_SC12.Enqueue(buf1D0x);
-                    //    SaveFile.Lock_12.ExitWriteLock();
-                    //}
-                    //else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x06)
-                    //{
-                    //    int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
-                    //    byte[] buf1D0x = new byte[num];
-                    //    Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                    //    SaveFile.Lock_13.EnterWriteLock();
-                    //    SaveFile.DataQueue_SC13.Enqueue(buf1D0x);
-                    //    SaveFile.Lock_13.ExitWriteLock();
-                    //}
-                    //else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x07)
-                    //{
-                    //    int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
-                    //    byte[] buf1D0x = new byte[num];
-                    //    Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                    //    SaveFile.Lock_14.EnterWriteLock();
-                    //    SaveFile.DataQueue_SC14.Enqueue(buf1D0x);
-                    //    SaveFile.Lock_14.ExitWriteLock();
-                    //}
                     else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x0f)
                     {
                         //空闲帧
@@ -961,7 +932,7 @@ namespace CKServer
 
 
         List<byte> ADList = new List<byte>();
-        double[] dataRe_AD = new double[64];
+        double[] dataRe_AD = new double[Func_AD.ADNums];
         private void DealWithADFun()
         {
             //获得AD校准参数
@@ -1219,13 +1190,15 @@ namespace CKServer
             mylist.Add(Func_DA.DAByteC);
             mylist.Add(Func_DA.DAByteD);
 
+
+
             for (int j = 0; j < 2; j++)
             {
                 for (int i = 0; i < 128; i++)
                 {
                     double value = 0;
-                    if (j == 0) value = (double)Func_DA.dt_DA1.Rows[i]["电压"];
-                    if (j == 1) value = (double)Func_DA.dt_DA2.Rows[i]["电压"];
+                    if (j == 0 && i<Func_DA.DABoard1Nums) value = (double)Func_DA.dt_DA1.Rows[i]["电压"];
+                    if (j == 1 && i<Func_DA.DABoard2Nums) value = (double)Func_DA.dt_DA2.Rows[i]["电压"];
                     if (value < 0 || value > 10)
                     {
                         //Deal with exception
@@ -1452,7 +1425,7 @@ namespace CKServer
             {
                 if (e.ColumnIndex == 0)//button列
                 {
-                    byte[] OCData = new byte[32];
+                    byte[] OCData = new byte[32];//此处不用OCOutChanNums，用32表示输出所有路数
                     for (int i = 0; i < OCData.Count(); i++) OCData[i] = 0x0;
 
                     OCData[e.RowIndex] = (byte)((int)Func_OC.dt_OC_Out.Rows[e.RowIndex]["脉宽"]);
@@ -1471,8 +1444,12 @@ namespace CKServer
         {
             byte[] OCData = new byte[32];
             for (int i = 0; i < OCData.Count(); i++)
-                OCData[i] = (byte)((int)Func_OC.dt_OC_Out.Rows[i]["脉宽"]);
-
+            {
+                if (i < Func_OC.OCOutChanNums)
+                    OCData[i] = (byte)((int)Func_OC.dt_OC_Out.Rows[i]["脉宽"]);
+                else
+                    OCData[i] = 0x0;
+            }
             Func_OC.Send2OCBD(OCData);
             MyLog.Info("统一输出全部OC！");
         }
