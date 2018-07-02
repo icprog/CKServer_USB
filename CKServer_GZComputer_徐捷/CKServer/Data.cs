@@ -107,7 +107,6 @@ namespace CKServer
 
         }
 
-
         public static string DAconfigPath = Program.GetStartupPath() + @"配置文件\DAconfig.xml";
         public static string ADconfigPath = Program.GetStartupPath() + @"配置文件\ADconfig.xml";
         public static string RconfigPath = Program.GetStartupPath() + @"配置文件\Rconfig.xml";

@@ -81,6 +81,26 @@ namespace CKServer
         public static void SendData(int id, byte[] temp)
         {
             int TempLength = temp.Length;
+            byte[] RealSend;
+            int RealSendLength;
+
+            if (TempLength%1024==0)
+            {
+                RealSendLength = TempLength + 4;
+                RealSend = new byte[RealSendLength];
+                temp.CopyTo(RealSend, 0);
+                RealSend[TempLength] = 0xC0;
+                RealSend[TempLength+1] = 0xDE;
+                RealSend[TempLength+2] = 0xC0;
+                RealSend[TempLength+3] = 0xDE;
+            }
+            else
+            {
+                RealSendLength = TempLength + 4;
+                RealSend = new byte[TempLength];
+                temp.CopyTo(RealSend, 0);
+            }
+
             if (MyDeviceList[id] != null)
             {
                 lock (MyDeviceList[id])

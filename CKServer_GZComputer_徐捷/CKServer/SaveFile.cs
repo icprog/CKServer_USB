@@ -40,6 +40,8 @@ namespace CKServer
         public static ReaderWriterLockSlim Lock_14 = new ReaderWriterLockSlim();
         public static ReaderWriterLockSlim Lock_15 = new ReaderWriterLockSlim();
         public static ReaderWriterLockSlim Lock_16 = new ReaderWriterLockSlim();
+        public static ReaderWriterLockSlim Lock_17 = new ReaderWriterLockSlim();
+        public static ReaderWriterLockSlim Lock_18 = new ReaderWriterLockSlim();
         public static List<ReaderWriterLockSlim> myLock = new List<ReaderWriterLockSlim>();
 
         public static ReaderWriterLockSlim Lock_asyn_1 = new ReaderWriterLockSlim();
@@ -76,6 +78,8 @@ namespace CKServer
         public static Queue<byte[]> DataQueue_SC14 = new Queue<byte[]>();
         public static Queue<byte[]> DataQueue_SC15 = new Queue<byte[]>();
         public static Queue<byte[]> DataQueue_SC16 = new Queue<byte[]>();
+        public static Queue<byte[]> DataQueue_SC17 = new Queue<byte[]>();
+        public static Queue<byte[]> DataQueue_SC18 = new Queue<byte[]>();
 
         public static Queue<byte[]> DataQueue_Async = new Queue<byte[]>();
 
@@ -87,7 +91,8 @@ namespace CKServer
         FileStream file_SC1, file_SC2, file_SC3, file_SC4,
             file_SC5, file_SC6, file_SC7, file_SC8,
             file_SC9, file_SC10, file_SC11, file_SC12,
-            file_SC13, file_SC14, file_SC15, file_SC16;
+            file_SC13, file_SC14, file_SC15, file_SC16,
+            file_SC17,file_SC18;
         List<FileStream> myFileList_dat = new List<FileStream>();
 
         FileStream file_asyn1, file_asyn2, file_asyn3, file_asyn4, file_asyn5, file_asyn6,
@@ -133,12 +138,14 @@ namespace CKServer
 
             FileCreateDat(Program.GetStartupPath() + @"存储数据\OC机箱数据\源码\", out file_SC10);
 
-            //FileCreateDat(Program.GetStartupPath() + @"数传机箱数据\同步422数据\通道2", out file_SC11);
-            //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道12\", out file_SC12);
-            //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道13\", out file_SC13);
-            //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道14\", out file_SC14);
-            //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道15\", out file_SC15);
-            //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道16\", out file_SC16);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\LVDS机箱数据\数管A机发送数传终端机A\", out file_SC11);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\LVDS机箱数据\数管A机发送数传终端机B\", out file_SC12);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\LVDS机箱数据\A机LVDS发送3\", out file_SC13);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\LVDS机箱数据\A机LVDS发送4\", out file_SC14);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\LVDS机箱数据\数管B机发送数传终端机A\", out file_SC15);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\LVDS机箱数据\数管B机发送数传终端机B\", out file_SC16);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\LVDS机箱数据\B机LVDS发送3\", out file_SC17);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\LVDS机箱数据\B机LVDS发送4\", out file_SC18);
 
             FileCreateDat(Program.GetStartupPath() + @"异步422\", out file_async);
             DataQueueList.Add(DataQueue_SC1);
@@ -157,6 +164,8 @@ namespace CKServer
             DataQueueList.Add(DataQueue_SC14);
             DataQueueList.Add(DataQueue_SC15);
             DataQueueList.Add(DataQueue_SC16);
+            DataQueueList.Add(DataQueue_SC17);
+            DataQueueList.Add(DataQueue_SC18);
 
             myLock.Add(Lock_1);
             myLock.Add(Lock_2);
@@ -174,6 +183,8 @@ namespace CKServer
             myLock.Add(Lock_14);
             myLock.Add(Lock_15);
             myLock.Add(Lock_16);
+            myLock.Add(Lock_17);
+            myLock.Add(Lock_18);
 
             //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道1\", out file_asyn1);
             //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道2\", out file_asyn2);
@@ -203,9 +214,9 @@ namespace CKServer
 
 
 
-        //          WriteFileThread = new Thread(WriteToFile);
-        //           WriteFileThread.Start(file1);
-    }
+            //          WriteFileThread = new Thread(WriteToFile);
+            //           WriteFileThread.Start(file1);
+        }
 
         public void FileCreateDat(string Path, out FileStream file)
         {
@@ -264,11 +275,15 @@ namespace CKServer
             new Thread(() => { WriteToFileSC(8, file_SC9, ref DataQueue_SC9, ref Lock_9); }).Start();
             new Thread(() => { WriteToFileSC(9, file_SC10, ref DataQueue_SC10, ref Lock_10); }).Start();
 
-            //new Thread(() => { WriteToFileSC(10, file_SC11, ref DataQueue_SC11, ref Lock_11); }).Start();
-            //new Thread(() => { WriteToFileSC(11, file_SC12, ref DataQueue_SC12, ref Lock_12); }).Start();
-            //new Thread(() => { WriteToFileSC(12, file_SC13, ref DataQueue_SC13, ref Lock_13); }).Start();
-            //new Thread(() => { WriteToFileSC(13, file_SC14, ref DataQueue_SC14, ref Lock_14); }).Start();
+            new Thread(() => { WriteToFileSC(10, file_SC11, ref DataQueue_SC11, ref Lock_11); }).Start();
+            new Thread(() => { WriteToFileSC(11, file_SC12, ref DataQueue_SC12, ref Lock_12); }).Start();
+            new Thread(() => { WriteToFileSC(12, file_SC13, ref DataQueue_SC13, ref Lock_13); }).Start();
+            new Thread(() => { WriteToFileSC(13, file_SC14, ref DataQueue_SC14, ref Lock_14); }).Start();
 
+            new Thread(() => { WriteToFileSC(14, file_SC11, ref DataQueue_SC15, ref Lock_15); }).Start();
+            new Thread(() => { WriteToFileSC(15, file_SC12, ref DataQueue_SC16, ref Lock_16); }).Start();
+            new Thread(() => { WriteToFileSC(16, file_SC13, ref DataQueue_SC17, ref Lock_17); }).Start();
+            new Thread(() => { WriteToFileSC(17, file_SC14, ref DataQueue_SC18, ref Lock_18); }).Start();
 
             //new Thread(() => { WriteToFileAsynC(1, file_asyn1, ref DataQueue_asyn_1, ref Lock_asyn_1); }).Start();
             //new Thread(() => { WriteToFileAsynC(2, file_asyn2, ref DataQueue_asyn_2, ref Lock_asyn_2); }).Start();
