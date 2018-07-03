@@ -152,7 +152,7 @@
             this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.btn_Start = new DevExpress.XtraBars.BarButtonItem();
-            this.CheckEnable_422 = new DevExpress.XtraBars.BarCheckItem();
+            this.CheckEnable_422_A = new DevExpress.XtraBars.BarCheckItem();
             this.btn_OpenPath_Storage = new DevExpress.XtraBars.BarButtonItem();
             this.btn_OpenPath_Log = new DevExpress.XtraBars.BarButtonItem();
             this.btn_RegCtl = new DevExpress.XtraBars.BarButtonItem();
@@ -161,12 +161,16 @@
             this.repositoryItemTextEdit14 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barEditI_RegValue = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit15 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.CheckEnable_422_B = new DevExpress.XtraBars.BarCheckItem();
+            this.barButton_AStart = new DevExpress.XtraBars.BarButtonItem();
+            this.barButton_BStart = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Page_Setting = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -187,6 +191,8 @@
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemTextEdit12 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemTextEdit13 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -281,26 +287,34 @@
             this.Column12 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.dockPanel_422 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel_422_A = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.textBox_Send422_B = new System.Windows.Forms.TextBox();
-            this.btn_Start422_B = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.btn_Off = new System.Windows.Forms.Button();
+            this.btn_On = new System.Windows.Forms.Button();
+            this.btn_refreshDisable = new System.Windows.Forms.Button();
+            this.btn_refreshEnable = new System.Windows.Forms.Button();
             this.textBox_Send422_A = new System.Windows.Forms.TextBox();
-            this.btn_Send422_B = new System.Windows.Forms.Button();
-            this.btn_Start422_A = new System.Windows.Forms.Button();
             this.btn_Send422_A = new System.Windows.Forms.Button();
-            this.dataGridView_YC2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView_YC1 = new System.Windows.Forms.DataGridView();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dockPanel_422_B = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.textBox_Send422_B = new System.Windows.Forms.TextBox();
+            this.dataGridView_YC2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Send422_B = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.通道名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.控制 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -343,6 +357,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.hideContainerRight.SuspendLayout();
@@ -378,10 +394,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Reg)).BeginInit();
             this.dockPanel_LOG.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
-            this.dockPanel_422.SuspendLayout();
+            this.dockPanel_422_A.SuspendLayout();
             this.dockPanel3_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).BeginInit();
+            this.dockPanel_422_B.SuspendLayout();
+            this.controlContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -461,15 +479,18 @@
             this.btn_OCOut,
             this.barEditItem2,
             this.btn_Start,
-            this.CheckEnable_422,
+            this.CheckEnable_422_A,
             this.btn_OpenPath_Storage,
             this.btn_OpenPath_Log,
             this.btn_RegCtl,
             this.btn_RegSet,
             this.barEditI_RegAddr,
-            this.barEditI_RegValue});
+            this.barEditI_RegValue,
+            this.CheckEnable_422_B,
+            this.barButton_AStart,
+            this.barButton_BStart});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 157;
+            this.ribbonControl1.MaxItemId = 162;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -504,7 +525,9 @@
             this.repositoryItemTextEdit12,
             this.repositoryItemTextEdit13,
             this.repositoryItemTextEdit14,
-            this.repositoryItemTextEdit15});
+            this.repositoryItemTextEdit15,
+            this.repositoryItemCheckEdit2,
+            this.repositoryItemCheckEdit3});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
@@ -1120,15 +1143,15 @@
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Start_ItemClick);
             // 
-            // CheckEnable_422
+            // CheckEnable_422_A
             // 
-            this.CheckEnable_422.BindableChecked = true;
-            resources.ApplyResources(this.CheckEnable_422, "CheckEnable_422");
-            this.CheckEnable_422.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.CheckEnable_422.Checked = true;
-            this.CheckEnable_422.Id = 147;
-            this.CheckEnable_422.Name = "CheckEnable_422";
-            this.CheckEnable_422.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_LVDS_CheckedChanged);
+            this.CheckEnable_422_A.BindableChecked = true;
+            resources.ApplyResources(this.CheckEnable_422_A, "CheckEnable_422_A");
+            this.CheckEnable_422_A.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.CheckEnable_422_A.Checked = true;
+            this.CheckEnable_422_A.Id = 147;
+            this.CheckEnable_422_A.Name = "CheckEnable_422_A";
+            this.CheckEnable_422_A.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_LVDS_CheckedChanged);
             // 
             // btn_OpenPath_Storage
             // 
@@ -1192,6 +1215,32 @@
             this.repositoryItemTextEdit15.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.repositoryItemTextEdit15.Name = "repositoryItemTextEdit15";
             // 
+            // CheckEnable_422_B
+            // 
+            resources.ApplyResources(this.CheckEnable_422_B, "CheckEnable_422_B");
+            this.CheckEnable_422_B.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.CheckEnable_422_B.Id = 159;
+            this.CheckEnable_422_B.Name = "CheckEnable_422_B";
+            this.CheckEnable_422_B.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_LVDS_CheckedChanged);
+            // 
+            // barButton_AStart
+            // 
+            resources.ApplyResources(this.barButton_AStart, "barButton_AStart");
+            this.barButton_AStart.Id = 160;
+            this.barButton_AStart.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButton_AStart.ImageOptions.Image")));
+            this.barButton_AStart.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButton_AStart.ImageOptions.LargeImage")));
+            this.barButton_AStart.Name = "barButton_AStart";
+            this.barButton_AStart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButton_AStart_ItemClick);
+            // 
+            // barButton_BStart
+            // 
+            resources.ApplyResources(this.barButton_BStart, "barButton_BStart");
+            this.barButton_BStart.Id = 161;
+            this.barButton_BStart.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButton_BStart.ImageOptions.Image")));
+            this.barButton_BStart.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButton_BStart.ImageOptions.LargeImage")));
+            this.barButton_BStart.Name = "barButton_BStart";
+            this.barButton_BStart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButton_BStart_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -1203,7 +1252,8 @@
             this.ribbonPageGroup2,
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
-            this.ribbonPageGroup8});
+            this.ribbonPageGroup8,
+            this.ribbonPageGroup9});
             this.ribbonPage1.Name = "ribbonPage1";
             resources.ApplyResources(this.ribbonPage1, "ribbonPage1");
             // 
@@ -1235,6 +1285,13 @@
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             resources.ApplyResources(this.ribbonPageGroup8, "ribbonPageGroup8");
             // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButton_AStart);
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButton_BStart);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            resources.ApplyResources(this.ribbonPageGroup9, "ribbonPageGroup9");
+            // 
             // Page_Setting
             // 
             this.Page_Setting.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1261,7 +1318,8 @@
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_LOG);
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_AD);
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_OC);
-            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_422);
+            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_422_A);
+            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_422_B);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             resources.ApplyResources(this.ribbonPageGroup14, "ribbonPageGroup14");
             // 
@@ -1407,6 +1465,16 @@
             this.repositoryItemTextEdit13.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.repositoryItemTextEdit13.Name = "repositoryItemTextEdit13";
             // 
+            // repositoryItemCheckEdit2
+            // 
+            resources.ApplyResources(this.repositoryItemCheckEdit2, "repositoryItemCheckEdit2");
+            this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
+            // 
+            // repositoryItemCheckEdit3
+            // 
+            resources.ApplyResources(this.repositoryItemCheckEdit3, "repositoryItemCheckEdit3");
+            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
+            // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem1);
@@ -1546,7 +1614,8 @@
             this.dockPanel_RegCtl});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.dockPanel_LOG,
-            this.dockPanel_422});
+            this.dockPanel_422_A,
+            this.dockPanel_422_B});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -2276,61 +2345,101 @@
             resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             // 
-            // dockPanel_422
+            // dockPanel_422_A
             // 
-            this.dockPanel_422.Controls.Add(this.dockPanel3_Container);
-            this.dockPanel_422.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.dockPanel_422.FloatSize = new System.Drawing.Size(683, 512);
-            this.dockPanel_422.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
-            resources.ApplyResources(this.dockPanel_422, "dockPanel_422");
-            this.dockPanel_422.Name = "dockPanel_422";
-            this.dockPanel_422.OriginalSize = new System.Drawing.Size(884, 160);
+            this.dockPanel_422_A.Controls.Add(this.dockPanel3_Container);
+            this.dockPanel_422_A.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel_422_A.FloatSize = new System.Drawing.Size(683, 512);
+            this.dockPanel_422_A.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
+            resources.ApplyResources(this.dockPanel_422_A, "dockPanel_422_A");
+            this.dockPanel_422_A.Name = "dockPanel_422_A";
+            this.dockPanel_422_A.OriginalSize = new System.Drawing.Size(449, 160);
             // 
             // dockPanel3_Container
             // 
-            this.dockPanel3_Container.Controls.Add(this.textBox_Send422_B);
-            this.dockPanel3_Container.Controls.Add(this.btn_Start422_B);
+            this.dockPanel3_Container.Controls.Add(this.label2);
+            this.dockPanel3_Container.Controls.Add(this.comboBox6);
+            this.dockPanel3_Container.Controls.Add(this.label1);
+            this.dockPanel3_Container.Controls.Add(this.comboBox5);
+            this.dockPanel3_Container.Controls.Add(this.btn_Off);
+            this.dockPanel3_Container.Controls.Add(this.btn_On);
+            this.dockPanel3_Container.Controls.Add(this.btn_refreshDisable);
+            this.dockPanel3_Container.Controls.Add(this.btn_refreshEnable);
             this.dockPanel3_Container.Controls.Add(this.textBox_Send422_A);
-            this.dockPanel3_Container.Controls.Add(this.btn_Send422_B);
-            this.dockPanel3_Container.Controls.Add(this.btn_Start422_A);
             this.dockPanel3_Container.Controls.Add(this.btn_Send422_A);
-            this.dockPanel3_Container.Controls.Add(this.dataGridView_YC2);
             this.dockPanel3_Container.Controls.Add(this.dataGridView_YC1);
             resources.ApplyResources(this.dockPanel3_Container, "dockPanel3_Container");
             this.dockPanel3_Container.Name = "dockPanel3_Container";
             // 
-            // textBox_Send422_B
+            // label2
             // 
-            resources.ApplyResources(this.textBox_Send422_B, "textBox_Send422_B");
-            this.textBox_Send422_B.Name = "textBox_Send422_B";
-            this.textBox_Send422_B.Click += new System.EventHandler(this.textBox_Send422_A_Click);
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
             // 
-            // btn_Start422_B
+            // comboBox6
             // 
-            resources.ApplyResources(this.btn_Start422_B, "btn_Start422_B");
-            this.btn_Start422_B.Name = "btn_Start422_B";
-            this.btn_Start422_B.UseVisualStyleBackColor = true;
-            this.btn_Start422_B.Click += new System.EventHandler(this.btn_Start422_B_Click);
+            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            resources.GetString("comboBox6.Items"),
+            resources.GetString("comboBox6.Items1"),
+            resources.GetString("comboBox6.Items2"),
+            resources.GetString("comboBox6.Items3"),
+            resources.GetString("comboBox6.Items4")});
+            resources.ApplyResources(this.comboBox6, "comboBox6");
+            this.comboBox6.Name = "comboBox6";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            resources.GetString("comboBox5.Items"),
+            resources.GetString("comboBox5.Items1"),
+            resources.GetString("comboBox5.Items2"),
+            resources.GetString("comboBox5.Items3"),
+            resources.GetString("comboBox5.Items4")});
+            resources.ApplyResources(this.comboBox5, "comboBox5");
+            this.comboBox5.Name = "comboBox5";
+            // 
+            // btn_Off
+            // 
+            resources.ApplyResources(this.btn_Off, "btn_Off");
+            this.btn_Off.Name = "btn_Off";
+            this.btn_Off.UseVisualStyleBackColor = true;
+            this.btn_Off.Click += new System.EventHandler(this.btn_Off_Click);
+            // 
+            // btn_On
+            // 
+            resources.ApplyResources(this.btn_On, "btn_On");
+            this.btn_On.Name = "btn_On";
+            this.btn_On.UseVisualStyleBackColor = true;
+            this.btn_On.Click += new System.EventHandler(this.btn_On_Click);
+            // 
+            // btn_refreshDisable
+            // 
+            resources.ApplyResources(this.btn_refreshDisable, "btn_refreshDisable");
+            this.btn_refreshDisable.Name = "btn_refreshDisable";
+            this.btn_refreshDisable.UseVisualStyleBackColor = true;
+            this.btn_refreshDisable.Click += new System.EventHandler(this.btn_refreshDisable_Click);
+            // 
+            // btn_refreshEnable
+            // 
+            resources.ApplyResources(this.btn_refreshEnable, "btn_refreshEnable");
+            this.btn_refreshEnable.Name = "btn_refreshEnable";
+            this.btn_refreshEnable.UseVisualStyleBackColor = true;
+            this.btn_refreshEnable.Click += new System.EventHandler(this.btn_refreshEnable_Click);
             // 
             // textBox_Send422_A
             // 
             resources.ApplyResources(this.textBox_Send422_A, "textBox_Send422_A");
             this.textBox_Send422_A.Name = "textBox_Send422_A";
             this.textBox_Send422_A.Click += new System.EventHandler(this.textBox_Send422_A_Click);
-            // 
-            // btn_Send422_B
-            // 
-            resources.ApplyResources(this.btn_Send422_B, "btn_Send422_B");
-            this.btn_Send422_B.Name = "btn_Send422_B";
-            this.btn_Send422_B.UseVisualStyleBackColor = true;
-            this.btn_Send422_B.Click += new System.EventHandler(this.btn_Send422_B_Click);
-            // 
-            // btn_Start422_A
-            // 
-            resources.ApplyResources(this.btn_Start422_A, "btn_Start422_A");
-            this.btn_Start422_A.Name = "btn_Start422_A";
-            this.btn_Start422_A.UseVisualStyleBackColor = true;
-            this.btn_Start422_A.Click += new System.EventHandler(this.btn_Start422_A_Click);
             // 
             // btn_Send422_A
             // 
@@ -2339,9 +2448,80 @@
             this.btn_Send422_A.UseVisualStyleBackColor = true;
             this.btn_Send422_A.Click += new System.EventHandler(this.btn_Send422_A_Click);
             // 
+            // dataGridView_YC1
+            // 
+            this.dataGridView_YC1.AllowUserToResizeRows = false;
+            resources.ApplyResources(this.dataGridView_YC1, "dataGridView_YC1");
+            this.dataGridView_YC1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_YC1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column13,
+            this.Column14,
+            this.Column17,
+            this.Column15,
+            this.Column16});
+            this.dataGridView_YC1.Name = "dataGridView_YC1";
+            this.dataGridView_YC1.RowHeadersVisible = false;
+            this.dataGridView_YC1.RowTemplate.Height = 23;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "序号";
+            resources.ApplyResources(this.Column13, "Column13");
+            this.Column13.Name = "Column13";
+            // 
+            // Column14
+            // 
+            this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column14.DataPropertyName = "名称";
+            resources.ApplyResources(this.Column14, "Column14");
+            this.Column14.Name = "Column14";
+            // 
+            // Column17
+            // 
+            this.Column17.DataPropertyName = "占位";
+            resources.ApplyResources(this.Column17, "Column17");
+            this.Column17.Name = "Column17";
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "值";
+            resources.ApplyResources(this.Column15, "Column15");
+            this.Column15.Name = "Column15";
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "解析值";
+            resources.ApplyResources(this.Column16, "Column16");
+            this.Column16.Name = "Column16";
+            // 
+            // dockPanel_422_B
+            // 
+            this.dockPanel_422_B.Controls.Add(this.controlContainer3);
+            this.dockPanel_422_B.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel_422_B.FloatSize = new System.Drawing.Size(467, 602);
+            this.dockPanel_422_B.ID = new System.Guid("4de8d0eb-cd9a-49b4-8bc0-cc7a12de1682");
+            resources.ApplyResources(this.dockPanel_422_B, "dockPanel_422_B");
+            this.dockPanel_422_B.Name = "dockPanel_422_B";
+            this.dockPanel_422_B.OriginalSize = new System.Drawing.Size(435, 560);
+            // 
+            // controlContainer3
+            // 
+            this.controlContainer3.Controls.Add(this.textBox_Send422_B);
+            this.controlContainer3.Controls.Add(this.dataGridView_YC2);
+            this.controlContainer3.Controls.Add(this.btn_Send422_B);
+            resources.ApplyResources(this.controlContainer3, "controlContainer3");
+            this.controlContainer3.Name = "controlContainer3";
+            // 
+            // textBox_Send422_B
+            // 
+            resources.ApplyResources(this.textBox_Send422_B, "textBox_Send422_B");
+            this.textBox_Send422_B.Name = "textBox_Send422_B";
+            this.textBox_Send422_B.Click += new System.EventHandler(this.textBox_Send422_A_Click);
+            // 
             // dataGridView_YC2
             // 
             this.dataGridView_YC2.AllowUserToResizeRows = false;
+            resources.ApplyResources(this.dataGridView_YC2, "dataGridView_YC2");
             this.dataGridView_YC2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_YC2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn9,
@@ -2349,7 +2529,6 @@
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
-            resources.ApplyResources(this.dataGridView_YC2, "dataGridView_YC2");
             this.dataGridView_YC2.Name = "dataGridView_YC2";
             this.dataGridView_YC2.RowHeadersVisible = false;
             this.dataGridView_YC2.RowTemplate.Height = 23;
@@ -2385,51 +2564,12 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
-            // dataGridView_YC1
+            // btn_Send422_B
             // 
-            this.dataGridView_YC1.AllowUserToResizeRows = false;
-            this.dataGridView_YC1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_YC1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column13,
-            this.Column14,
-            this.Column17,
-            this.Column15,
-            this.Column16});
-            resources.ApplyResources(this.dataGridView_YC1, "dataGridView_YC1");
-            this.dataGridView_YC1.Name = "dataGridView_YC1";
-            this.dataGridView_YC1.RowHeadersVisible = false;
-            this.dataGridView_YC1.RowTemplate.Height = 23;
-            // 
-            // Column13
-            // 
-            this.Column13.DataPropertyName = "序号";
-            resources.ApplyResources(this.Column13, "Column13");
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column14.DataPropertyName = "名称";
-            resources.ApplyResources(this.Column14, "Column14");
-            this.Column14.Name = "Column14";
-            // 
-            // Column17
-            // 
-            this.Column17.DataPropertyName = "占位";
-            resources.ApplyResources(this.Column17, "Column17");
-            this.Column17.Name = "Column17";
-            // 
-            // Column15
-            // 
-            this.Column15.DataPropertyName = "值";
-            resources.ApplyResources(this.Column15, "Column15");
-            this.Column15.Name = "Column15";
-            // 
-            // Column16
-            // 
-            this.Column16.DataPropertyName = "解析值";
-            resources.ApplyResources(this.Column16, "Column16");
-            this.Column16.Name = "Column16";
+            resources.ApplyResources(this.btn_Send422_B, "btn_Send422_B");
+            this.btn_Send422_B.Name = "btn_Send422_B";
+            this.btn_Send422_B.UseVisualStyleBackColor = true;
+            this.btn_Send422_B.Click += new System.EventHandler(this.btn_Send422_B_Click);
             // 
             // ID
             // 
@@ -2512,7 +2652,8 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dockPanel_422);
+            this.Controls.Add(this.dockPanel_422_B);
+            this.Controls.Add(this.dockPanel_422_A);
             this.Controls.Add(this.dockPanel_LOG);
             this.Controls.Add(this.hideContainerLeft);
             this.Controls.Add(this.hideContainerRight);
@@ -2554,6 +2695,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.hideContainerRight.ResumeLayout(false);
@@ -2597,11 +2740,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Reg)).EndInit();
             this.dockPanel_LOG.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
-            this.dockPanel_422.ResumeLayout(false);
+            this.dockPanel_422_A.ResumeLayout(false);
             this.dockPanel3_Container.ResumeLayout(false);
             this.dockPanel3_Container.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).EndInit();
+            this.dockPanel_422_B.ResumeLayout(false);
+            this.controlContainer3.ResumeLayout(false);
+            this.controlContainer3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2764,7 +2910,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private DevExpress.XtraBars.BarButtonItem btn_Start;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel_422;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel_422_A;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel3_Container;
         private DevExpress.XtraBars.Docking.DockPanel dockPanel_OC;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel4_Container;
@@ -2799,7 +2945,7 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox textBox_Result_4;
         private System.Windows.Forms.TextBox textBox_Result_1;
-        private DevExpress.XtraBars.BarCheckItem CheckEnable_422;
+        private DevExpress.XtraBars.BarCheckItem CheckEnable_422_A;
         private DevExpress.XtraBars.BarButtonItem btn_OpenPath_Storage;
         private DevExpress.XtraBars.BarButtonItem btn_OpenPath_Log;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
@@ -2847,12 +2993,26 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.Button btn_Start422_A;
         private System.Windows.Forms.Button btn_Send422_A;
         public System.Windows.Forms.TextBox textBox_Send422_A;
         public System.Windows.Forms.TextBox textBox_Send422_B;
-        private System.Windows.Forms.Button btn_Start422_B;
         private System.Windows.Forms.Button btn_Send422_B;
+        private DevExpress.XtraBars.BarCheckItem CheckEnable_422_B;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel_422_B;
+        private DevExpress.XtraBars.Docking.ControlContainer controlContainer3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Button btn_Off;
+        private System.Windows.Forms.Button btn_On;
+        private System.Windows.Forms.Button btn_refreshDisable;
+        private System.Windows.Forms.Button btn_refreshEnable;
+        private DevExpress.XtraBars.BarButtonItem barButton_AStart;
+        private DevExpress.XtraBars.BarButtonItem barButton_BStart;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
     }
 }
 

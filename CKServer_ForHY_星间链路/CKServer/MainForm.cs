@@ -32,6 +32,18 @@ namespace CKServer
         private DataTable dtModifyDA1 = new DataTable();
         private DataTable dtModifyDA2 = new DataTable();
 
+        //应用数据的字节1和字节2--A机
+        String A_Byte1_b76 = "10";
+        String A_Byte1_b543 = "100";
+        String A_Byte1_b210 = "100";
+        String A_Byte2_b76 = "10";
+
+        //应用数据的字节1和字节2--B机
+        String B_Byte1_b76 = "10";
+        String B_Byte1_b543 = "100";
+        String B_Byte1_b210 = "100";
+        String B_Byte2_b76 = "10";
+
         void UsbDevices_DeviceAttached(object sender, EventArgs e)
         {
             SetDevice(false);
@@ -109,6 +121,9 @@ namespace CKServer
             myRs422FrameProduceForm = new RS422FrameProduceForm(this);
 
             dockPanel_RegCtl.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+
+            this.comboBox5.SelectedIndex = 0;
+            this.comboBox6.SelectedIndex = 0;
 
         }
 
@@ -408,14 +423,14 @@ namespace CKServer
         private void btn_Modify_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            if (dockPanel_422.Visibility != DevExpress.XtraBars.Docking.DockVisibility.Visible)
+            if (dockPanel_422_A.Visibility != DevExpress.XtraBars.Docking.DockVisibility.Visible)
             {
-                dockPanel_422.Show();
+                dockPanel_422_A.Show();
                 MyLog.Info("显示422界面！");
             }
             else
             {
-                dockPanel_422.Hide();
+                dockPanel_422_A.Hide();
                 MyLog.Info("隐藏422界面！");
             }
 
@@ -977,8 +992,11 @@ namespace CKServer
                 case "CheckEnable_LVDS":
                     panel = this.dockPanel_LVDS;
                     break;
-                case "CheckEnable_422":
-                    panel = this.dockPanel_422;
+                case "CheckEnable_422_A":
+                    panel = this.dockPanel_422_A;
+                    break;
+                case "CheckEnable_422_B":
+                    panel = this.dockPanel_422_B;
                     break;
                 case "CheckEnable_AD":
                     panel = this.dockPanel_AD;
@@ -1104,7 +1122,60 @@ namespace CKServer
         public string Rs422_Channel_Name;           //
         private void btn_Send422_A_Click(object sender, EventArgs e)
         {
+            //switch(comboBox5.Text)
+            //{
+            //    case "30Mbps模式":
+            //        A_Byte1_b543 = "100";
+            //        break;
+            //    case "15Mbps模式":
+            //        A_Byte1_b543 = "011";
+            //        break;
+            //    case "10Mbps模式":
+            //        A_Byte1_b543 = "010";
+            //        break;
+            //    case "2Mbps模式":
+            //        A_Byte1_b543 = "001";
+            //        break;
+            //    case "1Mbps模式":
+            //        A_Byte1_b543 = "000";
+            //        break;
+            //    default:
+            //        A_Byte1_b543 = "000";
+            //        break;
+            //}
+
+            //switch (comboBox6.Text)
+            //{
+            //    case "30Mbps模式":
+            //        A_Byte1_b210 = "100";
+            //        break;
+            //    case "15Mbps模式":
+            //        A_Byte1_b210 = "011";
+            //        break;
+            //    case "10Mbps模式":
+            //        A_Byte1_b210 = "010";
+            //        break;
+            //    case "2Mbps模式":
+            //        A_Byte1_b210 = "001";
+            //        break;
+            //    case "1Mbps模式":
+            //        A_Byte1_b210 = "000";
+            //        break;
+            //    default:
+            //        A_Byte1_b210 = "000";
+            //        break;
+            //}
+
+            //Byte b1 = Convert.ToByte(A_Byte1_b76 + A_Byte1_b543 + A_Byte1_b210, 2);
+            //Byte b2 = Convert.ToByte(A_Byte2_b76 + "000000", 2);
+
+            //byte[] SendYK = new byte[256];
+
+
             byte[] SendBuf = Function.StrToHexByte(textBox_Send422_A.Text);
+
+    
+
 
             if (SendBuf.Length > 10)
                 USB.SendData(Data.OnlyID, SendBuf);
@@ -1158,6 +1229,74 @@ namespace CKServer
                 myRs422FrameProduceForm = new RS422FrameProduceForm(this);
             }
             myRs422FrameProduceForm.ShowDialog();
+        }
+
+        private void btn_refreshEnable_Click(object sender, EventArgs e)
+        {
+            A_Byte1_b76 = "10";
+            btn_refreshEnable.BackColor = Color.GreenYellow;
+            btn_refreshDisable.BackColor = Color.Transparent;
+        }
+
+        private void btn_refreshDisable_Click(object sender, EventArgs e)
+        {
+            A_Byte1_b76 = "01";
+            btn_refreshEnable.BackColor = Color.Transparent;
+            btn_refreshDisable.BackColor = Color.GreenYellow;
+        }
+
+        private void btn_On_Click(object sender, EventArgs e)
+        {
+            A_Byte2_b76 = "10";
+            btn_On.BackColor = Color.GreenYellow;
+            btn_Off.BackColor = Color.Transparent;
+        }
+
+        private void btn_Off_Click(object sender, EventArgs e)
+        {
+            A_Byte2_b76 = "01";
+            btn_On.BackColor = Color.Transparent;
+            btn_Off.BackColor = Color.GreenYellow;
+        }
+
+        private void barButton_AStart_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            byte[] SendData = new byte[6] { 0xeb, 0x90, 0x05, 0x02, 0x01, 0x82 };
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+            byte[] FinalSend = new byte[28];
+
+            FinalSend[0] = 0x1D;
+            FinalSend[1] = 0x00;
+            FinalSend[2] = 0x00;
+            FinalSend[3] = 0x06;
+            SendData.CopyTo(FinalSend, 4);
+
+            FinalSend[10] = 0x00;
+            FinalSend[11] = 0x00;
+
+            end.CopyTo(FinalSend, 12);
+
+            USB.SendData(Data.OnlyID, FinalSend);
+        }
+
+        private void barButton_BStart_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            byte[] SendData = new byte[6] { 0xeb, 0x90, 0x05, 0x02, 0x01, 0x82 };
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+            byte[] FinalSend = new byte[28];
+
+            FinalSend[0] = 0x1D;
+            FinalSend[1] = 0x01;
+            FinalSend[2] = 0x00;
+            FinalSend[3] = 0x06;
+            SendData.CopyTo(FinalSend, 4);
+
+            FinalSend[10] = 0x00;
+            FinalSend[11] = 0x00;
+
+            end.CopyTo(FinalSend, 12);
+
+            USB.SendData(Data.OnlyID, FinalSend);
         }
     }
 }
