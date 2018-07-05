@@ -632,23 +632,22 @@ namespace CKServer
                 {
                     if (MyDevice01.BulkInEndPt != null)
                     {
-
                         byte[] RecvBoxBuf = new byte[4096];
                         int RecvBoxLen = 4096;
-                        MyDevice01.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);
+                        MyDevice01.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);//接收USB数据，不定长
 
                         if (RecvBoxLen > 0)
                         {
                             byte[] tempbuf = new byte[RecvBoxLen];
-                            Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);
+                            Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);//实际收到数据量放到1个Temp数组中
                             //存储源码
                             SaveFile.Lock_1.EnterWriteLock();
                             SaveFile.DataQueue_SC1.Enqueue(tempbuf);
                             SaveFile.Lock_1.ExitWriteLock();
-
+                            //将数据放到一个8K的数组中
                             Array.Copy(tempbuf, 0, Recv_MidBuf_8K_Box01, Pos_Recv_MidBuf_8K_Box01, tempbuf.Length);
                             Pos_Recv_MidBuf_8K_Box01 += tempbuf.Length;
-
+                            //判断数据大于4K，就处理掉4K
                             while (Pos_Recv_MidBuf_8K_Box01 >= 4096)
                             {
                                 if (Recv_MidBuf_8K_Box01[0] == 0xff && (0x0 <= Recv_MidBuf_8K_Box01[1]) && (Recv_MidBuf_8K_Box01[1] < 0x11))

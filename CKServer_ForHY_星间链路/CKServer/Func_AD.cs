@@ -9,6 +9,7 @@ namespace CKServer
     class Func_AD
     {
         public static DataTable dt_AD = new DataTable();
+        public static DataTable dt_ADShow = new DataTable();
         public static void Init_Table()
         {
             dt_AD.Columns.Add("序号", typeof(Int32));
@@ -21,6 +22,18 @@ namespace CKServer
                 dr["名称"] = Function.GetConfigStr(Data.ADconfigPath, "add", "AD_Channel_" + i.ToString(), "name");
                 dr["测量值"] = 0;
                 dt_AD.Rows.Add(dr);
+            }
+
+            dt_ADShow.Columns.Add("序号", typeof(Int32));
+            dt_ADShow.Columns.Add("名称", typeof(String));
+            dt_ADShow.Columns.Add("测量值", typeof(double));
+            for (int i = 0; i < 4; i++)
+            {
+                DataRow dr = dt_ADShow.NewRow();
+                dr["序号"] = i + 1;
+                dr["名称"] = Function.GetConfigStr(Data.ADconfigPath, "add", "AD_Channel_" + (i+38).ToString(), "name");
+                dr["测量值"] = 0;
+                dt_ADShow.Rows.Add(dr);
             }
 
         }
@@ -46,7 +59,7 @@ namespace CKServer
                     {
                         buf[t] = ADList[_StartPos + 2 + t];
                     }
-                    for (int k = 0; k < 63; k++)
+                    for (int k = 0; k < 64; k++)
                     {
                         int temp = (buf[2 * k] & 0x7f) * 256 + buf[2 * k + 1];
                         double t = (double)(5 * temp) / (double)32767;

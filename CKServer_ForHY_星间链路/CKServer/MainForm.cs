@@ -121,9 +121,7 @@ namespace CKServer
             myRs422FrameProduceForm = new RS422FrameProduceForm(this);
 
             dockPanel_RegCtl.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-
-            this.comboBox5.SelectedIndex = 0;
-            this.comboBox6.SelectedIndex = 0;
+            
 
         }
 
@@ -136,7 +134,7 @@ namespace CKServer
                 dataGridView_Reg.AllowUserToAddRows = false;
 
                 Func_AD.Init_Table();
-                dataGridView_AD.DataSource = Func_AD.dt_AD;
+                dataGridView_AD.DataSource = Func_AD.dt_ADShow;
                 dataGridView_AD.AllowUserToAddRows = false;
 
                 Func_OC.Init_Table();
@@ -414,9 +412,9 @@ namespace CKServer
                 ts.Minutes.ToString() + "分" +
                 ts.Seconds.ToString() + "秒";
 
-            for (int i = 0; i < 64; i++)
+            for (int i = 0; i < 4; i++)
             {
-                Func_AD.dt_AD.Rows[i]["测量值"] = dataRe_AD[i];
+                Func_AD.dt_ADShow.Rows[i]["测量值"] = dataRe_AD[i+38];
             }
         }
 
@@ -1007,6 +1005,9 @@ namespace CKServer
                 case "CheckEnable_LOG":
                     panel = this.dockPanel_LOG;
                     break;
+                case "CheckEnable_ManualYK":
+                    panel = this.dockPanel1;
+                    break;
                 default:
                     panel = this.dockPanel_LVDS;
                     break;
@@ -1122,60 +1123,7 @@ namespace CKServer
         public string Rs422_Channel_Name;           //
         private void btn_Send422_A_Click(object sender, EventArgs e)
         {
-            //switch(comboBox5.Text)
-            //{
-            //    case "30Mbps模式":
-            //        A_Byte1_b543 = "100";
-            //        break;
-            //    case "15Mbps模式":
-            //        A_Byte1_b543 = "011";
-            //        break;
-            //    case "10Mbps模式":
-            //        A_Byte1_b543 = "010";
-            //        break;
-            //    case "2Mbps模式":
-            //        A_Byte1_b543 = "001";
-            //        break;
-            //    case "1Mbps模式":
-            //        A_Byte1_b543 = "000";
-            //        break;
-            //    default:
-            //        A_Byte1_b543 = "000";
-            //        break;
-            //}
-
-            //switch (comboBox6.Text)
-            //{
-            //    case "30Mbps模式":
-            //        A_Byte1_b210 = "100";
-            //        break;
-            //    case "15Mbps模式":
-            //        A_Byte1_b210 = "011";
-            //        break;
-            //    case "10Mbps模式":
-            //        A_Byte1_b210 = "010";
-            //        break;
-            //    case "2Mbps模式":
-            //        A_Byte1_b210 = "001";
-            //        break;
-            //    case "1Mbps模式":
-            //        A_Byte1_b210 = "000";
-            //        break;
-            //    default:
-            //        A_Byte1_b210 = "000";
-            //        break;
-            //}
-
-            //Byte b1 = Convert.ToByte(A_Byte1_b76 + A_Byte1_b543 + A_Byte1_b210, 2);
-            //Byte b2 = Convert.ToByte(A_Byte2_b76 + "000000", 2);
-
-            //byte[] SendYK = new byte[256];
-
-
-            byte[] SendBuf = Function.StrToHexByte(textBox_Send422_A.Text);
-
-    
-
+            byte[] SendBuf = Function.StrToHexByte(textBox_Send422_A.Text);  
 
             if (SendBuf.Length > 10)
                 USB.SendData(Data.OnlyID, SendBuf);
@@ -1231,33 +1179,6 @@ namespace CKServer
             myRs422FrameProduceForm.ShowDialog();
         }
 
-        private void btn_refreshEnable_Click(object sender, EventArgs e)
-        {
-            A_Byte1_b76 = "10";
-            btn_refreshEnable.BackColor = Color.GreenYellow;
-            btn_refreshDisable.BackColor = Color.Transparent;
-        }
-
-        private void btn_refreshDisable_Click(object sender, EventArgs e)
-        {
-            A_Byte1_b76 = "01";
-            btn_refreshEnable.BackColor = Color.Transparent;
-            btn_refreshDisable.BackColor = Color.GreenYellow;
-        }
-
-        private void btn_On_Click(object sender, EventArgs e)
-        {
-            A_Byte2_b76 = "10";
-            btn_On.BackColor = Color.GreenYellow;
-            btn_Off.BackColor = Color.Transparent;
-        }
-
-        private void btn_Off_Click(object sender, EventArgs e)
-        {
-            A_Byte2_b76 = "01";
-            btn_On.BackColor = Color.Transparent;
-            btn_Off.BackColor = Color.GreenYellow;
-        }
 
         private void barButton_AStart_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -1297,6 +1218,98 @@ namespace CKServer
             end.CopyTo(FinalSend, 12);
 
             USB.SendData(Data.OnlyID, FinalSend);
+        }
+
+        private void bar_Send422_A_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string YKcode = "";
+            string YKstr = barEdit_YKSelect_A.EditValue.ToString();
+            switch(YKstr)
+            {
+                case "刷新允许":
+                    YKcode = "0101";
+                    break;
+                case "刷新禁止":
+                    YKcode = "0202";
+                    break;
+                case "收发通信机发射开":
+                    YKcode = "0303";
+                    break;
+                case "收发通信机发射关":
+                    YKcode = "0404";
+                    break;
+                case "发射码速率1Mbps模式":
+                    YKcode = "1010";
+                    break;
+                case "发射码速率2Mbps模式":
+                    YKcode = "1111";
+                    break;
+                case "发射码速率10Mbps模式":
+                    YKcode = "1212";
+                    break;
+                case "发射码速率15Mbps模式":
+                    YKcode = "1313";
+                    break;
+                case "发射码速率30Mbps模式":
+                    YKcode = "1414";
+                    break;
+                case "接收码速率1Mbps模式":
+                    YKcode = "2020";
+                    break;
+                case "接收码速率2Mbps模式":
+                    YKcode = "2121";
+                    break;
+                case "接收码速率10Mbps模式":
+                    YKcode = "2222";
+                    break;
+                case "接收码速率15Mbps模式":
+                    YKcode = "2323";
+                    break;
+                case "接收码速率30Mbps模式":
+                    YKcode = "2424";
+                    break;             
+                default:
+                    YKcode = "0202";
+                    break;
+            }
+
+            //EB90020c163CC0000005000002020202
+            string header = "eb90020c";
+            string body = "163cc00000050000" + YKcode;
+            string hcrc = "0000";
+
+            int crc = 0;
+            int count = body.Length / 4;
+            if (body.Length % 4 == 0)
+            {
+                for (int m = 0; m < body.Length / 4; m++)
+                {
+                    int temp = Convert.ToInt32(body.Substring(m * 4, 4), 16);
+                    crc ^= temp;
+                }
+                hcrc = crc.ToString("x4");
+            }
+
+            byte[] SendData = Function.StrToHexByte(header + body + hcrc);
+
+            //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
+            byte[] FinalSend = new byte[SendData.Length + 20];
+            byte[] head = new byte[2] { 0x1D, 0x00 };
+            byte[] len = new byte[2] { 0, 0 };
+            len[0] = (byte)((byte)(SendData.Length & 0xff00) >> 8);
+            len[1] = (byte)(SendData.Length & 0xff);
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+
+            head.CopyTo(FinalSend, 0);
+            len.CopyTo(FinalSend, 2);
+            SendData.CopyTo(FinalSend, 4);
+            end.CopyTo(FinalSend, 4 + SendData.Length);
+
+
+            if (FinalSend.Length > 10)
+                USB.SendData(Data.OnlyID, FinalSend);
+            else
+                MyLog.Error("输入正确的遥控注数数据！");
         }
     }
 }

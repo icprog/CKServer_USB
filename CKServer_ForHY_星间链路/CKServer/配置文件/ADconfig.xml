@@ -38,10 +38,10 @@
   <add key="AD_Channel_35" value="1" name="AD通道36" />
   <add key="AD_Channel_36" value="1" name="AD通道37" />
   <add key="AD_Channel_37" value="1" name="AD通道38" />
-  <add key="AD_Channel_38" value="1" name="AD通道39" />
-  <add key="AD_Channel_39" value="1" name="AD通道40" />
-  <add key="AD_Channel_40" value="3" name="AD通道41" />
-  <add key="AD_Channel_41" value="3" name="AD通道42" />
+  <add key="AD_Channel_38" value="1" name="A机5V遥测" />
+  <add key="AD_Channel_39" value="1" name="B机5V遥测" />
+  <add key="AD_Channel_40" value="3" name="A机温度遥测" />
+  <add key="AD_Channel_41" value="3" name="B机温度遥测" />
   <add key="AD_Channel_42" value="3" name="AD通道43" />
   <add key="AD_Channel_43" value="3" name="AD通道44" />
   <add key="AD_Channel_44" value="3" name="AD通道45" />

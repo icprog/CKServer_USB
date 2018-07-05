@@ -111,9 +111,6 @@ namespace CKServer
                 case "textBox_Send422_A":
                     mform.textBox_Send422_A.Text = ZhenStr;
                     break;
-                case "textBox_Send422_B":
-                    mform.textBox_Send422_B.Text = ZhenStr;
-                    break;
                 default:
                     break;
 

@@ -1094,6 +1094,165 @@
         AAAASUVORK5CYII=
 </value>
   </data>
+  <data name="bar_Send422_A.Caption" xml:space="preserve">
+    <value>遥控注数（A机）</value>
+  </data>
+  <data name="bar_Send422_A.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAFXRFWHRUaXRsZQBOZXh0O0Fy
+        cm93O0Rvd24pe8EDAAACpElEQVRYR8WXu2oVURSGYyUphQRCtEynlZWtnUUUvCBBG0ELsZE8QcRaUvsK
+        voGQvIF4QwRBhFQWVoJICF7G/xvWP+wzrjOzRzCn+ELmX/9aa8/MvsxZappmobR/Lj9+XsO62BK7Yl8c
+        iMOA/9GI4cGb1ZihdgBnxSPxVjSV4CWH3Kxmy9gAToj74qWg6G+xJ3bEptgQywH/oxHDg5cccqlBrb96
+        DA1gTTwRvqNn4hreGvBGjvOpRc2ZPnidUILxqSDxk9gWJ8sGNZATudSgFjVnBoHPZsOj8p2/FjfKov8C
+        NaKWn0T3OojbZHhfvvPB5uHr6MdLqCX8JOjR9iNmAzBjPeG2ywIZ4asaAFAzvPRoVwe6g8CywcDkGX3n
+        4Z0yAOaEJya9Wt1BNg7WLsunarbLN2kAQG1BD3qtoznA7kWhvTJhiPBPGgDQI3K2uLbIFoq4U5ojdqav
+        hT46AOmricZmRc4u1xbZxxE3S3PEPorTid41hyS+Kt4lOjsmOftcW+QwQdwozRFD/yDWEr2jF6N5e3aU
+        esTYtsk54NoiJxricmmOmJu8F90jLfSWQqf5m75exDk7iB1ybbFmAMBdrSS6pFZbEV1z6yXS0gEMvYKj
+        iJlX4lRPA5p7yzWfk3rpKxiahFdEfxAvetfQb/5FnEvqpZNw7jKM+HXxIzw1fBXn59RKl+HoRqTYTfEz
+        fEN8ExeyGqBYuhFVbcWK3RZDg/guLma5oNjcrRiqDiPF7ohf4S1hnlzKckCxwcMIqo9jxe8Jf/cBT+Vq
+        5jWKjx7HMOWD5IFgEDS/lXkMtcToBwlM+iRT/KG4m8UMNaIWNUc/yWChH6UGo58EMHmO7bPc8Kh4X56Y
+        vO9j+2FSwoxl2bTHayV4yWln+zxqB2D+34/TxdEs/QEC/9aOMHfXzAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="barEdit_YKSelect_A.Caption" xml:space="preserve">
+    <value>遥控指令名称（A）</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items" xml:space="preserve">
+    <value>刷新允许</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items1" xml:space="preserve">
+    <value>刷新禁止</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items2" xml:space="preserve">
+    <value>收发通信机发射开</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items3" xml:space="preserve">
+    <value>收发通信机发射关</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items4" xml:space="preserve">
+    <value>发射码速率1Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items5" xml:space="preserve">
+    <value>发射码速率2Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items6" xml:space="preserve">
+    <value>发射码速率10Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items7" xml:space="preserve">
+    <value>发射码速率15Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items8" xml:space="preserve">
+    <value>发射码速率30Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items9" xml:space="preserve">
+    <value>接收码速率1Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items10" xml:space="preserve">
+    <value>接收码速率2Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items11" xml:space="preserve">
+    <value>接收码速率10Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items12" xml:space="preserve">
+    <value>接收码速率15Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.Items13" xml:space="preserve">
+    <value>接收码速率30Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_A.NullText" xml:space="preserve">
+    <value>刷新禁止</value>
+  </data>
+  <data name="barEdit_YKSelect_A.EditWidth" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="barEditItem14.Caption" xml:space="preserve">
+    <value>遥控指令名称（B）</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items" xml:space="preserve">
+    <value>刷新允许</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items1" xml:space="preserve">
+    <value>刷新禁止</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items2" xml:space="preserve">
+    <value>收发通信机发射开</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items3" xml:space="preserve">
+    <value>收发通信机发射关</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items4" xml:space="preserve">
+    <value>发射码速率1Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items5" xml:space="preserve">
+    <value>发射码速率2Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items6" xml:space="preserve">
+    <value>发射码速率10Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items7" xml:space="preserve">
+    <value>发射码速率15Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items8" xml:space="preserve">
+    <value>发射码速率30Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items9" xml:space="preserve">
+    <value>接收码速率1Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items10" xml:space="preserve">
+    <value>接收码速率2Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items11" xml:space="preserve">
+    <value>接收码速率10Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items12" xml:space="preserve">
+    <value>接收码速率15Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.Items13" xml:space="preserve">
+    <value>接收码速率30Mbps模式</value>
+  </data>
+  <data name="ComboBox_YKSelect_B.NullText" xml:space="preserve">
+    <value>刷新禁止</value>
+  </data>
+  <data name="barEditItem14.EditWidth" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="bar_Send422_B.Caption" xml:space="preserve">
+    <value>遥控注数（B机）</value>
+  </data>
+  <data name="bar_Send422_B.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAFXRFWHRUaXRsZQBOZXh0O0Fy
+        cm93O0Rvd24pe8EDAAACpElEQVRYR8WXu2oVURSGYyUphQRCtEynlZWtnUUUvCBBG0ELsZE8QcRaUvsK
+        voGQvIF4QwRBhFQWVoJICF7G/xvWP+wzrjOzRzCn+ELmX/9aa8/MvsxZappmobR/Lj9+XsO62BK7Yl8c
+        iMOA/9GI4cGb1ZihdgBnxSPxVjSV4CWH3Kxmy9gAToj74qWg6G+xJ3bEptgQywH/oxHDg5cccqlBrb96
+        DA1gTTwRvqNn4hreGvBGjvOpRc2ZPnidUILxqSDxk9gWJ8sGNZATudSgFjVnBoHPZsOj8p2/FjfKov8C
+        NaKWn0T3OojbZHhfvvPB5uHr6MdLqCX8JOjR9iNmAzBjPeG2ywIZ4asaAFAzvPRoVwe6g8CywcDkGX3n
+        4Z0yAOaEJya9Wt1BNg7WLsunarbLN2kAQG1BD3qtoznA7kWhvTJhiPBPGgDQI3K2uLbIFoq4U5ojdqav
+        hT46AOmricZmRc4u1xbZxxE3S3PEPorTid41hyS+Kt4lOjsmOftcW+QwQdwozRFD/yDWEr2jF6N5e3aU
+        esTYtsk54NoiJxricmmOmJu8F90jLfSWQqf5m75exDk7iB1ybbFmAMBdrSS6pFZbEV1z6yXS0gEMvYKj
+        iJlX4lRPA5p7yzWfk3rpKxiahFdEfxAvetfQb/5FnEvqpZNw7jKM+HXxIzw1fBXn59RKl+HoRqTYTfEz
+        fEN8ExeyGqBYuhFVbcWK3RZDg/guLma5oNjcrRiqDiPF7ohf4S1hnlzKckCxwcMIqo9jxe8Jf/cBT+Vq
+        5jWKjx7HMOWD5IFgEDS/lXkMtcToBwlM+iRT/KG4m8UMNaIWNUc/yWChH6UGo58EMHmO7bPc8Kh4X56Y
+        vO9j+2FSwoxl2bTHayV4yWln+zxqB2D+34/TxdEs/QEC/9aOMHfXzAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="CheckEnable_ManualYK.Caption" xml:space="preserve">
+    <value>生成遥控包</value>
+  </data>
   <data name="ribbonControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1109,11 +1268,11 @@
   <data name="ribbonPageGroup5.Text" xml:space="preserve">
     <value>打开路径</value>
   </data>
-  <data name="ribbonPageGroup8.Text" xml:space="preserve">
-    <value>寄存器控制</value>
-  </data>
   <data name="ribbonPageGroup9.Text" xml:space="preserve">
-    <value>422功能控制</value>
+    <value>422采集控制</value>
+  </data>
+  <data name="ribbonPageGroup10.Text" xml:space="preserve">
+    <value>422遥控控制</value>
   </data>
   <data name="ribbonPage1.Text" xml:space="preserve">
     <value>控制功能</value>
@@ -1159,6 +1318,15 @@
   </data>
   <data name="Page_Setting.Text" xml:space="preserve">
     <value>系统配置</value>
+  </data>
+  <data name="ribbonPageGroup11.Text" xml:space="preserve">
+    <value>调试保留</value>
+  </data>
+  <data name="ribbonPageGroup8.Text" xml:space="preserve">
+    <value>寄存器控制</value>
+  </data>
+  <data name="ribbonPage2.Text" xml:space="preserve">
+    <value>调试保留</value>
   </data>
   <data name="repositoryItemTextEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1243,13 +1411,13 @@
     <value>Default</value>
   </data>
   <data name="ribbonControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1109, 133</value>
+    <value>1275, 133</value>
   </data>
   <data name="ribbonStatusBar1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 744</value>
   </data>
   <data name="ribbonStatusBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1109, 31</value>
+    <value>1275, 31</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar1.Name" xml:space="preserve">
     <value>ribbonStatusBar1</value>
@@ -1261,7 +1429,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;ribbonControl1.Name" xml:space="preserve">
     <value>ribbonControl1</value>
@@ -1273,7 +1441,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ribbonControl1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 17</value>
@@ -1286,7 +1454,7 @@
     <value>0, 0</value>
   </data>
   <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 584</value>
+    <value>1267, 80</value>
   </data>
   <data name="richTextBox1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1476,452 +1644,14 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>55</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1109, 775</value>
-  </data>
-  <data name="textBox_Send422_B.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 29</value>
-  </data>
-  <data name="textBox_Send422_B.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBox_Send422_B.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 103</value>
-  </data>
-  <data name="textBox_Send422_B.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBox_Send422_B.Name" xml:space="preserve">
-    <value>textBox_Send422_B</value>
-  </data>
-  <data name="&gt;&gt;textBox_Send422_B.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox_Send422_B.Parent" xml:space="preserve">
-    <value>controlContainer3</value>
-  </data>
-  <data name="&gt;&gt;textBox_Send422_B.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dataGridView_YC2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>序号</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>名称(B机)</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>占位</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn11.Width" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>值</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn12.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn13.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn13.HeaderText" xml:space="preserve">
-    <value>解析值</value>
-  </data>
-  <data name="dataGridView_YC2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 138</value>
-  </data>
-  <data name="dataGridView_YC2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 423</value>
-  </data>
-  <data name="dataGridView_YC2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_YC2.Name" xml:space="preserve">
-    <value>dataGridView_YC2</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_YC2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_YC2.Parent" xml:space="preserve">
-    <value>controlContainer3</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_YC2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btn_Send422_B.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_Send422_B.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 0</value>
-  </data>
-  <data name="btn_Send422_B.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="btn_Send422_B.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btn_Send422_B.Text" xml:space="preserve">
-    <value>B机-遥控注数</value>
-  </data>
-  <data name="&gt;&gt;btn_Send422_B.Name" xml:space="preserve">
-    <value>btn_Send422_B</value>
-  </data>
-  <data name="&gt;&gt;btn_Send422_B.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_Send422_B.Parent" xml:space="preserve">
-    <value>controlContainer3</value>
-  </data>
-  <data name="&gt;&gt;btn_Send422_B.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="controlContainer3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 23</value>
-  </data>
-  <data name="controlContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>426, 584</value>
-  </data>
-  <data name="controlContainer3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;controlContainer3.Name" xml:space="preserve">
-    <value>controlContainer3</value>
-  </data>
-  <data name="&gt;&gt;controlContainer3.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;controlContainer3.Parent" xml:space="preserve">
-    <value>dockPanel_422_B</value>
-  </data>
-  <data name="&gt;&gt;controlContainer3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dockPanel_422_B.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 133</value>
-  </data>
-  <data name="dockPanel_422_B.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 611</value>
-  </data>
-  <data name="dockPanel_422_B.Text" xml:space="preserve">
-    <value>422功能区_B机</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_422_B.Name" xml:space="preserve">
-    <value>dockPanel_422_B</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_422_B.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_422_B.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_422_B.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 33</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 14</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>接收码速率设置</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="comboBox6.Items" xml:space="preserve">
-    <value>30Mbps模式</value>
-  </data>
-  <data name="comboBox6.Items1" xml:space="preserve">
-    <value>15Mbps模式</value>
-  </data>
-  <data name="comboBox6.Items2" xml:space="preserve">
-    <value>10Mbps模式</value>
-  </data>
-  <data name="comboBox6.Items3" xml:space="preserve">
-    <value>2Mbps模式</value>
-  </data>
-  <data name="comboBox6.Items4" xml:space="preserve">
-    <value>1Mbps模式</value>
-  </data>
-  <data name="comboBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 62</value>
-  </data>
-  <data name="comboBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 22</value>
-  </data>
-  <data name="comboBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;comboBox6.Name" xml:space="preserve">
-    <value>comboBox6</value>
-  </data>
-  <data name="&gt;&gt;comboBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox6.Parent" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;comboBox6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 33</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 14</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>发射码速率设置</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="comboBox5.Items" xml:space="preserve">
-    <value>30Mbps模式</value>
-  </data>
-  <data name="comboBox5.Items1" xml:space="preserve">
-    <value>15Mbps模式</value>
-  </data>
-  <data name="comboBox5.Items2" xml:space="preserve">
-    <value>10Mbps模式</value>
-  </data>
-  <data name="comboBox5.Items3" xml:space="preserve">
-    <value>2Mbps模式</value>
-  </data>
-  <data name="comboBox5.Items4" xml:space="preserve">
-    <value>1Mbps模式</value>
-  </data>
-  <data name="comboBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 62</value>
-  </data>
-  <data name="comboBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 22</value>
-  </data>
-  <data name="comboBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;comboBox5.Name" xml:space="preserve">
-    <value>comboBox5</value>
-  </data>
-  <data name="&gt;&gt;comboBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox5.Parent" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;comboBox5.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btn_Off.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_Off.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 61</value>
-  </data>
-  <data name="btn_Off.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 23</value>
-  </data>
-  <data name="btn_Off.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btn_Off.Text" xml:space="preserve">
-    <value>收发通信机发射关</value>
-  </data>
-  <data name="&gt;&gt;btn_Off.Name" xml:space="preserve">
-    <value>btn_Off</value>
-  </data>
-  <data name="&gt;&gt;btn_Off.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_Off.Parent" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;btn_Off.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btn_On.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_On.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 32</value>
-  </data>
-  <data name="btn_On.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 23</value>
-  </data>
-  <data name="btn_On.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btn_On.Text" xml:space="preserve">
-    <value>收发通信机发射开</value>
-  </data>
-  <data name="&gt;&gt;btn_On.Name" xml:space="preserve">
-    <value>btn_On</value>
-  </data>
-  <data name="&gt;&gt;btn_On.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_On.Parent" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;btn_On.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btn_refreshDisable.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_refreshDisable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 62</value>
-  </data>
-  <data name="btn_refreshDisable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="btn_refreshDisable.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btn_refreshDisable.Text" xml:space="preserve">
-    <value>刷新禁止</value>
-  </data>
-  <data name="&gt;&gt;btn_refreshDisable.Name" xml:space="preserve">
-    <value>btn_refreshDisable</value>
-  </data>
-  <data name="&gt;&gt;btn_refreshDisable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_refreshDisable.Parent" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;btn_refreshDisable.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btn_refreshEnable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 33</value>
-  </data>
-  <data name="btn_refreshEnable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="btn_refreshEnable.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btn_refreshEnable.Text" xml:space="preserve">
-    <value>刷新允许</value>
-  </data>
-  <data name="&gt;&gt;btn_refreshEnable.Name" xml:space="preserve">
-    <value>btn_refreshEnable</value>
-  </data>
-  <data name="&gt;&gt;btn_refreshEnable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_refreshEnable.Parent" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;btn_refreshEnable.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="textBox_Send422_A.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 3</value>
-  </data>
-  <data name="textBox_Send422_A.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBox_Send422_A.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 23</value>
-  </data>
-  <data name="textBox_Send422_A.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBox_Send422_A.Name" xml:space="preserve">
-    <value>textBox_Send422_A</value>
-  </data>
-  <data name="&gt;&gt;textBox_Send422_A.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox_Send422_A.Parent" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;textBox_Send422_A.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="btn_Send422_A.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 3</value>
-  </data>
-  <data name="btn_Send422_A.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="btn_Send422_A.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btn_Send422_A.Text" xml:space="preserve">
-    <value>A机-遥控注数</value>
-  </data>
-  <data name="&gt;&gt;btn_Send422_A.Name" xml:space="preserve">
-    <value>btn_Send422_A</value>
-  </data>
-  <data name="&gt;&gt;btn_Send422_A.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_Send422_A.Parent" xml:space="preserve">
-    <value>dockPanel3_Container</value>
-  </data>
-  <data name="&gt;&gt;btn_Send422_A.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="dataGridView_YC1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+    <value>1275, 775</value>
   </data>
   <metadata name="Column13.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1962,11 +1692,14 @@
   <data name="Column16.HeaderText" xml:space="preserve">
     <value>解析值</value>
   </data>
+  <data name="dataGridView_YC1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="dataGridView_YC1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 141</value>
+    <value>0, 0</value>
   </data>
   <data name="dataGridView_YC1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 423</value>
+    <value>440, 472</value>
   </data>
   <data name="dataGridView_YC1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1981,13 +1714,13 @@
     <value>dockPanel3_Container</value>
   </data>
   <data name="&gt;&gt;dataGridView_YC1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>0</value>
   </data>
   <data name="dockPanel3_Container.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
   </data>
   <data name="dockPanel3_Container.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 584</value>
+    <value>440, 472</value>
   </data>
   <data name="dockPanel3_Container.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2005,10 +1738,10 @@
     <value>0</value>
   </data>
   <data name="dockPanel_422_A.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 133</value>
+    <value>565, 133</value>
   </data>
   <data name="dockPanel_422_A.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 611</value>
+    <value>448, 500</value>
   </data>
   <data name="dockPanel_422_A.Text" xml:space="preserve">
     <value>422功能区_A机</value>
@@ -2023,49 +1756,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dockPanel_422_A.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="dockPanel1_Container.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 23</value>
-  </data>
-  <data name="dockPanel1_Container.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 584</value>
-  </data>
-  <data name="dockPanel1_Container.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.Name" xml:space="preserve">
-    <value>dockPanel1_Container</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.Parent" xml:space="preserve">
-    <value>dockPanel_LOG</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dockPanel_LOG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>904, 133</value>
-  </data>
-  <data name="dockPanel_LOG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 611</value>
-  </data>
-  <data name="dockPanel_LOG.Text" xml:space="preserve">
-    <value>日志</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.Name" xml:space="preserve">
-    <value>dockPanel_LOG</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2098,7 +1789,7 @@
     <value>0, 0</value>
   </data>
   <data name="dataGridView_AD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 584</value>
+    <value>253, 192</value>
   </data>
   <data name="dataGridView_AD.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2116,10 +1807,10 @@
     <value>0</value>
   </data>
   <data name="dockPanel5_Container.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 23</value>
+    <value>5, 23</value>
   </data>
   <data name="dockPanel5_Container.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 584</value>
+    <value>253, 192</value>
   </data>
   <data name="dockPanel5_Container.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2137,10 +1828,10 @@
     <value>0</value>
   </data>
   <data name="dockPanel_AD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-309, 0</value>
+    <value>0, 0</value>
   </data>
   <data name="dockPanel_AD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 611</value>
+    <value>262, 220</value>
   </data>
   <data name="dockPanel_AD.Text" xml:space="preserve">
     <value>AD功能区</value>
@@ -2152,10 +1843,118 @@
     <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;dockPanel_AD.Parent" xml:space="preserve">
-    <value>hideContainerLeft</value>
+    <value>panelContainer1</value>
   </data>
   <data name="&gt;&gt;dockPanel_AD.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column5.HeaderText" xml:space="preserve">
+    <value>输出控制</value>
+  </data>
+  <data name="dataGridView_OC.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView_OC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dataGridView_OC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 256</value>
+  </data>
+  <data name="dataGridView_OC.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_OC.Name" xml:space="preserve">
+    <value>dataGridView_OC</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_OC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_OC.Parent" xml:space="preserve">
+    <value>dockPanel4_Container</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_OC.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dockPanel4_Container.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 23</value>
+  </data>
+  <data name="dockPanel4_Container.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 256</value>
+  </data>
+  <data name="dockPanel4_Container.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dockPanel4_Container.Name" xml:space="preserve">
+    <value>dockPanel4_Container</value>
+  </data>
+  <data name="&gt;&gt;dockPanel4_Container.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dockPanel4_Container.Parent" xml:space="preserve">
+    <value>dockPanel_OC</value>
+  </data>
+  <data name="&gt;&gt;dockPanel4_Container.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dockPanel_OC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 220</value>
+  </data>
+  <data name="dockPanel_OC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 283</value>
+  </data>
+  <data name="dockPanel_OC.Text" xml:space="preserve">
+    <value>OC功能区</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_OC.Name" xml:space="preserve">
+    <value>dockPanel_OC</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_OC.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_OC.Parent" xml:space="preserve">
+    <value>panelContainer1</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_OC.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1013, 133</value>
+  </data>
+  <data name="panelContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 503</value>
+  </data>
+  <data name="panelContainer1.Text" xml:space="preserve">
+    <value>panelContainer1</value>
+  </data>
+  <data name="&gt;&gt;panelContainer1.Name" xml:space="preserve">
+    <value>panelContainer1</value>
+  </data>
+  <data name="&gt;&gt;panelContainer1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelContainer1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelContainer1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="comboBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2167,16 +1966,19 @@
     <value>20M</value>
   </data>
   <data name="comboBox4.Items2" xml:space="preserve">
-    <value>10M</value>
+    <value>15M</value>
   </data>
   <data name="comboBox4.Items3" xml:space="preserve">
-    <value>02M</value>
+    <value>10M</value>
   </data>
   <data name="comboBox4.Items4" xml:space="preserve">
+    <value>02M</value>
+  </data>
+  <data name="comboBox4.Items5" xml:space="preserve">
     <value>01M</value>
   </data>
   <data name="comboBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>492, 92</value>
+    <value>477, 92</value>
   </data>
   <data name="comboBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 22</value>
@@ -2209,16 +2011,19 @@
     <value>20M</value>
   </data>
   <data name="comboBox3.Items2" xml:space="preserve">
-    <value>10M</value>
+    <value>15M</value>
   </data>
   <data name="comboBox3.Items3" xml:space="preserve">
-    <value>02M</value>
+    <value>10M</value>
   </data>
   <data name="comboBox3.Items4" xml:space="preserve">
+    <value>02M</value>
+  </data>
+  <data name="comboBox3.Items5" xml:space="preserve">
     <value>01M</value>
   </data>
   <data name="comboBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>492, 63</value>
+    <value>477, 63</value>
   </data>
   <data name="comboBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 22</value>
@@ -2251,16 +2056,19 @@
     <value>20M</value>
   </data>
   <data name="comboBox2.Items2" xml:space="preserve">
-    <value>10M</value>
+    <value>15M</value>
   </data>
   <data name="comboBox2.Items3" xml:space="preserve">
-    <value>02M</value>
+    <value>10M</value>
   </data>
   <data name="comboBox2.Items4" xml:space="preserve">
+    <value>02M</value>
+  </data>
+  <data name="comboBox2.Items5" xml:space="preserve">
     <value>01M</value>
   </data>
   <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>492, 34</value>
+    <value>477, 34</value>
   </data>
   <data name="comboBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 22</value>
@@ -2293,16 +2101,19 @@
     <value>20M</value>
   </data>
   <data name="comboBox1.Items2" xml:space="preserve">
-    <value>10M</value>
+    <value>15M</value>
   </data>
   <data name="comboBox1.Items3" xml:space="preserve">
-    <value>02M</value>
+    <value>10M</value>
   </data>
   <data name="comboBox1.Items4" xml:space="preserve">
+    <value>02M</value>
+  </data>
+  <data name="comboBox1.Items5" xml:space="preserve">
     <value>01M</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>492, 4</value>
+    <value>477, 4</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 22</value>
@@ -2344,7 +2155,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox_Send_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 89</value>
+    <value>262, 62</value>
   </data>
   <data name="textBox_Send_1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2368,7 +2179,7 @@
     <value>3, 3</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 110</value>
+    <value>268, 83</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2401,7 +2212,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox_Send_2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 89</value>
+    <value>262, 62</value>
   </data>
   <data name="textBox_Send_2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2422,10 +2233,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 119</value>
+    <value>3, 92</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 110</value>
+    <value>268, 83</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2458,7 +2269,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox_Send_3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 89</value>
+    <value>262, 62</value>
   </data>
   <data name="textBox_Send_3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2479,10 +2290,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 235</value>
+    <value>3, 181</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 110</value>
+    <value>268, 83</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2515,7 +2326,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox_Send_4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 89</value>
+    <value>262, 62</value>
   </data>
   <data name="textBox_Send_4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2536,10 +2347,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 351</value>
+    <value>3, 270</value>
   </data>
   <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 110</value>
+    <value>268, 83</value>
   </data>
   <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2572,7 +2383,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox_Result_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 89</value>
+    <value>263, 62</value>
   </data>
   <data name="textBox_Result_1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2593,10 +2404,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 3</value>
+    <value>277, 3</value>
   </data>
   <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 110</value>
+    <value>269, 83</value>
   </data>
   <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2629,7 +2440,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox_Result_2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 89</value>
+    <value>263, 62</value>
   </data>
   <data name="textBox_Result_2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2650,10 +2461,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 119</value>
+    <value>277, 92</value>
   </data>
   <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 110</value>
+    <value>269, 83</value>
   </data>
   <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2686,7 +2497,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox_Result_3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 89</value>
+    <value>263, 62</value>
   </data>
   <data name="textBox_Result_3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2707,10 +2518,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 235</value>
+    <value>277, 181</value>
   </data>
   <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 110</value>
+    <value>269, 83</value>
   </data>
   <data name="groupBox7.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2743,7 +2554,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox_Result_4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 89</value>
+    <value>263, 62</value>
   </data>
   <data name="textBox_Result_4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2764,10 +2575,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 351</value>
+    <value>277, 270</value>
   </data>
   <data name="groupBox8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 110</value>
+    <value>269, 83</value>
   </data>
   <data name="groupBox8.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2794,7 +2605,7 @@
     <value>4</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>564, 464</value>
+    <value>549, 356</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -2931,7 +2742,7 @@
     <value>True</value>
   </data>
   <data name="buttonEdit4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 24</value>
+    <value>469, 24</value>
   </data>
   <data name="buttonEdit4.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -3064,7 +2875,7 @@
     <value>True</value>
   </data>
   <data name="buttonEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 24</value>
+    <value>469, 24</value>
   </data>
   <data name="buttonEdit1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -3197,7 +3008,7 @@
     <value>True</value>
   </data>
   <data name="buttonEdit3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 24</value>
+    <value>469, 24</value>
   </data>
   <data name="buttonEdit3.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -3330,7 +3141,7 @@
     <value>True</value>
   </data>
   <data name="buttonEdit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 24</value>
+    <value>469, 24</value>
   </data>
   <data name="buttonEdit2.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -3351,7 +3162,7 @@
     <value>4, 23</value>
   </data>
   <data name="controlContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>571, 584</value>
+    <value>556, 476</value>
   </data>
   <data name="controlContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3369,10 +3180,10 @@
     <value>0</value>
   </data>
   <data name="dockPanel_LVDS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-580, 0</value>
+    <value>0, 133</value>
   </data>
   <data name="dockPanel_LVDS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>580, 611</value>
+    <value>565, 503</value>
   </data>
   <data name="dockPanel_LVDS.Text" xml:space="preserve">
     <value>LVDS功能区</value>
@@ -3384,139 +3195,52 @@
     <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;dockPanel_LVDS.Parent" xml:space="preserve">
-    <value>hideContainerLeft</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;dockPanel_LVDS.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <data name="hideContainerLeft.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="dockPanel1_Container.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
   </data>
-  <data name="hideContainerLeft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 133</value>
+  <data name="dockPanel1_Container.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1267, 80</value>
   </data>
-  <data name="hideContainerLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 611</value>
-  </data>
-  <data name="&gt;&gt;hideContainerLeft.Name" xml:space="preserve">
-    <value>hideContainerLeft</value>
-  </data>
-  <data name="&gt;&gt;hideContainerLeft.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.AutoHideContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;hideContainerLeft.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;hideContainerLeft.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>序号</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>名称</value>
-  </data>
-  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Column5.HeaderText" xml:space="preserve">
-    <value>输出控制</value>
-  </data>
-  <data name="dataGridView_OC.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView_OC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="dataGridView_OC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 584</value>
-  </data>
-  <data name="dataGridView_OC.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_OC.Name" xml:space="preserve">
-    <value>dataGridView_OC</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_OC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_OC.Parent" xml:space="preserve">
-    <value>dockPanel4_Container</value>
-  </data>
-  <data name="&gt;&gt;dataGridView_OC.ZOrder" xml:space="preserve">
+  <data name="dockPanel1_Container.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="dockPanel4_Container.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 23</value>
+  <data name="&gt;&gt;dockPanel1_Container.Name" xml:space="preserve">
+    <value>dockPanel1_Container</value>
   </data>
-  <data name="dockPanel4_Container.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 584</value>
-  </data>
-  <data name="dockPanel4_Container.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dockPanel4_Container.Name" xml:space="preserve">
-    <value>dockPanel4_Container</value>
-  </data>
-  <data name="&gt;&gt;dockPanel4_Container.Type" xml:space="preserve">
+  <data name="&gt;&gt;dockPanel1_Container.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;dockPanel4_Container.Parent" xml:space="preserve">
-    <value>dockPanel_OC</value>
+  <data name="&gt;&gt;dockPanel1_Container.Parent" xml:space="preserve">
+    <value>dockPanel_LOG</value>
   </data>
-  <data name="&gt;&gt;dockPanel4_Container.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dockPanel1_Container.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="dockPanel_OC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="dockPanel_LOG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 636</value>
   </data>
-  <data name="dockPanel_OC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 611</value>
+  <data name="dockPanel_LOG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1275, 108</value>
   </data>
-  <data name="dockPanel_OC.Text" xml:space="preserve">
-    <value>OC功能区</value>
+  <data name="dockPanel_LOG.Text" xml:space="preserve">
+    <value>日志</value>
   </data>
-  <data name="&gt;&gt;dockPanel_OC.Name" xml:space="preserve">
-    <value>dockPanel_OC</value>
+  <data name="&gt;&gt;dockPanel_LOG.Name" xml:space="preserve">
+    <value>dockPanel_LOG</value>
   </data>
-  <data name="&gt;&gt;dockPanel_OC.Type" xml:space="preserve">
+  <data name="&gt;&gt;dockPanel_LOG.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;dockPanel_OC.Parent" xml:space="preserve">
-    <value>hideContainerRight</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_OC.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="hideContainerRight.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="hideContainerRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1089, 133</value>
-  </data>
-  <data name="hideContainerRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 611</value>
-  </data>
-  <data name="&gt;&gt;hideContainerRight.Name" xml:space="preserve">
-    <value>hideContainerRight</value>
-  </data>
-  <data name="&gt;&gt;hideContainerRight.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.AutoHideContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;hideContainerRight.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dockPanel_LOG.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;hideContainerRight.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;dockPanel_LOG.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>USB3.0通用测试设备</value>
@@ -4085,6 +3809,48 @@
   <data name="&gt;&gt;barButton_BStart.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;bar_Send422_A.Name" xml:space="preserve">
+    <value>bar_Send422_A</value>
+  </data>
+  <data name="&gt;&gt;bar_Send422_A.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEdit_YKSelect_A.Name" xml:space="preserve">
+    <value>barEdit_YKSelect_A</value>
+  </data>
+  <data name="&gt;&gt;barEdit_YKSelect_A.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_YKSelect_A.Name" xml:space="preserve">
+    <value>ComboBox_YKSelect_A</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_YKSelect_A.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEditItem14.Name" xml:space="preserve">
+    <value>barEditItem14</value>
+  </data>
+  <data name="&gt;&gt;barEditItem14.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_YKSelect_B.Name" xml:space="preserve">
+    <value>ComboBox_YKSelect_B</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_YKSelect_B.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bar_Send422_B.Name" xml:space="preserve">
+    <value>bar_Send422_B</value>
+  </data>
+  <data name="&gt;&gt;bar_Send422_B.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CheckEnable_ManualYK.Name" xml:space="preserve">
+    <value>CheckEnable_ManualYK</value>
+  </data>
+  <data name="&gt;&gt;CheckEnable_ManualYK.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarCheckItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;ribbonPageCategory1.Name" xml:space="preserve">
     <value>ribbonPageCategory1</value>
   </data>
@@ -4115,16 +3881,16 @@
   <data name="&gt;&gt;ribbonPageGroup5.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;ribbonPageGroup8.Name" xml:space="preserve">
-    <value>ribbonPageGroup8</value>
-  </data>
-  <data name="&gt;&gt;ribbonPageGroup8.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;ribbonPageGroup9.Name" xml:space="preserve">
     <value>ribbonPageGroup9</value>
   </data>
   <data name="&gt;&gt;ribbonPageGroup9.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup10.Name" xml:space="preserve">
+    <value>ribbonPageGroup10</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup10.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;Page_Setting.Name" xml:space="preserve">
@@ -4149,6 +3915,24 @@
     <value>ribbonPageGroup27</value>
   </data>
   <data name="&gt;&gt;ribbonPageGroup27.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage2.Name" xml:space="preserve">
+    <value>ribbonPage2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup11.Name" xml:space="preserve">
+    <value>ribbonPageGroup11</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup11.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup8.Name" xml:space="preserve">
+    <value>ribbonPageGroup8</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup8.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;repositoryItemTextEdit1.Name" xml:space="preserve">
@@ -4367,42 +4151,6 @@
   <data name="&gt;&gt;dockManager1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Docking.DockManager, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn2</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column5.Name" xml:space="preserve">
-    <value>Column5</value>
-  </data>
-  <data name="&gt;&gt;Column5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
-    <value>Column1</value>
-  </data>
-  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
-    <value>Column2</value>
-  </data>
-  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column3.Name" xml:space="preserve">
-    <value>Column3</value>
-  </data>
-  <data name="&gt;&gt;Column3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn3</value>
   </data>
@@ -4505,36 +4253,6 @@
   <data name="&gt;&gt;Column12.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column13.Name" xml:space="preserve">
-    <value>Column13</value>
-  </data>
-  <data name="&gt;&gt;Column13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column14.Name" xml:space="preserve">
-    <value>Column14</value>
-  </data>
-  <data name="&gt;&gt;Column14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column17.Name" xml:space="preserve">
-    <value>Column17</value>
-  </data>
-  <data name="&gt;&gt;Column17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column15.Name" xml:space="preserve">
-    <value>Column15</value>
-  </data>
-  <data name="&gt;&gt;Column15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column16.Name" xml:space="preserve">
-    <value>Column16</value>
-  </data>
-  <data name="&gt;&gt;Column16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn9.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn9</value>
   </data>
@@ -4563,6 +4281,72 @@
     <value>dataGridViewTextBoxColumn13</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
+    <value>Column2</value>
+  </data>
+  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column3.Name" xml:space="preserve">
+    <value>Column3</value>
+  </data>
+  <data name="&gt;&gt;Column3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column5.Name" xml:space="preserve">
+    <value>Column5</value>
+  </data>
+  <data name="&gt;&gt;Column5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column13.Name" xml:space="preserve">
+    <value>Column13</value>
+  </data>
+  <data name="&gt;&gt;Column13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column14.Name" xml:space="preserve">
+    <value>Column14</value>
+  </data>
+  <data name="&gt;&gt;Column14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column17.Name" xml:space="preserve">
+    <value>Column17</value>
+  </data>
+  <data name="&gt;&gt;Column17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column15.Name" xml:space="preserve">
+    <value>Column15</value>
+  </data>
+  <data name="&gt;&gt;Column15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column16.Name" xml:space="preserve">
+    <value>Column16</value>
+  </data>
+  <data name="&gt;&gt;Column16.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ID.Name" xml:space="preserve">
@@ -4636,6 +4420,12 @@
   </data>
   <data name="&gt;&gt;repositoryItemSpinEdit6.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barCheckItem1.Name" xml:space="preserve">
+    <value>barCheckItem1</value>
+  </data>
+  <data name="&gt;&gt;barCheckItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarCheckItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
@@ -5146,6 +4936,189 @@
   <data name="&gt;&gt;dockPanel_RegCtl.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="textBox_Send422_A.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 42</value>
+  </data>
+  <data name="textBox_Send422_A.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBox_Send422_A.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 72</value>
+  </data>
+  <data name="textBox_Send422_A.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBox_Send422_A.Name" xml:space="preserve">
+    <value>textBox_Send422_A</value>
+  </data>
+  <data name="&gt;&gt;textBox_Send422_A.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_Send422_A.Parent" xml:space="preserve">
+    <value>controlContainer4</value>
+  </data>
+  <data name="&gt;&gt;textBox_Send422_A.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_Send422_A.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 13</value>
+  </data>
+  <data name="btn_Send422_A.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="btn_Send422_A.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btn_Send422_A.Text" xml:space="preserve">
+    <value>A机-遥控注数</value>
+  </data>
+  <data name="&gt;&gt;btn_Send422_A.Name" xml:space="preserve">
+    <value>btn_Send422_A</value>
+  </data>
+  <data name="&gt;&gt;btn_Send422_A.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_Send422_A.Parent" xml:space="preserve">
+    <value>controlContainer4</value>
+  </data>
+  <data name="&gt;&gt;btn_Send422_A.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="controlContainer4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="controlContainer4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>517, 122</value>
+  </data>
+  <data name="controlContainer4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;controlContainer4.Name" xml:space="preserve">
+    <value>controlContainer4</value>
+  </data>
+  <data name="&gt;&gt;controlContainer4.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;controlContainer4.Parent" xml:space="preserve">
+    <value>dockPanel1</value>
+  </data>
+  <data name="&gt;&gt;controlContainer4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dockPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>488, 133</value>
+  </data>
+  <data name="dockPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>525, 150</value>
+  </data>
+  <data name="dockPanel1.Text" xml:space="preserve">
+    <value>dockPanel1</value>
+  </data>
+  <data name="&gt;&gt;dockPanel1.Name" xml:space="preserve">
+    <value>dockPanel1</value>
+  </data>
+  <data name="&gt;&gt;dockPanel1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>名称(B机)</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+    <value>占位</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn11.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn12.HeaderText" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn12.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn13.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn13.HeaderText" xml:space="preserve">
+    <value>解析值</value>
+  </data>
+  <data name="dataGridView_YC2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView_YC2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dataGridView_YC2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>718, 218</value>
+  </data>
+  <data name="dataGridView_YC2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_YC2.Name" xml:space="preserve">
+    <value>dataGridView_YC2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_YC2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_YC2.Parent" xml:space="preserve">
+    <value>controlContainer3</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_YC2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="controlContainer3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="controlContainer3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>718, 218</value>
+  </data>
+  <data name="controlContainer3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;controlContainer3.Name" xml:space="preserve">
+    <value>controlContainer3</value>
+  </data>
+  <data name="&gt;&gt;controlContainer3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;controlContainer3.Parent" xml:space="preserve">
+    <value>dockPanel_422_B</value>
+  </data>
+  <data name="&gt;&gt;controlContainer3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dockPanel_422_B.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 391</value>
+  </data>
+  <data name="dockPanel_422_B.Size" type="System.Drawing.Size, System.Drawing">
+    <value>727, 245</value>
+  </data>
+  <data name="dockPanel_422_B.Text" xml:space="preserve">
+    <value>422功能区_B机</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_422_B.Name" xml:space="preserve">
+    <value>dockPanel_422_B</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_422_B.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -5237,5 +5210,8 @@
   </data>
   <data name="repositoryItemSpinEdit6.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
     <value>Combo</value>
+  </data>
+  <data name="barCheckItem1.Caption" xml:space="preserve">
+    <value>422功能区B</value>
   </data>
 </root>
