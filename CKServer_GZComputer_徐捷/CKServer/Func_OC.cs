@@ -27,6 +27,8 @@ namespace CKServer
                 DataRow dr = dt_OC_In1.NewRow();
                 dr["序号"] = i + 1;
                 dr["名称"] = Function.GetConfigStr(Data.OCconfigPath, "OCborad_in1", "OC_Channel_" + i.ToString(), "name");
+                dr["计数"] = 0;
+                dr["脉宽"] = 0;
                 dt_OC_In1.Rows.Add(dr);
             }
 
@@ -39,6 +41,8 @@ namespace CKServer
                 DataRow dr = dt_OC_In2.NewRow();
                 dr["序号"] = i + 1;
                 dr["名称"] = Function.GetConfigStr(Data.OCconfigPath, "OCborad_in2", "OC_Channel_" + i.ToString(), "name");
+                dr["计数"] = 0;
+                dr["脉宽"] = 0;
                 dt_OC_In2.Rows.Add(dr);
             }
 
@@ -51,6 +55,8 @@ namespace CKServer
                 DataRow dr = dt_OC_In3.NewRow();
                 dr["序号"] = i +1;
                 dr["名称"] = Function.GetConfigStr(Data.OCconfigPath, "OCborad_in3", "OC_Channel_" + i.ToString(), "name");
+                dr["计数"] = 0;
+                dr["脉宽"] = 0;
                 dt_OC_In3.Rows.Add(dr);
             }
 
@@ -71,22 +77,24 @@ namespace CKServer
 
         public static void Send2OCBD(byte[] OCData)
         {
-            byte[] Send2OCBd = new byte[45];
+            byte[] Send2OCBd = new byte[37];
             Send2OCBd[0] = 0x1D;
             Send2OCBd[1] = 0x00;
             Send2OCBd[2] = 0x00;
-            Send2OCBd[3] = 0x25;//32+5 1D000025是机箱帧头
+            Send2OCBd[3] = 0x1D;//24+5 1D000025是机箱帧头
             Send2OCBd[4] = 0xBD;
             Send2OCBd[5] = 0x1D;
             Send2OCBd[6] = 0x00;
             Send2OCBd[7] = 0x0C;//BD1D000C代表OC数据格式
             Send2OCBd[8] = 0x00;//00/01/02/03代表通道，此处使用OC
             OCData.CopyTo(Send2OCBd, 9);
-            Send2OCBd[41] = 0xC0;
-            Send2OCBd[42] = 0xDE;
-            Send2OCBd[43] = 0xC0;
-            Send2OCBd[44] = 0xDE;
+            Send2OCBd[33] = 0xC0;
+            Send2OCBd[34] = 0xDE;
+            Send2OCBd[35] = 0xC0;
+            Send2OCBd[36] = 0xDE;
 
+            USB.SendCMD(Data.OCid, 0x81, 0x1);
+            USB.SendCMD(Data.OCid, 0x81, 0x0);
             USB.SendData(Data.OCid, Send2OCBd);
 
         }

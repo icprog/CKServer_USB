@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration>
-
   <add key="AD_Channel_0" value="1" name="数管计算机温度"/>
   <add key="AD_Channel_1" value="1" name="保留" />
   <add key="AD_Channel_2" value="1" name="保留" />

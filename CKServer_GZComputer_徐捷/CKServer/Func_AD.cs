@@ -48,13 +48,19 @@ namespace CKServer
                     }
                     for (int k = 0; k < ADNums; k++)
                     {
-                        int temp = (buf[2 * k] & 0x7f) * 256 + buf[2 * k + 1];
-                        double t = (double)(5 * temp) / (double)32767;
-                        t = t * 3 / md[k];
+                        int temp= (buf[2 * k] & 0x7f) * 256 + buf[2 * k + 1];
+
+                        double value = temp;
+
+                        value = 10 * (value / 32767);
+
+
                         if ((buf[2 * k] & 0x80) == 0x80)
-                            dataRe_AD[k] = -t;
+                            dataRe_AD[k] = value;
                         else
-                            dataRe_AD[k] = t;
+                            dataRe_AD[k] = -10+value;
+
+                        dataRe_AD[k] = 5.1 / (10 / dataRe_AD[k] - 1);
                     }
                     lock (ADList)
                     {

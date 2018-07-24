@@ -31,7 +31,6 @@ namespace CKServer
         public static ChanStatus_Struct Status_FF05 = new ChanStatus_Struct();
         public static ChanStatus_Struct Status_FF06 = new ChanStatus_Struct();
         public static ChanStatus_Struct Status_FF07 = new ChanStatus_Struct();
-
         public static ChanStatus_Struct Status_FF08 = new ChanStatus_Struct();
 
         public static ChanStatus_Struct Status_1D00 = new ChanStatus_Struct();
@@ -48,12 +47,29 @@ namespace CKServer
 
         public static ChanStatus_Struct[] Status_List;
 
-        public static int DAid = 1;
-        public static int OCid = 2;
-        public static int SC422id = 3;
-        public static int LVDSid = 4;
+        public static int DAid = 3;
+        public static int OCid = 4;
+        public static int SC422id = 2;
+        public static int LVDSid = 1;
 
-// public static int OnlyID = 1;
+        public static List<string> APIDList1 = new List<string>();
+        public static List<string> APIDList2 = new List<string>();
+        public static List<string> APIDList3 = new List<string>();
+        public static List<string> APIDList4 = new List<string>();
+        public static List<string> APIDList5 = new List<string>();
+        public static List<string> APIDList6 = new List<string>();
+        public static List<string> APIDList7 = new List<string>();
+        public static List<string> APIDList8 = new List<string>();
+
+
+        public static Dictionary<string, BinaryWriter> myDictionary1 = new Dictionary<string, BinaryWriter>();
+        public static Dictionary<string, BinaryWriter> myDictionary2 = new Dictionary<string, BinaryWriter>();
+        public static Dictionary<string, BinaryWriter> myDictionary3 = new Dictionary<string, BinaryWriter>();
+        public static Dictionary<string, BinaryWriter> myDictionary4 = new Dictionary<string, BinaryWriter>();
+        public static Dictionary<string, BinaryWriter> myDictionary5 = new Dictionary<string, BinaryWriter>();
+        public static Dictionary<string, BinaryWriter> myDictionary6 = new Dictionary<string, BinaryWriter>();
+        public static Dictionary<string, BinaryWriter> myDictionary7 = new Dictionary<string, BinaryWriter>();
+        public static Dictionary<string, BinaryWriter> myDictionary8 = new Dictionary<string, BinaryWriter>();
 
         public static string Path = null;                       //程序运行目录
 
@@ -81,13 +97,8 @@ namespace CKServer
         public static Queue<byte[]> DataQueue3 = new Queue<byte[]>();   //For FrameEPDU deal with 串口下行
         public static int Channel = 1;                                      //表明从哪里调用的FrameEPDU
 
-        public static Dictionary<string, BinaryWriter> myDictionary1 = new Dictionary<string, BinaryWriter>();
-        public static Dictionary<string, BinaryWriter> myDictionary2 = new Dictionary<string, BinaryWriter>();
-        public static Dictionary<string, BinaryWriter> myDictionary3 = new Dictionary<string, BinaryWriter>();
 
-        public static List<string> APIDList = new List<string>();
-        public static List<string> APIDList2 = new List<string>();
-        public static List<string> APIDList3 = new List<string>();
+
 
         public static Dictionary<string, Queue<byte[]>> Apid_EPDU_Dictionary = new Dictionary<string, Queue<byte[]>>();
         public static Dictionary<string, Queue<byte[]>> Apid_EPDU_Dictionary2 = new Dictionary<string, Queue<byte[]>>();
@@ -111,7 +122,7 @@ namespace CKServer
         public static string ADconfigPath = Program.GetStartupPath() + @"配置文件\ADconfig.xml";
         public static string RconfigPath = Program.GetStartupPath() + @"配置文件\Rconfig.xml";
         public static string OCconfigPath = Program.GetStartupPath() + @"配置文件\OCconfig.xml";
-
+        public static string LVDSconfigPath = Program.GetStartupPath() + @"配置文件\LVDSconfig.xml";
         public static void SaveConfig(string Path,string key ,string value)
         {
             XDocument xDoc = XDocument.Load(Path);

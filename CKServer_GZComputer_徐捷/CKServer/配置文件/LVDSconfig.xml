@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <add key="LVDS_Channel_0" value="1" name="数管A机发送数传终端机A"/>
+  <add key="LVDS_Channel_1" value="1" name="数管A机发送数传终端机B" />
+  <add key="LVDS_Channel_2" value="1" name="A机LVDS发送3" />
+  <add key="LVDS_Channel_3" value="1" name="A机LVDS发送4" />
+  <add key="LVDS_Channel_4" value="1" name="数管B机发送数传终端机A"/>
+  <add key="LVDS_Channel_5" value="1" name="数管B机发送数传终端机B" />
+  <add key="LVDS_Channel_6" value="1" name="B机LVDS发送3" />
+  <add key="LVDS_Channel_7" value="1" name="B机LVDS发送4" />
+</configuration>

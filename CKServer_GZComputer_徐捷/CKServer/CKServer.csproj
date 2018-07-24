@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="Data.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="Function_LVDS.cs" />
     <Compile Include="Func_AD.cs" />
     <Compile Include="Func_OC.cs" />
     <Compile Include="Func_DA.cs" />
@@ -198,6 +199,9 @@
   <ItemGroup>
     <Content Include="planet.ico" />
     <Content Include="配置文件\DAconfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="配置文件\LVDSconfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="配置文件\OCconfig.xml">

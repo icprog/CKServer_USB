@@ -121,8 +121,6 @@ namespace CKServer
             myRs422FrameProduceForm = new RS422FrameProduceForm(this);
 
             dockPanel_RegCtl.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-            
-
         }
 
         private void InitDataTable()
@@ -414,7 +412,7 @@ namespace CKServer
 
             for (int i = 0; i < 4; i++)
             {
-                Func_AD.dt_ADShow.Rows[i]["测量值"] = dataRe_AD[i+38];
+                Func_AD.dt_ADShow.Rows[i]["测量值"] = dataRe_AD[i + 38];
             }
         }
 
@@ -491,12 +489,14 @@ namespace CKServer
             }
         }
 
-        public byte[] Recv_MidBuf_8K = new byte[8192];//8K中间缓存
-        public int Pos_Recv_MidBuf_8K = 0;//中间缓存数据存储到哪个位置
+
         private void RecvFun(int key)
         {
             Trace.WriteLine("开启线程接收USB数据");
             CyUSBDevice MyDevice = USB.MyDeviceList[key];
+
+            byte[] Recv_MidBuf_8K = new byte[8192];//8K中间缓存
+            int Pos_Recv_MidBuf_8K = 0;//中间缓存数据存储到哪个位置
 
             while (_BoxIsStarted)
             {
@@ -794,7 +794,7 @@ namespace CKServer
                 _BoxIsStarted = false;
                 Thread.Sleep(200);
                 FileThread.FileClose();
-                
+
             }
             catch (Exception ex)
             {
@@ -887,7 +887,7 @@ namespace CKServer
                 string tmpFilter = openFileDialog1.Filter;
                 string title = openFileDialog1.Title;
                 openFileDialog1.Title = "选择要注入的码表文件";
-                openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*) | *.*";
+                openFileDialog1.Filter = "dat files (*.dat)|*.dat|All files (*.*) | *.*";
 
                 if (openFileDialog1.ShowDialog() == DialogResult.OK) //selecting bitstream
                 {
@@ -948,34 +948,50 @@ namespace CKServer
             }
             else
             {
-                String freqstr = myFreqEdit.Text;
-                int freqint = 0;
-                bool ret = int.TryParse(freqstr.Substring(0, 2), out freqint);
-                if (ret)
+                if (Button.Caption == "开始")
                 {
-                    byte freqcode = (byte)(60 / freqint);
-
-                    if (USB.MyDeviceList[Data.OnlyID] != null)
+                    String freqstr = myFreqEdit.Text;
+                    int freqint = 0;
+                    bool ret = int.TryParse(freqstr.Substring(0, 2), out freqint);
+                    if (ret)
                     {
-                        USB.SendCMD(Data.OnlyID, (byte)(0x85 + (FrameHeadLastByte - 0x08)), freqcode);
+                        byte freqcode = (byte)(60 / freqint);
 
-                        USB.SendCMD(Data.OnlyID, 0x83, (byte)(0x01 << (byte)(FrameHeadLastByte - 0x08)));
-                        USB.SendCMD(Data.OnlyID, 0x83, 0x00);
+                        if (USB.MyDeviceList[Data.OnlyID] != null)
+                        {
+                            USB.SendCMD(Data.OnlyID, (byte)(0x85 + (FrameHeadLastByte - 0x08)), freqcode);
 
-                        byte[] SendBuf = Function.StrToHexByte(mytxtbox.Text);
+                            USB.SendCMD(Data.OnlyID, 0x83, (byte)(0x01 << (byte)(FrameHeadLastByte - 0x08)));
+                            USB.SendCMD(Data.OnlyID, 0x83, 0x00);
 
-                        USB.SendData(Data.OnlyID, SendBuf);
+                            byte[] SendBuf = Function.StrToHexByte(mytxtbox.Text);
 
+                            USB.SendData(Data.OnlyID, SendBuf);
 
+                            Button.Image = CKServer.Properties.Resources.remove_16x16;
+                            myFreqEdit.Enabled = false;
+                            Button.Caption = "停止";
+                        }
+                        else
+                        {
+                            MyLog.Error("向设备" + msgstr + "注入码表失败，请检查设置及连接！");
+                        }
                     }
                     else
                     {
-                        MyLog.Error("向设备" + msgstr + "注入码表失败，请检查设置及连接！");
+                        MessageBox.Show("输入正确的频率！！");
                     }
+
                 }
                 else
                 {
-                    MessageBox.Show("输入正确的频率！！");
+                    Button.Caption = "开始";                    
+                    myFreqEdit.Enabled = true;
+                    Button.Image = Properties.Resources.download_16x16;
+
+                    USB.SendCMD(Data.OnlyID, 0x83, (byte)(0x01 << (byte)(FrameHeadLastByte - 0x08)));
+                    USB.SendCMD(Data.OnlyID, 0x83, 0x00);
+
                 }
 
             }
@@ -1102,7 +1118,7 @@ namespace CKServer
 
         private void btn_Start422_A_Click(object sender, EventArgs e)
         {
-            byte[] SendData = new byte[6] { 0xeb,0x90,0x05,0x02,0x01,0x82};
+            byte[] SendData = new byte[6] { 0xeb, 0x90, 0x05, 0x02, 0x01, 0x82 };
             byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
             byte[] FinalSend = new byte[28];
 
@@ -1123,7 +1139,7 @@ namespace CKServer
         public string Rs422_Channel_Name;           //
         private void btn_Send422_A_Click(object sender, EventArgs e)
         {
-            byte[] SendBuf = Function.StrToHexByte(textBox_Send422_A.Text);  
+            byte[] SendBuf = Function.StrToHexByte(textBox_Send422_A.Text);
 
             if (SendBuf.Length > 10)
                 USB.SendData(Data.OnlyID, SendBuf);
@@ -1224,7 +1240,7 @@ namespace CKServer
         {
             string YKcode = "";
             string YKstr = barEdit_YKSelect_A.EditValue.ToString();
-            switch(YKstr)
+            switch (YKstr)
             {
                 case "刷新允许":
                     YKcode = "0101";
@@ -1267,7 +1283,7 @@ namespace CKServer
                     break;
                 case "接收码速率30Mbps模式":
                     YKcode = "2424";
-                    break;             
+                    break;
                 default:
                     YKcode = "0202";
                     break;
@@ -1295,6 +1311,98 @@ namespace CKServer
             //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
             byte[] FinalSend = new byte[SendData.Length + 20];
             byte[] head = new byte[2] { 0x1D, 0x00 };
+            byte[] len = new byte[2] { 0, 0 };
+            len[0] = (byte)((byte)(SendData.Length & 0xff00) >> 8);
+            len[1] = (byte)(SendData.Length & 0xff);
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+
+            head.CopyTo(FinalSend, 0);
+            len.CopyTo(FinalSend, 2);
+            SendData.CopyTo(FinalSend, 4);
+            end.CopyTo(FinalSend, 4 + SendData.Length);
+
+
+            if (FinalSend.Length > 10)
+                USB.SendData(Data.OnlyID, FinalSend);
+            else
+                MyLog.Error("输入正确的遥控注数数据！");
+        }
+
+        private void bar_Send422_B_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string YKcode = "";
+            string YKstr = barEdit_YKSelect_B.EditValue.ToString();
+            switch (YKstr)
+            {
+                case "刷新允许":
+                    YKcode = "0101";
+                    break;
+                case "刷新禁止":
+                    YKcode = "0202";
+                    break;
+                case "收发通信机发射开":
+                    YKcode = "0303";
+                    break;
+                case "收发通信机发射关":
+                    YKcode = "0404";
+                    break;
+                case "发射码速率1Mbps模式":
+                    YKcode = "1010";
+                    break;
+                case "发射码速率2Mbps模式":
+                    YKcode = "1111";
+                    break;
+                case "发射码速率10Mbps模式":
+                    YKcode = "1212";
+                    break;
+                case "发射码速率15Mbps模式":
+                    YKcode = "1313";
+                    break;
+                case "发射码速率30Mbps模式":
+                    YKcode = "1414";
+                    break;
+                case "接收码速率1Mbps模式":
+                    YKcode = "2020";
+                    break;
+                case "接收码速率2Mbps模式":
+                    YKcode = "2121";
+                    break;
+                case "接收码速率10Mbps模式":
+                    YKcode = "2222";
+                    break;
+                case "接收码速率15Mbps模式":
+                    YKcode = "2323";
+                    break;
+                case "接收码速率30Mbps模式":
+                    YKcode = "2424";
+                    break;
+                default:
+                    YKcode = "0202";
+                    break;
+            }
+
+            //EB90020c163CC0000005000002020202
+            string header = "eb90020c";
+            string body = "163cc00000050000" + YKcode;
+            string hcrc = "0000";
+
+            int crc = 0;
+            int count = body.Length / 4;
+            if (body.Length % 4 == 0)
+            {
+                for (int m = 0; m < body.Length / 4; m++)
+                {
+                    int temp = Convert.ToInt32(body.Substring(m * 4, 4), 16);
+                    crc ^= temp;
+                }
+                hcrc = crc.ToString("x4");
+            }
+
+            byte[] SendData = Function.StrToHexByte(header + body + hcrc);
+
+            //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
+            byte[] FinalSend = new byte[SendData.Length + 20];
+            byte[] head = new byte[2] { 0x1D, 0x01 };
             byte[] len = new byte[2] { 0, 0 };
             len[0] = (byte)((byte)(SendData.Length & 0xff00) >> 8);
             len[1] = (byte)(SendData.Length & 0xff);

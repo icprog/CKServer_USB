@@ -30,6 +30,15 @@ namespace CKServer
 
                 Data.DA_Card1[i] = 0;
                 Data.DA_Card2[i] = 0;
+
+                Data.APIDList1.Clear();
+                Data.APIDList2.Clear();
+                Data.APIDList3.Clear();
+                Data.APIDList4.Clear();
+                Data.APIDList5.Clear();
+                Data.APIDList6.Clear();
+                Data.APIDList7.Clear();
+                Data.APIDList8.Clear();
             }
 
             Trace.WriteLine("--完成--Function Init--");
