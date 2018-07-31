@@ -24,6 +24,7 @@ namespace CKServer
         SaveFile FileThread;
 
         RS422FrameProduceForm myRs422FrameProduceForm;
+        SetComPareFrame myComPareFrame;
 
         public DateTime startDT;
         // private DataTable dt_AD = new DataTable();
@@ -119,6 +120,7 @@ namespace CKServer
             Function.Init();//初始化DA参数
 
             myRs422FrameProduceForm = new RS422FrameProduceForm(this);
+            myComPareFrame = new SetComPareFrame(this);
 
             dockPanel_RegCtl.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
         }
@@ -127,6 +129,14 @@ namespace CKServer
         {
             try
             {
+                Func_LVDS.Init_Table();
+                dataGridView_LvdsCP.DataSource = Func_LVDS.dt_LVDS_CP;
+                dataGridView_LvdsCP.AllowUserToAddRows = false;
+
+                dataGridView_LvdsResult.DataSource = Func_LVDS.dt_LVDS_Result;
+                dataGridView_LvdsResult.AllowUserToAddRows = false;
+
+
                 Register.Init();
                 dataGridView_Reg.DataSource = Register.dt_Reg;
                 dataGridView_Reg.AllowUserToAddRows = false;
@@ -414,6 +424,14 @@ namespace CKServer
             {
                 Func_AD.dt_ADShow.Rows[i]["测量值"] = dataRe_AD[i + 38];
             }
+
+            Func_LVDS.dt_LVDS_Result.Rows[0]["总字节数"] = Func_LVDS.TotalNums1;
+            Func_LVDS.dt_LVDS_Result.Rows[0]["错误字节"] = Func_LVDS.ErrorNums1;
+            Func_LVDS.dt_LVDS_Result.Rows[0]["误码率"] = Func_LVDS.ErPert1;
+
+            Func_LVDS.dt_LVDS_Result.Rows[1]["总字节数"] = Func_LVDS.TotalNums2;
+            Func_LVDS.dt_LVDS_Result.Rows[1]["错误字节"] = Func_LVDS.ErrorNums2;
+            Func_LVDS.dt_LVDS_Result.Rows[1]["误码率"] = Func_LVDS.ErPert2;
         }
 
         private void btn_Modify_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -475,6 +493,9 @@ namespace CKServer
                 YCList_A.Clear();
                 YCList_B.Clear();
                 new Thread(() => { DealWithYCFun(); }).Start();
+
+                if (radioButton1.Checked)
+                    Func_LVDS.StartComPare();//开启比对
             }
             else
             {
@@ -484,6 +505,8 @@ namespace CKServer
                 Thread.Sleep(200);
 
                 FileThread.FileClose();
+
+                Func_LVDS._StartCompare = false;
 
 
             }
@@ -497,6 +520,9 @@ namespace CKServer
 
             byte[] Recv_MidBuf_8K = new byte[8192];//8K中间缓存
             int Pos_Recv_MidBuf_8K = 0;//中间缓存数据存储到哪个位置
+
+            Func_LVDS.DataQueue1.Clear();
+            Func_LVDS.DataQueue2.Clear();
 
             while (_BoxIsStarted)
             {
@@ -563,29 +589,39 @@ namespace CKServer
             Array.Copy(TempBuf, 4096, TempBuf, 0, TempTag - 4096);
             TempTag -= 4096;
 
-            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x00)
+            //if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x00)
+            //{
+            //    byte[] bufsav = new byte[4092];
+            //    Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
+            //    SaveFile.Lock_2.EnterWriteLock();
+            //    SaveFile.DataQueue_SC2.Enqueue(bufsav);
+            //    SaveFile.Lock_2.ExitWriteLock();
+            //}
+            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x01)
             {
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
                 SaveFile.Lock_2.EnterWriteLock();
                 SaveFile.DataQueue_SC2.Enqueue(bufsav);
                 SaveFile.Lock_2.ExitWriteLock();
+
+                Func_LVDS.Lock1.EnterWriteLock();
+                for (int i = 0; i < 4092; i++) Func_LVDS.DataQueue1.Enqueue(bufsav[i]);
+                Func_LVDS.Lock1.ExitWriteLock();
+
             }
-            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x01)
+            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x02)
             {
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
                 SaveFile.Lock_3.EnterWriteLock();
                 SaveFile.DataQueue_SC3.Enqueue(bufsav);
                 SaveFile.Lock_3.ExitWriteLock();
-            }
-            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x02)
-            {
-                byte[] bufsav = new byte[4092];
-                Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
-                SaveFile.Lock_4.EnterWriteLock();
-                SaveFile.DataQueue_SC4.Enqueue(bufsav);
-                SaveFile.Lock_4.ExitWriteLock();
+
+                Func_LVDS.Lock2.EnterWriteLock();
+                for (int i = 0; i < 4092; i++) Func_LVDS.DataQueue2.Enqueue(bufsav[i]);
+                Func_LVDS.Lock2.ExitWriteLock();
+
             }
             if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x03)
             {
@@ -835,6 +871,7 @@ namespace CKServer
             ButtonEdit editor = (ButtonEdit)sender;
             EditorButton Button = e.Button;
             TextBox mytxtbox;
+            GroupBox mygroupBox;
             System.Windows.Forms.ComboBox myFreqEdit;
             String msgstr = "未选择文件";
             String ConfigPath = "PATH_DAT_01";
@@ -847,6 +884,7 @@ namespace CKServer
                     FrameHeadLastByte = 0x08;
                     mytxtbox = textBox_Send_1;
                     myFreqEdit = comboBox1;
+                    mygroupBox = groupBox1;
                     break;
                 case "buttonEdit2":
                     msgstr = "通道2";
@@ -854,20 +892,7 @@ namespace CKServer
                     FrameHeadLastByte = 0x09;
                     mytxtbox = textBox_Send_2;
                     myFreqEdit = comboBox2;
-                    break;
-                case "buttonEdit3":
-                    msgstr = "通道3";
-                    ConfigPath = "PATH_DAT_03";
-                    FrameHeadLastByte = 0x0A;
-                    mytxtbox = textBox_Send_3;
-                    myFreqEdit = comboBox3;
-                    break;
-                case "buttonEdit4":
-                    msgstr = "通道4";
-                    ConfigPath = "PATH_DAT_04";
-                    FrameHeadLastByte = 0x0B;
-                    mytxtbox = textBox_Send_4;
-                    myFreqEdit = comboBox4;
+                    mygroupBox = groupBox2;
                     break;
                 default:
                     msgstr = "通道1";
@@ -875,6 +900,7 @@ namespace CKServer
                     FrameHeadLastByte = 0x08;
                     mytxtbox = textBox_Send_1;
                     myFreqEdit = comboBox1;
+                    mygroupBox = groupBox1;
                     break;
             }
 
@@ -938,6 +964,7 @@ namespace CKServer
                     string temp = null;
                     for (int i = 0; i < FinalSendBytes.Length; i++) temp += FinalSendBytes[i].ToString("x2");
                     mytxtbox.AppendText(temp);
+                    mygroupBox.Text = mygroupBox.Text + "(" + (FinalSendBytes.Length - 20).ToString() + ")";
                 }
                 else
                 {
@@ -985,7 +1012,7 @@ namespace CKServer
                 }
                 else
                 {
-                    Button.Caption = "开始";                    
+                    Button.Caption = "开始";
                     myFreqEdit.Enabled = true;
                     Button.Image = Properties.Resources.download_16x16;
 
@@ -1003,8 +1030,11 @@ namespace CKServer
             DevExpress.XtraBars.Docking.DockPanel panel;
             switch (chk.Name)
             {
-                case "CheckEnable_LVDS":
-                    panel = this.dockPanel_LVDS;
+                case "CheckEnable_LVDS_Send":
+                    panel = this.dockPanel_LVDS_Send;
+                    break;
+                case "CheckEnable_LVDS_Recv":
+                    panel = this.dockPanel_LVDS_Recv;
                     break;
                 case "CheckEnable_422_A":
                     panel = this.dockPanel_422_A;
@@ -1025,7 +1055,7 @@ namespace CKServer
                     panel = this.dockPanel1;
                     break;
                 default:
-                    panel = this.dockPanel_LVDS;
+                    panel = this.dockPanel_LVDS_Send;
                     break;
 
 
@@ -1418,6 +1448,168 @@ namespace CKServer
                 USB.SendData(Data.OnlyID, FinalSend);
             else
                 MyLog.Error("输入正确的遥控注数数据！");
+        }
+
+        private void btn_SetLvdsComPare_Frame_Click(object sender, EventArgs e)
+        {
+            int head = Convert.ToInt32((string)Func_LVDS.dt_LVDS_CP.Rows[0]["设定值"], 16);
+            Func_LVDS.ComPareBuf[0] = (byte)((head & 0xff000000) >> 24);
+            Func_LVDS.ComPareBuf[1] = (byte)((head & 0xff0000) >> 16);
+            Func_LVDS.ComPareBuf[2] = (byte)((head & 0xff00) >> 8);
+            Func_LVDS.ComPareBuf[3] = (byte)(head & 0xff);
+
+            //版本号，源飞行器
+            byte b1 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[1]["设定值"], 16);
+            byte b2 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[2]["设定值"], 16);
+            Func_LVDS.ComPareBuf[4] = (byte)(((b1 << 6) & 0xc0) | (b2 >> 2));
+
+            //VCID
+            byte b3 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[3]["设定值"], 16);
+            Func_LVDS.ComPareBuf[5] = (byte)(((b2 << 6) & 0xc0) | (b3 >> 2));
+
+            //VCDU计数
+            int VCDUCounts = Convert.ToInt32((string)Func_LVDS.dt_LVDS_CP.Rows[4]["设定值"], 16);
+            Func_LVDS.ComPareBuf[6] = (byte)((VCDUCounts & 0xff0000) >> 16);
+            Func_LVDS.ComPareBuf[7] = (byte)((VCDUCounts & 0xff00) >> 8);
+            Func_LVDS.ComPareBuf[8] = (byte)(VCDUCounts & 0xff);
+
+            //信号域
+            Func_LVDS.ComPareBuf[9] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[5]["设定值"], 16);
+
+            //密钥区
+            string key = (string)Func_LVDS.dt_LVDS_CP.Rows[6]["设定值"];
+            key = key.PadLeft(24, '0');
+            for (int i = 0; i < 12; i++)
+            {
+                Func_LVDS.ComPareBuf[10 + i] = Convert.ToByte(key.Substring(2 * i, 2), 16);
+            }
+
+            //目标飞行器
+            Func_LVDS.ComPareBuf[22] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[7]["设定值"], 16);
+
+            //备用
+            Func_LVDS.ComPareBuf[23] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[8]["设定值"], 16);
+
+
+            //数据域
+            byte[] data = Function.StrToHexByte(textBox_lvdsFrame_Data.Text);
+
+            for (int i = 0; i < 872; i = i + data.Length)
+            {
+                data.CopyTo(Func_LVDS.ComPareBuf, 24 + i);
+            }
+            
+        }
+
+
+
+        private void buttonEdit3_ButtonClick(object sender, ButtonPressedEventArgs e)
+        {
+            String Path = Data.Path + @"接收机箱数据\";
+            if (!Directory.Exists(Path))
+                Directory.CreateDirectory(Path);
+            openFileDialog1.InitialDirectory = Path;
+            string tmpFilter = openFileDialog1.Filter;
+            string title = openFileDialog1.Title;
+            openFileDialog1.Title = "选择要比对的码表文件";
+            openFileDialog1.Filter = "dat files (*.dat)|*.dat|All files (*.*) | *.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) //selecting bitstream
+            {
+                buttonEdit3.Text = openFileDialog1.FileName;
+                FileStream file = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+
+                //int fileBytes = (int)file.Length + 8;//为何要+8??
+                int fileBytes = (int)file.Length;
+                byte[] read_file_buf = new byte[fileBytes];
+                for (int i = 0; i < fileBytes; i++) read_file_buf[i] = 0xff;
+                file.Read(read_file_buf, 0, fileBytes);
+
+                file.Close();
+                barbtn_setFrame.Enabled = true;
+            }
+            else
+            {
+                barbtn_setFrame.Enabled = false;
+            }
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButton2.Checked)
+            {
+                buttonEdit3.Enabled = true;
+            }
+            else
+            {
+                buttonEdit3.Enabled = false;
+            }
+        }
+
+        private void barbtn_StartComP_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barbtn_StartComP.Caption == "开始比对")
+            {
+                barbtn_StartComP.Caption = "停止比对";
+                barbtn_StartComP.ImageOptions.LargeImage = CKServer.Properties.Resources.stop_32x32;
+            }
+            else
+            {
+                barbtn_StartComP.Caption = "开始比对";
+                barbtn_StartComP.ImageOptions.LargeImage = CKServer.Properties.Resources.play_32x32;
+            }
+        }
+
+        private void barbtn_setFrame_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int head = Convert.ToInt32((string)Func_LVDS.dt_LVDS_CP.Rows[0]["设定值"], 16);
+            Func_LVDS.ComPareBuf[0] = (byte)((head & 0xff000000) >> 24);
+            Func_LVDS.ComPareBuf[1] = (byte)((head & 0xff0000) >> 16);
+            Func_LVDS.ComPareBuf[2] = (byte)((head & 0xff00) >> 8);
+            Func_LVDS.ComPareBuf[3] = (byte)(head & 0xff);
+
+            //版本号，源飞行器
+            byte b1 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[1]["设定值"], 16);
+            byte b2 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[2]["设定值"], 16);
+            Func_LVDS.ComPareBuf[4] = (byte)(((b1 << 6) & 0xc0) | (b2 >> 2));
+
+            //VCID
+            byte b3 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[3]["设定值"], 16);
+            Func_LVDS.ComPareBuf[5] = (byte)(((b2 << 6) & 0xc0) | (b3 >> 2));
+
+            //VCDU计数
+            int VCDUCounts = Convert.ToInt32((string)Func_LVDS.dt_LVDS_CP.Rows[4]["设定值"], 16);
+            Func_LVDS.ComPareBuf[6] = (byte)((VCDUCounts & 0xff0000) >> 16);
+            Func_LVDS.ComPareBuf[7] = (byte)((VCDUCounts & 0xff00) >> 8);
+            Func_LVDS.ComPareBuf[8] = (byte)(VCDUCounts & 0xff);
+
+            //信号域
+            Func_LVDS.ComPareBuf[9] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[5]["设定值"], 16);
+
+            //密钥区
+            string key = (string)Func_LVDS.dt_LVDS_CP.Rows[6]["设定值"];
+            key = key.PadLeft(24, '0');
+            for (int i = 0; i < 12; i++)
+            {
+                Func_LVDS.ComPareBuf[10 + i] = Convert.ToByte(key.Substring(2 * i, 2), 16);
+            }
+
+            //目标飞行器
+            Func_LVDS.ComPareBuf[22] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[7]["设定值"], 16);
+
+            //备用
+            Func_LVDS.ComPareBuf[23] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[8]["设定值"], 16);
+
+
+            //数据域
+            byte[] data = Function.StrToHexByte(textBox_lvdsFrame_Data.Text);
+
+            for (int i = 0; i < 872; i = i + data.Length)
+            {
+                data.CopyTo(Func_LVDS.ComPareBuf, 24 + i);
+            }
+
         }
     }
 }

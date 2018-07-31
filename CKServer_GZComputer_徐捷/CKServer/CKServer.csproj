@@ -112,6 +112,7 @@
       <DependentUpon>DAmodify.cs</DependentUpon>
     </Compile>
     <Compile Include="Data.cs" />
+    <Compile Include="ErrorLog.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="Function_LVDS.cs" />
     <Compile Include="Func_AD.cs" />

@@ -112,6 +112,7 @@
     <Compile Include="Data.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="Func_AD.cs" />
+    <Compile Include="Func_LVDS.cs" />
     <Compile Include="Func_OC.cs" />
     <Compile Include="Func_YC.cs" />
     <Compile Include="LoadFPGAForm.cs">
@@ -139,6 +140,12 @@
     </Compile>
     <Compile Include="SaveFile.cs" />
     <Compile Include="MySPort.cs" />
+    <Compile Include="SetComPareFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetComPareFrame.Designer.cs">
+      <DependentUpon>SetComPareFrame.cs</DependentUpon>
+    </Compile>
     <Compile Include="USB.cs" />
     <EmbeddedResource Include="DAmodify.resx">
       <DependentUpon>DAmodify.cs</DependentUpon>
@@ -166,6 +173,9 @@
     </Compile>
     <EmbeddedResource Include="RS422FrameProduceForm.resx">
       <DependentUpon>RS422FrameProduceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetComPareFrame.resx">
+      <DependentUpon>SetComPareFrame.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CKServer_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
@@ -207,6 +217,15 @@
     <None Include="Resources\remove_16x16.png" />
     <None Include="Resources\open_16x16.png" />
     <None Include="Resources\download_16x16.png" />
+    <None Include="Resources\play_32x32.png" />
+    <None Include="Resources\play_16x16.png" />
+    <None Include="Resources\stop_32x32.png" />
+    <None Include="Resources\stop_16x16.png" />
+    <None Include="Resources\play_32x321.png" />
+    <None Include="Resources\play_16x161.png" />
+    <Content Include="配置文件\LVDSconfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="配置文件\OCconfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

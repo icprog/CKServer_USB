@@ -22,7 +22,6 @@ namespace CKServer
 {
     class SaveFile
     {
-
         struct SaveFileStruct
         {
             public FileStream file;

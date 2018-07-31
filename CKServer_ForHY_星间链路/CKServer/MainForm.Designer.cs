@@ -31,15 +31,24 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -50,25 +59,8 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -86,7 +78,7 @@
             this.repositoryItemTextEdit7 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barEditItem8 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.CheckEnable_LVDS = new DevExpress.XtraBars.BarCheckItem();
+            this.CheckEnable_LVDS_Send = new DevExpress.XtraBars.BarCheckItem();
             this.CheckEnable_OC = new DevExpress.XtraBars.BarCheckItem();
             this.barCheckItem3 = new DevExpress.XtraBars.BarCheckItem();
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
@@ -171,6 +163,9 @@
             this.ComboBox_YKSelect_B = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.bar_Send422_B = new DevExpress.XtraBars.BarButtonItem();
             this.CheckEnable_ManualYK = new DevExpress.XtraBars.BarCheckItem();
+            this.CheckEnable_LVDS_Recv = new DevExpress.XtraBars.BarCheckItem();
+            this.barbtn_StartComP = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtn_setFrame = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -178,6 +173,7 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Page_Setting = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -268,39 +264,15 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.dockPanel_LVDS = new DevExpress.XtraBars.Docking.DockPanel();
-            this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.buttonEdit2 = new DevExpress.XtraEditors.ButtonEdit();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buttonEdit3 = new DevExpress.XtraEditors.ButtonEdit();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buttonEdit4 = new DevExpress.XtraEditors.ButtonEdit();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox_Send_1 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox_Send_2 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox_Send_3 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox_Send_4 = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox_Result_1 = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox_Result_2 = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textBox_Result_3 = new System.Windows.Forms.TextBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox_Result_4 = new System.Windows.Forms.TextBox();
             this.panelContainer1 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel_422_A = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dataGridView_YC1 = new System.Windows.Forms.DataGridView();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dockPanel_AD = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dataGridView_AD = new System.Windows.Forms.DataGridView();
@@ -313,14 +285,36 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dockPanel_422_A = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.dataGridView_YC1 = new System.Windows.Forms.DataGridView();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dockPanel_LVDS_Send = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox_Send_1 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox_Send_2 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEdit2 = new DevExpress.XtraEditors.ButtonEdit();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dockPanel_LVDS_Recv = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer5 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox_lvdsFrame_Data = new System.Windows.Forms.TextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.buttonEdit3 = new DevExpress.XtraEditors.ButtonEdit();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.dataGridView_LvdsCP = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView_LvdsResult = new System.Windows.Forms.DataGridView();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.通道名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.控制 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -334,6 +328,8 @@
             this.barEditItem12 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemSpinEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
+            this.repositoryItemRadioGroup1 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
+            this.repositoryItemRadioGroup2 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
@@ -385,33 +381,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).BeginInit();
             this.dockPanel_LOG.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
-            this.dockPanel_LVDS.SuspendLayout();
-            this.controlContainer1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.panelContainer1.SuspendLayout();
+            this.dockPanel_422_A.SuspendLayout();
+            this.dockPanel3_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).BeginInit();
             this.dockPanel_AD.SuspendLayout();
             this.dockPanel5_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AD)).BeginInit();
             this.dockPanel_OC.SuspendLayout();
             this.dockPanel4_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OC)).BeginInit();
-            this.dockPanel_422_A.SuspendLayout();
-            this.dockPanel3_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).BeginInit();
+            this.dockPanel_LVDS_Send.SuspendLayout();
+            this.controlContainer1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).BeginInit();
+            this.dockPanel_LVDS_Recv.SuspendLayout();
+            this.controlContainer5.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LvdsCP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LvdsResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup2)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -428,7 +425,7 @@
             this.barEditItem6,
             this.barEditItem7,
             this.barEditItem8,
-            this.CheckEnable_LVDS,
+            this.CheckEnable_LVDS_Send,
             this.CheckEnable_OC,
             this.barCheckItem3,
             this.barButtonGroup1,
@@ -504,9 +501,12 @@
             this.barEdit_YKSelect_A,
             this.barEdit_YKSelect_B,
             this.bar_Send422_B,
-            this.CheckEnable_ManualYK});
+            this.CheckEnable_ManualYK,
+            this.CheckEnable_LVDS_Recv,
+            this.barbtn_StartComP,
+            this.barbtn_setFrame});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 168;
+            this.ribbonControl1.MaxItemId = 173;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -546,7 +546,9 @@
             this.repositoryItemCheckEdit2,
             this.repositoryItemCheckEdit3,
             this.ComboBox_YKSelect_A,
-            this.ComboBox_YKSelect_B});
+            this.ComboBox_YKSelect_B,
+            this.repositoryItemRadioGroup1,
+            this.repositoryItemRadioGroup2});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
@@ -646,15 +648,15 @@
             resources.ApplyResources(this.repositoryItemTextEdit8, "repositoryItemTextEdit8");
             this.repositoryItemTextEdit8.Name = "repositoryItemTextEdit8";
             // 
-            // CheckEnable_LVDS
+            // CheckEnable_LVDS_Send
             // 
-            this.CheckEnable_LVDS.BindableChecked = true;
-            resources.ApplyResources(this.CheckEnable_LVDS, "CheckEnable_LVDS");
-            this.CheckEnable_LVDS.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.CheckEnable_LVDS.Checked = true;
-            this.CheckEnable_LVDS.Id = 25;
-            this.CheckEnable_LVDS.Name = "CheckEnable_LVDS";
-            this.CheckEnable_LVDS.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_LVDS_CheckedChanged);
+            this.CheckEnable_LVDS_Send.BindableChecked = true;
+            resources.ApplyResources(this.CheckEnable_LVDS_Send, "CheckEnable_LVDS_Send");
+            this.CheckEnable_LVDS_Send.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.CheckEnable_LVDS_Send.Checked = true;
+            this.CheckEnable_LVDS_Send.Id = 25;
+            this.CheckEnable_LVDS_Send.Name = "CheckEnable_LVDS_Send";
+            this.CheckEnable_LVDS_Send.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_LVDS_CheckedChanged);
             // 
             // CheckEnable_OC
             // 
@@ -1342,6 +1344,34 @@
             this.CheckEnable_ManualYK.Name = "CheckEnable_ManualYK";
             this.CheckEnable_ManualYK.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_LVDS_CheckedChanged);
             // 
+            // CheckEnable_LVDS_Recv
+            // 
+            this.CheckEnable_LVDS_Recv.BindableChecked = true;
+            resources.ApplyResources(this.CheckEnable_LVDS_Recv, "CheckEnable_LVDS_Recv");
+            this.CheckEnable_LVDS_Recv.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.CheckEnable_LVDS_Recv.Checked = true;
+            this.CheckEnable_LVDS_Recv.Id = 168;
+            this.CheckEnable_LVDS_Recv.Name = "CheckEnable_LVDS_Recv";
+            this.CheckEnable_LVDS_Recv.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_LVDS_CheckedChanged);
+            // 
+            // barbtn_StartComP
+            // 
+            resources.ApplyResources(this.barbtn_StartComP, "barbtn_StartComP");
+            this.barbtn_StartComP.Id = 169;
+            this.barbtn_StartComP.ImageOptions.Image = global::CKServer.Properties.Resources.play_16x161;
+            this.barbtn_StartComP.ImageOptions.LargeImage = global::CKServer.Properties.Resources.play_32x321;
+            this.barbtn_StartComP.Name = "barbtn_StartComP";
+            this.barbtn_StartComP.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtn_StartComP_ItemClick);
+            // 
+            // barbtn_setFrame
+            // 
+            resources.ApplyResources(this.barbtn_setFrame, "barbtn_setFrame");
+            this.barbtn_setFrame.Id = 170;
+            this.barbtn_setFrame.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtn_setFrame.ImageOptions.Image")));
+            this.barbtn_setFrame.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtn_setFrame.ImageOptions.LargeImage")));
+            this.barbtn_setFrame.Name = "barbtn_setFrame";
+            this.barbtn_setFrame.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtn_setFrame_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -1354,7 +1384,8 @@
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
             this.ribbonPageGroup9,
-            this.ribbonPageGroup10});
+            this.ribbonPageGroup10,
+            this.ribbonPageGroup12});
             this.ribbonPage1.Name = "ribbonPage1";
             resources.ApplyResources(this.ribbonPage1, "ribbonPage1");
             // 
@@ -1393,6 +1424,13 @@
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             resources.ApplyResources(this.ribbonPageGroup10, "ribbonPageGroup10");
             // 
+            // ribbonPageGroup12
+            // 
+            this.ribbonPageGroup12.ItemLinks.Add(this.barbtn_StartComP);
+            this.ribbonPageGroup12.ItemLinks.Add(this.barbtn_setFrame);
+            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            resources.ApplyResources(this.ribbonPageGroup12, "ribbonPageGroup12");
+            // 
             // Page_Setting
             // 
             this.Page_Setting.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1415,7 +1453,8 @@
             // 
             // ribbonPageGroup14
             // 
-            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_LVDS);
+            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_LVDS_Send);
+            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_LVDS_Recv);
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_LOG);
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_AD);
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_OC);
@@ -1737,9 +1776,9 @@
             this.dockPanel_422_B});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.dockPanel_LOG,
-            this.dockPanel_LVDS,
             this.panelContainer1,
-            this.dockPanel_422_A});
+            this.dockPanel_LVDS_Send,
+            this.dockPanel_LVDS_Recv});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -1803,8 +1842,8 @@
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "ID";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle12;
             resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -1813,8 +1852,8 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "a";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle13;
             resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1822,8 +1861,8 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "b";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle14;
             resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1863,8 +1902,8 @@
             // 
             this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn6.DataPropertyName = "ID";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle15;
             resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -1873,8 +1912,8 @@
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "a";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle16;
             resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1882,8 +1921,8 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "b";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle17;
             resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1954,14 +1993,14 @@
             this.Column12});
             resources.ApplyResources(this.dataGridView_Reg, "dataGridView_Reg");
             this.dataGridView_Reg.Name = "dataGridView_Reg";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Reg.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Reg.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView_Reg.RowHeadersVisible = false;
             this.dataGridView_Reg.RowTemplate.Height = 23;
             this.dataGridView_Reg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Reg_CellContentClick);
@@ -1988,8 +2027,8 @@
             // Column4
             // 
             this.Column4.DataPropertyName = "bit7";
-            dataGridViewCellStyle17.NullValue = "0";
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle18.NullValue = "0";
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle18;
             resources.ApplyResources(this.Column4, "Column4");
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -2153,13 +2192,12 @@
             // dockPanel_LOG
             // 
             this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
-            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
-            this.dockPanel_LOG.FloatVertical = true;
             this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
             resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
             this.dockPanel_LOG.Name = "dockPanel_LOG";
-            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(200, 108);
+            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(385, 138);
             // 
             // dockPanel1_Container
             // 
@@ -2167,435 +2205,27 @@
             resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             // 
-            // dockPanel_LVDS
-            // 
-            this.dockPanel_LVDS.Controls.Add(this.controlContainer1);
-            this.dockPanel_LVDS.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.dockPanel_LVDS.FloatSize = new System.Drawing.Size(1920, 1040);
-            this.dockPanel_LVDS.ID = new System.Guid("613b1802-fd1d-4b73-91c5-831cb04cde38");
-            resources.ApplyResources(this.dockPanel_LVDS, "dockPanel_LVDS");
-            this.dockPanel_LVDS.Name = "dockPanel_LVDS";
-            this.dockPanel_LVDS.OriginalSize = new System.Drawing.Size(565, 200);
-            // 
-            // controlContainer1
-            // 
-            this.controlContainer1.Controls.Add(this.tableLayoutPanel3);
-            this.controlContainer1.Controls.Add(this.tableLayoutPanel1);
-            resources.ApplyResources(this.controlContainer1, "controlContainer1");
-            this.controlContainer1.Name = "controlContainer1";
-            // 
-            // tableLayoutPanel3
-            // 
-            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
-            this.tableLayoutPanel3.Controls.Add(this.buttonEdit1, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.comboBox4, 2, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.comboBox3, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.buttonEdit2, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.comboBox2, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.comboBox1, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.buttonEdit3, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.buttonEdit4, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            // 
-            // buttonEdit1
-            // 
-            resources.ApplyResources(this.buttonEdit1, "buttonEdit1");
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit1.Properties.Appearance.Font")));
-            this.buttonEdit1.Properties.Appearance.Options.UseFont = true;
-            resources.ApplyResources(serializableAppearanceObject4, "serializableAppearanceObject4");
-            serializableAppearanceObject4.Options.UseBackColor = true;
-            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit1.Properties.Buttons"))), resources.GetString("buttonEdit1.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit1.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit1.Properties.Buttons6"))), global::CKServer.Properties.Resources.open_16x16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("buttonEdit1.Properties.Buttons7"), ((object)(resources.GetObject("buttonEdit1.Properties.Buttons8"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit1.Properties.Buttons9"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons10")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit1.Properties.Buttons11"))), resources.GetString("buttonEdit1.Properties.Buttons12"), ((int)(resources.GetObject("buttonEdit1.Properties.Buttons13"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons16"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit1.Properties.Buttons17"))), global::CKServer.Properties.Resources.download_16x16, resources.GetString("buttonEdit1.Properties.Buttons18"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, serializableAppearanceObject5, resources.GetString("buttonEdit1.Properties.Buttons19"), ((object)(resources.GetObject("buttonEdit1.Properties.Buttons20"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit1.Properties.Buttons21"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons22"))))});
-            this.buttonEdit1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
-            // 
-            // comboBox4
-            // 
-            resources.ApplyResources(this.comboBox4, "comboBox4");
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            resources.GetString("comboBox4.Items"),
-            resources.GetString("comboBox4.Items1"),
-            resources.GetString("comboBox4.Items2"),
-            resources.GetString("comboBox4.Items3"),
-            resources.GetString("comboBox4.Items4"),
-            resources.GetString("comboBox4.Items5")});
-            this.comboBox4.Name = "comboBox4";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // comboBox3
-            // 
-            resources.ApplyResources(this.comboBox3, "comboBox3");
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            resources.GetString("comboBox3.Items"),
-            resources.GetString("comboBox3.Items1"),
-            resources.GetString("comboBox3.Items2"),
-            resources.GetString("comboBox3.Items3"),
-            resources.GetString("comboBox3.Items4"),
-            resources.GetString("comboBox3.Items5")});
-            this.comboBox3.Name = "comboBox3";
-            // 
-            // buttonEdit2
-            // 
-            resources.ApplyResources(this.buttonEdit2, "buttonEdit2");
-            this.buttonEdit2.Name = "buttonEdit2";
-            this.buttonEdit2.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit2.Properties.Appearance.Font")));
-            this.buttonEdit2.Properties.Appearance.Options.UseFont = true;
-            resources.ApplyResources(serializableAppearanceObject9, "serializableAppearanceObject9");
-            serializableAppearanceObject9.Options.UseBackColor = true;
-            this.buttonEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit2.Properties.Buttons"))), resources.GetString("buttonEdit2.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit2.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit2.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit2.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, resources.GetString("buttonEdit2.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit2.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit2.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons11")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit2.Properties.Buttons12"))), resources.GetString("buttonEdit2.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit2.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit2.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit2.Properties.Buttons19"))), resources.GetString("buttonEdit2.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, serializableAppearanceObject8, serializableAppearanceObject9, serializableAppearanceObject10, resources.GetString("buttonEdit2.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit2.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit2.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons24"))))});
-            this.buttonEdit2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
-            // 
-            // comboBox2
-            // 
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            resources.GetString("comboBox2.Items"),
-            resources.GetString("comboBox2.Items1"),
-            resources.GetString("comboBox2.Items2"),
-            resources.GetString("comboBox2.Items3"),
-            resources.GetString("comboBox2.Items4"),
-            resources.GetString("comboBox2.Items5")});
-            this.comboBox2.Name = "comboBox2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // comboBox1
-            // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2"),
-            resources.GetString("comboBox1.Items3"),
-            resources.GetString("comboBox1.Items4"),
-            resources.GetString("comboBox1.Items5")});
-            this.comboBox1.Name = "comboBox1";
-            // 
-            // buttonEdit3
-            // 
-            resources.ApplyResources(this.buttonEdit3, "buttonEdit3");
-            this.buttonEdit3.Name = "buttonEdit3";
-            this.buttonEdit3.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit3.Properties.Appearance.Font")));
-            this.buttonEdit3.Properties.Appearance.Options.UseFont = true;
-            resources.ApplyResources(serializableAppearanceObject14, "serializableAppearanceObject14");
-            serializableAppearanceObject14.Options.UseBackColor = true;
-            this.buttonEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit3.Properties.Buttons"))), resources.GetString("buttonEdit3.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit3.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit3.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit3.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, resources.GetString("buttonEdit3.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit3.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit3.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons11")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit3.Properties.Buttons12"))), resources.GetString("buttonEdit3.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit3.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit3.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit3.Properties.Buttons19"))), resources.GetString("buttonEdit3.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject12, serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, resources.GetString("buttonEdit3.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit3.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit3.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons24"))))});
-            this.buttonEdit3.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // buttonEdit4
-            // 
-            resources.ApplyResources(this.buttonEdit4, "buttonEdit4");
-            this.buttonEdit4.Name = "buttonEdit4";
-            this.buttonEdit4.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit4.Properties.Appearance.Font")));
-            this.buttonEdit4.Properties.Appearance.Options.UseFont = true;
-            resources.ApplyResources(serializableAppearanceObject19, "serializableAppearanceObject19");
-            serializableAppearanceObject19.Options.UseBackColor = true;
-            this.buttonEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit4.Properties.Buttons"))), resources.GetString("buttonEdit4.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit4.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit4.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit4.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject16, resources.GetString("buttonEdit4.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit4.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit4.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons11")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit4.Properties.Buttons12"))), resources.GetString("buttonEdit4.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit4.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit4.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit4.Properties.Buttons19"))), resources.GetString("buttonEdit4.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, resources.GetString("buttonEdit4.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit4.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit4.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit4.Properties.Buttons24"))))});
-            this.buttonEdit4.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // tableLayoutPanel1
-            // 
-            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox5, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox6, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox7, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox8, 1, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox_Send_1);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
-            // textBox_Send_1
-            // 
-            resources.ApplyResources(this.textBox_Send_1, "textBox_Send_1");
-            this.textBox_Send_1.Name = "textBox_Send_1";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox_Send_2);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // textBox_Send_2
-            // 
-            resources.ApplyResources(this.textBox_Send_2, "textBox_Send_2");
-            this.textBox_Send_2.Name = "textBox_Send_2";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox_Send_3);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // textBox_Send_3
-            // 
-            resources.ApplyResources(this.textBox_Send_3, "textBox_Send_3");
-            this.textBox_Send_3.Name = "textBox_Send_3";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.textBox_Send_4);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // textBox_Send_4
-            // 
-            resources.ApplyResources(this.textBox_Send_4, "textBox_Send_4");
-            this.textBox_Send_4.Name = "textBox_Send_4";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBox_Result_1);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
-            // 
-            // textBox_Result_1
-            // 
-            resources.ApplyResources(this.textBox_Result_1, "textBox_Result_1");
-            this.textBox_Result_1.Name = "textBox_Result_1";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.textBox_Result_2);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.TabStop = false;
-            // 
-            // textBox_Result_2
-            // 
-            resources.ApplyResources(this.textBox_Result_2, "textBox_Result_2");
-            this.textBox_Result_2.Name = "textBox_Result_2";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.textBox_Result_3);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.TabStop = false;
-            // 
-            // textBox_Result_3
-            // 
-            resources.ApplyResources(this.textBox_Result_3, "textBox_Result_3");
-            this.textBox_Result_3.Name = "textBox_Result_3";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.textBox_Result_4);
-            resources.ApplyResources(this.groupBox8, "groupBox8");
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.TabStop = false;
-            // 
-            // textBox_Result_4
-            // 
-            resources.ApplyResources(this.textBox_Result_4, "textBox_Result_4");
-            this.textBox_Result_4.Name = "textBox_Result_4";
-            // 
             // panelContainer1
             // 
+            this.panelContainer1.Controls.Add(this.dockPanel_422_A);
             this.panelContainer1.Controls.Add(this.dockPanel_AD);
             this.panelContainer1.Controls.Add(this.dockPanel_OC);
             this.panelContainer1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
-            this.panelContainer1.FloatSize = new System.Drawing.Size(174, 137);
-            this.panelContainer1.ID = new System.Guid("0760534f-cef8-4a61-999d-e7b5d57893fe");
+            this.panelContainer1.FloatSize = new System.Drawing.Size(683, 512);
+            this.panelContainer1.ID = new System.Guid("175b3333-7bbf-425f-97dd-c6234584ee50");
             resources.ApplyResources(this.panelContainer1, "panelContainer1");
             this.panelContainer1.Name = "panelContainer1";
-            this.panelContainer1.OriginalSize = new System.Drawing.Size(262, 163);
-            // 
-            // dockPanel_AD
-            // 
-            this.dockPanel_AD.Controls.Add(this.dockPanel5_Container);
-            this.dockPanel_AD.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.dockPanel_AD.ID = new System.Guid("277b4796-f1d3-44ac-9aab-bf8085b99d6f");
-            resources.ApplyResources(this.dockPanel_AD, "dockPanel_AD");
-            this.dockPanel_AD.Name = "dockPanel_AD";
-            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(262, 180);
-            // 
-            // dockPanel5_Container
-            // 
-            this.dockPanel5_Container.Controls.Add(this.dataGridView_AD);
-            resources.ApplyResources(this.dockPanel5_Container, "dockPanel5_Container");
-            this.dockPanel5_Container.Name = "dockPanel5_Container";
-            // 
-            // dataGridView_AD
-            // 
-            this.dataGridView_AD.AllowUserToAddRows = false;
-            this.dataGridView_AD.AllowUserToDeleteRows = false;
-            this.dataGridView_AD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView_AD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView_AD.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_AD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView_AD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_AD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            resources.ApplyResources(this.dataGridView_AD, "dataGridView_AD");
-            this.dataGridView_AD.Name = "dataGridView_AD";
-            this.dataGridView_AD.RowHeadersVisible = false;
-            this.dataGridView_AD.RowTemplate.Height = 23;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "序号";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "名称";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "测量值";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "N3";
-            dataGridViewCellStyle5.NullValue = "0.000";
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
-            resources.ApplyResources(this.Column3, "Column3");
-            this.Column3.Name = "Column3";
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dockPanel_OC
-            // 
-            this.dockPanel_OC.Controls.Add(this.dockPanel4_Container);
-            this.dockPanel_OC.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.dockPanel_OC.FloatSize = new System.Drawing.Size(334, 322);
-            this.dockPanel_OC.ID = new System.Guid("33b8ddeb-d01d-4235-9b86-4643140871e6");
-            resources.ApplyResources(this.dockPanel_OC, "dockPanel_OC");
-            this.dockPanel_OC.Name = "dockPanel_OC";
-            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(262, 231);
-            // 
-            // dockPanel4_Container
-            // 
-            this.dockPanel4_Container.Controls.Add(this.dataGridView_OC);
-            resources.ApplyResources(this.dockPanel4_Container, "dockPanel4_Container");
-            this.dockPanel4_Container.Name = "dockPanel4_Container";
-            // 
-            // dataGridView_OC
-            // 
-            this.dataGridView_OC.AllowUserToAddRows = false;
-            this.dataGridView_OC.AllowUserToDeleteRows = false;
-            this.dataGridView_OC.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView_OC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView_OC.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 9F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_OC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView_OC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_OC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.Column5});
-            resources.ApplyResources(this.dataGridView_OC, "dataGridView_OC");
-            this.dataGridView_OC.Name = "dataGridView_OC";
-            this.dataGridView_OC.RowHeadersVisible = false;
-            this.dataGridView_OC.RowTemplate.Height = 23;
-            this.dataGridView_OC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "序号";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "名称";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle9;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.NullValue = "输出";
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle10;
-            resources.ApplyResources(this.Column5, "Column5");
-            this.Column5.Name = "Column5";
-            this.Column5.Text = "输出控制";
+            this.panelContainer1.OriginalSize = new System.Drawing.Size(432, 100);
             // 
             // dockPanel_422_A
             // 
             this.dockPanel_422_A.Controls.Add(this.dockPanel3_Container);
-            this.dockPanel_422_A.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
+            this.dockPanel_422_A.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
             this.dockPanel_422_A.FloatSize = new System.Drawing.Size(683, 512);
             this.dockPanel_422_A.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
             resources.ApplyResources(this.dockPanel_422_A, "dockPanel_422_A");
             this.dockPanel_422_A.Name = "dockPanel_422_A";
-            this.dockPanel_422_A.OriginalSize = new System.Drawing.Size(448, 500);
+            this.dockPanel_422_A.OriginalSize = new System.Drawing.Size(448, 204);
             // 
             // dockPanel3_Container
             // 
@@ -2648,6 +2278,404 @@
             this.Column16.DataPropertyName = "解析值";
             resources.ApplyResources(this.Column16, "Column16");
             this.Column16.Name = "Column16";
+            // 
+            // dockPanel_AD
+            // 
+            this.dockPanel_AD.Controls.Add(this.dockPanel5_Container);
+            this.dockPanel_AD.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
+            this.dockPanel_AD.FloatVertical = true;
+            this.dockPanel_AD.ID = new System.Guid("277b4796-f1d3-44ac-9aab-bf8085b99d6f");
+            resources.ApplyResources(this.dockPanel_AD, "dockPanel_AD");
+            this.dockPanel_AD.Name = "dockPanel_AD";
+            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(448, 177);
+            // 
+            // dockPanel5_Container
+            // 
+            this.dockPanel5_Container.Controls.Add(this.dataGridView_AD);
+            resources.ApplyResources(this.dockPanel5_Container, "dockPanel5_Container");
+            this.dockPanel5_Container.Name = "dockPanel5_Container";
+            // 
+            // dataGridView_AD
+            // 
+            this.dataGridView_AD.AllowUserToAddRows = false;
+            this.dataGridView_AD.AllowUserToDeleteRows = false;
+            this.dataGridView_AD.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView_AD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_AD.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_AD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_AD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_AD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            resources.ApplyResources(this.dataGridView_AD, "dataGridView_AD");
+            this.dataGridView_AD.Name = "dataGridView_AD";
+            this.dataGridView_AD.RowHeadersVisible = false;
+            this.dataGridView_AD.RowTemplate.Height = 23;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "序号";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "名称";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle5;
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "测量值";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "N3";
+            dataGridViewCellStyle6.NullValue = "0.000";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle6;
+            resources.ApplyResources(this.Column3, "Column3");
+            this.Column3.Name = "Column3";
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dockPanel_OC
+            // 
+            this.dockPanel_OC.Controls.Add(this.dockPanel4_Container);
+            this.dockPanel_OC.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
+            this.dockPanel_OC.FloatSize = new System.Drawing.Size(334, 322);
+            this.dockPanel_OC.ID = new System.Guid("33b8ddeb-d01d-4235-9b86-4643140871e6");
+            resources.ApplyResources(this.dockPanel_OC, "dockPanel_OC");
+            this.dockPanel_OC.Name = "dockPanel_OC";
+            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(448, 230);
+            // 
+            // dockPanel4_Container
+            // 
+            this.dockPanel4_Container.Controls.Add(this.dataGridView_OC);
+            resources.ApplyResources(this.dockPanel4_Container, "dockPanel4_Container");
+            this.dockPanel4_Container.Name = "dockPanel4_Container";
+            // 
+            // dataGridView_OC
+            // 
+            this.dataGridView_OC.AllowUserToAddRows = false;
+            this.dataGridView_OC.AllowUserToDeleteRows = false;
+            this.dataGridView_OC.AllowUserToResizeRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView_OC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView_OC.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 9F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_OC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView_OC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_OC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.Column5});
+            resources.ApplyResources(this.dataGridView_OC, "dataGridView_OC");
+            this.dataGridView_OC.Name = "dataGridView_OC";
+            this.dataGridView_OC.RowHeadersVisible = false;
+            this.dataGridView_OC.RowTemplate.Height = 23;
+            this.dataGridView_OC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "序号";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "名称";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle10;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.NullValue = "输出";
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle11;
+            resources.ApplyResources(this.Column5, "Column5");
+            this.Column5.Name = "Column5";
+            this.Column5.Text = "输出控制";
+            // 
+            // dockPanel_LVDS_Send
+            // 
+            this.dockPanel_LVDS_Send.Controls.Add(this.controlContainer1);
+            this.dockPanel_LVDS_Send.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
+            this.dockPanel_LVDS_Send.FloatSize = new System.Drawing.Size(1920, 1040);
+            this.dockPanel_LVDS_Send.ID = new System.Guid("613b1802-fd1d-4b73-91c5-831cb04cde38");
+            resources.ApplyResources(this.dockPanel_LVDS_Send, "dockPanel_LVDS_Send");
+            this.dockPanel_LVDS_Send.Name = "dockPanel_LVDS_Send";
+            this.dockPanel_LVDS_Send.OriginalSize = new System.Drawing.Size(637, 318);
+            // 
+            // controlContainer1
+            // 
+            this.controlContainer1.Controls.Add(this.tableLayoutPanel1);
+            this.controlContainer1.Controls.Add(this.tableLayoutPanel3);
+            resources.ApplyResources(this.controlContainer1, "controlContainer1");
+            this.controlContainer1.Name = "controlContainer1";
+            // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox_Send_1);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // textBox_Send_1
+            // 
+            resources.ApplyResources(this.textBox_Send_1, "textBox_Send_1");
+            this.textBox_Send_1.Name = "textBox_Send_1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox_Send_2);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // textBox_Send_2
+            // 
+            resources.ApplyResources(this.textBox_Send_2, "textBox_Send_2");
+            this.textBox_Send_2.Name = "textBox_Send_2";
+            // 
+            // tableLayoutPanel3
+            // 
+            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
+            this.tableLayoutPanel3.Controls.Add(this.buttonEdit1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonEdit2, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.comboBox2, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.comboBox1, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            // 
+            // buttonEdit1
+            // 
+            resources.ApplyResources(this.buttonEdit1, "buttonEdit1");
+            this.buttonEdit1.Name = "buttonEdit1";
+            this.buttonEdit1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit1.Properties.Appearance.Font")));
+            this.buttonEdit1.Properties.Appearance.Options.UseFont = true;
+            resources.ApplyResources(serializableAppearanceObject5, "serializableAppearanceObject5");
+            serializableAppearanceObject5.Options.UseBackColor = true;
+            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit1.Properties.Buttons"))), resources.GetString("buttonEdit1.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit1.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit1.Properties.Buttons6"))), global::CKServer.Properties.Resources.open_16x16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, resources.GetString("buttonEdit1.Properties.Buttons7"), ((object)(resources.GetObject("buttonEdit1.Properties.Buttons8"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit1.Properties.Buttons9"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons10")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit1.Properties.Buttons11"))), resources.GetString("buttonEdit1.Properties.Buttons12"), ((int)(resources.GetObject("buttonEdit1.Properties.Buttons13"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons16"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit1.Properties.Buttons17"))), global::CKServer.Properties.Resources.download_16x16, resources.GetString("buttonEdit1.Properties.Buttons18"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, serializableAppearanceObject4, serializableAppearanceObject5, serializableAppearanceObject6, resources.GetString("buttonEdit1.Properties.Buttons19"), ((object)(resources.GetObject("buttonEdit1.Properties.Buttons20"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit1.Properties.Buttons21"))), ((bool)(resources.GetObject("buttonEdit1.Properties.Buttons22"))))});
+            this.buttonEdit1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
+            // 
+            // buttonEdit2
+            // 
+            resources.ApplyResources(this.buttonEdit2, "buttonEdit2");
+            this.buttonEdit2.Name = "buttonEdit2";
+            this.buttonEdit2.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit2.Properties.Appearance.Font")));
+            this.buttonEdit2.Properties.Appearance.Options.UseFont = true;
+            resources.ApplyResources(serializableAppearanceObject10, "serializableAppearanceObject10");
+            serializableAppearanceObject10.Options.UseBackColor = true;
+            this.buttonEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit2.Properties.Buttons"))), resources.GetString("buttonEdit2.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit2.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit2.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit2.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, resources.GetString("buttonEdit2.Properties.Buttons8"), ((object)(resources.GetObject("buttonEdit2.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit2.Properties.Buttons10"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons11")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit2.Properties.Buttons12"))), resources.GetString("buttonEdit2.Properties.Buttons13"), ((int)(resources.GetObject("buttonEdit2.Properties.Buttons14"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons15"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons16"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons17"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit2.Properties.Buttons18"))), ((System.Drawing.Image)(resources.GetObject("buttonEdit2.Properties.Buttons19"))), resources.GetString("buttonEdit2.Properties.Buttons20"), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, resources.GetString("buttonEdit2.Properties.Buttons21"), ((object)(resources.GetObject("buttonEdit2.Properties.Buttons22"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit2.Properties.Buttons23"))), ((bool)(resources.GetObject("buttonEdit2.Properties.Buttons24"))))});
+            this.buttonEdit2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
+            // 
+            // comboBox2
+            // 
+            resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            resources.GetString("comboBox2.Items"),
+            resources.GetString("comboBox2.Items1"),
+            resources.GetString("comboBox2.Items2"),
+            resources.GetString("comboBox2.Items3"),
+            resources.GetString("comboBox2.Items4"),
+            resources.GetString("comboBox2.Items5")});
+            this.comboBox2.Name = "comboBox2";
+            // 
+            // comboBox1
+            // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2"),
+            resources.GetString("comboBox1.Items3"),
+            resources.GetString("comboBox1.Items4"),
+            resources.GetString("comboBox1.Items5")});
+            this.comboBox1.Name = "comboBox1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // dockPanel_LVDS_Recv
+            // 
+            this.dockPanel_LVDS_Recv.Controls.Add(this.controlContainer5);
+            this.dockPanel_LVDS_Recv.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel_LVDS_Recv.FloatSize = new System.Drawing.Size(861, 375);
+            this.dockPanel_LVDS_Recv.FloatVertical = true;
+            this.dockPanel_LVDS_Recv.ID = new System.Guid("d0a692ca-17d9-4279-9a5c-0979cde98445");
+            resources.ApplyResources(this.dockPanel_LVDS_Recv, "dockPanel_LVDS_Recv");
+            this.dockPanel_LVDS_Recv.Name = "dockPanel_LVDS_Recv";
+            this.dockPanel_LVDS_Recv.OriginalSize = new System.Drawing.Size(565, 293);
+            // 
+            // controlContainer5
+            // 
+            this.controlContainer5.Controls.Add(this.tableLayoutPanel4);
+            resources.ApplyResources(this.controlContainer5, "controlContainer5");
+            this.controlContainer5.Name = "controlContainer5";
+            // 
+            // tableLayoutPanel4
+            // 
+            resources.ApplyResources(this.tableLayoutPanel4, "tableLayoutPanel4");
+            this.tableLayoutPanel4.Controls.Add(this.groupBox3, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.radioButton2, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.buttonEdit3, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.radioButton1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.dataGridView_LvdsCP, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.dataGridView_LvdsResult, 0, 2);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            // 
+            // groupBox3
+            // 
+            this.tableLayoutPanel4.SetColumnSpan(this.groupBox3, 2);
+            this.groupBox3.Controls.Add(this.textBox_lvdsFrame_Data);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // textBox_lvdsFrame_Data
+            // 
+            resources.ApplyResources(this.textBox_lvdsFrame_Data, "textBox_lvdsFrame_Data");
+            this.textBox_lvdsFrame_Data.Name = "textBox_lvdsFrame_Data";
+            // 
+            // radioButton2
+            // 
+            resources.ApplyResources(this.radioButton2, "radioButton2");
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // buttonEdit3
+            // 
+            this.tableLayoutPanel4.SetColumnSpan(this.buttonEdit3, 4);
+            resources.ApplyResources(this.buttonEdit3, "buttonEdit3");
+            this.buttonEdit3.Name = "buttonEdit3";
+            this.buttonEdit3.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("buttonEdit3.Properties.Appearance.Font")));
+            this.buttonEdit3.Properties.Appearance.Options.UseFont = true;
+            this.buttonEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("buttonEdit3.Properties.Buttons"))), resources.GetString("buttonEdit3.Properties.Buttons1"), ((int)(resources.GetObject("buttonEdit3.Properties.Buttons2"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons3"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons4"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("buttonEdit3.Properties.Buttons6"))), global::CKServer.Properties.Resources.open_16x16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("buttonEdit3.Properties.Buttons7"), ((object)(resources.GetObject("buttonEdit3.Properties.Buttons8"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("buttonEdit3.Properties.Buttons9"))), ((bool)(resources.GetObject("buttonEdit3.Properties.Buttons10"))))});
+            this.buttonEdit3.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit3_ButtonClick);
+            // 
+            // radioButton1
+            // 
+            resources.ApplyResources(this.radioButton1, "radioButton1");
+            this.radioButton1.Checked = true;
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView_LvdsCP
+            // 
+            this.dataGridView_LvdsCP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_LvdsCP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.tableLayoutPanel4.SetColumnSpan(this.dataGridView_LvdsCP, 2);
+            resources.ApplyResources(this.dataGridView_LvdsCP, "dataGridView_LvdsCP");
+            this.dataGridView_LvdsCP.Name = "dataGridView_LvdsCP";
+            this.dataGridView_LvdsCP.RowHeadersVisible = false;
+            this.dataGridView_LvdsCP.RowTemplate.Height = 23;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "名称";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "设定值";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridView_LvdsResult
+            // 
+            this.dataGridView_LvdsResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_LvdsResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column19,
+            this.Column20,
+            this.Column21,
+            this.Column22});
+            this.tableLayoutPanel4.SetColumnSpan(this.dataGridView_LvdsResult, 4);
+            resources.ApplyResources(this.dataGridView_LvdsResult, "dataGridView_LvdsResult");
+            this.dataGridView_LvdsResult.Name = "dataGridView_LvdsResult";
+            this.dataGridView_LvdsResult.RowHeadersVisible = false;
+            this.dataGridView_LvdsResult.RowTemplate.Height = 23;
+            // 
+            // Column19
+            // 
+            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column19.DataPropertyName = "名称";
+            resources.ApplyResources(this.Column19, "Column19");
+            this.Column19.Name = "Column19";
+            // 
+            // Column20
+            // 
+            this.Column20.DataPropertyName = "总字节数";
+            resources.ApplyResources(this.Column20, "Column20");
+            this.Column20.Name = "Column20";
+            // 
+            // Column21
+            // 
+            this.Column21.DataPropertyName = "错误字节";
+            resources.ApplyResources(this.Column21, "Column21");
+            this.Column21.Name = "Column21";
+            // 
+            // Column22
+            // 
+            this.Column22.DataPropertyName = "误码率";
+            dataGridViewCellStyle1.Format = "E6";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Column22.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.Column22, "Column22");
+            this.Column22.Name = "Column22";
             // 
             // ID
             // 
@@ -2733,13 +2761,21 @@
             this.barCheckItem1.Id = 159;
             this.barCheckItem1.Name = "barCheckItem1";
             // 
+            // repositoryItemRadioGroup1
+            // 
+            this.repositoryItemRadioGroup1.Name = "repositoryItemRadioGroup1";
+            // 
+            // repositoryItemRadioGroup2
+            // 
+            this.repositoryItemRadioGroup2.Name = "repositoryItemRadioGroup2";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dockPanel_422_A);
+            this.Controls.Add(this.dockPanel_LVDS_Recv);
+            this.Controls.Add(this.dockPanel_LVDS_Send);
             this.Controls.Add(this.panelContainer1);
-            this.Controls.Add(this.dockPanel_LVDS);
             this.Controls.Add(this.dockPanel_LOG);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
@@ -2801,42 +2837,39 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).EndInit();
             this.dockPanel_LOG.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
-            this.dockPanel_LVDS.ResumeLayout(false);
-            this.controlContainer1.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.panelContainer1.ResumeLayout(false);
+            this.dockPanel_422_A.ResumeLayout(false);
+            this.dockPanel3_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).EndInit();
             this.dockPanel_AD.ResumeLayout(false);
             this.dockPanel5_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AD)).EndInit();
             this.dockPanel_OC.ResumeLayout(false);
             this.dockPanel4_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OC)).EndInit();
-            this.dockPanel_422_A.ResumeLayout(false);
-            this.dockPanel3_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC1)).EndInit();
+            this.dockPanel_LVDS_Send.ResumeLayout(false);
+            this.controlContainer1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).EndInit();
+            this.dockPanel_LVDS_Recv.ResumeLayout(false);
+            this.controlContainer5.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LvdsCP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LvdsResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2872,7 +2905,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit7;
         private DevExpress.XtraBars.BarEditItem barEditItem8;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit8;
-        private DevExpress.XtraBars.BarCheckItem CheckEnable_LVDS;
+        private DevExpress.XtraBars.BarCheckItem CheckEnable_LVDS_Send;
         private DevExpress.XtraBars.BarCheckItem CheckEnable_OC;
         private DevExpress.XtraBars.BarCheckItem barCheckItem3;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
@@ -3007,32 +3040,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel_LVDS;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel_LVDS_Send;
         private DevExpress.XtraBars.Docking.ControlContainer controlContainer1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit4;
         private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit3;
         private DevExpress.XtraEditors.ButtonEdit buttonEdit2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox_Send_1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox_Send_2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox_Send_3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox_Send_4;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox_Result_2;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox textBox_Result_3;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox textBox_Result_4;
-        private System.Windows.Forms.TextBox textBox_Result_1;
         private DevExpress.XtraBars.BarCheckItem CheckEnable_422_A;
         private DevExpress.XtraBars.BarButtonItem btn_OpenPath_Storage;
         private DevExpress.XtraBars.BarButtonItem btn_OpenPath_Log;
@@ -3063,8 +3081,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column10;
         private System.Windows.Forms.DataGridViewButtonColumn Column11;
         private System.Windows.Forms.DataGridViewButtonColumn Column12;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView_YC1;
@@ -3089,7 +3105,6 @@
         private DevExpress.XtraBars.BarButtonItem barButton_AStart;
         private DevExpress.XtraBars.BarButtonItem barButton_BStart;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
-        private DevExpress.XtraBars.Docking.DockPanel panelContainer1;
         private DevExpress.XtraBars.BarButtonItem bar_Send422_A;
         private DevExpress.XtraBars.BarEditItem barEdit_YKSelect_A;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox ComboBox_YKSelect_A;
@@ -3104,10 +3119,32 @@
         private DevExpress.XtraBars.Docking.ControlContainer controlContainer4;
         private DevExpress.XtraBars.BarCheckItem barCheckItem1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel_LVDS_Recv;
+        private DevExpress.XtraBars.Docking.ControlContainer controlContainer5;
+        private DevExpress.XtraBars.BarCheckItem CheckEnable_LVDS_Recv;
+        private System.Windows.Forms.DataGridView dataGridView_LvdsCP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.TextBox textBox_lvdsFrame_Data;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dataGridView_LvdsResult;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private DevExpress.XtraEditors.ButtonEdit buttonEdit3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private DevExpress.XtraBars.Docking.DockPanel panelContainer1;
+        private DevExpress.XtraBars.BarButtonItem barbtn_StartComP;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.BarButtonItem barbtn_setFrame;
+        private DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup repositoryItemRadioGroup1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup repositoryItemRadioGroup2;
     }
 }
 
