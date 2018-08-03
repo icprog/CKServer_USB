@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+	<add key="RS422_Channel_0" name="数管接收GNC计算机"/>
+	<add key="RS422_Channel_1" name="数管接收GNC执行机1"/>
+	<add key="RS422_Channel_2" name="数管接收GNC执行机2"/>
+	<add key="RS422_Channel_3" name="数管接收推进线路盒1"/>
+	<add key="RS422_Channel_4" name="数管接收推进线路盒2"/>
+	<add key="RS422_Channel_5" name="数管接收测控终端A机"/>
+	<add key="RS422_Channel_6" name="数管接收测控终端B机"/>
+	<add key="RS422_Channel_7" name="数管接收综合驱动控制器 "/>
+	<add key="RS422_Channel_8" name="数管接收空空通信机"/>
+	<add key="RS422_Channel_9" name="RS422收10"/>
+	<add key="RS422_Channel_10" name="RS422收11"/>
+	<add key="RS422_Channel_11" name="数管接收指令上行"/>
+	<add key="RS422_Channel_12" name="数管接收综合控制单元"/>
+	<add key="RS422_Channel_13" name="RS422收22"/>
+	<add key="RS422_Channel_14" name="RS422收23"/>
+	<add key="RS422_Channel_15" name="RS422收24"/>
+	<add key="RS422_Channel_16" name="RS422收25"/>
+	<add key="RS422_Channel_17" name="RS422收26"/>
+	<add key="RS422_Channel_18" name="RS422收27"/>
+	<add key="RS422_Channel_19" name="RS422收28"/>
+	<add key="RS422_Channel_20" name="RS422收29"/>
+	<add key="RS422_Channel_21" name="RS422收30"/>
+	<add key="RS422_Channel_22" name="RS422收31"/>
+	<add key="RS422_Channel_23" name="RS422收32"/>
+</configuration>

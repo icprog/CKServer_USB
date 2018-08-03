@@ -1309,6 +1309,26 @@
         Xco2AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="barbtn_savFrame.Caption" xml:space="preserve">
+    <value>保存比较帧</value>
+  </data>
+  <data name="barbtn_savFrame.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAALdEVYdFRpdGxlAFNhdmU7+ej5CQAAAFpJREFUOE9j+P//P0UYTHRGrv5PDsYwgFhA0ICDBw9i
+        xTBA0ABCgKAB2GwHYRggaAAhQDsDSMW0MeAfUAAfRlYLBLgNQOeji4MwEAwiAxqQJYjEDXADyMf/GQBn
+        gBh61xOsQAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="barbtn_savFrame.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAALdEVYdFRpdGxlAFNhdmU7+ej5CQAAAJ9JREFUWEftkIEJgDAMBLumW3QNZ3GKbuImsQWRGJPa
+        aowU8nCIMf0eBgD4FXZoCTu05PQyTwtYgO+8CKCnapoF0JJqSPdgAimlR+CQ7j4BjZDuwQS439sCDunu
+        E9AI6XYBFxhA4EvwnS5wK/A2QuegArVvUuiZ/ZwLuIAosDLLR2rfpNAzmTWPRYFYFtCyNqU74jtPAn/A
+        Di1hh3ZA2AC7p8AQM2PmmAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="ribbonControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1704,7 +1724,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>105</value>
+    <value>64</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 14</value>
@@ -1725,7 +1745,7 @@
     <value>True</value>
   </data>
   <data name="textBox_lvdsFrame_Data.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 96</value>
+    <value>214, 117</value>
   </data>
   <data name="textBox_lvdsFrame_Data.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1749,16 +1769,16 @@
     <value>Fill</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 145</value>
+    <value>227, 159</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 117</value>
+    <value>220, 138</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
   <data name="groupBox3.Text" xml:space="preserve">
-    <value>数据区(6976bits)</value>
+    <value>数据区(重复数据区到872Bytes）</value>
   </data>
   <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
     <value>groupBox3</value>
@@ -1927,10 +1947,10 @@
     <value>Fill</value>
   </data>
   <data name="dataGridView_LvdsCP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 145</value>
+    <value>3, 159</value>
   </data>
   <data name="dataGridView_LvdsCP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 117</value>
+    <value>218, 138</value>
   </data>
   <data name="dataGridView_LvdsCP.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1987,7 +2007,7 @@
     <value>3, 63</value>
   </data>
   <data name="dataGridView_LvdsResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 76</value>
+    <value>444, 90</value>
   </data>
   <data name="dataGridView_LvdsResult.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -2014,7 +2034,7 @@
     <value>4</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 265</value>
+    <value>450, 300</value>
   </data>
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -2038,7 +2058,7 @@
     <value>4, 24</value>
   </data>
   <data name="controlContainer5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 265</value>
+    <value>450, 300</value>
   </data>
   <data name="controlContainer5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2056,10 +2076,10 @@
     <value>0</value>
   </data>
   <data name="dockPanel_LVDS_Recv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 451</value>
+    <value>0, 416</value>
   </data>
   <data name="dockPanel_LVDS_Recv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 293</value>
+    <value>458, 328</value>
   </data>
   <data name="dockPanel_LVDS_Recv.Text" xml:space="preserve">
     <value>LVDS接收区</value>
@@ -2657,7 +2677,7 @@
     <value>4, 23</value>
   </data>
   <data name="controlContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 290</value>
+    <value>450, 255</value>
   </data>
   <data name="controlContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2678,7 +2698,7 @@
     <value>0, 133</value>
   </data>
   <data name="dockPanel_LVDS_Send.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 318</value>
+    <value>458, 283</value>
   </data>
   <data name="dockPanel_LVDS_Send.Text" xml:space="preserve">
     <value>LVDS发送区</value>
@@ -3667,6 +3687,12 @@
   <data name="&gt;&gt;barbtn_setFrame.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;barbtn_savFrame.Name" xml:space="preserve">
+    <value>barbtn_savFrame</value>
+  </data>
+  <data name="&gt;&gt;barbtn_savFrame.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;ribbonPageCategory1.Name" xml:space="preserve">
     <value>ribbonPageCategory1</value>
   </data>
@@ -3864,6 +3890,18 @@
   </data>
   <data name="&gt;&gt;repositoryItemCheckEdit3.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemRadioGroup1.Name" xml:space="preserve">
+    <value>repositoryItemRadioGroup1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemRadioGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemRadioGroup2.Name" xml:space="preserve">
+    <value>repositoryItemRadioGroup2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemRadioGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
     <value>openFileDialog1</value>
@@ -4285,17 +4323,11 @@
   <data name="&gt;&gt;barCheckItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarCheckItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;repositoryItemRadioGroup1.Name" xml:space="preserve">
-    <value>repositoryItemRadioGroup1</value>
+  <data name="&gt;&gt;saveFileDialog2.Name" xml:space="preserve">
+    <value>saveFileDialog2</value>
   </data>
-  <data name="&gt;&gt;repositoryItemRadioGroup1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemRadioGroup2.Name" xml:space="preserve">
-    <value>repositoryItemRadioGroup2</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemRadioGroup2.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;saveFileDialog2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
@@ -5084,4 +5116,7 @@
   <data name="barCheckItem1.Caption" xml:space="preserve">
     <value>422功能区B</value>
   </data>
+  <metadata name="saveFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>948, 17</value>
+  </metadata>
 </root>

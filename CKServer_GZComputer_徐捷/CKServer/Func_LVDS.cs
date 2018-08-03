@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace CKServer
 {
-    class Function_LVDS
+    class Func_LVDS
     {
         public static DataTable dt_LVDS = new DataTable();
         public static int LVDSNums = 8;
@@ -118,16 +118,23 @@ namespace CKServer
             dt_LVDS.Columns.Add("出错行", typeof(Int32));
             dt_LVDS.Columns.Add("出错列", typeof(Int32));
 
-            for (int i = 0; i < LVDSNums; i++)
+            try
             {
-                DataRow dr = dt_LVDS.NewRow();
-                dr["序号"] = i + 1;
-                dr["名称"] = Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_Channel_" + i.ToString(), "name");
-                dr["收到数据"] = 0;
-                dr["比对长度"] = 20;
-                dr["出错行"] = 0;
-                dr["出错列"] = 0;
-                dt_LVDS.Rows.Add(dr);
+                for (int i = 0; i < LVDSNums; i++)
+                {
+                    DataRow dr = dt_LVDS.NewRow();
+                    dr["序号"] = i + 1;
+                    dr["名称"] = Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_Channel_" + i.ToString(), "name");
+                    dr["收到数据"] = 0;
+                    dr["比对长度"] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_" + (i+1).ToString(), "value"));
+                    dr["出错行"] = 0;
+                    dr["出错列"] = 0;
+                    dt_LVDS.Rows.Add(dr);
+                }
+            }
+            catch(Exception ex)
+            {
+                Trace.WriteLine(ex.Message);
             }
         }
 

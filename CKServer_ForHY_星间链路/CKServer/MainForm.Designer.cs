@@ -166,6 +166,7 @@
             this.CheckEnable_LVDS_Recv = new DevExpress.XtraBars.BarCheckItem();
             this.barbtn_StartComP = new DevExpress.XtraBars.BarButtonItem();
             this.barbtn_setFrame = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtn_savFrame = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -199,6 +200,8 @@
             this.repositoryItemTextEdit13 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemRadioGroup1 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
+            this.repositoryItemRadioGroup2 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -328,8 +331,7 @@
             this.barEditItem12 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemSpinEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
-            this.repositoryItemRadioGroup1 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
-            this.repositoryItemRadioGroup2 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
@@ -364,6 +366,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel2.SuspendLayout();
@@ -407,8 +411,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LvdsCP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LvdsResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup2)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -504,9 +506,10 @@
             this.CheckEnable_ManualYK,
             this.CheckEnable_LVDS_Recv,
             this.barbtn_StartComP,
-            this.barbtn_setFrame});
+            this.barbtn_setFrame,
+            this.barbtn_savFrame});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 173;
+            this.ribbonControl1.MaxItemId = 174;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1372,6 +1375,15 @@
             this.barbtn_setFrame.Name = "barbtn_setFrame";
             this.barbtn_setFrame.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtn_setFrame_ItemClick);
             // 
+            // barbtn_savFrame
+            // 
+            resources.ApplyResources(this.barbtn_savFrame, "barbtn_savFrame");
+            this.barbtn_savFrame.Id = 173;
+            this.barbtn_savFrame.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtn_savFrame.ImageOptions.Image")));
+            this.barbtn_savFrame.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtn_savFrame.ImageOptions.LargeImage")));
+            this.barbtn_savFrame.Name = "barbtn_savFrame";
+            this.barbtn_savFrame.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtn_savFrame_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -1428,6 +1440,7 @@
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.barbtn_StartComP);
             this.ribbonPageGroup12.ItemLinks.Add(this.barbtn_setFrame);
+            this.ribbonPageGroup12.ItemLinks.Add(this.barbtn_savFrame);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             resources.ApplyResources(this.ribbonPageGroup12, "ribbonPageGroup12");
             // 
@@ -1637,6 +1650,14 @@
             // 
             resources.ApplyResources(this.repositoryItemCheckEdit3, "repositoryItemCheckEdit3");
             this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
+            // 
+            // repositoryItemRadioGroup1
+            // 
+            this.repositoryItemRadioGroup1.Name = "repositoryItemRadioGroup1";
+            // 
+            // repositoryItemRadioGroup2
+            // 
+            this.repositoryItemRadioGroup2.Name = "repositoryItemRadioGroup2";
             // 
             // ribbonStatusBar1
             // 
@@ -2430,7 +2451,7 @@
             this.dockPanel_LVDS_Send.ID = new System.Guid("613b1802-fd1d-4b73-91c5-831cb04cde38");
             resources.ApplyResources(this.dockPanel_LVDS_Send, "dockPanel_LVDS_Send");
             this.dockPanel_LVDS_Send.Name = "dockPanel_LVDS_Send";
-            this.dockPanel_LVDS_Send.OriginalSize = new System.Drawing.Size(637, 318);
+            this.dockPanel_LVDS_Send.OriginalSize = new System.Drawing.Size(637, 283);
             // 
             // controlContainer1
             // 
@@ -2552,7 +2573,7 @@
             this.dockPanel_LVDS_Recv.ID = new System.Guid("d0a692ca-17d9-4279-9a5c-0979cde98445");
             resources.ApplyResources(this.dockPanel_LVDS_Recv, "dockPanel_LVDS_Recv");
             this.dockPanel_LVDS_Recv.Name = "dockPanel_LVDS_Recv";
-            this.dockPanel_LVDS_Recv.OriginalSize = new System.Drawing.Size(565, 293);
+            this.dockPanel_LVDS_Recv.OriginalSize = new System.Drawing.Size(565, 328);
             // 
             // controlContainer5
             // 
@@ -2761,14 +2782,6 @@
             this.barCheckItem1.Id = 159;
             this.barCheckItem1.Name = "barCheckItem1";
             // 
-            // repositoryItemRadioGroup1
-            // 
-            this.repositoryItemRadioGroup1.Name = "repositoryItemRadioGroup1";
-            // 
-            // repositoryItemRadioGroup2
-            // 
-            this.repositoryItemRadioGroup2.Name = "repositoryItemRadioGroup2";
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -2819,6 +2832,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel2.ResumeLayout(false);
@@ -2868,8 +2883,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LvdsCP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LvdsResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3145,6 +3158,8 @@
         private DevExpress.XtraBars.BarButtonItem barbtn_setFrame;
         private DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup repositoryItemRadioGroup1;
         private DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup repositoryItemRadioGroup2;
+        private DevExpress.XtraBars.BarButtonItem barbtn_savFrame;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
     }
 }
 

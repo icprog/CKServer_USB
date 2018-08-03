@@ -150,7 +150,6 @@ namespace CKServer
         {
             CompassAgree = CompassAgree + AddOnAngle;
             if (CompassAgree >= 360) CompassAgree = CompassAgree - 360;
-
             byte[] SendData = new byte[7];
             short compassDeg = 0;
             if (CompassAgree >= 0)
@@ -212,7 +211,11 @@ namespace CKServer
             WritePort(SendData);
         }
 
-
+        /// <summary>
+        /// 设置巡航
+        /// </summary>
+        /// <param name="direction"></param>
+        /// <param name="speed"></param>
         public static void SetCruise(string direction,byte speed)
         {
             byte[] SendData = new byte[7];

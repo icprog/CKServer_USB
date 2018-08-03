@@ -1611,5 +1611,82 @@ namespace CKServer
             }
 
         }
+
+        private void barbtn_savFrame_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            byte[] SvaeBuf = new byte[896];
+
+            int head = Convert.ToInt32((string)Func_LVDS.dt_LVDS_CP.Rows[0]["设定值"], 16);
+            SvaeBuf[0] = (byte)((head & 0xff000000) >> 24);
+            SvaeBuf[1] = (byte)((head & 0xff0000) >> 16);
+            SvaeBuf[2] = (byte)((head & 0xff00) >> 8);
+            SvaeBuf[3] = (byte)(head & 0xff);
+
+            //版本号，源飞行器
+            byte b1 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[1]["设定值"], 16);
+            byte b2 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[2]["设定值"], 16);
+            SvaeBuf[4] = (byte)(((b1 << 6) & 0xc0) | (b2 >> 2));
+
+            //VCID
+            byte b3 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[3]["设定值"], 16);
+            SvaeBuf[5] = (byte)(((b2 << 6) & 0xc0) | (b3 >> 2));
+
+            //VCDU计数
+            int VCDUCounts = Convert.ToInt32((string)Func_LVDS.dt_LVDS_CP.Rows[4]["设定值"], 16);
+            SvaeBuf[6] = (byte)((VCDUCounts & 0xff0000) >> 16);
+            SvaeBuf[7] = (byte)((VCDUCounts & 0xff00) >> 8);
+            SvaeBuf[8] = (byte)(VCDUCounts & 0xff);
+
+            //信号域
+            SvaeBuf[9] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[5]["设定值"], 16);
+
+            //密钥区
+            string key = (string)Func_LVDS.dt_LVDS_CP.Rows[6]["设定值"];
+            key = key.PadLeft(24, '0');
+            for (int i = 0; i < 12; i++)
+            {
+                SvaeBuf[10 + i] = Convert.ToByte(key.Substring(2 * i, 2), 16);
+            }
+
+            //目标飞行器
+            SvaeBuf[22] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[7]["设定值"], 16);
+
+            //备用
+            SvaeBuf[23] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[8]["设定值"], 16);
+
+
+            //数据域
+            byte[] data = Function.StrToHexByte(textBox_lvdsFrame_Data.Text);
+
+            for (int i = 0; i < 872; i = i + data.Length)
+            {
+                data.CopyTo(SvaeBuf, 24 + i);
+            }
+
+
+            String Path = Program.GetStartupPath() + @"码本文件\";
+            if (!Directory.Exists(Path))
+                Directory.CreateDirectory(Path);
+
+            saveFileDialog2.InitialDirectory = Path;
+
+            saveFileDialog2.Filter = "dat文件(*.dat)|*.dat|All files(*.*)|*.*";
+            saveFileDialog2.FilterIndex = 1;
+            saveFileDialog2.RestoreDirectory = true;
+
+            if (saveFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                string localFilePath = saveFileDialog2.FileName.ToString(); //获得文件路径 
+                FileStream file0 = new FileStream(localFilePath, FileMode.Create);
+                BinaryWriter bw = new BinaryWriter(file0);
+                bw.Write(SvaeBuf);
+
+                bw.Flush();
+                bw.Close();
+                file0.Close();
+                MessageBox.Show("存储dat文件成功！", "保存文件");
+
+            }
+        }
     }
 }

@@ -1,8 +1,4 @@
 <configuration>
-  <OCborad_in1 key="" name="" />
-  <OCborad_in1 key="" name="" /> 
-  <OCborad_in2 key="" name="" />
-  <OCborad_in2 key="" name="" /> 
-  <OCborad_in3 key="" name="" />
-  <OCborad_in3 key="" name="" /> 
+  <add key="" name="" />
+  <add key="" name="" />
 </configuration>

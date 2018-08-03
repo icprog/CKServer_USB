@@ -258,8 +258,12 @@ namespace CKServer
         {
             try
             {
-                Function_LVDS.Init_Table();
-                dataGridView_LVDS.DataSource = Function_LVDS.dt_LVDS;
+                Func_RS422.Init_Table();
+                dataGridView_RS422_Send.DataSource = Func_RS422.dt_RS422_Send;
+                dataGridView_RS422_Send.AllowUserToAddRows = false;
+
+                Func_LVDS.Init_Table();
+                dataGridView_LVDS.DataSource = Func_LVDS.dt_LVDS;
                 dataGridView_LVDS.AllowUserToAddRows = false;
 
                 Func_AD.Init_Table();
@@ -313,7 +317,7 @@ namespace CKServer
             }
             catch (Exception ex)
             {
-                Trace.WriteLine("初始化DA：" + ex.Message);
+                Trace.WriteLine("Main InitDataTable：" + ex.Message);
             }
 
         }
@@ -560,39 +564,39 @@ namespace CKServer
                     }
                 }
                 //每1s更新一次LVDS数据比对结果
-                if (Function_LVDS.LVDS_ComPareTag)
+                if (Func_LVDS.LVDS_ComPareTag)
                 {
-                    Function_LVDS.dt_LVDS.Rows[0]["收到数据"] = Function_LVDS.RecvLVDS_Chan1.RecvCounts;
-                    Function_LVDS.dt_LVDS.Rows[0]["出错行"] = Function_LVDS.RecvLVDS_Chan1.ErrorRow;
-                    Function_LVDS.dt_LVDS.Rows[0]["出错列"] = Function_LVDS.RecvLVDS_Chan1.ErrorColumn;
+                    Func_LVDS.dt_LVDS.Rows[0]["收到数据"] = Func_LVDS.RecvLVDS_Chan1.RecvCounts;
+                    Func_LVDS.dt_LVDS.Rows[0]["出错行"] = Func_LVDS.RecvLVDS_Chan1.ErrorRow;
+                    Func_LVDS.dt_LVDS.Rows[0]["出错列"] = Func_LVDS.RecvLVDS_Chan1.ErrorColumn;
 
-                    Function_LVDS.dt_LVDS.Rows[1]["收到数据"] = Function_LVDS.RecvLVDS_Chan2.RecvCounts;
-                    Function_LVDS.dt_LVDS.Rows[1]["出错行"] = Function_LVDS.RecvLVDS_Chan2.ErrorRow;
-                    Function_LVDS.dt_LVDS.Rows[1]["出错列"] = Function_LVDS.RecvLVDS_Chan2.ErrorColumn;
+                    Func_LVDS.dt_LVDS.Rows[1]["收到数据"] = Func_LVDS.RecvLVDS_Chan2.RecvCounts;
+                    Func_LVDS.dt_LVDS.Rows[1]["出错行"] = Func_LVDS.RecvLVDS_Chan2.ErrorRow;
+                    Func_LVDS.dt_LVDS.Rows[1]["出错列"] = Func_LVDS.RecvLVDS_Chan2.ErrorColumn;
 
-                    Function_LVDS.dt_LVDS.Rows[2]["收到数据"] = Function_LVDS.RecvLVDS_Chan3.RecvCounts;
-                    Function_LVDS.dt_LVDS.Rows[2]["出错行"] = Function_LVDS.RecvLVDS_Chan3.ErrorRow;
-                    Function_LVDS.dt_LVDS.Rows[2]["出错列"] = Function_LVDS.RecvLVDS_Chan3.ErrorColumn;
+                    Func_LVDS.dt_LVDS.Rows[2]["收到数据"] = Func_LVDS.RecvLVDS_Chan3.RecvCounts;
+                    Func_LVDS.dt_LVDS.Rows[2]["出错行"] = Func_LVDS.RecvLVDS_Chan3.ErrorRow;
+                    Func_LVDS.dt_LVDS.Rows[2]["出错列"] = Func_LVDS.RecvLVDS_Chan3.ErrorColumn;
 
-                    Function_LVDS.dt_LVDS.Rows[3]["收到数据"] = Function_LVDS.RecvLVDS_Chan4.RecvCounts;
-                    Function_LVDS.dt_LVDS.Rows[3]["出错行"] = Function_LVDS.RecvLVDS_Chan4.ErrorRow;
-                    Function_LVDS.dt_LVDS.Rows[3]["出错列"] = Function_LVDS.RecvLVDS_Chan4.ErrorColumn;
+                    Func_LVDS.dt_LVDS.Rows[3]["收到数据"] = Func_LVDS.RecvLVDS_Chan4.RecvCounts;
+                    Func_LVDS.dt_LVDS.Rows[3]["出错行"] = Func_LVDS.RecvLVDS_Chan4.ErrorRow;
+                    Func_LVDS.dt_LVDS.Rows[3]["出错列"] = Func_LVDS.RecvLVDS_Chan4.ErrorColumn;
 
-                    Function_LVDS.dt_LVDS.Rows[4]["收到数据"] = Function_LVDS.RecvLVDS_Chan5.RecvCounts;
-                    Function_LVDS.dt_LVDS.Rows[4]["出错行"] = Function_LVDS.RecvLVDS_Chan5.ErrorRow;
-                    Function_LVDS.dt_LVDS.Rows[4]["出错列"] = Function_LVDS.RecvLVDS_Chan5.ErrorColumn;
+                    Func_LVDS.dt_LVDS.Rows[4]["收到数据"] = Func_LVDS.RecvLVDS_Chan5.RecvCounts;
+                    Func_LVDS.dt_LVDS.Rows[4]["出错行"] = Func_LVDS.RecvLVDS_Chan5.ErrorRow;
+                    Func_LVDS.dt_LVDS.Rows[4]["出错列"] = Func_LVDS.RecvLVDS_Chan5.ErrorColumn;
 
-                    Function_LVDS.dt_LVDS.Rows[5]["收到数据"] = Function_LVDS.RecvLVDS_Chan6.RecvCounts;
-                    Function_LVDS.dt_LVDS.Rows[5]["出错行"] = Function_LVDS.RecvLVDS_Chan6.ErrorRow;
-                    Function_LVDS.dt_LVDS.Rows[5]["出错列"] = Function_LVDS.RecvLVDS_Chan6.ErrorColumn;
+                    Func_LVDS.dt_LVDS.Rows[5]["收到数据"] = Func_LVDS.RecvLVDS_Chan6.RecvCounts;
+                    Func_LVDS.dt_LVDS.Rows[5]["出错行"] = Func_LVDS.RecvLVDS_Chan6.ErrorRow;
+                    Func_LVDS.dt_LVDS.Rows[5]["出错列"] = Func_LVDS.RecvLVDS_Chan6.ErrorColumn;
 
-                    Function_LVDS.dt_LVDS.Rows[6]["收到数据"] = Function_LVDS.RecvLVDS_Chan7.RecvCounts;
-                    Function_LVDS.dt_LVDS.Rows[6]["出错行"] = Function_LVDS.RecvLVDS_Chan7.ErrorRow;
-                    Function_LVDS.dt_LVDS.Rows[6]["出错列"] = Function_LVDS.RecvLVDS_Chan7.ErrorColumn;
+                    Func_LVDS.dt_LVDS.Rows[6]["收到数据"] = Func_LVDS.RecvLVDS_Chan7.RecvCounts;
+                    Func_LVDS.dt_LVDS.Rows[6]["出错行"] = Func_LVDS.RecvLVDS_Chan7.ErrorRow;
+                    Func_LVDS.dt_LVDS.Rows[6]["出错列"] = Func_LVDS.RecvLVDS_Chan7.ErrorColumn;
 
-                    Function_LVDS.dt_LVDS.Rows[7]["收到数据"] = Function_LVDS.RecvLVDS_Chan8.RecvCounts;
-                    Function_LVDS.dt_LVDS.Rows[7]["出错行"] = Function_LVDS.RecvLVDS_Chan8.ErrorRow;
-                    Function_LVDS.dt_LVDS.Rows[7]["出错列"] = Function_LVDS.RecvLVDS_Chan8.ErrorColumn;
+                    Func_LVDS.dt_LVDS.Rows[7]["收到数据"] = Func_LVDS.RecvLVDS_Chan8.RecvCounts;
+                    Func_LVDS.dt_LVDS.Rows[7]["出错行"] = Func_LVDS.RecvLVDS_Chan8.ErrorRow;
+                    Func_LVDS.dt_LVDS.Rows[7]["出错列"] = Func_LVDS.RecvLVDS_Chan8.ErrorColumn;
 
                 }
             }
@@ -622,14 +626,14 @@ namespace CKServer
         private void btn_Modify_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            if (dockPanel_BoxLVDS.Visibility != DevExpress.XtraBars.Docking.DockVisibility.Visible)
+            if (dockPanel_BoxLVDS_A.Visibility != DevExpress.XtraBars.Docking.DockVisibility.Visible)
             {
-                dockPanel_BoxLVDS.Show();
+                dockPanel_BoxLVDS_A.Show();
                 MyLog.Info("显示422界面！");
             }
             else
             {
-                dockPanel_BoxLVDS.Hide();
+                dockPanel_BoxLVDS_A.Hide();
                 MyLog.Info("隐藏422界面！");
             }
 
@@ -702,7 +706,7 @@ namespace CKServer
 
                 FileThread.FileClose();
 
-                Function_LVDS.LVDS_ComPareTag = false;
+                Func_LVDS.LVDS_ComPareTag = false;
 
             }
         }
@@ -746,7 +750,7 @@ namespace CKServer
             if (MyDevice04 != null)//LVDS
             {
                 MyDevice04_Enable = true;
-                Function_LVDS.Init();//初始化LVDS比对各项参数
+                Func_LVDS.Init();//初始化LVDS比对各项参数
                                      //            new Thread(() => { RealTime_ComPare2(); }).Start();
 
             }
@@ -1148,44 +1152,44 @@ namespace CKServer
                 switch (ChanNo)
                 {
                     case 1:
-                        Function_LVDS.RecvLVDS_Chan1.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Function_LVDS.RecvLVDS_Chan1.RecvBuf.Add(bufsav[i]);
-                        Function_LVDS.RecvLVDS_Chan1.Lock.ExitWriteLock();
+                        Func_LVDS.RecvLVDS_Chan1.Lock.EnterWriteLock();
+                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan1.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan1.Lock.ExitWriteLock();
                         break;
                     case 2:
-                        Function_LVDS.RecvLVDS_Chan2.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Function_LVDS.RecvLVDS_Chan2.RecvBuf.Add(bufsav[i]);
-                        Function_LVDS.RecvLVDS_Chan2.Lock.ExitWriteLock();
+                        Func_LVDS.RecvLVDS_Chan2.Lock.EnterWriteLock();
+                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan2.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan2.Lock.ExitWriteLock();
                         break;
                     case 3:
-                        Function_LVDS.RecvLVDS_Chan3.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Function_LVDS.RecvLVDS_Chan3.RecvBuf.Add(bufsav[i]);
-                        Function_LVDS.RecvLVDS_Chan3.Lock.ExitWriteLock();
+                        Func_LVDS.RecvLVDS_Chan3.Lock.EnterWriteLock();
+                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan3.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan3.Lock.ExitWriteLock();
                         break;
                     case 4:
-                        Function_LVDS.RecvLVDS_Chan4.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Function_LVDS.RecvLVDS_Chan4.RecvBuf.Add(bufsav[i]);
-                        Function_LVDS.RecvLVDS_Chan4.Lock.ExitWriteLock();
+                        Func_LVDS.RecvLVDS_Chan4.Lock.EnterWriteLock();
+                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan4.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan4.Lock.ExitWriteLock();
                         break;
                     case 5:
-                        Function_LVDS.RecvLVDS_Chan5.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Function_LVDS.RecvLVDS_Chan5.RecvBuf.Add(bufsav[i]);
-                        Function_LVDS.RecvLVDS_Chan5.Lock.ExitWriteLock();
+                        Func_LVDS.RecvLVDS_Chan5.Lock.EnterWriteLock();
+                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan5.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan5.Lock.ExitWriteLock();
                         break;
                     case 6:
-                        Function_LVDS.RecvLVDS_Chan6.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Function_LVDS.RecvLVDS_Chan6.RecvBuf.Add(bufsav[i]);
-                        Function_LVDS.RecvLVDS_Chan6.Lock.ExitWriteLock();
+                        Func_LVDS.RecvLVDS_Chan6.Lock.EnterWriteLock();
+                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan6.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan6.Lock.ExitWriteLock();
                         break;
                     case 7:
-                        Function_LVDS.RecvLVDS_Chan7.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Function_LVDS.RecvLVDS_Chan7.RecvBuf.Add(bufsav[i]);
-                        Function_LVDS.RecvLVDS_Chan7.Lock.ExitWriteLock();
+                        Func_LVDS.RecvLVDS_Chan7.Lock.EnterWriteLock();
+                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan7.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan7.Lock.ExitWriteLock();
                         break;
                     case 8:
-                        Function_LVDS.RecvLVDS_Chan8.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Function_LVDS.RecvLVDS_Chan8.RecvBuf.Add(bufsav[i]);
-                        Function_LVDS.RecvLVDS_Chan8.Lock.ExitWriteLock();
+                        Func_LVDS.RecvLVDS_Chan8.Lock.EnterWriteLock();
+                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan8.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan8.Lock.ExitWriteLock();
                         break;
                     default:
                         break;
@@ -1201,80 +1205,80 @@ namespace CKServer
         public void RealTime_ComPare2()
         {
             Trace.WriteLine("RealTime_ComPare2 in");
-            while (Function_LVDS.LVDS_ComPareTag)
+            while (Func_LVDS.LVDS_ComPareTag)
             {
                 Trace.WriteLine("RealTime_ComPare2 LVDS_ComPareTag ---");
-                lock (Function_LVDS.RecvLVDS_Chan5.RecvBuf)
+                lock (Func_LVDS.RecvLVDS_Chan5.RecvBuf)
                 {
-                    if (Function_LVDS.RecvLVDS_Chan5.RecvBuf.Count() >= 1024)
+                    if (Func_LVDS.RecvLVDS_Chan5.RecvBuf.Count() >= 1024)
                     {
                         Trace.WriteLine("Function_LVDS.RecvLVDS_Chan5.RecvBuf.Count() >= 1024");
                         byte[] CADU = new byte[1024];
 
-                        for (int i = 0; i < 1024; i++) CADU[i] = Function_LVDS.RecvLVDS_Chan5.RecvBuf[i];
+                        for (int i = 0; i < 1024; i++) CADU[i] = Func_LVDS.RecvLVDS_Chan5.RecvBuf[i];
 
-                        Function_LVDS.RecvLVDS_Chan5.RecvBuf.RemoveRange(0, 1024);
+                        Func_LVDS.RecvLVDS_Chan5.RecvBuf.RemoveRange(0, 1024);
 
-                        Function_LVDS.RecvLVDS_Chan5.RecvCounts += 1024;
+                        Func_LVDS.RecvLVDS_Chan5.RecvCounts += 1024;
 
                         byte Tag = (byte)(CADU[9] & 0x80);
 
                         byte[] data = new byte[886];//数据域
-                        int CPlen = Function_LVDS.RecvLVDS_Chan5.ComPareLenth;
+                        int CPlen = Func_LVDS.RecvLVDS_Chan5.ComPareLenth;
                         byte[] CPdata = new byte[CPlen];//比对数组长度
 
 
-                        int Erow = Function_LVDS.RecvLVDS_Chan5.RecvCounts / 1024; ;
+                        int Erow = Func_LVDS.RecvLVDS_Chan5.RecvCounts / 1024; ;
                         int Ecol = 10;
                         int ETemprow = 0;
 
                         if (Tag == 0x80)//回放数据--延时遥测
                         {
-                            for (int i = 0; i < 886; i++) Function_LVDS.RecvLVDS_Chan5.DelayBuf.Add(data[i]);
-                            if (Function_LVDS.RecvLVDS_Chan5.GetComPareDataTag)
+                            for (int i = 0; i < 886; i++) Func_LVDS.RecvLVDS_Chan5.DelayBuf.Add(data[i]);
+                            if (Func_LVDS.RecvLVDS_Chan5.GetComPareDataTag)
                             {
-                                for (int j = 0; j < CPlen; j++) CPdata[j] = Function_LVDS.RecvLVDS_Chan5.DelayBuf[j];
-                                Function_LVDS.RecvLVDS_Chan5.GetComPareDataTag = false;
+                                for (int j = 0; j < CPlen; j++) CPdata[j] = Func_LVDS.RecvLVDS_Chan5.DelayBuf[j];
+                                Func_LVDS.RecvLVDS_Chan5.GetComPareDataTag = false;
                             }
                             //循环处理数据域data
-                            while (Function_LVDS.RecvLVDS_Chan5.DelayBuf.Count() >= CPlen)
+                            while (Func_LVDS.RecvLVDS_Chan5.DelayBuf.Count() >= CPlen)
                             {
                                 for (int t = 0; t < CPlen; t++)
                                 {
-                                    if (Function_LVDS.RecvLVDS_Chan5.DelayBuf[t] != CPdata[t])
+                                    if (Func_LVDS.RecvLVDS_Chan5.DelayBuf[t] != CPdata[t])
                                     {
                                         Ecol = t + 1 + ETemprow * CPlen;
-                                        Function_LVDS.RecvLVDS_Chan5.ErrorColumn = Ecol;
-                                        Function_LVDS.RecvLVDS_Chan5.ErrorRow = Erow;
+                                        Func_LVDS.RecvLVDS_Chan5.ErrorColumn = Ecol;
+                                        Func_LVDS.RecvLVDS_Chan5.ErrorRow = Erow;
                                     }
                                 }
                                 ETemprow++;
-                                Function_LVDS.RecvLVDS_Chan5.DelayBuf.RemoveRange(0, CPlen);
+                                Func_LVDS.RecvLVDS_Chan5.DelayBuf.RemoveRange(0, CPlen);
                             }
                         }
                         else//Tag==0x00,实时遥测
                         {
-                            for (int i = 0; i < 886; i++) Function_LVDS.RecvLVDS_Chan5.RealBuf.Add(data[i]);
-                            if (Function_LVDS.RecvLVDS_Chan5.GetComPareDataTag)
+                            for (int i = 0; i < 886; i++) Func_LVDS.RecvLVDS_Chan5.RealBuf.Add(data[i]);
+                            if (Func_LVDS.RecvLVDS_Chan5.GetComPareDataTag)
                             {
-                                for (int j = 0; j < CPlen; j++) CPdata[j] = Function_LVDS.RecvLVDS_Chan5.RealBuf[j];
-                                Function_LVDS.RecvLVDS_Chan5.GetComPareDataTag = false;
+                                for (int j = 0; j < CPlen; j++) CPdata[j] = Func_LVDS.RecvLVDS_Chan5.RealBuf[j];
+                                Func_LVDS.RecvLVDS_Chan5.GetComPareDataTag = false;
                             }
 
                             //循环处理数据域data
-                            while (Function_LVDS.RecvLVDS_Chan5.RealBuf.Count() >= CPlen)
+                            while (Func_LVDS.RecvLVDS_Chan5.RealBuf.Count() >= CPlen)
                             {
                                 for (int t = 0; t < CPlen; t++)
                                 {
-                                    if (Function_LVDS.RecvLVDS_Chan5.RealBuf[t] != CPdata[t])
+                                    if (Func_LVDS.RecvLVDS_Chan5.RealBuf[t] != CPdata[t])
                                     {
                                         Ecol = t + 1 + ETemprow * CPlen;
-                                        Function_LVDS.RecvLVDS_Chan5.ErrorColumn = Ecol;
-                                        Function_LVDS.RecvLVDS_Chan5.ErrorRow = Erow;
+                                        Func_LVDS.RecvLVDS_Chan5.ErrorColumn = Ecol;
+                                        Func_LVDS.RecvLVDS_Chan5.ErrorRow = Erow;
                                     }
                                 }
                                 ETemprow++;
-                                Function_LVDS.RecvLVDS_Chan5.RealBuf.RemoveRange(0, CPlen);
+                                Func_LVDS.RecvLVDS_Chan5.RealBuf.RemoveRange(0, CPlen);
                             }
 
                         }
@@ -1460,7 +1464,6 @@ namespace CKServer
                 {
                     Thread.Sleep(500);
                 }
-
             }
         }
 
@@ -1478,57 +1481,7 @@ namespace CKServer
                 bool ret = Func_AD.Return_ADValue(ref ADList, ref dataRe_AD, md);
                 if (!ret) Thread.Sleep(500);
             }
-        }
-
-        //private void DealWithADFun()
-        //{
-        //    //获得AD校准参数
-        //    double[] md = new double[64];
-        //    for (int j = 0; j < 64; j++) md[j] = double.Parse(Function.GetConfigStr(Data.ADconfigPath, "add", "AD_Channel_" + j.ToString(), "value"));
-
-        //    while (_BoxIsStarted)
-        //    {
-        //        int ADFrame = 132;//64channel=128bytes,+2head,+2end
-        //        int _StartPos = ADList.IndexOf(0xB0);
-        //        if (_StartPos >= 0 && ADList.Count >= (_StartPos + ADFrame))
-        //        {
-        //            if (ADList[_StartPos + 1] == 0xFA && ADList[_StartPos + ADFrame - 2] == 0xE0 && ADList[_StartPos + ADFrame - 1] == 0xF5)
-        //            {
-        //                byte[] buf = new byte[128];
-        //                for (int t = 0; t < 128; t++)
-        //                {
-        //                    buf[t] = ADList[_StartPos + 2 + t];
-        //                }
-        //                for (int k = 0; k < 63; k++)
-        //                {
-        //                    int temp = (buf[2 * k] & 0x7f) * 256 + buf[2 * k + 1];
-        //                    double t = (double)(5 * temp) / (double)32767;
-        //                    t = t * 3 / md[k];
-        //                    if ((buf[2 * k] & 0x80) == 0x80)
-        //                        dataRe_AD[k] = -t;
-        //                    else
-        //                        dataRe_AD[k] = t;
-        //                }
-        //                lock (ADList)
-        //                {
-        //                    ADList.RemoveRange(0, _StartPos + ADFrame);
-        //                }
-        //            }
-        //        }
-        //        else
-        //        {
-        //            Thread.Sleep(500);
-        //            if (ADList.Count >= 8192)
-        //            {
-        //                lock (ADList)
-        //                {
-        //                    ADList.Clear();
-        //                }
-        //            }
-        //        }
-        //    }
-        //    Trace.WriteLine("退出 DealWithADFun：");
-        //}
+        }      
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -1629,81 +1582,6 @@ namespace CKServer
                     return;
                 }
             }
-            //else
-            //{
-            //    try
-            //    {
-            //        if (editor.Text != null)
-            //        {
-            //            FileStream file = new FileStream(editor.Text, FileMode.Open, FileAccess.Read);
-
-            //            //int fileBytes = (int)file.Length + 8;//为何要+8??
-            //            int fileBytes = (int)file.Length;
-            //            byte[] read_file_buf = new byte[fileBytes];
-            //            for (int i = 0; i < fileBytes; i++) read_file_buf[i] = 0xff;
-            //            file.Read(read_file_buf, 0, fileBytes);
-
-
-            //            int AddToFour = fileBytes % 4;
-
-            //            //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
-            //            byte[] FinalSendBytes = new byte[fileBytes + 4 - AddToFour + 20];
-            //            byte[] head = new byte[2] { 0x1D, FrameHeadLastByte };
-            //            byte[] len = new byte[2] { 0, 0 };
-            //            len[0] = (byte)(fileBytes / 256);
-            //            len[1] = (byte)(fileBytes % 256);
-            //            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
-
-            //            head.CopyTo(FinalSendBytes, 0);
-            //            len.CopyTo(FinalSendBytes, 2);
-            //            read_file_buf.CopyTo(FinalSendBytes, 4);
-
-            //            if (AddToFour != 0)
-            //            {
-            //                byte[] add_buf = new byte[4 - AddToFour];//4-余数才是要补的数据
-            //                for (int t = 0; t < add_buf.Count(); t++)
-            //                {
-            //                    add_buf[t] = 0x0;
-            //                }
-            //                add_buf.CopyTo(FinalSendBytes, fileBytes + 4);
-            //                end.CopyTo(FinalSendBytes, fileBytes + 4 + add_buf.Count());
-            //            }
-            //            else
-            //            {
-            //                end.CopyTo(FinalSendBytes, fileBytes + 4);
-            //            }
-
-            //            file.Close();
-
-            //            if (USB.MyDeviceList[Data.LVDSid] != null)
-            //            {
-            //                int Repeats = int.Parse(SendRepeats[SendChan].Text);
-            //                int DivTime = int.Parse(SendDivTimes[SendChan].Text);
-            //                if (Repeats > 1)
-            //                {
-            //                    new Thread(() => { LoopSend2USB(Data.LVDSid, FinalSendBytes, Repeats, DivTime, 0x83, SendChan); }).Start();
-            //                }
-            //                else
-            //                {
-            //                    USB.SendCMD(Data.LVDSid, (byte)(0x83 + SendChan / 7), (byte)(0x1 << SendChan % 7));
-            //                    USB.SendCMD(Data.LVDSid, (byte)(0x83 + SendChan / 7), 0x0);
-
-            //                    USB.SendData(Data.LVDSid, FinalSendBytes);
-            //                }
-            //            }
-            //            else
-            //            {
-            //                MyLog.Error("向设备" + msgstr + "注入码表失败，请检查设置及连接！");
-            //            }
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("检查码表路径是否正确！" + ex.Message);
-            //        MyLog.Error(ex.Message);
-            //    }
-
-            //}
         }
 
 
@@ -1716,8 +1594,11 @@ namespace CKServer
                 case "CheckEnable_BoxRS422":
                     panel = this.dockPanel_BoxRS422;
                     break;
-                case "CheckEnable_BoxLVDS":
-                    panel = this.dockPanel_BoxLVDS;
+                case "CheckEnable_BoxLVDS_A":
+                    panel = this.dockPanel_BoxLVDS_A;
+                    break;
+                case "CheckEnable_BoxLVDS_B":
+                    panel = this.dockPanel_BoxLVDS_A;
                     break;
                 case "CheckEnable_AD":
                     panel = this.dockPanel_AD;
@@ -2549,42 +2430,7 @@ namespace CKServer
 
         private void dataGridView_LVDS_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                if (e.ColumnIndex == 3)                        //输出指令
-                {
-                    int CurrentRow = e.RowIndex;
-                    switch (e.RowIndex)
-                    {
-                        case 0:
-                            Function_LVDS.RecvLVDS_Chan1.ComPareLenth = (int)Function_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
-                            break;
-                        case 1:
-                            Function_LVDS.RecvLVDS_Chan2.ComPareLenth = (int)Function_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
-                            break;
-                        case 2:
-                            Function_LVDS.RecvLVDS_Chan3.ComPareLenth = (int)Function_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
-                            break;
-                        case 3:
-                            Function_LVDS.RecvLVDS_Chan4.ComPareLenth = (int)Function_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
-                            break;
-                        case 4:
-                            Function_LVDS.RecvLVDS_Chan5.ComPareLenth = (int)Function_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
-                            break;
-                        case 5:
-                            Function_LVDS.RecvLVDS_Chan6.ComPareLenth = (int)Function_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
-                            break;
-                        case 6:
-                            Function_LVDS.RecvLVDS_Chan7.ComPareLenth = (int)Function_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
-                            break;
-                        case 7:
-                            Function_LVDS.RecvLVDS_Chan8.ComPareLenth = (int)Function_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            }
+
 
         }
 
@@ -2596,6 +2442,97 @@ namespace CKServer
         private void btn_OpenPath_Storage2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             System.Diagnostics.Process.Start("Explorer", Program.GetStartupPath() + @"存储数据\LVDS机箱数据\");
+        }
+
+        private void dataGridView_LVDS_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView_LVDS_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == 3)                        //输出指令
+                {
+                    int CurrentRow = e.RowIndex;
+                    Function.SaveConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_" + (e.RowIndex + 1).ToString(), "value", Func_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex].ToString());
+                    switch (e.RowIndex)
+                    {
+                        case 0:
+                            Func_LVDS.RecvLVDS_Chan1.ComPareLenth = (int)Func_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
+                            break;
+                        case 1:
+                            Func_LVDS.RecvLVDS_Chan2.ComPareLenth = (int)Func_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
+                            break;
+                        case 2:
+                            Func_LVDS.RecvLVDS_Chan3.ComPareLenth = (int)Func_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
+                            break;
+                        case 3:
+                            Func_LVDS.RecvLVDS_Chan4.ComPareLenth = (int)Func_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
+                            break;
+                        case 4:
+                            Func_LVDS.RecvLVDS_Chan5.ComPareLenth = (int)Func_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
+                            break;
+                        case 5:
+                            Func_LVDS.RecvLVDS_Chan6.ComPareLenth = (int)Func_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
+                            break;
+                        case 6:
+                            Func_LVDS.RecvLVDS_Chan7.ComPareLenth = (int)Func_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
+                            break;
+                        case 7:
+                            Func_LVDS.RecvLVDS_Chan8.ComPareLenth = (int)Func_LVDS.dt_LVDS.Rows[e.RowIndex][e.ColumnIndex];
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+
+        private void dataGridView_RS422_Send_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView_RS422_Send_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == 3)
+                {
+                    openFileDialog2.InitialDirectory = Data.Path + @"码本文件\";
+                    string tmpFilter = openFileDialog2.Filter;
+                    string title = openFileDialog2.Title;
+                    openFileDialog2.Title = "选择要注入的码表文件";
+                    openFileDialog2.Filter = "dat files (*.dat)|*.dat|All files (*.*) | *.*";
+
+                    if (openFileDialog2.ShowDialog() == DialogResult.OK) //selecting bitstream
+                    {
+                        Func_RS422.dt_RS422_Send.Rows[e.RowIndex][e.ColumnIndex] = openFileDialog2.FileName;
+                        Refresh();
+                    }
+                    else
+                    {
+                        openFileDialog2.Filter = tmpFilter;
+                        openFileDialog2.Title = title;
+                        return;
+                    }
+
+                }
+            }
+        }
+
+        private void dataGridView_RS422_Send_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == 1)
+                {
+                    DataGridViewCheckBoxCell checkcell = (DataGridViewCheckBoxCell)dataGridView_RS422_Send.Rows[e.RowIndex].Cells[1];
+                    Boolean flag = Convert.ToBoolean(checkcell.EditedFormattedValue);
+                }
+            }
         }
     }
 }
