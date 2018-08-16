@@ -24,4 +24,33 @@
   <add key="RS422_Channel_21" name="RS422收30" path="" check="false"/>
   <add key="RS422_Channel_22" name="RS422收31" path="" check="false"/>
   <add key="RS422_Channel_23" name="RS422收32" path="" check="false"/>
+
+  <add key="RS422_Channel_24" name="保留未使用1" path="" check="false"/>
+  <add key="RS422_Channel_25" name="保留未使用2" path="" check="false"/>
+  <add key="RS422_Channel_26" name="保留未使用3" path="" check="false"/>
+  <add key="RS422_Channel_27" name="保留未使用4" path="" check="false"/>
+  <add key="RS422_Channel_28" name="保留未使用5" path="" check="false"/>
+  <add key="RS422_Channel_29" name="保留未使用6" path="" check="false"/>
+  <add key="RS422_Channel_30" name="保留未使用7" path="" check="false"/>
+  <add key="RS422_Channel_31" name="保留未使用8" path="" check="false"/>
+  <add key="RS422_Channel_32" name="保留未使用9" path="" check="false"/>
+  <add key="RS422_Channel_33" name="保留未使用10" path="" check="false"/>
+  <add key="RS422_Channel_34" name="保留未使用11" path="" check="false"/>
+  <add key="RS422_Channel_35" name="保留未使用12" path="" check="false"/>
+  <add key="RS422_Channel_36" name="保留未使用13" path="" check="false"/>
+  <add key="RS422_Channel_37" name="保留未使用14" path="" check="false"/>
+  <add key="RS422_Channel_38" name="保留未使用15" path="" check="false"/>
+  <add key="RS422_Channel_39" name="保留未使用16" path="" check="false"/>
+  <add key="RS422_Channel_40" name="保留未使用17" path="" check="false"/>
+
+  <add key="RS422_Channel_41" name="保留未使用18" path="" check="false"/>
+  <add key="RS422_Channel_42" name="保留未使用19" path="" check="false"/>
+  <add key="RS422_Channel_43" name="保留未使用20" path="" check="false"/>
+  <add key="RS422_Channel_44" name="保留未使用21" path="" check="false"/>
+  <add key="RS422_Channel_45" name="保留未使用22" path="" check="false"/>
+  <add key="RS422_Channel_46" name="保留未使用23" path="" check="false"/>
+  <add key="RS422_Channel_47" name="保留未使用24" path="" check="false"/>
+  
+  
+  
 </configuration>

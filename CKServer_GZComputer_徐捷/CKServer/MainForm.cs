@@ -111,6 +111,8 @@ namespace CKServer
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+
+
             Channel_LVDSCheck = new System.Windows.Forms.CheckBox[16] { checkBox_LVDS_select1,checkBox_LVDS_select2,checkBox_LVDS_select3,checkBox_LVDS_select4,checkBox_LVDS_select5, checkBox_LVDS_select6,checkBox_LVDS_select7,checkBox_LVDS_select8,
                 checkBox_LVDS_select9, checkBox_LVDS_select10,checkBox_LVDS_select11,checkBox_LVDS_select12,checkBox_LVDS_select13, checkBox_LVDS_select14,checkBox_LVDS_select15,checkBox_LVDS_select16 };
 
@@ -189,6 +191,23 @@ namespace CKServer
                     }
                 }
 
+                bool t1 = Convert.ToBoolean(Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_1", "compare"));
+                bool t2 = Convert.ToBoolean(Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_2", "compare"));
+                bool t3 = Convert.ToBoolean(Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_3", "compare"));
+                bool t4 = Convert.ToBoolean(Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_4", "compare"));
+                bool t5 = Convert.ToBoolean(Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_5", "compare"));
+                bool t6 = Convert.ToBoolean(Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_6", "compare"));
+                bool t7 = Convert.ToBoolean(Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_7", "compare"));
+                bool t8 = Convert.ToBoolean(Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_8", "compare"));
+                if (t1) checkBox_ComPare1.Checked = true;
+                if (t2) checkBox_ComPare2.Checked = true;
+                if (t3) checkBox_ComPare3.Checked = true;
+                if (t4) checkBox_ComPare4.Checked = true;
+                if (t5) checkBox_ComPare5.Checked = true;
+                if (t6) checkBox_ComPare6.Checked = true;
+                if (t7) checkBox_ComPare7.Checked = true;
+                if (t8) checkBox_ComPare8.Checked = true;
+
             }
             catch (Exception ex)
             {
@@ -249,7 +268,7 @@ namespace CKServer
             }
             #endregion
 
-
+            Func_RS422.textBox_Show422Reslt = this.textBox_RS422_Show;
 
         }
 
@@ -741,8 +760,35 @@ namespace CKServer
             if (MyDevice02 != null)
             {
                 MyDevice02_Enable = true;
-                OCList1.Clear(); OCList2.Clear(); OCList3.Clear();
+                OCList1.Clear();
+                OCList2.Clear();
+                OCList3.Clear();
+
+                foreach (DataRow dr in Func_OC.dt_OC_In1.Rows)
+                {
+                    dr["计数"] = 0;
+                    dr["脉宽"] = 0;
+                }
+                foreach (DataRow dr in Func_OC.dt_OC_In2.Rows)
+                {
+                    dr["计数"] = 0;
+                    dr["脉宽"] = 0;
+                }
+                foreach (DataRow dr in Func_OC.dt_OC_In3.Rows)
+                {
+                    dr["计数"] = 0;
+                    dr["脉宽"] = 0;
+                }
+
+                for (int i = 0; i < 324; i++)
+                {
+                    dataRe_OC1[i] = 0;
+                    dataRe_OC2[i] = 0;
+                    dataRe_OC3[i] = 0;
+                }
+
                 new Thread(() => { DealWithOCFun(); }).Start();
+
             }
             if (MyDevice03 != null)
                 MyDevice03_Enable = true;
@@ -751,7 +797,7 @@ namespace CKServer
             {
                 MyDevice04_Enable = true;
                 Func_LVDS.Init();//初始化LVDS比对各项参数
-                                     //            new Thread(() => { RealTime_ComPare2(); }).Start();
+                                 //            new Thread(() => { RealTime_ComPare2(); }).Start();
 
             }
 
@@ -774,7 +820,9 @@ namespace CKServer
                     {
                         byte[] RecvBoxBuf = new byte[4096];
                         int RecvBoxLen = 4096;
-                        MyDevice01.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);//接收USB数据，不定长
+
+                        lock (MyDevice01)
+                            MyDevice01.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);//接收USB数据，不定长
 
                         if (RecvBoxLen > 0)
                         {
@@ -820,18 +868,22 @@ namespace CKServer
                     {
                         byte[] RecvBoxBuf = new byte[4096];
                         int RecvBoxLen = 4096;
-                        MyDevice02.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);
+                        lock(MyDevice02)
+                            MyDevice02.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);
 
                         if (RecvBoxLen > 0)
                         {
                             byte[] tempbuf = new byte[RecvBoxLen];
                             Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);
+
                             //存储源码
                             SaveFile.Lock_10.EnterWriteLock();
                             SaveFile.DataQueue_SC10.Enqueue(tempbuf);
                             SaveFile.Lock_10.ExitWriteLock();
 
-                            Array.Copy(tempbuf, 0, Recv_MidBuf_8K_Box02, Pos_Recv_MidBuf_8K_Box02, tempbuf.Length);
+                            lock(Recv_MidBuf_8K_Box02)
+                                Array.Copy(tempbuf, 0, Recv_MidBuf_8K_Box02, Pos_Recv_MidBuf_8K_Box02, tempbuf.Length);
+
                             Pos_Recv_MidBuf_8K_Box02 += tempbuf.Length;
 
                             while (Pos_Recv_MidBuf_8K_Box02 >= 4096)
@@ -857,9 +909,6 @@ namespace CKServer
                             Trace.WriteLine("OC机箱接收数据异常，居然收到了小于0的数！！");
                             //MyLog.Error("USB接收数据异常，居然收到了小于0的数！！");
                         }
-
-
-
                     }
                 }
 
@@ -871,13 +920,16 @@ namespace CKServer
 
                         byte[] RecvBoxBuf = new byte[4096];
                         int RecvBoxLen = 4096;
-                        MyDevice03.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);
+
+                        lock (MyDevice03)
+                            MyDevice03.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);
 
                         if (RecvBoxLen > 0)
                         {
                             byte[] tempbuf = new byte[RecvBoxLen];
                             Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);
                             //存储源码
+
                             SaveFile.Lock_20.EnterWriteLock();
                             SaveFile.DataQueue_SC20.Enqueue(tempbuf);
                             SaveFile.Lock_20.ExitWriteLock();
@@ -887,13 +939,13 @@ namespace CKServer
 
                             while (Pos_Recv_MidBuf_8K_Box03 >= 4096)
                             {
-                                if (Recv_MidBuf_8K_Box03[0] == 0xff && (0x0 <= Recv_MidBuf_8K_Box03[1]) && (Recv_MidBuf_8K_Box03[1] < 0x11))
+                                if (Recv_MidBuf_8K_Box03[0] == 0xff)
                                 {
                                     DealWith_RS422_Frame(ref Recv_MidBuf_8K_Box03, ref Pos_Recv_MidBuf_8K_Box03);
                                 }
                                 else
                                 {
-                                    MyLog.Error("收到异常帧！");
+                                    MyLog.Error("422机箱 收到异常帧！");
                                     Array.Clear(Recv_MidBuf_8K_Box03, 0, Pos_Recv_MidBuf_8K_Box03);
                                     Pos_Recv_MidBuf_8K_Box03 = 0;
                                 }
@@ -901,7 +953,7 @@ namespace CKServer
                         }
                         else if (RecvBoxLen == 0)
                         {
-                            Trace.WriteLine("422机箱收到0包-----0000000000");
+                            //    Trace.WriteLine("422机箱收到0包-----0000000000");
                         }
                         else
                         {
@@ -916,7 +968,9 @@ namespace CKServer
                     {
                         byte[] RecvBoxBuf = new byte[4096];
                         int RecvBoxLen = 4096;
-                        MyDevice04.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);
+
+                        lock (MyDevice04)
+                            MyDevice04.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);
 
                         if (RecvBoxLen > 0)
                         {
@@ -946,7 +1000,7 @@ namespace CKServer
                         }
                         else if (RecvBoxLen == 0)
                         {
-                            Trace.WriteLine("LVDS机箱收到0包-----0000000000");
+                            //    Trace.WriteLine("LVDS机箱收到0包-----0000000000");
                         }
                         else
                         {
@@ -976,7 +1030,9 @@ namespace CKServer
             byte[] buf_LongFrame = new byte[4096];
             Array.Copy(TempBuf, 0, buf_LongFrame, 0, 4096);
 
+            lock(TempBuf)
             Array.Copy(TempBuf, 4096, TempBuf, 0, TempTag - 4096);
+
             TempTag -= 4096;
 
             if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x08)
@@ -1050,30 +1106,308 @@ namespace CKServer
             Array.Copy(TempBuf, 4096, TempBuf, 0, TempTag - 4096);
             TempTag -= 4096;
 
-            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x00)
+            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x05)
             {
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
-                //SaveFile.Lock_5.EnterWriteLock();
-                //SaveFile.DataQueue_SC5.Enqueue(bufsav);
-                //SaveFile.Lock_5.ExitWriteLock();
+                for (int i = 0; i < 6; i++)
+                {
+                    if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] <= 0x10)
+                    {
+                        int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
+                        byte[] buf1D0x = new byte[num];
+                        Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
+
+                        int ChanNo = (buf_LongFrame[1] - 0x05) * 15 + bufsav[i * 682 + 1];
+
+                        if (bufsav[i * 682 + 1] == 0x00)//1D00：第1路
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_21, ref SaveFile.DataQueue_SC21, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x01)//1D01:
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_22, ref SaveFile.DataQueue_SC22, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x02)//1D02
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_23, ref SaveFile.DataQueue_SC23, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x03)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_24, ref SaveFile.DataQueue_SC24, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x04)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_25, ref SaveFile.DataQueue_SC25, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x05)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_26, ref SaveFile.DataQueue_SC26, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x06)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_27, ref SaveFile.DataQueue_SC27, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x07)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_28, ref SaveFile.DataQueue_SC28, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x08)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_29, ref SaveFile.DataQueue_SC29, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x09)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_30, ref SaveFile.DataQueue_SC30, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0A)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_31, ref SaveFile.DataQueue_SC31, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0B)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_32, ref SaveFile.DataQueue_SC32, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0C)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_33, ref SaveFile.DataQueue_SC33, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0D)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_34, ref SaveFile.DataQueue_SC34, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0E)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_35, ref SaveFile.DataQueue_SC35, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0F)
+                        {
+                            //空闲帧
+                        }
+                        else
+                        {
+                            Trace.WriteLine("FF05通道出错!");
+                        }
+                    }
+                }
             }
-            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x01)
+            else if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x06)
             {
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
+                for (int i = 0; i < 6; i++)
+                {
+                    if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] <= 0x10)
+                    {
+                        int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
+                        byte[] buf1D0x = new byte[num];
+                        Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
+
+                        int ChanNo = (buf_LongFrame[1] - 0x05) * 15 + bufsav[i * 682 + 1];
+
+                        if (bufsav[i * 682 + 1] == 0x00)//1D00：第1路
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_36, ref SaveFile.DataQueue_SC36, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x01)//1D01:
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_37, ref SaveFile.DataQueue_SC37, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x02)//1D02
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_38, ref SaveFile.DataQueue_SC38, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x03)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_39, ref SaveFile.DataQueue_SC39, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x04)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_40, ref SaveFile.DataQueue_SC40, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x05)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_41, ref SaveFile.DataQueue_SC41, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x06)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_42, ref SaveFile.DataQueue_SC42, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x07)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_43, ref SaveFile.DataQueue_SC43, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x08)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_44, ref SaveFile.DataQueue_SC44, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x09)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_45, ref SaveFile.DataQueue_SC45, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0A)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_46, ref SaveFile.DataQueue_SC46, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0B)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_47, ref SaveFile.DataQueue_SC47, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0C)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_48, ref SaveFile.DataQueue_SC48, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0D)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_49, ref SaveFile.DataQueue_SC49, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0E)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_50, ref SaveFile.DataQueue_SC50, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0F)
+                        {
+                            //空闲帧
+                        }
+                        else
+                        {
+                            Trace.WriteLine("FF06通道出错!");
+                        }
+                    }
+                }
 
             }
-            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x02)
+            else if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x07)
             {
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
+                for (int i = 0; i < 6; i++)
+                {
+                    if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] <= 0x10)
+                    {
+                        int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
+                        byte[] buf1D0x = new byte[num];
+                        Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
+                        int ChanNo = (buf_LongFrame[1] - 0x05) * 15 + bufsav[i * 682 + 1];
+                        if (bufsav[i * 682 + 1] == 0x00)//1D00：第1路
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_51, ref SaveFile.DataQueue_SC51, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x01)//1D01:
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_52, ref SaveFile.DataQueue_SC52, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x02)//1D02
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_53, ref SaveFile.DataQueue_SC53, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x03)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_54, ref SaveFile.DataQueue_SC54, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x04)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_55, ref SaveFile.DataQueue_SC55, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x05)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_56, ref SaveFile.DataQueue_SC56, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x06)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_57, ref SaveFile.DataQueue_SC57, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x07)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_58, ref SaveFile.DataQueue_SC58, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x08)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_59, ref SaveFile.DataQueue_SC59, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x09)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_60, ref SaveFile.DataQueue_SC60, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0A)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_61, ref SaveFile.DataQueue_SC61, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0B)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_62, ref SaveFile.DataQueue_SC62, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0C)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_63, ref SaveFile.DataQueue_SC63, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0D)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_64, ref SaveFile.DataQueue_SC64, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0E)
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_65, ref SaveFile.DataQueue_SC65, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x0F)
+                        {
+                            //空闲帧
+                        }
+                        else
+                        {
+                            Trace.WriteLine("FF07通道出错!");
+                        }
+                    }
+                }
 
             }
-            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x03)
+            else if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x08)
             {
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
+                for (int i = 0; i < 6; i++)
+                {
+                    if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] <= 0x10)
+                    {
+                        int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
+                        byte[] buf1D0x = new byte[num];
+                        Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
+                        int ChanNo = (buf_LongFrame[1] - 0x05) * 15 + bufsav[i * 682 + 1];
+                        if (bufsav[i * 682 + 1] == 0x00)//1D00：第1路
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_66, ref SaveFile.DataQueue_SC66, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x01)//1D01:
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_67, ref SaveFile.DataQueue_SC68, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x02)//1D02
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_68, ref SaveFile.DataQueue_SC68, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x03)//1D03----同步422第1路接收
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_69, ref SaveFile.DataQueue_SC69, buf1D0x, ChanNo);
+                        }
+                        else if (bufsav[i * 682 + 1] == 0x04)//1D04----同步422第2路接收
+                        {
+                            Func_RS422.SaveToFile(ref SaveFile.Lock_70, ref SaveFile.DataQueue_SC70, buf1D0x, ChanNo);
+                        }
+
+                        else if (bufsav[i * 682 + 1] == 0x0F)
+                        {
+                            //空闲帧
+                        }
+                        else
+                        {
+                            Trace.WriteLine("FF08通道出错!");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Trace.WriteLine("422机箱收到异常帧头！");
             }
 
         }
@@ -1141,6 +1475,7 @@ namespace CKServer
         }
 
 
+
         public void SaveToFile(ref ReaderWriterLockSlim rwlock, ref Queue<byte[]> queue, byte[] bufsav, int ChanNo)
         {
             rwlock.EnterWriteLock();
@@ -1153,42 +1488,50 @@ namespace CKServer
                 {
                     case 1:
                         Func_LVDS.RecvLVDS_Chan1.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan1.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan1.RecvBuf.AddRange(bufsav);
+                        //for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan1.RecvBuf.Add(bufsav[i]);
                         Func_LVDS.RecvLVDS_Chan1.Lock.ExitWriteLock();
                         break;
                     case 2:
                         Func_LVDS.RecvLVDS_Chan2.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan2.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan2.RecvBuf.AddRange(bufsav);
+                        //for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan2.RecvBuf.Add(bufsav[i]);
                         Func_LVDS.RecvLVDS_Chan2.Lock.ExitWriteLock();
                         break;
                     case 3:
                         Func_LVDS.RecvLVDS_Chan3.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan3.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan3.RecvBuf.AddRange(bufsav);
+                        //for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan3.RecvBuf.Add(bufsav[i]);
                         Func_LVDS.RecvLVDS_Chan3.Lock.ExitWriteLock();
                         break;
                     case 4:
                         Func_LVDS.RecvLVDS_Chan4.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan4.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan4.RecvBuf.AddRange(bufsav);
+                        //for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan4.RecvBuf.Add(bufsav[i]);
                         Func_LVDS.RecvLVDS_Chan4.Lock.ExitWriteLock();
                         break;
                     case 5:
                         Func_LVDS.RecvLVDS_Chan5.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan5.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan5.RecvBuf.AddRange(bufsav);
+                        //for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan5.RecvBuf.Add(bufsav[i]);
                         Func_LVDS.RecvLVDS_Chan5.Lock.ExitWriteLock();
                         break;
                     case 6:
                         Func_LVDS.RecvLVDS_Chan6.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan6.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan6.RecvBuf.AddRange(bufsav);
+                        //for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan6.RecvBuf.Add(bufsav[i]);
                         Func_LVDS.RecvLVDS_Chan6.Lock.ExitWriteLock();
                         break;
                     case 7:
                         Func_LVDS.RecvLVDS_Chan7.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan7.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan7.RecvBuf.AddRange(bufsav);
+                        //for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan7.RecvBuf.Add(bufsav[i]);
                         Func_LVDS.RecvLVDS_Chan7.Lock.ExitWriteLock();
                         break;
                     case 8:
                         Func_LVDS.RecvLVDS_Chan8.Lock.EnterWriteLock();
-                        for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan8.RecvBuf.Add(bufsav[i]);
+                        Func_LVDS.RecvLVDS_Chan8.RecvBuf.AddRange(bufsav);
+                        //for (int i = 0; i < bufsav.Count(); i++) Func_LVDS.RecvLVDS_Chan8.RecvBuf.Add(bufsav[i]);
                         Func_LVDS.RecvLVDS_Chan8.Lock.ExitWriteLock();
                         break;
                     default:
@@ -1201,98 +1544,6 @@ namespace CKServer
             }
         }
 
-
-        public void RealTime_ComPare2()
-        {
-            Trace.WriteLine("RealTime_ComPare2 in");
-            while (Func_LVDS.LVDS_ComPareTag)
-            {
-                Trace.WriteLine("RealTime_ComPare2 LVDS_ComPareTag ---");
-                lock (Func_LVDS.RecvLVDS_Chan5.RecvBuf)
-                {
-                    if (Func_LVDS.RecvLVDS_Chan5.RecvBuf.Count() >= 1024)
-                    {
-                        Trace.WriteLine("Function_LVDS.RecvLVDS_Chan5.RecvBuf.Count() >= 1024");
-                        byte[] CADU = new byte[1024];
-
-                        for (int i = 0; i < 1024; i++) CADU[i] = Func_LVDS.RecvLVDS_Chan5.RecvBuf[i];
-
-                        Func_LVDS.RecvLVDS_Chan5.RecvBuf.RemoveRange(0, 1024);
-
-                        Func_LVDS.RecvLVDS_Chan5.RecvCounts += 1024;
-
-                        byte Tag = (byte)(CADU[9] & 0x80);
-
-                        byte[] data = new byte[886];//数据域
-                        int CPlen = Func_LVDS.RecvLVDS_Chan5.ComPareLenth;
-                        byte[] CPdata = new byte[CPlen];//比对数组长度
-
-
-                        int Erow = Func_LVDS.RecvLVDS_Chan5.RecvCounts / 1024; ;
-                        int Ecol = 10;
-                        int ETemprow = 0;
-
-                        if (Tag == 0x80)//回放数据--延时遥测
-                        {
-                            for (int i = 0; i < 886; i++) Func_LVDS.RecvLVDS_Chan5.DelayBuf.Add(data[i]);
-                            if (Func_LVDS.RecvLVDS_Chan5.GetComPareDataTag)
-                            {
-                                for (int j = 0; j < CPlen; j++) CPdata[j] = Func_LVDS.RecvLVDS_Chan5.DelayBuf[j];
-                                Func_LVDS.RecvLVDS_Chan5.GetComPareDataTag = false;
-                            }
-                            //循环处理数据域data
-                            while (Func_LVDS.RecvLVDS_Chan5.DelayBuf.Count() >= CPlen)
-                            {
-                                for (int t = 0; t < CPlen; t++)
-                                {
-                                    if (Func_LVDS.RecvLVDS_Chan5.DelayBuf[t] != CPdata[t])
-                                    {
-                                        Ecol = t + 1 + ETemprow * CPlen;
-                                        Func_LVDS.RecvLVDS_Chan5.ErrorColumn = Ecol;
-                                        Func_LVDS.RecvLVDS_Chan5.ErrorRow = Erow;
-                                    }
-                                }
-                                ETemprow++;
-                                Func_LVDS.RecvLVDS_Chan5.DelayBuf.RemoveRange(0, CPlen);
-                            }
-                        }
-                        else//Tag==0x00,实时遥测
-                        {
-                            for (int i = 0; i < 886; i++) Func_LVDS.RecvLVDS_Chan5.RealBuf.Add(data[i]);
-                            if (Func_LVDS.RecvLVDS_Chan5.GetComPareDataTag)
-                            {
-                                for (int j = 0; j < CPlen; j++) CPdata[j] = Func_LVDS.RecvLVDS_Chan5.RealBuf[j];
-                                Func_LVDS.RecvLVDS_Chan5.GetComPareDataTag = false;
-                            }
-
-                            //循环处理数据域data
-                            while (Func_LVDS.RecvLVDS_Chan5.RealBuf.Count() >= CPlen)
-                            {
-                                for (int t = 0; t < CPlen; t++)
-                                {
-                                    if (Func_LVDS.RecvLVDS_Chan5.RealBuf[t] != CPdata[t])
-                                    {
-                                        Ecol = t + 1 + ETemprow * CPlen;
-                                        Func_LVDS.RecvLVDS_Chan5.ErrorColumn = Ecol;
-                                        Func_LVDS.RecvLVDS_Chan5.ErrorRow = Erow;
-                                    }
-                                }
-                                ETemprow++;
-                                Func_LVDS.RecvLVDS_Chan5.RealBuf.RemoveRange(0, CPlen);
-                            }
-
-                        }
-                    }
-                    else
-                    {
-                        Trace.WriteLine("RealTime_ComPare2 RecvLVDS_Chan5 nums <1024");
-                        Thread.Sleep(1000);
-                    }
-                }
-            }
-
-            Trace.WriteLine("RealTime_ComPare2 out");
-        }
 
         public void DealWithCADU(byte[] CADU, ref List<string> APIDList, string ChannelName,
             ref Dictionary<string, Queue<byte[]>> Apid_EPDU_Dictionary, ref Dictionary<string, BinaryWriter> myDictionary)
@@ -1481,7 +1732,7 @@ namespace CKServer
                 bool ret = Func_AD.Return_ADValue(ref ADList, ref dataRe_AD, md);
                 if (!ret) Thread.Sleep(500);
             }
-        }      
+        }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -1594,6 +1845,9 @@ namespace CKServer
                 case "CheckEnable_BoxRS422":
                     panel = this.dockPanel_BoxRS422;
                     break;
+                case "CheckEnable_BoxRS422_Show":
+                    panel = this.dockPanel_BoxRS422_Show;
+                    break;
                 case "CheckEnable_BoxLVDS_A":
                     panel = this.dockPanel_BoxLVDS_A;
                     break;
@@ -1655,8 +1909,6 @@ namespace CKServer
             mylist.Add(Func_DA.DAByteB);
             mylist.Add(Func_DA.DAByteC);
             mylist.Add(Func_DA.DAByteD);
-
-
 
             for (int j = 0; j < 2; j++)
             {
@@ -2531,8 +2783,723 @@ namespace CKServer
                 {
                     DataGridViewCheckBoxCell checkcell = (DataGridViewCheckBoxCell)dataGridView_RS422_Send.Rows[e.RowIndex].Cells[1];
                     Boolean flag = Convert.ToBoolean(checkcell.EditedFormattedValue);
+                    Func_RS422.dt_RS422_Send.Rows[e.RowIndex][e.ColumnIndex] = flag;
+                }
+
+                if (e.ColumnIndex == 4)
+                {
+                    try
+                    {
+                        //1.根据路径获取数据
+                        int SendChan = e.RowIndex;
+                        byte FrameHeadLastByte = (byte)SendChan;
+
+                        FileStream file = new FileStream((string)Func_RS422.dt_RS422_Send.Rows[e.RowIndex]["码本路径"], FileMode.Open, FileAccess.Read);
+
+                        int fileBytes = (int)file.Length;
+                        byte[] read_file_buf = new byte[fileBytes];
+                        for (int i = 0; i < fileBytes; i++) read_file_buf[i] = 0xff;
+                        file.Read(read_file_buf, 0, fileBytes);
+
+                        int AddToFour = fileBytes % 4;
+
+                        //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
+                        byte[] FinalSendBytes = new byte[fileBytes + 4 - AddToFour + 20];
+                        byte[] head = new byte[2] { 0x1D, FrameHeadLastByte };
+                        byte[] len = new byte[2] { 0, 0 };
+                        len[0] = (byte)(fileBytes / 256);
+                        len[1] = (byte)(fileBytes % 256);
+                        byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+
+                        head.CopyTo(FinalSendBytes, 0);
+                        len.CopyTo(FinalSendBytes, 2);
+                        read_file_buf.CopyTo(FinalSendBytes, 4);
+
+
+                        if (AddToFour != 0)
+                        {
+                            byte[] add_buf = new byte[4 - AddToFour];//4-余数才是要补的数据
+                            for (int t = 0; t < add_buf.Count(); t++)
+                            {
+                                add_buf[t] = 0x0;
+                            }
+                            add_buf.CopyTo(FinalSendBytes, fileBytes + 4);
+                            end.CopyTo(FinalSendBytes, fileBytes + 4 + add_buf.Count());
+                        }
+                        else
+                        {
+                            end.CopyTo(FinalSendBytes, fileBytes + 4);
+                        }
+                        file.Close();
+
+                        if (USB.MyDeviceList[Data.SC422id] != null)
+                        {
+                            //2.通过寄存器将RAM清0
+                            byte addr = (byte)(0x81 + e.RowIndex / 7);
+                            byte value = (byte)(e.RowIndex % 7);
+                            USB.SendCMD(Data.SC422id, addr, (byte)(0x1 << value));
+
+
+                            USB.SendCMD(Data.SC422id, addr, 0x0);
+
+                            //3.将数据推送到RAM
+                            USB.SendData(Data.SC422id, FinalSendBytes);
+                        }
+                        else
+                        {
+                            MyLog.Error("SC422机箱未连接！请检查设置及连接！");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MyLog.Error(ex.Message + "From异步422发送通道：" + (e.RowIndex + 1).ToString());
+                    }
+
                 }
             }
+
+        }
+
+
+        private void barCheckItem_SelectAll_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barCheckItem_SelectAll.Checked)
+            {
+                for (int i = 0; i < Func_RS422.RS422Nums; i++)
+                {
+                    Func_RS422.dt_RS422_Send.Rows[i]["选中发送"] = true;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < Func_RS422.RS422Nums; i++)
+                {
+                    Func_RS422.dt_RS422_Send.Rows[i]["选中发送"] = false;
+                }
+            }
+        }
+
+        private void barButtonItem_422Send_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (DataRow dr in Func_RS422.dt_RS422_Send.Rows)
+            {
+                if ((bool)dr["选中发送"])
+                {
+                    int SendChan = (int)dr["序号"] - 1;
+
+                    try
+                    {
+                        //1.根据路径获取数据
+
+                        byte FrameHeadLastByte = (byte)SendChan;
+
+                        FileStream file = new FileStream((string)dr["码本路径"], FileMode.Open, FileAccess.Read);
+
+                        int fileBytes = (int)file.Length;
+                        byte[] read_file_buf = new byte[fileBytes];
+                        for (int i = 0; i < fileBytes; i++) read_file_buf[i] = 0xff;
+                        file.Read(read_file_buf, 0, fileBytes);
+
+                        int AddToFour = fileBytes % 4;
+
+                        //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
+                        byte[] FinalSendBytes = new byte[fileBytes + 4 - AddToFour + 20];
+                        byte[] head = new byte[2] { 0x1D, FrameHeadLastByte };
+                        byte[] len = new byte[2] { 0, 0 };
+                        len[0] = (byte)(fileBytes / 256);
+                        len[1] = (byte)(fileBytes % 256);
+                        byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+
+                        head.CopyTo(FinalSendBytes, 0);
+                        len.CopyTo(FinalSendBytes, 2);
+                        read_file_buf.CopyTo(FinalSendBytes, 4);
+
+                        if (AddToFour != 0)
+                        {
+                            byte[] add_buf = new byte[4 - AddToFour];//4-余数才是要补的数据
+                            for (int t = 0; t < add_buf.Count(); t++)
+                            {
+                                add_buf[t] = 0x0;
+                            }
+                            add_buf.CopyTo(FinalSendBytes, fileBytes + 4);
+                            end.CopyTo(FinalSendBytes, fileBytes + 4 + add_buf.Count());
+                        }
+                        else
+                        {
+                            end.CopyTo(FinalSendBytes, fileBytes + 4);
+                        }
+                        file.Close();
+
+                        if (USB.MyDeviceList[Data.SC422id] != null)
+                        {
+                            //2.通过寄存器将RAM清0
+                            byte addr = (byte)(0x81 + SendChan / 7);
+                            byte value = (byte)(SendChan % 7);
+                            USB.SendCMD(Data.SC422id, addr, (byte)(0x1 << value));
+                            USB.SendCMD(Data.SC422id, addr, 0x0);
+
+                            //3.将数据推送到RAM
+                            USB.SendData(Data.SC422id, FinalSendBytes);
+                        }
+                        else
+                        {
+                            MyLog.Error("SC422机箱未连接！请检查设置及连接！");
+                            break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MyLog.Error(ex.Message + "From异步422发送通道：" + (SendChan + 1).ToString());
+                    }
+
+
+                }
+            }
+
+
+        }
+
+        private void buttonEdit25_ButtonClick(object sender, ButtonPressedEventArgs e)
+        {
+            ButtonEdit editor = (ButtonEdit)sender;
+            EditorButton Button = e.Button;
+
+            String msgstr = "未选择文件";
+            String ConfigPath = "PATH_DAT_01";
+            byte FrameHeadLastByte = 0x00;
+
+            //buttonEdit_SC422_TB1
+            String SenderName = editor.Name;
+            int SendChan = int.Parse(SenderName.Substring(19)) - 1;//界面上从1开始，实际数组从0开始//buttonEdit_422_1
+            FrameHeadLastByte = (byte)(0x30 + SendChan);//1D0x中0x的值，在此获取
+
+            msgstr = "SC422机箱：同步422通道" + (SendChan + 1).ToString();
+
+            if (Button.Caption == "SelectBin")
+            {
+                openFileDialog1.InitialDirectory = Data.Path + @"码本文件\";
+                string tmpFilter = openFileDialog1.Filter;
+                string title = openFileDialog1.Title;
+                openFileDialog1.Title = "选择要注入的码表文件";
+                openFileDialog1.Filter = "dat files (*.dat)|*.dat|All files (*.*) | *.*";
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK) //selecting bitstream
+                {
+                    editor.Text = openFileDialog1.FileName;
+                    Refresh();
+                    MyLog.Info("选取" + msgstr + "文件成功");
+                }
+                else
+                {
+                    openFileDialog1.Filter = tmpFilter;
+                    openFileDialog1.Title = title;
+                    return;
+                }
+            }
+            else
+            {
+                try
+                {
+                    FileStream file = new FileStream(editor.Text, FileMode.Open, FileAccess.Read);
+
+                    //int fileBytes = (int)file.Length + 8;//为何要+8??
+                    int fileBytes = (int)file.Length;
+                    byte[] read_file_buf = new byte[fileBytes];
+                    for (int i = 0; i < fileBytes; i++) read_file_buf[i] = 0xff;
+                    file.Read(read_file_buf, 0, fileBytes);
+
+                    int AddToFour = fileBytes % 4;
+
+                    //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
+                    byte[] FinalSendBytes = new byte[fileBytes + 4 - AddToFour + 20];
+                    byte[] head = new byte[2] { 0x1D, FrameHeadLastByte };
+                    byte[] len = new byte[2] { 0, 0 };
+                    len[0] = (byte)(fileBytes / 256);
+                    len[1] = (byte)(fileBytes % 256);
+                    byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+
+                    head.CopyTo(FinalSendBytes, 0);
+                    len.CopyTo(FinalSendBytes, 2);
+                    read_file_buf.CopyTo(FinalSendBytes, 4);
+
+
+                    if (AddToFour != 0)
+                    {
+                        byte[] add_buf = new byte[4 - AddToFour];//4-余数才是要补的数据
+                        for (int t = 0; t < add_buf.Count(); t++)
+                        {
+                            add_buf[t] = 0x0;
+                        }
+                        add_buf.CopyTo(FinalSendBytes, fileBytes + 4);
+                        end.CopyTo(FinalSendBytes, fileBytes + 4 + add_buf.Count());
+                    }
+                    else
+                    {
+                        end.CopyTo(FinalSendBytes, fileBytes + 4);
+                    }
+
+                    file.Close();
+
+                    if (USB.MyDeviceList[Data.SC422id] != null)
+                    {
+                        //RAM清0
+                        USB.SendCMD(Data.SC422id, (byte)(0x88 + SendChan / 7), (byte)(0x1 << SendChan % 7));
+                        USB.SendCMD(Data.SC422id, (byte)(0x88 + SendChan / 7), 0x0);
+
+                        //向下注数
+                        USB.SendData(Data.SC422id, FinalSendBytes);
+
+                    }
+                    else
+                    {
+                        MyLog.Error("向设备" + msgstr + "注入码表失败，请检查设置及连接！");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("检查码表路径是否正确！" + ex.Message);
+                    MyLog.Error(ex.Message);
+                }
+            }
+        }
+
+        private void barEditItem13_ItemPress(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barCheckItem1_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barCheckItem_A1.Checked)
+            {
+                barCheckItem_A2.Checked = false;
+                Func_RS422.ShowTB1 = true;
+            }
+
+
+
+        }
+
+        private void barCheckItem2_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barCheckItem_A2.Checked)
+            {
+                barCheckItem_A1.Checked = false;
+                Func_RS422.ShowTB1 = false;
+            }
+        }
+
+        private void barCheckItem_B1_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barCheckItem_B1.Checked)
+            {
+                barCheckItem_B2.Checked = false;
+                Func_RS422.ShowTB2 = true;
+            }
+        }
+
+        private void barCheckItem_B2_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barCheckItem_B2.Checked)
+            {
+                barCheckItem_B1.Checked = false;
+                Func_RS422.ShowTB2 = true;
+            }
+        }
+
+        private void barButtonItem_SelectFile_A_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openFileDialog1.InitialDirectory = Data.Path + @"码本文件\";
+            string tmpFilter = openFileDialog1.Filter;
+            string title = openFileDialog1.Title;
+            openFileDialog1.Title = "选择要注入的码表文件";
+            openFileDialog1.Filter = "dat files (*.dat)|*.dat|All files (*.*) | *.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) //selecting bitstream
+            {
+                barEditItem_FilePath_A.EditValue = openFileDialog1.FileName;
+                Refresh();
+            }
+            else
+            {
+                openFileDialog1.Filter = tmpFilter;
+                openFileDialog1.Title = title;
+                return;
+            }
+
+        }
+
+        private void barButtonItem_SelectFile_B_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openFileDialog1.InitialDirectory = Data.Path + @"码本文件\";
+            string tmpFilter = openFileDialog1.Filter;
+            string title = openFileDialog1.Title;
+            openFileDialog1.Title = "选择要注入的码表文件";
+            openFileDialog1.Filter = "dat files (*.dat)|*.dat|All files (*.*) | *.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) //selecting bitstream
+            {
+                barEditItem_FilePath_B.EditValue = openFileDialog1.FileName;
+                Refresh();
+            }
+            else
+            {
+                openFileDialog1.Filter = tmpFilter;
+                openFileDialog1.Title = title;
+                return;
+            }
+        }
+
+        private void barButton_RS422freqset_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            double freq = 115.2;
+            double.TryParse(barEditItem_RS422freqset.EditValue.ToString(), out freq);
+            byte addr = 0x8a;
+            byte value = 0x0;
+            switch (freq)
+            {
+                case 1:
+                    value = 0x1;
+                    break;
+                case 2:
+                    value = 0x2;
+                    break;
+                case 4:
+                    value = 0x4;
+                    break;
+                case 8:
+                    value = 0x8;
+                    break;
+                case 16:
+                    value = 0x10;
+                    break;
+                case 32:
+                    value = 0x20;
+                    break;
+                case 64:
+                    value = 0x40;
+                    break;
+                case 115.2:
+                    value = 0x0;
+                    break;
+                default:
+                    value = 0x0;
+                    break;
+            }
+
+            USB.SendCMD(Data.SC422id, 0x8a, value);
+            USB.SendCMD(Data.SC422id, 0x8b, value);
+
+        }
+
+        private void barButton_TB1Send_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barButton_TB1Send.Caption == "发送")
+            {
+                try
+                {
+                    byte FrameHeadLastByte = 0x30;
+
+                    FileStream file = new FileStream(barEditItem_FilePath_A.EditValue.ToString(), FileMode.Open, FileAccess.Read);
+
+                    //int fileBytes = (int)file.Length + 8;//为何要+8??
+                    int fileBytes = (int)file.Length;
+                    byte[] read_file_buf = new byte[fileBytes];
+                    for (int i = 0; i < fileBytes; i++) read_file_buf[i] = 0xff;
+                    file.Read(read_file_buf, 0, fileBytes);
+
+                    int AddToFour = fileBytes % 4;
+
+                    //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
+                    byte[] FinalSendBytes = new byte[fileBytes + 4 - AddToFour + 20];
+                    byte[] head = new byte[2] { 0x1D, FrameHeadLastByte };
+                    byte[] len = new byte[2] { 0, 0 };
+                    len[0] = (byte)(fileBytes / 256);
+                    len[1] = (byte)(fileBytes % 256);
+                    byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+
+                    head.CopyTo(FinalSendBytes, 0);
+                    len.CopyTo(FinalSendBytes, 2);
+                    read_file_buf.CopyTo(FinalSendBytes, 4);
+
+                    if (AddToFour != 0)
+                    {
+                        byte[] add_buf = new byte[4 - AddToFour];//4-余数才是要补的数据
+                        for (int t = 0; t < add_buf.Count(); t++)
+                        {
+                            add_buf[t] = 0x0;
+                        }
+                        add_buf.CopyTo(FinalSendBytes, fileBytes + 4);
+                        end.CopyTo(FinalSendBytes, fileBytes + 4 + add_buf.Count());
+                    }
+                    else
+                    {
+                        end.CopyTo(FinalSendBytes, fileBytes + 4);
+                    }
+                    file.Close();
+                    if (USB.MyDeviceList[Data.SC422id] != null)
+                    {
+                        //RAM清0
+                        USB.SendCMD(Data.SC422id, 0x88, 0x01);
+                        USB.SendCMD(Data.SC422id, 0x88, 0x00);
+
+                        //向下注数
+                        USB.SendData(Data.SC422id, FinalSendBytes);
+
+
+                        if (barCheckItem_A1.Checked)
+                        {//单次发送
+                            Func_RS422.Reg_8CH = (byte)(Func_RS422.Reg_8CH & 0xfe);
+                            USB.SendCMD(Data.SC422id, 0x8C, Func_RS422.Reg_8CH);
+
+
+                        }
+                        else if (barCheckItem_A2.Checked)
+                        {
+                            //连续发送
+                            Func_RS422.Reg_8CH = (byte)(Func_RS422.Reg_8CH | 0x1);
+                            USB.SendCMD(Data.SC422id, 0x8C, Func_RS422.Reg_8CH);
+
+                            barButton_TB1Send.Caption = "停止";
+                            barButton_TB1Send.ImageOptions.LargeImage = CKServer.Properties.Resources.Stop_btn;
+                            barCheckItem_A1.Enabled = false;
+                            barCheckItem_A2.Enabled = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("请选择单次发送 or 连续发送！");
+                        }
+
+                    }
+                    else
+                    {
+                        MyLog.Error("向设备注数失败，请检查设置及连接！");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("检查码本路径是否正确！" + ex.Message);
+                    MyLog.Error(ex.Message);
+                }
+            }
+            else
+            {
+                //RAM清0
+                USB.SendCMD(Data.SC422id, 0x88, 0x01);
+                USB.SendCMD(Data.SC422id, 0x88, 0x00);
+
+                barButton_TB1Send.Caption = "发送";
+                barButton_TB1Send.ImageOptions.LargeImage = CKServer.Properties.Resources.Start_btn;
+                barCheckItem_A1.Enabled = true;
+                barCheckItem_A2.Enabled = true;
+            }
+
+        }
+
+        private void barButton_TB2Send_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barButton_TB2Send.Caption == "发送")
+            {
+                try
+                {
+                    byte FrameHeadLastByte = 0x31;
+
+                    FileStream file = new FileStream(barEditItem_FilePath_B.EditValue.ToString(), FileMode.Open, FileAccess.Read);
+
+                    //int fileBytes = (int)file.Length + 8;//为何要+8??
+                    int fileBytes = (int)file.Length;
+                    byte[] read_file_buf = new byte[fileBytes];
+                    for (int i = 0; i < fileBytes; i++) read_file_buf[i] = 0xff;
+                    file.Read(read_file_buf, 0, fileBytes);
+
+                    int AddToFour = fileBytes % 4;
+
+                    //1D0x + 长度2Bytes + 数据+(填写00填满32位) + 4 * C0DEC0DE
+                    byte[] FinalSendBytes = new byte[fileBytes + 4 - AddToFour + 20];
+                    byte[] head = new byte[2] { 0x1D, FrameHeadLastByte };
+                    byte[] len = new byte[2] { 0, 0 };
+                    len[0] = (byte)(fileBytes / 256);
+                    len[1] = (byte)(fileBytes % 256);
+                    byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+
+                    head.CopyTo(FinalSendBytes, 0);
+                    len.CopyTo(FinalSendBytes, 2);
+                    read_file_buf.CopyTo(FinalSendBytes, 4);
+
+                    if (AddToFour != 0)
+                    {
+                        byte[] add_buf = new byte[4 - AddToFour];//4-余数才是要补的数据
+                        for (int t = 0; t < add_buf.Count(); t++)
+                        {
+                            add_buf[t] = 0x0;
+                        }
+                        add_buf.CopyTo(FinalSendBytes, fileBytes + 4);
+                        end.CopyTo(FinalSendBytes, fileBytes + 4 + add_buf.Count());
+                    }
+                    else
+                    {
+                        end.CopyTo(FinalSendBytes, fileBytes + 4);
+                    }
+                    file.Close();
+                    if (USB.MyDeviceList[Data.SC422id] != null)
+                    {
+                        //RAM清0
+                        USB.SendCMD(Data.SC422id, 0x88, 0x02);
+                        USB.SendCMD(Data.SC422id, 0x88, 0x00);
+
+                        //向下注数
+                        USB.SendData(Data.SC422id, FinalSendBytes);
+
+
+                        if (barCheckItem_B1.Checked)
+                        {
+                            Func_RS422.Reg_8CH = (byte)(Func_RS422.Reg_8CH & 0xfd);
+                            USB.SendCMD(Data.SC422id, 0x8C, Func_RS422.Reg_8CH);
+                        }
+                        else if (barCheckItem_B2.Checked)
+                        {
+                            //向连续发送寄存器发指令
+                            Func_RS422.Reg_8CH = (byte)(Func_RS422.Reg_8CH | 0x2);
+                            USB.SendCMD(Data.SC422id, 0x8C, Func_RS422.Reg_8CH);
+
+                            barButton_TB2Send.Caption = "停止";
+                            barButton_TB2Send.ImageOptions.LargeImage = CKServer.Properties.Resources.Stop_btn;
+                            barCheckItem_B1.Enabled = false;
+                            barCheckItem_B2.Enabled = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("请选择单次发送 or 连续发送！");
+                        }
+
+                    }
+                    else
+                    {
+                        MyLog.Error("向设备注数失败，请检查设置及连接！");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("检查码本路径是否正确！" + ex.Message);
+                    MyLog.Error(ex.Message);
+                }
+            }
+            else
+            {
+                //RAM清0
+                USB.SendCMD(Data.SC422id, 0x88, 0x02);
+                USB.SendCMD(Data.SC422id, 0x88, 0x00);
+
+                barButton_TB2Send.Caption = "发送";
+                barButton_TB2Send.ImageOptions.LargeImage = CKServer.Properties.Resources.Start_btn;
+                barCheckItem_B1.Enabled = true;
+                barCheckItem_B2.Enabled = true;
+            }
+        }
+
+        private void barButtonItem_RS422BaudSet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int baud = 9600;
+            int.TryParse(barEditItem_RS422_baud.EditValue.ToString(), out baud);
+            byte addr = 0x89;
+            byte value = 0x0;
+            switch (baud)
+            {
+                case 9600:
+                    value = 0x0;
+                    break;
+                case 19200:
+                    value = 0x1;
+                    break;
+                case 38400:
+                    value = 0x2;
+                    break;
+                case 57600:
+                    value = 0x3;
+                    break;
+                case 115200:
+                    value = 0x4;
+                    break;
+                case 460800:
+                    value = 0x5;
+                    break;
+                case 921600:
+                    value = 0x6;
+                    break;
+                case 1000000:
+                    value = 0x7;
+                    break;
+                default:
+                    value = 0x0;
+                    break;
+            }
+
+            USB.SendCMD(Data.SC422id, addr, value);
+
+        }
+
+        private void barButtonItem_GNSS_A_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barButtonItem_GNSS_A.Caption == "开始：GNSS秒信号A")
+            {
+                barButtonItem_GNSS_A.Caption = "停止：GNSS秒信号A";
+                barButtonItem_GNSS_A.ImageOptions.Image = CKServer.Properties.Resources.Stop_btn;
+
+                Func_RS422.Reg_8DH = (byte)(Func_RS422.Reg_8DH | 0x01);
+                USB.SendCMD(Data.SC422id, 0x8D, Func_RS422.Reg_8DH);
+            }
+            else
+            {
+                Func_RS422.Reg_8DH = (byte)(Func_RS422.Reg_8DH & 0xfe);
+                USB.SendCMD(Data.SC422id, 0x8D, Func_RS422.Reg_8DH);
+
+                barButtonItem_GNSS_A.Caption = "开始：GNSS秒信号A";
+                barButtonItem_GNSS_A.ImageOptions.Image = CKServer.Properties.Resources.Start_btn;
+            }
+        }
+
+        private void barButtonItem_GNSS_B_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barButtonItem_GNSS_B.Caption == "开始：GNSS秒信号B")
+            {
+                barButtonItem_GNSS_B.Caption = "停止：GNSS秒信号B";
+                barButtonItem_GNSS_B.ImageOptions.Image = CKServer.Properties.Resources.Stop_btn;
+
+                Func_RS422.Reg_8DH = (byte)(Func_RS422.Reg_8DH | 0x02);
+                USB.SendCMD(Data.SC422id, 0x8D, Func_RS422.Reg_8DH);
+
+            }
+            else
+            {
+                barButtonItem_GNSS_B.Caption = "开始：GNSS秒信号B";
+                barButtonItem_GNSS_B.ImageOptions.Image = CKServer.Properties.Resources.Start_btn;
+
+                Func_RS422.Reg_8DH = (byte)(Func_RS422.Reg_8DH & 0xfd);
+                USB.SendCMD(Data.SC422id, 0x8D, Func_RS422.Reg_8DH);
+            }
+        }
+
+        private void checkBox_ComPare1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox chx = (CheckBox)sender;
+            int Chan = int.Parse(chx.Name.Substring(16));
+
+            Func_LVDS.RecvLVDS_Struct[] recvLVDS_Structs = new Func_LVDS.RecvLVDS_Struct[8] {
+                Func_LVDS.RecvLVDS_Chan1,Func_LVDS.RecvLVDS_Chan2,Func_LVDS.RecvLVDS_Chan3,Func_LVDS.RecvLVDS_Chan4,
+            Func_LVDS.RecvLVDS_Chan5,Func_LVDS.RecvLVDS_Chan6,Func_LVDS.RecvLVDS_Chan7,Func_LVDS.RecvLVDS_Chan8};
+
+            if (chx.Checked)
+            {
+                Function.SaveConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_" + Chan.ToString(), "compare", "True");
+            }
+            else
+            {
+                Function.SaveConfigStr(Data.LVDSconfigPath, "add", "LVDS_CompareLen_Chan_" + Chan.ToString(), "compare", "False");
+            }
+
+
+
         }
     }
 }

@@ -9,12 +9,12 @@
   <add key="LVDS_Channel_6" value="1" name="B机LVDS发送3" />
   <add key="LVDS_Channel_7" value="1" name="B机LVDS发送4" />
 
-  <add key ="LVDS_CompareLen_Chan_1" value="40"></add>
-  <add key ="LVDS_CompareLen_Chan_2" value="20"></add>
-  <add key ="LVDS_CompareLen_Chan_3" value="20"></add>
-  <add key ="LVDS_CompareLen_Chan_4" value="20"></add>
-  <add key ="LVDS_CompareLen_Chan_5" value="20"></add>
-  <add key ="LVDS_CompareLen_Chan_6" value="20"></add>
-  <add key ="LVDS_CompareLen_Chan_7" value="20"></add>
-  <add key ="LVDS_CompareLen_Chan_8" value="80"></add>
+  <add key ="LVDS_CompareLen_Chan_1" value="40" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_2" value="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_3" value="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_4" value="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_5" value="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_6" value="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_7" value="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_8" value="80" compare ="False"></add>
 </configuration>

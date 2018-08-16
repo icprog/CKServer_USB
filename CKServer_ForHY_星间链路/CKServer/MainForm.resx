@@ -1745,7 +1745,7 @@
     <value>True</value>
   </data>
   <data name="textBox_lvdsFrame_Data.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 117</value>
+    <value>214, 78</value>
   </data>
   <data name="textBox_lvdsFrame_Data.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1769,10 +1769,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 159</value>
+    <value>227, 132</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 138</value>
+    <value>220, 99</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1947,10 +1947,10 @@
     <value>Fill</value>
   </data>
   <data name="dataGridView_LvdsCP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 159</value>
+    <value>3, 132</value>
   </data>
   <data name="dataGridView_LvdsCP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 138</value>
+    <value>218, 99</value>
   </data>
   <data name="dataGridView_LvdsCP.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2007,7 +2007,7 @@
     <value>3, 63</value>
   </data>
   <data name="dataGridView_LvdsResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 90</value>
+    <value>444, 63</value>
   </data>
   <data name="dataGridView_LvdsResult.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -2034,7 +2034,7 @@
     <value>4</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 300</value>
+    <value>450, 234</value>
   </data>
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -2058,7 +2058,7 @@
     <value>4, 24</value>
   </data>
   <data name="controlContainer5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 300</value>
+    <value>450, 234</value>
   </data>
   <data name="controlContainer5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2076,10 +2076,10 @@
     <value>0</value>
   </data>
   <data name="dockPanel_LVDS_Recv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 416</value>
+    <value>0, 482</value>
   </data>
   <data name="dockPanel_LVDS_Recv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 328</value>
+    <value>458, 262</value>
   </data>
   <data name="dockPanel_LVDS_Recv.Text" xml:space="preserve">
     <value>LVDS接收区</value>
@@ -2112,7 +2112,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox_Send_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 81</value>
+    <value>438, 102</value>
   </data>
   <data name="textBox_Send_1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2136,7 +2136,7 @@
     <value>3, 3</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 102</value>
+    <value>444, 123</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2169,7 +2169,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox_Send_2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 82</value>
+    <value>438, 103</value>
   </data>
   <data name="textBox_Send_2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2190,10 +2190,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 111</value>
+    <value>3, 132</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 103</value>
+    <value>444, 124</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2214,7 +2214,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+    <value>Fill</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 62</value>
@@ -2223,7 +2223,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 217</value>
+    <value>450, 259</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -2256,7 +2256,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 3</value>
+    <value>43, 3</value>
   </data>
   <data name="buttonEdit1.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -2334,7 +2334,7 @@
     <value>True</value>
   </data>
   <data name="buttonEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 24</value>
+    <value>342, 24</value>
   </data>
   <data name="buttonEdit1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -2361,7 +2361,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 33</value>
+    <value>43, 33</value>
   </data>
   <data name="buttonEdit2.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -2467,7 +2467,7 @@
     <value>True</value>
   </data>
   <data name="buttonEdit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 24</value>
+    <value>342, 24</value>
   </data>
   <data name="buttonEdit2.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -2506,10 +2506,10 @@
     <value>01M</value>
   </data>
   <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 33</value>
+    <value>391, 33</value>
   </data>
   <data name="comboBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 22</value>
+    <value>56, 22</value>
   </data>
   <data name="comboBox2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2551,10 +2551,10 @@
     <value>01M</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 3</value>
+    <value>391, 3</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 22</value>
+    <value>56, 22</value>
   </data>
   <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2587,7 +2587,7 @@
     <value>3, 30</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 32</value>
+    <value>34, 32</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -2620,7 +2620,7 @@
     <value>3, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 30</value>
+    <value>34, 30</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -2671,13 +2671,13 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="buttonEdit1" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="buttonEdit2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="comboBox2" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="comboBox1" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,10,Percent,75,Percent,15" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="buttonEdit1" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="buttonEdit2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="comboBox2" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="comboBox1" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,40,Percent,85,Percent,15" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="controlContainer1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
   </data>
   <data name="controlContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 255</value>
+    <value>450, 321</value>
   </data>
   <data name="controlContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2698,7 +2698,7 @@
     <value>0, 133</value>
   </data>
   <data name="dockPanel_LVDS_Send.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 283</value>
+    <value>458, 349</value>
   </data>
   <data name="dockPanel_LVDS_Send.Text" xml:space="preserve">
     <value>LVDS发送区</value>

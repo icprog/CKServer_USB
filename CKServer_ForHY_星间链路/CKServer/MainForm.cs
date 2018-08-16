@@ -963,8 +963,9 @@ namespace CKServer
 
                     string temp = null;
                     for (int i = 0; i < FinalSendBytes.Length; i++) temp += FinalSendBytes[i].ToString("x2");
-                    mytxtbox.AppendText(temp);
-                    mygroupBox.Text = mygroupBox.Text + "(" + (FinalSendBytes.Length - 20).ToString() + ")";
+
+                    mytxtbox.Text = temp;
+                    mygroupBox.Text = (mygroupBox.Text).Split('(')[0] + "(" + (FinalSendBytes.Length - 20).ToString() + ")";
                 }
                 else
                 {
