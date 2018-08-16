@@ -274,34 +274,34 @@ namespace CKServer
 
             FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\源码\", out file_SC20);
 
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D00:数管发送GNC计算机\", out file_SC21);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D01:数管发送GNC执行机1\", out file_SC22);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D02:数管发送GNC执行机2\", out file_SC23);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D03:数管发送推进线路盒1\", out file_SC24);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D04:数管发送推进线路盒2\", out file_SC25);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D05:数管发送测控终端A机\", out file_SC26);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D06:数管发送测控终端B机\", out file_SC27);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D07:数管发送综合驱动控制器 \", out file_SC28);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D08:数管发送空空通信机\", out file_SC29);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D09:RS422发10\", out file_SC30);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0A:RS422发11\", out file_SC31);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0B:数管发送指令下行\", out file_SC32);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0C:RS422发16\", out file_SC33);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0D:RS422发19\", out file_SC34);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0E:RS422发20\", out file_SC35);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D00_数管发送GNC计算机\", out file_SC21);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D01_数管发送GNC执行机1\", out file_SC22);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D02_数管发送GNC执行机2\", out file_SC23);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D03_数管发送推进线路盒1\", out file_SC24);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D04_数管发送推进线路盒2\", out file_SC25);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D05_数管发送测控终端A机\", out file_SC26);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D06_数管发送测控终端B机\", out file_SC27);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D07_数管发送综合驱动控制器 \", out file_SC28);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D08_数管发送空空通信机\", out file_SC29);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D09_RS422发10\", out file_SC30);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0A_RS422发11\", out file_SC31);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0B_数管发送指令下行\", out file_SC32);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0C_RS422发16\", out file_SC33);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0D_RS422发19\", out file_SC34);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0E_RS422发20\", out file_SC35);
 
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D00:数管发送综合控制单元\", out file_SC36);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D01:RS422发22\", out file_SC37);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D02:RS422发23\", out file_SC38);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D03:RS422发24\", out file_SC39);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D04:RS422发25\", out file_SC40);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D05:RS422发26\", out file_SC41);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D06:RS422发27\", out file_SC42);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D07:RS422发28\", out file_SC43);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D08:RS422发29\", out file_SC44);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D09:RS422发30\", out file_SC45);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0A:RS422发31\", out file_SC46);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0B:RS422发32\", out file_SC47);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D00_数管发送综合控制单元\", out file_SC36);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D01_RS422发22\", out file_SC37);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D02_RS422发23\", out file_SC38);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D03_RS422发24\", out file_SC39);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D04_RS422发25\", out file_SC40);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D05_RS422发26\", out file_SC41);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D06_RS422发27\", out file_SC42);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D07_RS422发28\", out file_SC43);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D08_RS422发29\", out file_SC44);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D09_RS422发30\", out file_SC45);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0A_RS422发31\", out file_SC46);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0B_RS422发32\", out file_SC47);
             FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0C\", out file_SC48);
             FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0D\", out file_SC49);
             FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0E\", out file_SC50);
@@ -326,8 +326,8 @@ namespace CKServer
             FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D01\", out file_SC67);
             FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D02\", out file_SC68);
 
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D03:数管接收测试终端A机上行\", out file_SC69);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D04:数管接收测试终端A机下行\", out file_SC70);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D03_数管接收测试终端A机上行\", out file_SC69);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D04_数管接收测试终端A机下行\", out file_SC70);
 
 
 
