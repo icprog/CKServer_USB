@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <add key="RS422通道1" name="数管接收GNC计算机" path="" used="true"/>
+  <add key="RS422通道2" name="数管接收GNC执行机1" path="" used="true"/>
+  <add key="RS422通道3" name="数管接收GNC执行机2" path="" used="true"/>
+  <add key="RS422通道4" name="数管接收推进线路盒1" path="" used="true"/>
+  <add key="RS422通道5" name="数管接收推进线路盒2" path="" used="true"/>
+  <add key="RS422通道6" name="数管接收测控终端A机" path="" used="true"/>
+  <add key="RS422通道7" name="数管接收测控终端B机" path="" used="true"/>
+  <add key="RS422通道8" name="数管接收综合驱动控制器 " path="" used="true"/>
+  <add key="RS422通道9" name="数管接收空空通信机" path="" used="true"/>
+  <add key="RS422通道10" name="RS422收10" path="" used="true"/>
+  <add key="RS422通道11" name="RS422收11" path="" used="true"/>
+  <add key="RS422通道12" name="数管接收指令下行" path="" used="true"/>
+  <add key="RS422通道13" name="RS422发16" path="" used="true"/>
+  <add key="RS422通道14" name="RS422发19" path="" used="true"/>
+  <add key="RS422通道15" name="RS422发20" path="" used="true"/>
+  <add key="RS422通道16" name="数管发送综合控制单元" path="" used="true"/>
+  <add key="RS422通道17" name="RS422发22" path="" used="true"/>
+  <add key="RS422通道18" name="RS422发23" path="" used="true"/>
+  <add key="RS422通道19" name="RS422发24" path="" used="true"/>
+  <add key="RS422通道20" name="RS422发25" path="" used="true"/>
+  <add key="RS422通道21" name="RS422发26" path="" used="true"/>
+  <add key="RS422通道22" name="RS422发27" path="" used="true"/>
+  <add key="RS422通道23" name="RS422发28" path="" used="true"/>
+  <add key="RS422通道24" name="RS422发29" path="" used="true"/>
+  <add key="RS422通道25" name="RS422发30" path="" used="true"/>
+  <add key="RS422通道26" name="RS422发32" path="" used="true"/>
+  <add key="RS422通道27" name="RS422发32" path="" used="true"/>
+  
+  <add key="RS422通道28" name="保留未使用4" path="" used="false"/>
+  <add key="RS422通道29" name="保留未使用5" path="" used="false"/>
+  <add key="RS422通道30" name="保留未使用6" path="" used="false"/>
+  <add key="RS422通道31" name="保留未使用7" path="" used="false"/>
+  <add key="RS422通道32" name="保留未使用8" path="" used="false"/>
+  <add key="RS422通道33" name="保留未使用9" path="" used="false"/>
+  <add key="RS422通道34" name="保留未使用10" path="" used="false"/>
+  <add key="RS422通道35" name="保留未使用11" path="" used="false"/>
+  <add key="RS422通道36" name="保留未使用12" path="" used="false"/>
+  <add key="RS422通道37" name="保留未使用13" path="" used="false"/>
+  <add key="RS422通道38" name="保留未使用14" path="" used="false"/>
+  <add key="RS422通道39" name="保留未使用15" path="" used="false"/>
+  <add key="RS422通道40" name="保留未使用16" path="" used="false"/>
+  <add key="RS422通道41" name="保留未使用17" path="" used="false"/>
+
+  <add key="RS422通道42" name="保留未使用18" path="" used="false"/>
+  <add key="RS422通道43" name="保留未使用19" path="" used="false"/>
+  <add key="RS422通道44" name="保留未使用20" path="" used="false"/>
+  <add key="RS422通道45" name="保留未使用21" path="" used="false"/>
+  <add key="RS422通道46" name="保留未使用22" path="" used="false"/>
+  <add key="RS422通道47" name="保留未使用23" path="" used="false"/>
+  <add key="RS422通道48" name="保留未使用24" path="" used="false"/>
+  
+  
+  
+</configuration>

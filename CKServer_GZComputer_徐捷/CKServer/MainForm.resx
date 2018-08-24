@@ -2298,13 +2298,13 @@
     <value>True</value>
   </data>
   <data name="btn_Short_1D04.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1187, 133</value>
+    <value>1405, 133</value>
   </data>
   <data name="ribbonStatusBar1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 818</value>
   </data>
   <data name="ribbonStatusBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1187, 31</value>
+    <value>1405, 31</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar1.Name" xml:space="preserve">
     <value>ribbonStatusBar1</value>
@@ -2340,7 +2340,7 @@
     <value>0, 0</value>
   </data>
   <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 187</value>
+    <value>94, 638</value>
   </data>
   <data name="richTextBox1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -2531,280 +2531,13 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>118</value>
+    <value>87</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1187, 849</value>
-  </data>
-  <data name="checkBox_ComPare1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_ComPare1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 21</value>
-  </data>
-  <data name="checkBox_ComPare1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 18</value>
-  </data>
-  <data name="checkBox_ComPare1.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="checkBox_ComPare1.Text" xml:space="preserve">
-    <value>通道1比对</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare1.Name" xml:space="preserve">
-    <value>checkBox_ComPare1</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="checkBox_ComPare8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_ComPare8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox_ComPare8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 189</value>
-  </data>
-  <data name="checkBox_ComPare8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 18</value>
-  </data>
-  <data name="checkBox_ComPare8.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="checkBox_ComPare8.Text" xml:space="preserve">
-    <value>通道8比对</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare8.Name" xml:space="preserve">
-    <value>checkBox_ComPare8</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare8.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="checkBox_ComPare2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_ComPare2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox_ComPare2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 45</value>
-  </data>
-  <data name="checkBox_ComPare2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 18</value>
-  </data>
-  <data name="checkBox_ComPare2.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="checkBox_ComPare2.Text" xml:space="preserve">
-    <value>通道2比对</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare2.Name" xml:space="preserve">
-    <value>checkBox_ComPare2</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare2.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="checkBox_ComPare7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_ComPare7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox_ComPare7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 165</value>
-  </data>
-  <data name="checkBox_ComPare7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 18</value>
-  </data>
-  <data name="checkBox_ComPare7.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="checkBox_ComPare7.Text" xml:space="preserve">
-    <value>通道7比对</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare7.Name" xml:space="preserve">
-    <value>checkBox_ComPare7</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare7.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare7.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="checkBox_ComPare3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_ComPare3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox_ComPare3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 69</value>
-  </data>
-  <data name="checkBox_ComPare3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 18</value>
-  </data>
-  <data name="checkBox_ComPare3.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="checkBox_ComPare3.Text" xml:space="preserve">
-    <value>通道3比对</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare3.Name" xml:space="preserve">
-    <value>checkBox_ComPare3</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare3.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="checkBox_ComPare6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_ComPare6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox_ComPare6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 141</value>
-  </data>
-  <data name="checkBox_ComPare6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 18</value>
-  </data>
-  <data name="checkBox_ComPare6.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="checkBox_ComPare6.Text" xml:space="preserve">
-    <value>通道6比对</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare6.Name" xml:space="preserve">
-    <value>checkBox_ComPare6</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare6.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare6.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="checkBox_ComPare4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_ComPare4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox_ComPare4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 93</value>
-  </data>
-  <data name="checkBox_ComPare4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 18</value>
-  </data>
-  <data name="checkBox_ComPare4.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="checkBox_ComPare4.Text" xml:space="preserve">
-    <value>通道4比对</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare4.Name" xml:space="preserve">
-    <value>checkBox_ComPare4</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare4.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare4.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="checkBox_ComPare5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_ComPare5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox_ComPare5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 117</value>
-  </data>
-  <data name="checkBox_ComPare5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 18</value>
-  </data>
-  <data name="checkBox_ComPare5.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="checkBox_ComPare5.Text" xml:space="preserve">
-    <value>通道5比对</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare5.Name" xml:space="preserve">
-    <value>checkBox_ComPare5</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare5.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;checkBox_ComPare5.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 422</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>选择</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>controlContainer4</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dataGridView_LVDS.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+    <value>1405, 849</value>
   </data>
   <metadata name="Column13.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2821,17 +2554,38 @@
   <data name="Column14.HeaderText" xml:space="preserve">
     <value>通道名称</value>
   </data>
-  <data name="Column14.Width" type="System.Int32, mscorlib">
-    <value>200</value>
+  <metadata name="Column26.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column26.HeaderText" xml:space="preserve">
+    <value>实时/延时</value>
+  </data>
+  <data name="Column26.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="Column24.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column24.HeaderText" xml:space="preserve">
+    <value>VCID</value>
+  </data>
+  <data name="Column24.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="Column25.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column25.HeaderText" xml:space="preserve">
+    <value>帧计数</value>
+  </data>
+  <data name="Column25.Width" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
   <metadata name="Column15.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Column15.HeaderText" xml:space="preserve">
     <value>收到数据(KB)</value>
-  </data>
-  <data name="Column15.Width" type="System.Int32, mscorlib">
-    <value>120</value>
   </data>
   <metadata name="Column16.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2860,32 +2614,302 @@
   <data name="Column18.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
-  <data name="dataGridView_LVDS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 0</value>
+  <data name="dataGridView_LVDS_01.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="dataGridView_LVDS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>603, 419</value>
+  <data name="dataGridView_LVDS_01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 0</value>
   </data>
-  <data name="dataGridView_LVDS.TabIndex" type="System.Int32, mscorlib">
+  <data name="dataGridView_LVDS_01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>827, 629</value>
+  </data>
+  <data name="dataGridView_LVDS_01.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="&gt;&gt;dataGridView_LVDS.Name" xml:space="preserve">
-    <value>dataGridView_LVDS</value>
+  <data name="&gt;&gt;dataGridView_LVDS_01.Name" xml:space="preserve">
+    <value>dataGridView_LVDS_01</value>
   </data>
-  <data name="&gt;&gt;dataGridView_LVDS.Type" xml:space="preserve">
+  <data name="&gt;&gt;dataGridView_LVDS_01.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridView_LVDS.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dataGridView_LVDS_01.Parent" xml:space="preserve">
     <value>controlContainer4</value>
   </data>
-  <data name="&gt;&gt;dataGridView_LVDS.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dataGridView_LVDS_01.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButton8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 239</value>
+  </data>
+  <data name="radioButton8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 18</value>
+  </data>
+  <data name="radioButton8.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="radioButton8.Text" xml:space="preserve">
+    <value>通道8比对</value>
+  </data>
+  <data name="&gt;&gt;radioButton8.Name" xml:space="preserve">
+    <value>radioButton8</value>
+  </data>
+  <data name="&gt;&gt;radioButton8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton8.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButton7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 209</value>
+  </data>
+  <data name="radioButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 18</value>
+  </data>
+  <data name="radioButton7.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="radioButton7.Text" xml:space="preserve">
+    <value>通道7比对</value>
+  </data>
+  <data name="&gt;&gt;radioButton7.Name" xml:space="preserve">
+    <value>radioButton7</value>
+  </data>
+  <data name="&gt;&gt;radioButton7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton7.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioButton6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 179</value>
+  </data>
+  <data name="radioButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 18</value>
+  </data>
+  <data name="radioButton6.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="radioButton6.Text" xml:space="preserve">
+    <value>通道6比对</value>
+  </data>
+  <data name="&gt;&gt;radioButton6.Name" xml:space="preserve">
+    <value>radioButton6</value>
+  </data>
+  <data name="&gt;&gt;radioButton6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton6.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radioButton5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 149</value>
+  </data>
+  <data name="radioButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 18</value>
+  </data>
+  <data name="radioButton5.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="radioButton5.Text" xml:space="preserve">
+    <value>通道5比对</value>
+  </data>
+  <data name="&gt;&gt;radioButton5.Name" xml:space="preserve">
+    <value>radioButton5</value>
+  </data>
+  <data name="&gt;&gt;radioButton5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton5.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radioButton4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 119</value>
+  </data>
+  <data name="radioButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 18</value>
+  </data>
+  <data name="radioButton4.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="radioButton4.Text" xml:space="preserve">
+    <value>通道4比对</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.Name" xml:space="preserve">
+    <value>radioButton4</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radioButton3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 89</value>
+  </data>
+  <data name="radioButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 18</value>
+  </data>
+  <data name="radioButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="radioButton3.Text" xml:space="preserve">
+    <value>通道3比对</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Name" xml:space="preserve">
+    <value>radioButton3</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 59</value>
+  </data>
+  <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 18</value>
+  </data>
+  <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="radioButton2.Text" xml:space="preserve">
+    <value>通道2比对</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Name" xml:space="preserve">
+    <value>radioButton2</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 29</value>
+  </data>
+  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 18</value>
+  </data>
+  <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="radioButton1.Text" xml:space="preserve">
+    <value>通道1比对</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Name" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 629</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>controlContainer4</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="controlContainer4.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
   </data>
   <data name="controlContainer4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 422</value>
+    <value>830, 629</value>
   </data>
   <data name="controlContainer4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2906,7 +2930,7 @@
     <value>464, 153</value>
   </data>
   <data name="dockPanel_LVDS_Compare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>723, 450</value>
+    <value>838, 657</value>
   </data>
   <data name="dockPanel_LVDS_Compare.Text" xml:space="preserve">
     <value>LVDS实时比对</value>
@@ -2922,48 +2946,6 @@
   </data>
   <data name="&gt;&gt;dockPanel_LVDS_Compare.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="dockPanel1_Container.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="dockPanel1_Container.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 187</value>
-  </data>
-  <data name="dockPanel1_Container.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.Name" xml:space="preserve">
-    <value>dockPanel1_Container</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.Parent" xml:space="preserve">
-    <value>dockPanel_LOG</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dockPanel_LOG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>464, 603</value>
-  </data>
-  <data name="dockPanel_LOG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>723, 215</value>
-  </data>
-  <data name="dockPanel_LOG.Text" xml:space="preserve">
-    <value>日志</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.Name" xml:space="preserve">
-    <value>dockPanel_LOG</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="tableLayoutPanel6.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
@@ -5996,6 +5978,48 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dockPanel_BoxLVDS_A.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dockPanel1_Container.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 23</value>
+  </data>
+  <data name="dockPanel1_Container.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 638</value>
+  </data>
+  <data name="dockPanel1_Container.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dockPanel1_Container.Name" xml:space="preserve">
+    <value>dockPanel1_Container</value>
+  </data>
+  <data name="&gt;&gt;dockPanel1_Container.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dockPanel1_Container.Parent" xml:space="preserve">
+    <value>dockPanel_LOG</value>
+  </data>
+  <data name="&gt;&gt;dockPanel1_Container.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dockPanel_LOG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1302, 153</value>
+  </data>
+  <data name="dockPanel_LOG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 665</value>
+  </data>
+  <data name="dockPanel_LOG.Text" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_LOG.Name" xml:space="preserve">
+    <value>dockPanel_LOG</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_LOG.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_LOG.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_LOG.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="tableLayoutPanel3.ColumnCount" type="System.Int32, mscorlib">
@@ -6032,7 +6056,7 @@
     <value>3, 3</value>
   </data>
   <data name="dataGridView_DA1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>573, 166</value>
+    <value>682, 166</value>
   </data>
   <data name="dataGridView_DA1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6077,10 +6101,10 @@
     <value>Fill</value>
   </data>
   <data name="dataGridView_DA2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 3</value>
+    <value>691, 3</value>
   </data>
   <data name="dataGridView_DA2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>574, 166</value>
+    <value>683, 166</value>
   </data>
   <data name="dataGridView_DA2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6107,7 +6131,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1159, 172</value>
+    <value>1377, 172</value>
   </data>
   <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6131,7 +6155,7 @@
     <value>4, 23</value>
   </data>
   <data name="controlContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1159, 172</value>
+    <value>1377, 172</value>
   </data>
   <data name="controlContainer2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6152,7 +6176,7 @@
     <value>0, 0</value>
   </data>
   <data name="dockPanel_DA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1167, 200</value>
+    <value>1385, 200</value>
   </data>
   <data name="dockPanel_DA.Text" xml:space="preserve">
     <value>DA功能区</value>
@@ -6200,7 +6224,7 @@
     <value>0, 0</value>
   </data>
   <data name="dataGridView_AD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1159, 336</value>
+    <value>1377, 336</value>
   </data>
   <data name="dataGridView_AD.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -6221,7 +6245,7 @@
     <value>4, 23</value>
   </data>
   <data name="dockPanel5_Container.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1159, 336</value>
+    <value>1377, 336</value>
   </data>
   <data name="dockPanel5_Container.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6242,7 +6266,7 @@
     <value>0, 0</value>
   </data>
   <data name="dockPanel_AD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1167, 364</value>
+    <value>1385, 364</value>
   </data>
   <data name="dockPanel_AD.Text" xml:space="preserve">
     <value>AD功能区</value>
@@ -6302,7 +6326,7 @@
     <value>3, 3</value>
   </data>
   <data name="dataGridView_OC_In1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 166</value>
+    <value>452, 166</value>
   </data>
   <data name="dataGridView_OC_In1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6356,10 +6380,10 @@
     <value>Fill</value>
   </data>
   <data name="dataGridView_OC_In2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 3</value>
+    <value>461, 3</value>
   </data>
   <data name="dataGridView_OC_In2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>381, 166</value>
+    <value>453, 166</value>
   </data>
   <data name="dataGridView_OC_In2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6413,10 +6437,10 @@
     <value>Fill</value>
   </data>
   <data name="dataGridView_OC_In3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>775, 3</value>
+    <value>920, 3</value>
   </data>
   <data name="dataGridView_OC_In3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>381, 166</value>
+    <value>454, 166</value>
   </data>
   <data name="dataGridView_OC_In3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6443,7 +6467,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1159, 172</value>
+    <value>1377, 172</value>
   </data>
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6467,7 +6491,7 @@
     <value>4, 23</value>
   </data>
   <data name="controlContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1159, 172</value>
+    <value>1377, 172</value>
   </data>
   <data name="controlContainer3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6488,7 +6512,7 @@
     <value>0, 0</value>
   </data>
   <data name="dockPanel_OC_In.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1167, 200</value>
+    <value>1385, 200</value>
   </data>
   <data name="dockPanel_OC_In.Text" xml:space="preserve">
     <value>OC采集</value>
@@ -6584,7 +6608,7 @@
     <value>0</value>
   </data>
   <data name="dockPanel_OC_Out.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, -288</value>
   </data>
   <data name="dockPanel_OC_Out.Size" type="System.Drawing.Size, System.Drawing">
     <value>1167, 288</value>
@@ -6611,7 +6635,7 @@
     <value>20, 133</value>
   </data>
   <data name="hideContainerTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1167, 20</value>
+    <value>1385, 20</value>
   </data>
   <data name="&gt;&gt;hideContainerTop.Name" xml:space="preserve">
     <value>hideContainerTop</value>
@@ -8582,6 +8606,24 @@
     <value>Column14</value>
   </data>
   <data name="&gt;&gt;Column14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column26.Name" xml:space="preserve">
+    <value>Column26</value>
+  </data>
+  <data name="&gt;&gt;Column26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column24.Name" xml:space="preserve">
+    <value>Column24</value>
+  </data>
+  <data name="&gt;&gt;Column24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column25.Name" xml:space="preserve">
+    <value>Column25</value>
+  </data>
+  <data name="&gt;&gt;Column25.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Column15.Name" xml:space="preserve">

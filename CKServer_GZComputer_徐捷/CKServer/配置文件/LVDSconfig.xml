@@ -1,20 +1,156 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration>
-  <add key="LVDS_Channel_0" value="1" name="数管A机发送数传终端机A"/>
-  <add key="LVDS_Channel_1" value="1" name="数管A机发送数传终端机B" />
-  <add key="LVDS_Channel_2" value="1" name="A机LVDS发送3" />
-  <add key="LVDS_Channel_3" value="1" name="A机LVDS发送4" />
-  <add key="LVDS_Channel_4" value="1" name="数管B机发送数传终端机A"/>
-  <add key="LVDS_Channel_5" value="1" name="数管B机发送数传终端机B" />
-  <add key="LVDS_Channel_6" value="1" name="B机LVDS发送3" />
-  <add key="LVDS_Channel_7" value="1" name="B机LVDS发送4" />
+  <LVDS_Channel_0 key="VCID_Channel_1" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="000001"/>
+  <LVDS_Channel_0 key="VCID_Channel_2" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="000010"/>
+  <LVDS_Channel_0 key="VCID_Channel_3" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="000011"/>
+  <LVDS_Channel_0 key="VCID_Channel_4" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="000100"/>
+  <LVDS_Channel_0 key="VCID_Channel_5" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="000101"/>
+  <LVDS_Channel_0 key="VCID_Channel_6" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="000110"/>
+  <LVDS_Channel_0 key="VCID_Channel_7" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="000111"/>
+  <LVDS_Channel_0 key="VCID_Channel_8" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="001000"/>
+  <LVDS_Channel_0 key="VCID_Channel_9" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="001001"/>
+  <LVDS_Channel_0 key="VCID_Channel_10" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="001010"/>
+  <LVDS_Channel_0 key="VCID_Channel_11" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="001011"/>
+  <LVDS_Channel_0 key="VCID_Channel_12" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="001100"/>
+  <LVDS_Channel_0 key="VCID_Channel_13" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="001101"/>
+  <LVDS_Channel_0 key="VCID_Channel_14" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="001110"/>
+  <LVDS_Channel_0 key="VCID_Channel_15" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="001111"/>
+  <LVDS_Channel_0 key="VCID_Channel_16" CPLen = "20" name="数管A机发送数传终端机A" vcidName ="undefined" vcid ="010000"/>
 
-  <add key ="LVDS_CompareLen_Chan_1" value="40" compare ="False"></add>
-  <add key ="LVDS_CompareLen_Chan_2" value="20" compare ="False"></add>
-  <add key ="LVDS_CompareLen_Chan_3" value="20" compare ="False"></add>
-  <add key ="LVDS_CompareLen_Chan_4" value="20" compare ="False"></add>
-  <add key ="LVDS_CompareLen_Chan_5" value="20" compare ="False"></add>
-  <add key ="LVDS_CompareLen_Chan_6" value="20" compare ="False"></add>
-  <add key ="LVDS_CompareLen_Chan_7" value="20" compare ="False"></add>
-  <add key ="LVDS_CompareLen_Chan_8" value="80" compare ="False"></add>
+  <LVDS_Channel_1 key="VCID_Channel_1" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="000001"/>
+  <LVDS_Channel_1 key="VCID_Channel_2" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="000010"/>
+  <LVDS_Channel_1 key="VCID_Channel_3" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="000011"/>
+  <LVDS_Channel_1 key="VCID_Channel_4" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="000100"/>
+  <LVDS_Channel_1 key="VCID_Channel_5" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="000101"/>
+  <LVDS_Channel_1 key="VCID_Channel_6" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="000110"/>
+  <LVDS_Channel_1 key="VCID_Channel_7" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="000111"/>
+  <LVDS_Channel_1 key="VCID_Channel_8" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="001000"/>
+  <LVDS_Channel_1 key="VCID_Channel_9" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="001001"/>
+  <LVDS_Channel_1 key="VCID_Channel_10" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="001010"/>
+  <LVDS_Channel_1 key="VCID_Channel_11" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="001011"/>
+  <LVDS_Channel_1 key="VCID_Channel_12" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="001100"/>
+  <LVDS_Channel_1 key="VCID_Channel_13" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="001101"/>
+  <LVDS_Channel_1 key="VCID_Channel_14" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="001110"/>
+  <LVDS_Channel_1 key="VCID_Channel_15" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="001111"/>
+  <LVDS_Channel_1 key="VCID_Channel_16" CPLen = "20" name="数管A机发送数传终端机B" vcidName ="undefined" vcid ="010000"/>
+
+  <LVDS_Channel_2 key="VCID_Channel_1" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="000001"/>
+  <LVDS_Channel_2 key="VCID_Channel_2" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="000010"/>
+  <LVDS_Channel_2 key="VCID_Channel_3" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="000011"/>
+  <LVDS_Channel_2 key="VCID_Channel_4" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="000100"/>
+  <LVDS_Channel_2 key="VCID_Channel_5" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="000101"/>
+  <LVDS_Channel_2 key="VCID_Channel_6" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="000110"/>
+  <LVDS_Channel_2 key="VCID_Channel_7" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="000111"/>
+  <LVDS_Channel_2 key="VCID_Channel_8" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="001000"/>
+  <LVDS_Channel_2 key="VCID_Channel_9" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="001001"/>
+  <LVDS_Channel_2 key="VCID_Channel_10" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="001010"/>
+  <LVDS_Channel_2 key="VCID_Channel_11" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="001011"/>
+  <LVDS_Channel_2 key="VCID_Channel_12" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="001100"/>
+  <LVDS_Channel_2 key="VCID_Channel_13" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="001101"/>
+  <LVDS_Channel_2 key="VCID_Channel_14" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="001110"/>
+  <LVDS_Channel_2 key="VCID_Channel_15" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="001111"/>
+  <LVDS_Channel_2 key="VCID_Channel_16" CPLen = "20" name="A机LVDS发送3" vcidName ="undefined" vcid ="010000"/>
+
+  <LVDS_Channel_3 key="VCID_Channel_1" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="000001"/>
+  <LVDS_Channel_3 key="VCID_Channel_2" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="000010"/>
+  <LVDS_Channel_3 key="VCID_Channel_3" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="000011"/>
+  <LVDS_Channel_3 key="VCID_Channel_4" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="000100"/>
+  <LVDS_Channel_3 key="VCID_Channel_5" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="000101"/>
+  <LVDS_Channel_3 key="VCID_Channel_6" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="000110"/>
+  <LVDS_Channel_3 key="VCID_Channel_7" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="000111"/>
+  <LVDS_Channel_3 key="VCID_Channel_8" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="001000"/>
+  <LVDS_Channel_3 key="VCID_Channel_9" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="001001"/>
+  <LVDS_Channel_3 key="VCID_Channel_10" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="001010"/>
+  <LVDS_Channel_3 key="VCID_Channel_11" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="001011"/>
+  <LVDS_Channel_3 key="VCID_Channel_12" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="001100"/>
+  <LVDS_Channel_3 key="VCID_Channel_13" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="001101"/>
+  <LVDS_Channel_3 key="VCID_Channel_14" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="001110"/>
+  <LVDS_Channel_3 key="VCID_Channel_15" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="001111"/>
+  <LVDS_Channel_3 key="VCID_Channel_16" CPLen = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="010000"/>
+
+  <LVDS_Channel_4 key="VCID_Channel_1" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000001"/>
+  <LVDS_Channel_4 key="VCID_Channel_2" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000010"/>
+  <LVDS_Channel_4 key="VCID_Channel_3" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000011"/>
+  <LVDS_Channel_4 key="VCID_Channel_4" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000100"/>
+  <LVDS_Channel_4 key="VCID_Channel_5" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000101"/>
+  <LVDS_Channel_4 key="VCID_Channel_6" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000110"/>
+  <LVDS_Channel_4 key="VCID_Channel_7" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000111"/>
+  <LVDS_Channel_4 key="VCID_Channel_8" CPLen = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001000"/>
+  <LVDS_Channel_4 key="VCID_Channel_9" CPLen = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001001"/>
+  <LVDS_Channel_4 key="VCID_Channel_10" CPLen = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001010"/>
+  <LVDS_Channel_4 key="VCID_Channel_11" CPLen = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001011"/>
+  <LVDS_Channel_4 key="VCID_Channel_12" CPLen = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001100"/>
+  <LVDS_Channel_4 key="VCID_Channel_13" CPLen = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001101"/>
+  <LVDS_Channel_4 key="VCID_Channel_14" CPLen = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001110"/>
+  <LVDS_Channel_4 key="VCID_Channel_15" CPLen = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001111"/>
+  <LVDS_Channel_4 key="VCID_Channel_16" CPLen = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="010000"/>
+
+  <LVDS_Channel_5 key="VCID_Channel_1" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="000001"/>
+  <LVDS_Channel_5 key="VCID_Channel_2" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="000010"/>
+  <LVDS_Channel_5 key="VCID_Channel_3" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="000011"/>
+  <LVDS_Channel_5 key="VCID_Channel_4" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="000100"/>
+  <LVDS_Channel_5 key="VCID_Channel_5" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="000101"/>
+  <LVDS_Channel_5 key="VCID_Channel_6" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="000110"/>
+  <LVDS_Channel_5 key="VCID_Channel_7" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="000111"/>
+  <LVDS_Channel_5 key="VCID_Channel_8" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="001000"/>
+  <LVDS_Channel_5 key="VCID_Channel_9" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="001001"/>
+  <LVDS_Channel_5 key="VCID_Channel_10" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="001010"/>
+  <LVDS_Channel_5 key="VCID_Channel_11" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="001011"/>
+  <LVDS_Channel_5 key="VCID_Channel_12" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="001100"/>
+  <LVDS_Channel_5 key="VCID_Channel_13" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="001101"/>
+  <LVDS_Channel_5 key="VCID_Channel_14" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="001110"/>
+  <LVDS_Channel_5 key="VCID_Channel_15" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="001111"/>
+  <LVDS_Channel_5 key="VCID_Channel_16" CPLen = "20" name="数管B机发送数传终端机B" vcidName ="undefined" vcid ="010000"/>
+
+  <LVDS_Channel_6 key="VCID_Channel_1" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="000001"/>
+  <LVDS_Channel_6 key="VCID_Channel_2" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="000010"/>
+  <LVDS_Channel_6 key="VCID_Channel_3" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="000011"/>
+  <LVDS_Channel_6 key="VCID_Channel_4" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="000100"/>
+  <LVDS_Channel_6 key="VCID_Channel_5" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="000101"/>
+  <LVDS_Channel_6 key="VCID_Channel_6" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="000110"/>
+  <LVDS_Channel_6 key="VCID_Channel_7" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="000111"/>
+  <LVDS_Channel_6 key="VCID_Channel_8" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="001000"/>
+  <LVDS_Channel_6 key="VCID_Channel_9" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="001001"/>
+  <LVDS_Channel_6 key="VCID_Channel_10" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="001010"/>
+  <LVDS_Channel_6 key="VCID_Channel_11" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="001011"/>
+  <LVDS_Channel_6 key="VCID_Channel_12" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="001100"/>
+  <LVDS_Channel_6 key="VCID_Channel_13" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="001101"/>
+  <LVDS_Channel_6 key="VCID_Channel_14" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="001110"/>
+  <LVDS_Channel_6 key="VCID_Channel_15" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="001111"/>
+  <LVDS_Channel_6 key="VCID_Channel_16" CPLen = "20" name="B机LVDS发送3" vcidName ="undefined" vcid ="010000"/>
+
+  <LVDS_Channel_7 key="VCID_Channel_1" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="000001"/>
+  <LVDS_Channel_7 key="VCID_Channel_2" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="000010"/>
+  <LVDS_Channel_7 key="VCID_Channel_3" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="000011"/>
+  <LVDS_Channel_7 key="VCID_Channel_4" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="000100"/>
+  <LVDS_Channel_7 key="VCID_Channel_5" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="000101"/>
+  <LVDS_Channel_7 key="VCID_Channel_6" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="000110"/>
+  <LVDS_Channel_7 key="VCID_Channel_7" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="000111"/>
+  <LVDS_Channel_7 key="VCID_Channel_8" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="001000"/>
+  <LVDS_Channel_7 key="VCID_Channel_9" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="001001"/>
+  <LVDS_Channel_7 key="VCID_Channel_10" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="001010"/>
+  <LVDS_Channel_7 key="VCID_Channel_11" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="001011"/>
+  <LVDS_Channel_7 key="VCID_Channel_12" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="001100"/>
+  <LVDS_Channel_7 key="VCID_Channel_13" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="001101"/>
+  <LVDS_Channel_7 key="VCID_Channel_14" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="001110"/>
+  <LVDS_Channel_7 key="VCID_Channel_15" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="001111"/>
+  <LVDS_Channel_7 key="VCID_Channel_16" CPLen = "20" name="B机LVDS发送4" vcidName ="undefined" vcid ="010000"/>
+  
+
+  <add key ="LVDS_CompareLen_Chan_1" CPLen="40" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_2" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_3" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_4" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_5" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_6" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_7" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_8" CPLen="80" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_9" CPLen="40" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_10" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_11" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_12" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_13" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_14" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_15" CPLen="20" compare ="False"></add>
+  <add key ="LVDS_CompareLen_Chan_16" CPLen="80" compare ="False"></add>
 </configuration>

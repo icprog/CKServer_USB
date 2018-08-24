@@ -124,6 +124,7 @@ namespace CKServer
         public static string OCconfigPath = Program.GetStartupPath() + @"配置文件\OCconfig.xml";
         public static string LVDSconfigPath = Program.GetStartupPath() + @"配置文件\LVDSconfig.xml";
         public static string RS422configPath = Program.GetStartupPath() + @"配置文件\RS422config.xml";
+        public static string SaveFileconfigPath = Program.GetStartupPath() + @"配置文件\SaveFileconfig.xml";
 
         public static void SaveConfig(string Path,string key ,string value)
         {

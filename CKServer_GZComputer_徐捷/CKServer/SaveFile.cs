@@ -274,60 +274,74 @@ namespace CKServer
 
             FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\源码\", out file_SC20);
 
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D00_数管发送GNC计算机\", out file_SC21);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D01_数管发送GNC执行机1\", out file_SC22);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D02_数管发送GNC执行机2\", out file_SC23);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D03_数管发送推进线路盒1\", out file_SC24);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D04_数管发送推进线路盒2\", out file_SC25);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D05_数管发送测控终端A机\", out file_SC26);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D06_数管发送测控终端B机\", out file_SC27);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D07_数管发送综合驱动控制器 \", out file_SC28);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D08_数管发送空空通信机\", out file_SC29);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D09_RS422发10\", out file_SC30);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0A_RS422发11\", out file_SC31);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0B_数管发送指令下行\", out file_SC32);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0C_RS422发16\", out file_SC33);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0D_RS422发19\", out file_SC34);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF05\1D0E_RS422发20\", out file_SC35);
+            //尚未Test
+            //if (Convert.ToBoolean(Function.GetConfigStr(Data.SaveFileconfigPath, "add", "RS422通道1", "used")))
+            //    FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\" + "通道1_" + Function.GetConfigStr(Data.SaveFileconfigPath, "add", "RS422通道1", "name") + @"\", out file_SC21);
 
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D00_数管发送综合控制单元\", out file_SC36);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D01_RS422发22\", out file_SC37);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D02_RS422发23\", out file_SC38);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D03_RS422发24\", out file_SC39);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D04_RS422发25\", out file_SC40);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D05_RS422发26\", out file_SC41);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D06_RS422发27\", out file_SC42);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D07_RS422发28\", out file_SC43);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D08_RS422发29\", out file_SC44);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D09_RS422发30\", out file_SC45);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0A_RS422发31\", out file_SC46);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0B_RS422发32\", out file_SC47);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0C\", out file_SC48);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0D\", out file_SC49);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF06\1D0E\", out file_SC50);
 
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D00\", out file_SC51);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D01\", out file_SC52);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D02\", out file_SC53);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D03\", out file_SC54);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D04\", out file_SC55);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D05\", out file_SC56);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D06\", out file_SC57);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D07\", out file_SC58);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D08\", out file_SC59);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D09\", out file_SC60);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D0A\", out file_SC61);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D0B\", out file_SC62);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D0C\", out file_SC63);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D0D\", out file_SC64);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF07\1D0E\", out file_SC65);
 
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D00\", out file_SC66);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D01\", out file_SC67);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D02\", out file_SC68);
+            //if (Convert.ToBoolean(Function.GetConfigStr(Data.SaveFileconfigPath, "add", "RS422通道1", "used")))
+            //    FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\" + "通道1_" + Function.GetConfigStr(Data.SaveFileconfigPath, "add", "RS422通道1", "name") + @"\", out file_SC21);
+            //if (Convert.ToBoolean(Function.GetConfigStr(Data.SaveFileconfigPath, "add", "RS422通道2", "used")))
+            //    FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\" + "通道2_" + Function.GetConfigStr(Data.SaveFileconfigPath, "add", "RS422通道2", "name") + @"\", out file_SC22);
+            //if (Convert.ToBoolean(Function.GetConfigStr(Data.SaveFileconfigPath, "add", "RS422通道3", "used")))
+            //    FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\" + "通道3_" + Function.GetConfigStr(Data.SaveFileconfigPath, "add", "RS422通道3", "name") + @"\", out file_SC23);
 
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D03_数管接收测试终端A机上行\", out file_SC69);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\FF08\1D04_数管接收测试终端A机下行\", out file_SC70);
+
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道1_数管发送GNC计算机\", out file_SC21);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道2_数管发送GNC执行机1\", out file_SC22);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道3_数管发送GNC执行机2\", out file_SC23);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道4_数管发送推进线路盒1\", out file_SC24);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道5_数管发送推进线路盒2\", out file_SC25);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道6_数管发送测控终端A机\", out file_SC26);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道7_数管发送测控终端B机\", out file_SC27);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道8_数管发送综合驱动控制器 \", out file_SC28);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道9_数管发送空空通信机\", out file_SC29);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道10_RS422发10\", out file_SC30);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道11_RS422发11\", out file_SC31);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道12_数管发送指令下行\", out file_SC32);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道13_RS422发16\", out file_SC33);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道14_RS422发19\", out file_SC34);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道15_RS422发20\", out file_SC35);
+
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道16_数管发送综合控制单元\", out file_SC36);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道17_RS422发22\", out file_SC37);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道18_RS422发23\", out file_SC38);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道19_RS422发24\", out file_SC39);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道20_RS422发25\", out file_SC40);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道21_RS422发26\", out file_SC41);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道22_RS422发27\", out file_SC42);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道23_RS422发28\", out file_SC43);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道24_RS422发29\", out file_SC44);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道25_RS422发30\", out file_SC45);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道26_RS422发31\", out file_SC46);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道27_RS422发32\", out file_SC47);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道28_保留\", out file_SC48);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道29_保留\", out file_SC49);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道30_保留\", out file_SC50);
+
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道31_保留\", out file_SC51);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道32_保留\", out file_SC52);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道33_保留\", out file_SC53);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道34_保留\", out file_SC54);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道35_保留\", out file_SC55);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道36_保留\", out file_SC56);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道37_保留\", out file_SC57);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道38_保留\", out file_SC58);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道39_保留\", out file_SC59);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道40_保留\", out file_SC60);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道41_保留\", out file_SC61);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道42_保留\", out file_SC62);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道43_保留\", out file_SC63);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道44_保留\", out file_SC64);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道45_保留\", out file_SC65);
+
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道46_保留\", out file_SC66);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道47_保留\", out file_SC67);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道48_保留\", out file_SC68);
+
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\同步下行通道1_数管接收测试终端A机上行\", out file_SC69);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\同步下行通道2_数管接收测试终端A机下行\", out file_SC70);
 
 
 
@@ -475,7 +489,8 @@ namespace CKServer
             myLock.Add(Lock_68);
             myLock.Add(Lock_69);
             myLock.Add(Lock_70);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道1\", out file_asyn1);
+
+            FileCreateTxt(Program.GetStartupPath() + @"ErrorLog\", out file_asyn1);
             //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道2\", out file_asyn2);
             //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道3\", out file_asyn3);
             //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道4\", out file_asyn4);
@@ -488,7 +503,7 @@ namespace CKServer
             //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道GNC1\", out file_asyn11);
             //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道GNC2\", out file_asyn12);
 
-            //DataQueue_asynList.Add(DataQueue_asyn_1);
+            DataQueue_asynList.Add(DataQueue_asyn_1);
             //DataQueue_asynList.Add(DataQueue_asyn_2);
             //DataQueue_asynList.Add(DataQueue_asyn_3);
             //DataQueue_asynList.Add(DataQueue_asyn_4);
@@ -632,7 +647,7 @@ namespace CKServer
             new Thread(() => { WriteToFileSC(68, file_SC69, ref DataQueue_SC69, ref Lock_69); }).Start();
             new Thread(() => { WriteToFileSC(69, file_SC70, ref DataQueue_SC70, ref Lock_70); }).Start();
 
-            //new Thread(() => { WriteToFileAsynC(1, file_asyn1, ref DataQueue_asyn_1, ref Lock_asyn_1); }).Start();
+            new Thread(() => { WriteToFileAsynC(0, file_asyn1, ref DataQueue_asyn_1, ref Lock_asyn_1); }).Start();
             //new Thread(() => { WriteToFileAsynC(2, file_asyn2, ref DataQueue_asyn_2, ref Lock_asyn_2); }).Start();
             //new Thread(() => { WriteToFileAsynC(3, file_asyn3, ref DataQueue_asyn_3, ref Lock_asyn_3); }).Start();
             //new Thread(() => { WriteToFileAsynC(4, file_asyn4, ref DataQueue_asyn_4, ref Lock_asyn_4); }).Start();
@@ -673,6 +688,7 @@ namespace CKServer
         private void WriteToFileSC(int key, object file, ref Queue<byte[]> myQueue, ref ReaderWriterLockSlim myLock)
         {
             Trace.WriteLine("Start WriteToFileSC Thread:" + key.ToString());
+
             FileStream myfile = (FileStream)file;
             BinaryWriter bw = new BinaryWriter(myfile);
             //     FileInfo fileInfo;
@@ -749,6 +765,7 @@ namespace CKServer
                     {
                         myLock.EnterReadLock();
                         bw.Write(myQueue.Dequeue());
+                        bw.Write("\r\n");
                         bw.Flush();
                         myLock.ExitReadLock();
 
@@ -756,24 +773,26 @@ namespace CKServer
                         long FileSizeMB = myfile.Length / (1024 * 1024);
                         if (FileSizeMB > 10)
                         {
-                            myFileList_txt[key].Flush();
+                            MessageBox.Show("错误日志已超过10MB，请查看错误。");
 
-                            string Path2 = myFileList_txt[key].Name;
-                            int count = Path2.LastIndexOf("\\");
-                            Path2 = Path2.Substring(0, count + 1);
+                            //myFileList_txt[key].Flush();
 
-                            myFileList_txt[key].Close();
+                            //string Path2 = myFileList_txt[key].Name;
+                            //int count = Path2.LastIndexOf("\\");
+                            //Path2 = Path2.Substring(0, count + 1);
 
-                            FileStream newFile;
-                            string timestr = string.Format("{0}-{1:D2}-{2:D2} {3:D2}：{4:D2}：{5:D2}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
-                            string filename = Path2 + timestr + ".txt";
-                            newFile = new FileStream(filename, FileMode.Create);
+                            //myFileList_txt[key].Close();
 
-                            myFileList_txt.Remove(myFileList_txt[key]);
-                            myFileList_txt.Insert(key, newFile);
+                            //FileStream newFile;
+                            //string timestr = string.Format("{0}-{1:D2}-{2:D2} {3:D2}：{4:D2}：{5:D2}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+                            //string filename = Path2 + timestr + ".txt";
+                            //newFile = new FileStream(filename, FileMode.Create);
+
+                            //myFileList_txt.Remove(myFileList_txt[key]);
+                            //myFileList_txt.Insert(key, newFile);
 
                             break;
-                            //break跳出循环会执行新线程
+                            ////break跳出循环会执行新线程
                         }
                         #endregion
                     }
@@ -791,10 +810,10 @@ namespace CKServer
                     //                  Trace.WriteLine("Queue0 is empty!!");
                 }
             }
-            bw.Close();
-            Trace.WriteLine("Leaving WriteToFileAsync:" + key.ToString());
 
-            if (SaveOn) WriteToFileAsynC(key, myFileList_txt[key], ref myQueue, ref myLock);
+            Trace.WriteLine("Leaving WriteToFileAsync:" + key.ToString());
+            //bw.Close();                        
+            //if (SaveOn) WriteToFileAsynC(key, myFileList_txt[key], ref myQueue, ref myLock);
 
         }
     }
