@@ -340,8 +340,8 @@ namespace CKServer
             FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道47_保留\", out file_SC67);
             FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\通道48_保留\", out file_SC68);
 
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\同步下行通道1_数管接收测试终端A机上行\", out file_SC69);
-            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\同步下行通道2_数管接收测试终端A机下行\", out file_SC70);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\同步下行通道1_终端A机下行\", out file_SC69);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\RS422机箱数据\同步下行通道2_终端B机下行\", out file_SC70);
 
 
 

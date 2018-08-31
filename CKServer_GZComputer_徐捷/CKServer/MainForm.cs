@@ -45,7 +45,13 @@ namespace CKServer
         */
         void UsbDevices_DeviceRemoved(object sender, EventArgs e)
         {
+            USBEventArgs evt = (USBEventArgs)e;
+            USBDevice RemoveDevice = evt.Device;
+            string RemovedDeviceName = evt.FriendlyName;
+            MyLog.Error(RemovedDeviceName + "板卡断开");
 
+            int key = int.Parse(evt.ProductID.ToString("x4").Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+            USB.MyDeviceList[key] = null;
         }
 
         /*Summary
@@ -191,6 +197,48 @@ namespace CKServer
                         item.Checked = false;
                     }
                 }
+
+                int temp = int.Parse(ConfigurationManager.AppSettings["LVDS_ComPareChan"]);
+                switch(temp)
+                {
+                    case 0:
+                        radioButton1.Checked = true;
+                        radioButton8_Click(radioButton1, e);
+                        break;
+                    case 1:
+                        radioButton2.Checked = true;
+                        radioButton8_Click(radioButton2, e);
+                        break;
+                    case 2:
+                        radioButton3.Checked = true;
+                        radioButton8_Click(radioButton3, e);
+                        break;
+                    case 3:
+                        radioButton4.Checked = true;
+                        radioButton8_Click(radioButton4, e);
+                        break;
+                    case 4:
+                        radioButton5.Checked = true;
+                        radioButton8_Click(radioButton5, e);
+                        break;
+                    case 5:
+                        radioButton6.Checked = true;
+                        radioButton8_Click(radioButton6, e);
+                        break;
+                    case 6:
+                        radioButton7.Checked = true;
+                        radioButton8_Click(radioButton7, e);
+                        break;
+                    case 7:
+                        radioButton8.Checked = true;
+                        radioButton8_Click(radioButton8, e);
+                        break;
+                    default:
+                        radioButton1.Checked = true;
+                        radioButton8_Click(radioButton1, e);
+                        break;
+                }
+
 
             }
             catch (Exception ex)
@@ -2217,7 +2265,7 @@ namespace CKServer
 
             msgstr = "422通道" + (SendChan + 1).ToString();
 
-            ConfigPath = "PATH_422_DAT_" + SenderName.Substring(10).PadLeft(2, '0');//配置文件中存储
+            ConfigPath = "PATH_422_DAT_" + SenderName.Substring(15).PadLeft(2, '0');//配置文件中存储
 
             Trace.WriteLine(msgstr);
             Trace.WriteLine(ConfigPath);
@@ -2326,6 +2374,66 @@ namespace CKServer
             //}
         }
 
+        private void SetFreq()
+        {
+            int freq = 0;
+            string temp_freq = barEditItem_lvdsfreqset.EditValue.ToString();
+            int.TryParse(temp_freq, out freq);
+            if (freq >= 8 && freq <= 150)
+            {
+                int addon = 900 % freq;
+                int temp = 900 / freq;
+                if (addon != 0)
+                {
+                    double t = (double)(900 / (double)temp);
+                    barEditItem_lvdsfreqreal.EditValue = t.ToString("0.00");
+                }
+                else
+                {
+                    barEditItem_lvdsfreqreal.EditValue = freq.ToString("0.00");
+                }
+                USB.SendCMD(Data.LVDSid, 0x86, (byte)temp);//写入参数
+
+                Function.SetConfigValue("LVDS_Send_SetFreq", barEditItem_lvdsfreqset.EditValue.ToString());
+                Function.SetConfigValue("LVDS_Send_RealFreq", barEditItem_lvdsfreqreal.EditValue.ToString());
+            }
+            else
+            {
+                MessageBox.Show("输入10~150之间的数值！");
+            }
+
+            int freq422 = 0;
+            string temp_freq422 = barEditItem_422freqset.EditValue.ToString();
+            int.TryParse(temp_freq422, out freq422);
+
+            if (freq422 >= 0 && freq422 <= 30)
+            {
+                int addon422 = 900 % freq422;
+                int temp422 = 900 / freq422;
+                if (addon422 != 0)
+                {
+                    double t = (double)(900 / (double)temp422);
+
+                    barEditItem_422freqreal.EditValue = t.ToString("0.00");
+                }
+                else
+                {
+                    barEditItem_422freqreal.EditValue = freq422.ToString("0.00");
+                }
+                USB.SendCMD(Data.LVDSid, 0x87, (byte)temp422);//写入参数
+
+                Function.SetConfigValue("422_Send_SetFreq", barEditItem_422freqset.EditValue.ToString());
+                Function.SetConfigValue("422_Send_RealFreq", barEditItem_422freqreal.EditValue.ToString());
+            }
+            else
+            {
+                MessageBox.Show("输入0~30之间的数值！");
+            }
+
+            USB.SendCMD(Data.LVDSid, 0x8f, 0x01);//写入参数后，写寄存器使能
+            USB.SendCMD(Data.LVDSid, 0x8f, 0x00);
+        }
+
         private void barButton_lvdsfreqset_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int freq = 0;
@@ -2398,13 +2506,18 @@ namespace CKServer
 
         private void barButton_422Down_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
             if (barButton_422Down.Caption == "开始发送")
             {
+                checkBox1.Enabled = false;
                 barButton_422Down.Caption = "停止发送";
                 barButton_422Down.ImageOptions.LargeImage = CKServer.Properties.Resources.Stop_btn;
 
+                SetFreq();
+
                 byte FrameHeadLastByte = 0x10;
 
+                #region 422选中通道发送
                 foreach (var item in Channel_422Check)
                 {
                     if (item.Checked == true)
@@ -2478,11 +2591,16 @@ namespace CKServer
                     }
                     item.Enabled = false;
                 }
-                checkBox1.Enabled = false;
+#endregion
 
             }
             else
             {
+                checkBox1.Enabled = true;
+                barButton_422Down.Caption = "开始发送";
+                barButton_422Down.ImageOptions.LargeImage = CKServer.Properties.Resources.Start_btn;
+
+                #region 422选中通道禁止发送
                 foreach (var item in Channel_422Check)
                 {
                     if (item.Checked == true)
@@ -2499,11 +2617,7 @@ namespace CKServer
                     }
                     item.Enabled = true;
                 }
-                checkBox1.Enabled = true;
-
-                barButton_422Down.Caption = "开始发送";
-                barButton_422Down.ImageOptions.LargeImage = CKServer.Properties.Resources.Start_btn;
-
+                #endregion
             }
         }
 
@@ -2547,11 +2661,14 @@ namespace CKServer
         {
             if (barButton_LVDSDown.Caption == "开始发送")
             {
+                checkBox2.Enabled = false;//发送过程禁止选择
                 barButton_LVDSDown.Caption = "停止发送";
                 barButton_LVDSDown.ImageOptions.LargeImage = CKServer.Properties.Resources.Stop_btn;
 
-                byte FrameHeadLastByte = 0x00;
+                SetFreq();//设置频率
 
+                byte FrameHeadLastByte = 0x00;//设置LVDS发送通道1D00
+                #region LVDS选中通道发送
                 foreach (var item in Channel_LVDSCheck)
                 {
                     if (item.Checked == true)
@@ -2627,10 +2744,19 @@ namespace CKServer
 
                     item.Enabled = false;
                 }
-                checkBox2.Enabled = false;
+                #endregion 
+
+
+
+
             }
             else
             {
+                checkBox2.Enabled = true;
+                barButton_LVDSDown.Caption = "开始发送";
+                barButton_LVDSDown.ImageOptions.LargeImage = CKServer.Properties.Resources.Start_btn;
+
+                #region LVDS通道停止发送
                 foreach (var item in Channel_LVDSCheck)
                 {
                     if (item.Checked == true)
@@ -2642,14 +2768,15 @@ namespace CKServer
                         {
                             USB.SendCMD(Data.LVDSid, (byte)(0x83 + SendChan / 7), (byte)(0x1 << SendChan % 7));
                             USB.SendCMD(Data.LVDSid, (byte)(0x83 + SendChan / 7), 0x0);
-                        }
 
+                        }
                     }
                     item.Enabled = true;
                 }
-                checkBox2.Enabled = true;
-                barButton_LVDSDown.Caption = "开始发送";
-                barButton_LVDSDown.ImageOptions.LargeImage = CKServer.Properties.Resources.Start_btn;
+
+                #endregion
+
+
 
             }
         }
@@ -3432,11 +3559,17 @@ namespace CKServer
 
         private void radioButton8_Click(object sender, EventArgs e)
         {
+
+            
             RadioButton rdo = (RadioButton)sender;
             string Name = rdo.Name;
             int key = int.Parse(Name.Substring(11, 1)) - 1;
 
+            Trace.WriteLine(Name + "clicked!");
+
             Func_LVDS.LVDS_ComPare_Chan = key;
+
+            Function.SetConfigValue("LVDS_ComPareChan", key.ToString());
 
             for (int i = 0; i < 32; i++)
             {

@@ -39,6 +39,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -167,6 +175,7 @@
             this.barbtn_StartComP = new DevExpress.XtraBars.BarButtonItem();
             this.barbtn_setFrame = new DevExpress.XtraBars.BarButtonItem();
             this.barbtn_savFrame = new DevExpress.XtraBars.BarButtonItem();
+            this.CheckEnable_DY = new DevExpress.XtraBars.BarCheckItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -265,6 +274,21 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dockPanel4 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer7 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dockPanel_DY = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer6 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.panelContainer1 = new DevExpress.XtraBars.Docking.DockPanel();
@@ -332,6 +356,12 @@
             this.repositoryItemSpinEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
+            this.timer2_DYQuery = new System.Windows.Forms.Timer(this.components);
+            this.dockPanel7 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel7_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
@@ -383,6 +413,20 @@
             this.dockPanel_422_B.SuspendLayout();
             this.controlContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).BeginInit();
+            this.dockPanel4.SuspendLayout();
+            this.dockPanel_DY.SuspendLayout();
+            this.controlContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.dockPanel_LOG.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             this.panelContainer1.SuspendLayout();
@@ -507,9 +551,10 @@
             this.CheckEnable_LVDS_Recv,
             this.barbtn_StartComP,
             this.barbtn_setFrame,
-            this.barbtn_savFrame});
+            this.barbtn_savFrame,
+            this.CheckEnable_DY});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 174;
+            this.ribbonControl1.MaxItemId = 175;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1384,6 +1429,14 @@
             this.barbtn_savFrame.Name = "barbtn_savFrame";
             this.barbtn_savFrame.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtn_savFrame_ItemClick);
             // 
+            // CheckEnable_DY
+            // 
+            resources.ApplyResources(this.CheckEnable_DY, "CheckEnable_DY");
+            this.CheckEnable_DY.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.CheckEnable_DY.Id = 174;
+            this.CheckEnable_DY.Name = "CheckEnable_DY";
+            this.CheckEnable_DY.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_LVDS_CheckedChanged);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -1474,6 +1527,7 @@
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_422_A);
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_422_B);
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_ManualYK);
+            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_DY);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             resources.ApplyResources(this.ribbonPageGroup14, "ribbonPageGroup14");
             // 
@@ -1794,8 +1848,10 @@
             this.dockPanel2,
             this.dockPanel_RegCtl,
             this.dockPanel1,
-            this.dockPanel_422_B});
+            this.dockPanel_422_B,
+            this.dockPanel4});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
+            this.dockPanel_DY,
             this.dockPanel_LOG,
             this.panelContainer1,
             this.dockPanel_LVDS_Send,
@@ -2210,6 +2266,188 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
+            // dockPanel4
+            // 
+            this.dockPanel4.Controls.Add(this.controlContainer7);
+            this.dockPanel4.Dock = DevExpress.XtraBars.Docking.DockingStyle.Float;
+            this.dockPanel4.ID = new System.Guid("4f64b5d9-16d3-431e-a799-6c44fe2d2a44");
+            resources.ApplyResources(this.dockPanel4, "dockPanel4");
+            this.dockPanel4.Name = "dockPanel4";
+            this.dockPanel4.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanel4.SavedIndex = 5;
+            this.dockPanel4.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+            // 
+            // controlContainer7
+            // 
+            resources.ApplyResources(this.controlContainer7, "controlContainer7");
+            this.controlContainer7.Name = "controlContainer7";
+            // 
+            // dockPanel_DY
+            // 
+            this.dockPanel_DY.Controls.Add(this.controlContainer6);
+            this.dockPanel_DY.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
+            this.dockPanel_DY.FloatSize = new System.Drawing.Size(725, 327);
+            this.dockPanel_DY.FloatVertical = true;
+            this.dockPanel_DY.ID = new System.Guid("af875582-3434-40b9-81fd-bc05e36cee96");
+            resources.ApplyResources(this.dockPanel_DY, "dockPanel_DY");
+            this.dockPanel_DY.Name = "dockPanel_DY";
+            this.dockPanel_DY.OriginalSize = new System.Drawing.Size(273, 293);
+            // 
+            // controlContainer6
+            // 
+            this.controlContainer6.Controls.Add(this.chartControl2);
+            this.controlContainer6.Controls.Add(this.chartControl1);
+            this.controlContainer6.Controls.Add(this.label4);
+            this.controlContainer6.Controls.Add(this.label5);
+            this.controlContainer6.Controls.Add(this.label3);
+            this.controlContainer6.Controls.Add(this.pictureBox1);
+            this.controlContainer6.Controls.Add(this.numericUpDown2);
+            this.controlContainer6.Controls.Add(this.numericUpDown1);
+            this.controlContainer6.Controls.Add(this.button6);
+            this.controlContainer6.Controls.Add(this.button5);
+            this.controlContainer6.Controls.Add(this.button2);
+            resources.ApplyResources(this.controlContainer6, "controlContainer6");
+            this.controlContainer6.Name = "controlContainer6";
+            // 
+            // chartControl2
+            // 
+            this.chartControl2.DataBindings = null;
+            xyDiagram1.AxisX.DateTimeScaleOptions.AutoGrid = false;
+            xyDiagram1.AxisX.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Second;
+            xyDiagram1.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl2.Diagram = xyDiagram1;
+            this.chartControl2.Legend.Name = "Default Legend";
+            this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            resources.ApplyResources(this.chartControl2, "chartControl2");
+            this.chartControl2.Name = "chartControl2";
+            series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+            resources.ApplyResources(series1, "series1");
+            series1.View = lineSeriesView1;
+            this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            chartTitle1.Dock = DevExpress.XtraCharts.ChartTitleDockStyle.Left;
+            chartTitle1.Indent = 0;
+            resources.ApplyResources(chartTitle1, "chartTitle1");
+            this.chartControl2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle1});
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.AppearanceNameSerializable = "Gray";
+            this.chartControl1.DataBindings = null;
+            xyDiagram2.AxisX.DateTimeScaleOptions.AutoGrid = false;
+            xyDiagram2.AxisX.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Second;
+            xyDiagram2.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second;
+            xyDiagram2.AxisX.MinorCount = 1;
+            xyDiagram2.AxisX.Title.Text = resources.GetString("resource.Text");
+            xyDiagram2.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.Title.Text = resources.GetString("resource.Text1");
+            xyDiagram2.AxisY.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram2;
+            this.chartControl1.Legend.Border.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            resources.ApplyResources(this.chartControl1, "chartControl1");
+            this.chartControl1.Name = "chartControl1";
+            series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+            series2.LegendName = "Default Legend";
+            resources.ApplyResources(series2, "series2");
+            lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series2.View = lineSeriesView2;
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series2};
+            chartTitle2.Dock = DevExpress.XtraCharts.ChartTitleDockStyle.Left;
+            resources.ApplyResources(chartTitle2, "chartTitle2");
+            chartTitle2.Indent = 0;
+            chartTitle2.TextColor = System.Drawing.Color.Black;
+            chartTitle2.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle2});
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CKServer.Properties.Resources.red;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.DecimalPlaces = 2;
+            this.numericUpDown2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.DecimalPlaces = 2;
+            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            45,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Value = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            // 
+            // button6
+            // 
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            resources.ApplyResources(this.button5, "button5");
+            this.button5.Name = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // dockPanel_LOG
             // 
             this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
@@ -2218,7 +2456,7 @@
             this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
             resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
             this.dockPanel_LOG.Name = "dockPanel_LOG";
-            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(385, 138);
+            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(347, 138);
             // 
             // dockPanel1_Container
             // 
@@ -2236,7 +2474,7 @@
             this.panelContainer1.ID = new System.Guid("175b3333-7bbf-425f-97dd-c6234584ee50");
             resources.ApplyResources(this.panelContainer1, "panelContainer1");
             this.panelContainer1.Name = "panelContainer1";
-            this.panelContainer1.OriginalSize = new System.Drawing.Size(432, 100);
+            this.panelContainer1.OriginalSize = new System.Drawing.Size(470, 100);
             // 
             // dockPanel_422_A
             // 
@@ -2246,7 +2484,7 @@
             this.dockPanel_422_A.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
             resources.ApplyResources(this.dockPanel_422_A, "dockPanel_422_A");
             this.dockPanel_422_A.Name = "dockPanel_422_A";
-            this.dockPanel_422_A.OriginalSize = new System.Drawing.Size(448, 204);
+            this.dockPanel_422_A.OriginalSize = new System.Drawing.Size(470, 197);
             // 
             // dockPanel3_Container
             // 
@@ -2308,7 +2546,7 @@
             this.dockPanel_AD.ID = new System.Guid("277b4796-f1d3-44ac-9aab-bf8085b99d6f");
             resources.ApplyResources(this.dockPanel_AD, "dockPanel_AD");
             this.dockPanel_AD.Name = "dockPanel_AD";
-            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(448, 177);
+            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(470, 171);
             // 
             // dockPanel5_Container
             // 
@@ -2380,7 +2618,7 @@
             this.dockPanel_OC.ID = new System.Guid("33b8ddeb-d01d-4235-9b86-4643140871e6");
             resources.ApplyResources(this.dockPanel_OC, "dockPanel_OC");
             this.dockPanel_OC.Name = "dockPanel_OC";
-            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(448, 230);
+            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(470, 223);
             // 
             // dockPanel4_Container
             // 
@@ -2451,7 +2689,7 @@
             this.dockPanel_LVDS_Send.ID = new System.Guid("613b1802-fd1d-4b73-91c5-831cb04cde38");
             resources.ApplyResources(this.dockPanel_LVDS_Send, "dockPanel_LVDS_Send");
             this.dockPanel_LVDS_Send.Name = "dockPanel_LVDS_Send";
-            this.dockPanel_LVDS_Send.OriginalSize = new System.Drawing.Size(637, 349);
+            this.dockPanel_LVDS_Send.OriginalSize = new System.Drawing.Size(637, 292);
             // 
             // controlContainer1
             // 
@@ -2573,7 +2811,7 @@
             this.dockPanel_LVDS_Recv.ID = new System.Guid("d0a692ca-17d9-4279-9a5c-0979cde98445");
             resources.ApplyResources(this.dockPanel_LVDS_Recv, "dockPanel_LVDS_Recv");
             this.dockPanel_LVDS_Recv.Name = "dockPanel_LVDS_Recv";
-            this.dockPanel_LVDS_Recv.OriginalSize = new System.Drawing.Size(565, 262);
+            this.dockPanel_LVDS_Recv.OriginalSize = new System.Drawing.Size(565, 26);
             // 
             // controlContainer5
             // 
@@ -2782,6 +3020,39 @@
             this.barCheckItem1.Id = 159;
             this.barCheckItem1.Name = "barCheckItem1";
             // 
+            // timer2_DYQuery
+            // 
+            this.timer2_DYQuery.Interval = 1000;
+            this.timer2_DYQuery.Tick += new System.EventHandler(this.timer2_DYQuery_Tick);
+            // 
+            // dockPanel7
+            // 
+            this.dockPanel7.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
+            this.dockPanel7.ID = new System.Guid("0ebfdf20-356d-442a-b4e2-4fd06f038b8f");
+            resources.ApplyResources(this.dockPanel7, "dockPanel7");
+            this.dockPanel7.Name = "dockPanel7";
+            this.dockPanel7.OriginalSize = new System.Drawing.Size(200, 200);
+            // 
+            // dockPanel7_Container
+            // 
+            resources.ApplyResources(this.dockPanel7_Container, "dockPanel7_Container");
+            this.dockPanel7_Container.Name = "dockPanel7_Container";
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            // 
+            // button3
+            // 
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            // 
+            // button4
+            // 
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -2790,6 +3061,7 @@
             this.Controls.Add(this.dockPanel_LVDS_Send);
             this.Controls.Add(this.panelContainer1);
             this.Controls.Add(this.dockPanel_LOG);
+            this.Controls.Add(this.dockPanel_DY);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
@@ -2850,6 +3122,21 @@
             this.dockPanel_422_B.ResumeLayout(false);
             this.controlContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).EndInit();
+            this.dockPanel4.ResumeLayout(false);
+            this.dockPanel_DY.ResumeLayout(false);
+            this.controlContainer6.ResumeLayout(false);
+            this.controlContainer6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.dockPanel_LOG.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             this.panelContainer1.ResumeLayout(false);
@@ -3160,6 +3447,28 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup repositoryItemRadioGroup2;
         private DevExpress.XtraBars.BarButtonItem barbtn_savFrame;
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel4;
+        private DevExpress.XtraBars.Docking.ControlContainer controlContainer7;
+        private System.Windows.Forms.Timer timer2_DYQuery;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel7;
+        private DevExpress.XtraBars.Docking.ControlContainer dockPanel7_Container;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel_DY;
+        private DevExpress.XtraBars.Docking.ControlContainer controlContainer6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraBars.BarCheckItem CheckEnable_DY;
+        private DevExpress.XtraCharts.ChartControl chartControl2;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private System.Windows.Forms.Label label5;
     }
 }
 

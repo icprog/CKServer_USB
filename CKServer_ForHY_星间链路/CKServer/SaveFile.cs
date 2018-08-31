@@ -131,7 +131,7 @@ namespace CKServer
             FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF08\1D01\", out file_SC8);
             FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF08\1D08\", out file_SC9);
 
-          //  FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF08\", out file_SC10);
+            FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF08\电源数据\", out file_SC10);
 
             //FileCreateDat(Program.GetStartupPath() + @"数传机箱数据\同步422数据\通道2", out file_SC11);
             //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道12\", out file_SC12);

@@ -11,6 +11,9 @@ namespace CKServer
 {
     class Data
     {
+        public static int CountV = 0;
+        public static int CountA = 0;
+
         public static int OnlyID = 0;
 
         public static string Path = null;                       //程序运行目录

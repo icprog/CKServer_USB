@@ -140,6 +140,28 @@ namespace CKServer
 
         public static void Run()
         {
+
+            myVcidDic1.Clear();
+            
+            myVcidDic1.Add(0x01, VCID_01);
+            myVcidDic1.Add(0x02, VCID_02);
+            myVcidDic1.Add(0x03, VCID_03);
+            myVcidDic1.Add(0x04, VCID_04);
+            myVcidDic1.Add(0x05, VCID_05);
+            myVcidDic1.Add(0x06, VCID_06);
+            myVcidDic1.Add(0x07, VCID_07);
+            myVcidDic1.Add(0x08, VCID_08);
+            myVcidDic1.Add(0x09, VCID_09);
+            myVcidDic1.Add(0x0a, VCID_10);
+            myVcidDic1.Add(0x0b, VCID_11);
+            myVcidDic1.Add(0x0c, VCID_12);
+            myVcidDic1.Add(0x0d, VCID_13);
+            myVcidDic1.Add(0x0e, VCID_14);
+            myVcidDic1.Add(0x0f, VCID_15);
+            myVcidDic1.Add(0x10, VCID_16);
+
+
+
             VCID_01.init2(CPLenList[0], CPLenList[1]);
             VCID_02.init2(CPLenList[2], CPLenList[3]);
             VCID_03.init2(CPLenList[4], CPLenList[5]);
@@ -194,6 +216,8 @@ namespace CKServer
         }
         public static void Init()
         {
+
+
             VCID_01.init(0x1, CPLenList[0], CPLenList[1]);
             VCID_02.init(0x2, CPLenList[2], CPLenList[3]);
             VCID_03.init(0x3, CPLenList[4], CPLenList[5]);
@@ -214,26 +238,10 @@ namespace CKServer
             VCID_16.init(0x16, CPLenList[30], CPLenList[31]);
 
 
-            myVcidDic1.Add(0x01, VCID_01);
-            myVcidDic1.Add(0x02, VCID_02);
-            myVcidDic1.Add(0x03, VCID_03);
-            myVcidDic1.Add(0x04, VCID_04);
-            myVcidDic1.Add(0x05, VCID_05);
-            myVcidDic1.Add(0x6, VCID_06);
-            myVcidDic1.Add(0x7, VCID_07);
-            myVcidDic1.Add(0x8, VCID_08);
-            myVcidDic1.Add(0x9, VCID_09);
-            myVcidDic1.Add(0xa, VCID_10);
-            myVcidDic1.Add(0xb, VCID_11);
-            myVcidDic1.Add(0xc, VCID_12);
-            myVcidDic1.Add(0xd, VCID_13);
-            myVcidDic1.Add(0xe, VCID_14);
-            myVcidDic1.Add(0xf, VCID_15);
-            myVcidDic1.Add(0x10, VCID_16);
 
         }
 
-
+        public static bool FirstFindTag = true;
         public static List<byte> APIDList;
         public static Dictionary<byte, BinaryWriter> myDictionary;
         public static void DisPatch_VCIDFrame(ref List<byte> DispatchBuf, Dictionary<byte, RecvChan_VCID_Struct> myVcidDic)
@@ -244,12 +252,30 @@ namespace CKServer
             Trace.WriteLine("DisPatch_VCIDFrame Thread in!");
             String Name = Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + LVDS_ComPare_Chan.ToString(), "VCID_Channel_" + (LVDS_ComPare_Chan + 1).ToString(), "name");
 
+            FirstFindTag = true;
 
             while (LVDS_ComPareTag)
             {
-                if (DispatchBuf.Count() >= 1024)
+                if (DispatchBuf.Count() >= 2048)
                 {
                     DispatchLock.EnterReadLock();
+                    if (FirstFindTag)
+                    {
+                        FirstFindTag = false;
+                        int t1 = DispatchBuf.IndexOf(0x1A);
+
+                        if (DispatchBuf[t1 + 1] == 0xcf && DispatchBuf[t1 + 2] == 0xfc && DispatchBuf[t1 + 3] == 0x1d)
+                        {
+                            if (t1 != 0)
+                            {
+                                DispatchBuf.RemoveRange(0, t1);
+                                MyLog.Error("帧头非1ACFFC1D,偏了" + t1.ToString() + "个数！已自动同步！");
+                            }
+
+                        }
+                        
+
+                    }
                     byte[] CADU = DispatchBuf.Take(1024).ToArray();
                     DispatchBuf.RemoveRange(0, 1024);
                     DispatchLock.ExitReadLock();
@@ -477,6 +503,7 @@ namespace CKServer
                     else
                     {
                         MyLog.Error("比对数据偏头，请重新测试");
+                        break;
                     }
                 }
                 else
@@ -530,7 +557,7 @@ namespace CKServer
                                 {
                                     TempVCID.Real_ErrorCol = Recv_Real_Bytes % 862 + t;
                                     TempVCID.Real_ErrorRow = Recv_Real_Bytes / 862;
-                                    String loginfo = "--Error 实时 VCID:"+Convert.ToString(TempVCID.VCID,2).PadLeft(6,'0')+"--Row:"+ TempVCID.Real_ErrorRow.ToString()+"--Column:"+ TempVCID.Real_ErrorCol.ToString();
+                                    String loginfo = "--Error 实时 VCID:" + Convert.ToString(TempVCID.VCID, 2).PadLeft(6, '0') + "--Row:" + TempVCID.Real_ErrorRow.ToString() + "--Column:" + TempVCID.Real_ErrorCol.ToString();
                                     SaveFile.Lock_asyn_1.EnterWriteLock();
                                     SaveFile.DataQueue_asyn_1.Enqueue(loginfo);
                                     SaveFile.Lock_asyn_1.ExitWriteLock();
@@ -550,6 +577,7 @@ namespace CKServer
                         {
                             for (int j = 0; j < Delay_CPlen; j++) Delay_CPdata[j] = TempVCID.DelayBuf[j];
                             TempVCID.GetComPareDataTag = false;
+                            Recv_Delay_Bytes += Delay_CPlen;
                         }
                         //循环处理数据域data
                         while (TempVCID.DelayBuf.Count() >= Delay_CPlen)
@@ -559,8 +587,8 @@ namespace CKServer
                                 if (TempVCID.DelayBuf[t] != Delay_CPdata[t])
                                 {
                                     TempVCID.Delay_ErrorCol = Recv_Delay_Bytes % 862 + t;
-                                    TempVCID.Delay_ErrorRow = Recv_Delay_Bytes / 862;                                          
-                                    
+                                    TempVCID.Delay_ErrorRow = Recv_Delay_Bytes / 862;
+
                                     String loginfo = "Error 延时 VCID:" + Convert.ToString(TempVCID.VCID, 2).PadLeft(6, '0') + "--Row:" + TempVCID.Delay_ErrorRow.ToString() + "--Column:" + TempVCID.Delay_ErrorCol.ToString();
                                     SaveFile.Lock_asyn_1.EnterWriteLock();
                                     SaveFile.DataQueue_asyn_1.Enqueue(loginfo);

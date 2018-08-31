@@ -277,14 +277,12 @@
             this.repositoryItemTextEdit20 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barEditItem_lvds_KeepStop = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit21 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.barButton_lvdsKeepset = new DevExpress.XtraBars.BarButtonItem();
             this.barButton_422Down = new DevExpress.XtraBars.BarButtonItem();
             this.barButton_LVDSDown = new DevExpress.XtraBars.BarButtonItem();
             this.barEditItem_422_KeepRun = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit22 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barEditItem_422_KeepStop = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit23 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.barButton_422Keepset = new DevExpress.XtraBars.BarButtonItem();
             this.CheckEnable_BoxLVDS_Compare = new DevExpress.XtraBars.BarCheckItem();
             this.btn_OpenPath_ErrorLVDSLog = new DevExpress.XtraBars.BarButtonItem();
             this.btn_OpenPath_Storage2 = new DevExpress.XtraBars.BarButtonItem();
@@ -864,12 +862,10 @@
             this.barEditItem_422freqreal,
             this.barEditItem_lvds_KeepRun,
             this.barEditItem_lvds_KeepStop,
-            this.barButton_lvdsKeepset,
             this.barButton_422Down,
             this.barButton_LVDSDown,
             this.barEditItem_422_KeepRun,
             this.barEditItem_422_KeepStop,
-            this.barButton_422Keepset,
             this.CheckEnable_BoxLVDS_Compare,
             this.btn_OpenPath_ErrorLVDSLog,
             this.btn_OpenPath_Storage2,
@@ -2039,6 +2035,7 @@
             this.barButton_lvdsfreqset.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButton_lvdsfreqset.ImageOptions.Image")));
             this.barButton_lvdsfreqset.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButton_lvdsfreqset.ImageOptions.LargeImage")));
             this.barButton_lvdsfreqset.Name = "barButton_lvdsfreqset";
+            this.barButton_lvdsfreqset.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButton_lvdsfreqset.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButton_lvdsfreqset_ItemClick);
             // 
             // barEditItem_422freqset
@@ -2090,15 +2087,6 @@
             resources.ApplyResources(this.repositoryItemTextEdit21, "repositoryItemTextEdit21");
             this.repositoryItemTextEdit21.Name = "repositoryItemTextEdit21";
             // 
-            // barButton_lvdsKeepset
-            // 
-            resources.ApplyResources(this.barButton_lvdsKeepset, "barButton_lvdsKeepset");
-            this.barButton_lvdsKeepset.Id = 211;
-            this.barButton_lvdsKeepset.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButton_lvdsKeepset.ImageOptions.Image")));
-            this.barButton_lvdsKeepset.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButton_lvdsKeepset.ImageOptions.LargeImage")));
-            this.barButton_lvdsKeepset.Name = "barButton_lvdsKeepset";
-            this.barButton_lvdsKeepset.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButton_lvdsKeepset_ItemClick);
-            // 
             // barButton_422Down
             // 
             resources.ApplyResources(this.barButton_422Down, "barButton_422Down");
@@ -2139,15 +2127,6 @@
             // 
             resources.ApplyResources(this.repositoryItemTextEdit23, "repositoryItemTextEdit23");
             this.repositoryItemTextEdit23.Name = "repositoryItemTextEdit23";
-            // 
-            // barButton_422Keepset
-            // 
-            resources.ApplyResources(this.barButton_422Keepset, "barButton_422Keepset");
-            this.barButton_422Keepset.Id = 216;
-            this.barButton_422Keepset.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButton_422Keepset.ImageOptions.Image")));
-            this.barButton_422Keepset.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButton_422Keepset.ImageOptions.LargeImage")));
-            this.barButton_422Keepset.Name = "barButton_422Keepset";
-            this.barButton_422Keepset.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButton_422Keepset_ItemClick);
             // 
             // CheckEnable_BoxLVDS_Compare
             // 
@@ -2523,7 +2502,6 @@
             // 
             this.ribbonPageGroup17.ItemLinks.Add(this.barEditItem_422_KeepRun);
             this.ribbonPageGroup17.ItemLinks.Add(this.barEditItem_422_KeepStop);
-            this.ribbonPageGroup17.ItemLinks.Add(this.barButton_422Keepset);
             this.ribbonPageGroup17.ItemLinks.Add(this.barButton_422Down);
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
             resources.ApplyResources(this.ribbonPageGroup17, "ribbonPageGroup17");
@@ -2532,7 +2510,6 @@
             // 
             this.ribbonPageGroup13.ItemLinks.Add(this.barEditItem_lvds_KeepRun);
             this.ribbonPageGroup13.ItemLinks.Add(this.barEditItem_lvds_KeepStop);
-            this.ribbonPageGroup13.ItemLinks.Add(this.barButton_lvdsKeepset);
             this.ribbonPageGroup13.ItemLinks.Add(this.barButton_LVDSDown);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             resources.ApplyResources(this.ribbonPageGroup13, "ribbonPageGroup13");
@@ -3735,7 +3712,7 @@
             this.dockPanel_BoxLVDS_A.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
             resources.ApplyResources(this.dockPanel_BoxLVDS_A, "dockPanel_BoxLVDS_A");
             this.dockPanel_BoxLVDS_A.Name = "dockPanel_BoxLVDS_A";
-            this.dockPanel_BoxLVDS_A.OriginalSize = new System.Drawing.Size(444, 665);
+            this.dockPanel_BoxLVDS_A.OriginalSize = new System.Drawing.Size(483, 513);
             // 
             // dockPanel3_Container
             // 
@@ -4229,7 +4206,7 @@
             this.dockPanel_LVDS_Compare.ID = new System.Guid("c79193df-71d8-41f2-a9dd-1821b850b4dc");
             resources.ApplyResources(this.dockPanel_LVDS_Compare, "dockPanel_LVDS_Compare");
             this.dockPanel_LVDS_Compare.Name = "dockPanel_LVDS_Compare";
-            this.dockPanel_LVDS_Compare.OriginalSize = new System.Drawing.Size(1167, 657);
+            this.dockPanel_LVDS_Compare.OriginalSize = new System.Drawing.Size(1167, 513);
             this.dockPanel_LVDS_Compare.Click += new System.EventHandler(this.dockPanel_LVDS_Compare_Click);
             // 
             // controlContainer4
@@ -5418,7 +5395,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit20;
         private DevExpress.XtraBars.BarEditItem barEditItem_lvds_KeepStop;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit21;
-        private DevExpress.XtraBars.BarButtonItem barButton_lvdsKeepset;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage_LVDS;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private System.Windows.Forms.CheckBox checkBox_422_select1;
@@ -5453,7 +5429,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit22;
         private DevExpress.XtraBars.BarEditItem barEditItem_422_KeepStop;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit23;
-        private DevExpress.XtraBars.BarButtonItem barButton_422Keepset;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
         private DevExpress.XtraBars.Docking.DockPanel dockPanel_LVDS_Compare;
         private DevExpress.XtraBars.Docking.ControlContainer controlContainer4;

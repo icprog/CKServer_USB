@@ -89,6 +89,7 @@ namespace CKServer
                     SendCMD(id, 0x80, Register.Byte80H);
                     Register.Byte80H = (byte)(Register.Byte80H & 0xFD);
                     SendCMD(id, 0x80, Register.Byte80H);
+
                     if (MyDeviceList[id].BulkOutEndPt != null)
                     {
                         bool tag = MyDeviceList[id].BulkOutEndPt.XferData(ref temp, ref TempLength);

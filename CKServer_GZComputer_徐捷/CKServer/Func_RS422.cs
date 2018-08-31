@@ -46,24 +46,24 @@ namespace CKServer
             queue.Enqueue(bufsav);
             rwlock.ExitWriteLock();
 
-            string tempShow = "";
-            for (int i = 0; i < bufsav.Length; i++)
-            {
-                tempShow += bufsav[i].ToString("x2") + " ";
-            }
+            //string tempShow = "";
+            //for (int i = 0; i < bufsav.Length; i++)
+            //{
+            //    tempShow += bufsav[i].ToString("x2") + " ";
+            //}
 
-            if (ChanNo < 48)
-            {
-                textBox_Show422Reslt.BeginInvoke(new Action(() =>
-                {
-                    if (textBox_Show422Reslt.Lines.Count() > 50)
-                    {
-                        textBox_Show422Reslt.Clear();
-                    }
-                    textBox_Show422Reslt.AppendText(tempShow);
-                }
-                ));
-            }
+            //if (ChanNo < 48)
+            //{
+            //    textBox_Show422Reslt.BeginInvoke(new Action(() =>
+            //    {
+            //        if (textBox_Show422Reslt.Lines.Count() > 50)
+            //        {
+            //            textBox_Show422Reslt.Clear();
+            //        }
+            //        textBox_Show422Reslt.AppendText(tempShow);
+            //    }
+            //    ));
+            //}
             //if (ChanNo == 48 && ShowTB1)
             //{
             //    textBox_Show422Reslt.BeginInvoke(new Action(() =>

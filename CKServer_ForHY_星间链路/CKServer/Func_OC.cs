@@ -9,7 +9,6 @@ namespace CKServer
     class Func_OC
     {
         public static DataTable dt_OC = new DataTable();
-
         public static void Init_Table()
         {
             dt_OC.Columns.Add("序号", typeof(Int32));
