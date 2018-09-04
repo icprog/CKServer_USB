@@ -878,7 +878,7 @@
 </value>
   </data>
   <data name="btn_OpenPath_Log.Caption" xml:space="preserve">
-    <value>日志存盘目录</value>
+    <value>日志存储目录</value>
   </data>
   <data name="btn_OpenPath_Log.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1682,6 +1682,24 @@
   <data name="CheckEnable_BoxRS422_Show.Caption" xml:space="preserve">
     <value>RS422接收显示</value>
   </data>
+  <data name="btn_TbUsedSelct.Caption" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="ComboBox_TBUsedSelt.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBox_TBUsedSelt.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="ComboBox_TBUsedSelt.Items" xml:space="preserve">
+    <value>同步模式</value>
+  </data>
+  <data name="ComboBox_TBUsedSelt.Items1" xml:space="preserve">
+    <value>透明模式</value>
+  </data>
+  <data name="btn_TbUsedSelct.EditWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
   <data name="btn_Short_1D04.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1729,6 +1747,9 @@
   </data>
   <data name="ribbonPageGroup15.Text" xml:space="preserve">
     <value>打开路径</value>
+  </data>
+  <data name="ribbonPageGroup23.Text" xml:space="preserve">
+    <value>设置模式</value>
   </data>
   <data name="ribbonPage_LVDS.Text" xml:space="preserve">
     <value>LVDS机箱控制</value>
@@ -2226,11 +2247,14 @@
   <data name="repositoryItemButtonEdit5.Buttons11" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="repositoryItemCheckEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="btn_Short_1D04.Size" type="System.Drawing.Size, System.Drawing">
     <value>1351, 133</value>
   </data>
   <data name="ribbonStatusBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 731</value>
+    <value>0, 666</value>
   </data>
   <data name="ribbonStatusBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1351, 31</value>
@@ -2269,7 +2293,7 @@
     <value>0, 0</value>
   </data>
   <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 551</value>
+    <value>840, 125</value>
   </data>
   <data name="richTextBox1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -2466,7 +2490,49 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1351, 762</value>
+    <value>1351, 697</value>
+  </data>
+  <data name="dockPanel1_Container.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="dockPanel1_Container.Size" type="System.Drawing.Size, System.Drawing">
+    <value>840, 125</value>
+  </data>
+  <data name="dockPanel1_Container.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dockPanel1_Container.Name" xml:space="preserve">
+    <value>dockPanel1_Container</value>
+  </data>
+  <data name="&gt;&gt;dockPanel1_Container.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dockPanel1_Container.Parent" xml:space="preserve">
+    <value>dockPanel_LOG</value>
+  </data>
+  <data name="&gt;&gt;dockPanel1_Container.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dockPanel_LOG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>503, 513</value>
+  </data>
+  <data name="dockPanel_LOG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>848, 153</value>
+  </data>
+  <data name="dockPanel_LOG.Text" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_LOG.Name" xml:space="preserve">
+    <value>dockPanel_LOG</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_LOG.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_LOG.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_LOG.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="Column13.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2550,7 +2616,7 @@
     <value>106, 0</value>
   </data>
   <data name="dataGridView_LVDS_01.Size" type="System.Drawing.Size, System.Drawing">
-    <value>631, 485</value>
+    <value>734, 332</value>
   </data>
   <data name="dataGridView_LVDS_01.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -2567,6 +2633,36 @@
   <data name="&gt;&gt;dataGridView_LVDS_01.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="radioButton9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 261</value>
+  </data>
+  <data name="radioButton9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 18</value>
+  </data>
+  <data name="radioButton9.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="radioButton9.Text" xml:space="preserve">
+    <value>不比对</value>
+  </data>
+  <data name="&gt;&gt;radioButton9.Name" xml:space="preserve">
+    <value>radioButton9</value>
+  </data>
+  <data name="&gt;&gt;radioButton9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton9.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="radioButton8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2574,7 +2670,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 239</value>
+    <value>6, 232</value>
   </data>
   <data name="radioButton8.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
@@ -2595,7 +2691,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;radioButton8.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="radioButton7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2604,7 +2700,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 209</value>
+    <value>6, 203</value>
   </data>
   <data name="radioButton7.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
@@ -2625,7 +2721,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;radioButton7.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="radioButton6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2634,7 +2730,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 179</value>
+    <value>6, 174</value>
   </data>
   <data name="radioButton6.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
@@ -2655,7 +2751,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;radioButton6.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="radioButton5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2664,7 +2760,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 149</value>
+    <value>6, 145</value>
   </data>
   <data name="radioButton5.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
@@ -2685,7 +2781,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;radioButton5.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="radioButton4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2694,7 +2790,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 119</value>
+    <value>6, 116</value>
   </data>
   <data name="radioButton4.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
@@ -2715,7 +2811,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;radioButton4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="radioButton3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2724,7 +2820,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 89</value>
+    <value>6, 87</value>
   </data>
   <data name="radioButton3.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
@@ -2745,7 +2841,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;radioButton3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2754,7 +2850,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 59</value>
+    <value>6, 58</value>
   </data>
   <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
@@ -2775,7 +2871,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2805,7 +2901,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -2814,7 +2910,7 @@
     <value>0, 0</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 485</value>
+    <value>106, 332</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -2838,7 +2934,7 @@
     <value>4, 23</value>
   </data>
   <data name="controlContainer4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>737, 485</value>
+    <value>840, 332</value>
   </data>
   <data name="controlContainer4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2859,7 +2955,7 @@
     <value>503, 153</value>
   </data>
   <data name="dockPanel_LVDS_Compare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>745, 513</value>
+    <value>848, 360</value>
   </data>
   <data name="dockPanel_LVDS_Compare.Text" xml:space="preserve">
     <value>LVDS实时比对</value>
@@ -2874,7 +2970,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dockPanel_LVDS_Compare.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tableLayoutPanel6.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2889,10 +2985,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 333</value>
+    <value>3, 303</value>
   </data>
   <data name="checkBox_LVDS_select16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 18</value>
+    <value>105, 14</value>
   </data>
   <data name="checkBox_LVDS_select16.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -2919,10 +3015,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 313</value>
+    <value>3, 285</value>
   </data>
   <data name="checkBox_LVDS_select15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 14</value>
+    <value>105, 12</value>
   </data>
   <data name="checkBox_LVDS_select15.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -2949,10 +3045,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 293</value>
+    <value>3, 267</value>
   </data>
   <data name="checkBox_LVDS_select14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 14</value>
+    <value>105, 12</value>
   </data>
   <data name="checkBox_LVDS_select14.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -2979,10 +3075,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 273</value>
+    <value>3, 249</value>
   </data>
   <data name="checkBox_LVDS_select13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select13.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -3009,10 +3105,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 253</value>
+    <value>3, 231</value>
   </data>
   <data name="checkBox_LVDS_select12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select12.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -3039,10 +3135,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 233</value>
+    <value>3, 213</value>
   </data>
   <data name="checkBox_LVDS_select11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select11.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -3069,10 +3165,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 213</value>
+    <value>3, 195</value>
   </data>
   <data name="checkBox_LVDS_select10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select10.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -3099,10 +3195,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 193</value>
+    <value>3, 177</value>
   </data>
   <data name="checkBox_LVDS_select9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select9.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -3129,10 +3225,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 173</value>
+    <value>3, 159</value>
   </data>
   <data name="checkBox_LVDS_select8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 14</value>
+    <value>106, 12</value>
   </data>
   <data name="checkBox_LVDS_select8.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -3159,10 +3255,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 153</value>
+    <value>3, 141</value>
   </data>
   <data name="checkBox_LVDS_select7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select7.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -3189,10 +3285,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 133</value>
+    <value>3, 123</value>
   </data>
   <data name="checkBox_LVDS_select6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select6.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -3219,10 +3315,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 113</value>
+    <value>3, 105</value>
   </data>
   <data name="checkBox_LVDS_select5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select5.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -3249,10 +3345,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 93</value>
+    <value>3, 87</value>
   </data>
   <data name="checkBox_LVDS_select4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select4.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -3279,10 +3375,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 73</value>
+    <value>3, 69</value>
   </data>
   <data name="checkBox_LVDS_select3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select3.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -3309,10 +3405,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_LVDS_select2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 53</value>
+    <value>3, 51</value>
   </data>
   <data name="checkBox_LVDS_select2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select2.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -3427,7 +3523,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 53</value>
+    <value>120, 51</value>
   </data>
   <data name="buttonEdit2.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -3512,7 +3608,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 333</value>
+    <value>120, 303</value>
   </data>
   <data name="buttonEdit16.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -3597,7 +3693,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 313</value>
+    <value>120, 285</value>
   </data>
   <data name="buttonEdit15.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -3682,7 +3778,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 73</value>
+    <value>120, 69</value>
   </data>
   <data name="buttonEdit3.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -3767,7 +3863,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 293</value>
+    <value>120, 267</value>
   </data>
   <data name="buttonEdit14.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -3852,7 +3948,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 173</value>
+    <value>120, 159</value>
   </data>
   <data name="buttonEdit8.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -3937,7 +4033,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 273</value>
+    <value>120, 249</value>
   </data>
   <data name="buttonEdit13.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -4022,7 +4118,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 93</value>
+    <value>120, 87</value>
   </data>
   <data name="buttonEdit4.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -4107,7 +4203,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 253</value>
+    <value>120, 231</value>
   </data>
   <data name="buttonEdit12.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -4192,7 +4288,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 113</value>
+    <value>120, 105</value>
   </data>
   <data name="buttonEdit5.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -4277,7 +4373,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 233</value>
+    <value>120, 213</value>
   </data>
   <data name="buttonEdit11.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -4362,7 +4458,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 153</value>
+    <value>120, 141</value>
   </data>
   <data name="buttonEdit7.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -4447,7 +4543,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 213</value>
+    <value>120, 195</value>
   </data>
   <data name="buttonEdit10.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -4532,7 +4628,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 133</value>
+    <value>120, 123</value>
   </data>
   <data name="buttonEdit6.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -4617,7 +4713,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 193</value>
+    <value>120, 177</value>
   </data>
   <data name="buttonEdit9.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -4768,7 +4864,7 @@
     <value>3, 33</value>
   </data>
   <data name="checkBox_LVDS_select1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 14</value>
+    <value>111, 12</value>
   </data>
   <data name="checkBox_LVDS_select1.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -4792,13 +4888,13 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 184</value>
+    <value>3, 163</value>
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>468, 364</value>
+    <value>468, 320</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -4916,7 +5012,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit_422_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 46</value>
+    <value>120, 44</value>
   </data>
   <data name="buttonEdit_422_2.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -5001,7 +5097,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit_422_3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 64</value>
+    <value>120, 60</value>
   </data>
   <data name="buttonEdit_422_3.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -5086,7 +5182,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit_422_8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 154</value>
+    <value>120, 140</value>
   </data>
   <data name="buttonEdit_422_8.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -5171,7 +5267,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit_422_4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 82</value>
+    <value>120, 76</value>
   </data>
   <data name="buttonEdit_422_4.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -5256,7 +5352,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit_422_5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 100</value>
+    <value>120, 92</value>
   </data>
   <data name="buttonEdit_422_5.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -5341,7 +5437,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit_422_7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 136</value>
+    <value>120, 124</value>
   </data>
   <data name="buttonEdit_422_7.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -5426,7 +5522,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonEdit_422_6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 118</value>
+    <value>120, 108</value>
   </data>
   <data name="buttonEdit_422_6.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt, style=Italic</value>
@@ -5544,10 +5640,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_422_select2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 46</value>
+    <value>3, 44</value>
   </data>
   <data name="checkBox_422_select2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 12</value>
+    <value>111, 10</value>
   </data>
   <data name="checkBox_422_select2.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5574,10 +5670,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_422_select3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 64</value>
+    <value>3, 60</value>
   </data>
   <data name="checkBox_422_select3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 12</value>
+    <value>111, 10</value>
   </data>
   <data name="checkBox_422_select3.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5604,10 +5700,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_422_select4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 82</value>
+    <value>3, 76</value>
   </data>
   <data name="checkBox_422_select4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 12</value>
+    <value>111, 10</value>
   </data>
   <data name="checkBox_422_select4.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5634,10 +5730,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_422_select5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 100</value>
+    <value>3, 92</value>
   </data>
   <data name="checkBox_422_select5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 12</value>
+    <value>111, 10</value>
   </data>
   <data name="checkBox_422_select5.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5664,10 +5760,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_422_select6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 118</value>
+    <value>3, 108</value>
   </data>
   <data name="checkBox_422_select6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 12</value>
+    <value>111, 10</value>
   </data>
   <data name="checkBox_422_select6.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5694,10 +5790,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_422_select7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 136</value>
+    <value>3, 124</value>
   </data>
   <data name="checkBox_422_select7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 12</value>
+    <value>111, 10</value>
   </data>
   <data name="checkBox_422_select7.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5724,10 +5820,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_422_select8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 154</value>
+    <value>3, 140</value>
   </data>
   <data name="checkBox_422_select8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 18</value>
+    <value>111, 11</value>
   </data>
   <data name="checkBox_422_select8.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5754,7 +5850,7 @@
     <value>3, 28</value>
   </data>
   <data name="checkBox_422_select1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 12</value>
+    <value>111, 10</value>
   </data>
   <data name="checkBox_422_select1.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5817,7 +5913,7 @@
     <value>9</value>
   </data>
   <data name="tableLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>468, 175</value>
+    <value>468, 154</value>
   </data>
   <data name="tableLayoutPanel5.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -5847,7 +5943,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>474, 551</value>
+    <value>474, 486</value>
   </data>
   <data name="tableLayoutPanel6.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5871,7 +5967,7 @@
     <value>4, 23</value>
   </data>
   <data name="dockPanel3_Container.Size" type="System.Drawing.Size, System.Drawing">
-    <value>474, 551</value>
+    <value>474, 486</value>
   </data>
   <data name="dockPanel3_Container.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -5892,7 +5988,7 @@
     <value>20, 153</value>
   </data>
   <data name="dockPanel_BoxLVDS_A.Size" type="System.Drawing.Size, System.Drawing">
-    <value>483, 578</value>
+    <value>483, 513</value>
   </data>
   <data name="dockPanel_BoxLVDS_A.Text" xml:space="preserve">
     <value>LVDS机箱</value>
@@ -5907,48 +6003,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dockPanel_BoxLVDS_A.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="dockPanel1_Container.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 23</value>
-  </data>
-  <data name="dockPanel1_Container.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 551</value>
-  </data>
-  <data name="dockPanel1_Container.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.Name" xml:space="preserve">
-    <value>dockPanel1_Container</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.Parent" xml:space="preserve">
-    <value>dockPanel_LOG</value>
-  </data>
-  <data name="&gt;&gt;dockPanel1_Container.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dockPanel_LOG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1248, 153</value>
-  </data>
-  <data name="dockPanel_LOG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 578</value>
-  </data>
-  <data name="dockPanel_LOG.Text" xml:space="preserve">
-    <value>日志</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.Name" xml:space="preserve">
-    <value>dockPanel_LOG</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dockPanel_LOG.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="tableLayoutPanel3.ColumnCount" type="System.Int32, mscorlib">
@@ -6255,7 +6309,7 @@
     <value>3, 3</value>
   </data>
   <data name="dataGridView_OC_In1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>452, 166</value>
+    <value>434, 166</value>
   </data>
   <data name="dataGridView_OC_In1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6309,10 +6363,10 @@
     <value>Fill</value>
   </data>
   <data name="dataGridView_OC_In2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>461, 3</value>
+    <value>443, 3</value>
   </data>
   <data name="dataGridView_OC_In2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>453, 166</value>
+    <value>435, 166</value>
   </data>
   <data name="dataGridView_OC_In2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6366,10 +6420,10 @@
     <value>Fill</value>
   </data>
   <data name="dataGridView_OC_In3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>920, 3</value>
+    <value>884, 3</value>
   </data>
   <data name="dataGridView_OC_In3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>454, 166</value>
+    <value>436, 166</value>
   </data>
   <data name="dataGridView_OC_In3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6396,7 +6450,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1377, 172</value>
+    <value>1323, 172</value>
   </data>
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6420,7 +6474,7 @@
     <value>4, 23</value>
   </data>
   <data name="controlContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1377, 172</value>
+    <value>1323, 172</value>
   </data>
   <data name="controlContainer3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6438,10 +6492,10 @@
     <value>0</value>
   </data>
   <data name="dockPanel_OC_In.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, -200</value>
   </data>
   <data name="dockPanel_OC_In.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1385, 200</value>
+    <value>1331, 200</value>
   </data>
   <data name="dockPanel_OC_In.Text" xml:space="preserve">
     <value>OC采集</value>
@@ -6762,7 +6816,7 @@
     <value>0, 133</value>
   </data>
   <data name="hideContainerLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 598</value>
+    <value>20, 533</value>
   </data>
   <data name="&gt;&gt;hideContainerLeft.Name" xml:space="preserve">
     <value>hideContainerLeft</value>
@@ -7859,6 +7913,18 @@
   <data name="&gt;&gt;CheckEnable_BoxRS422_Show.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarCheckItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;btn_TbUsedSelct.Name" xml:space="preserve">
+    <value>btn_TbUsedSelct</value>
+  </data>
+  <data name="&gt;&gt;btn_TbUsedSelct.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_TBUsedSelt.Name" xml:space="preserve">
+    <value>ComboBox_TBUsedSelt</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_TBUsedSelt.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;ribbonPageCategory1.Name" xml:space="preserve">
     <value>ribbonPageCategory1</value>
   </data>
@@ -7953,6 +8019,12 @@
     <value>ribbonPageGroup15</value>
   </data>
   <data name="&gt;&gt;ribbonPageGroup15.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup23.Name" xml:space="preserve">
+    <value>ribbonPageGroup23</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup23.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;ribbonPage_422.Name" xml:space="preserve">
@@ -8188,6 +8260,12 @@
   </data>
   <data name="&gt;&gt;repositoryItemButtonEdit5.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemCheckEdit2.Name" xml:space="preserve">
+    <value>repositoryItemCheckEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemCheckEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
     <value>openFileDialog1</value>

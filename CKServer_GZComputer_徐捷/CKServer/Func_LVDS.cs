@@ -160,7 +160,7 @@ namespace CKServer
             myVcidDic1.Add(0x0f, VCID_15);
             myVcidDic1.Add(0x10, VCID_16);
 
-
+            Thread.Sleep(100);
 
             VCID_01.init2(CPLenList[0], CPLenList[1]);
             VCID_02.init2(CPLenList[2], CPLenList[3]);
@@ -261,249 +261,271 @@ namespace CKServer
                     DispatchLock.EnterReadLock();
                     if (FirstFindTag)
                     {
-                        FirstFindTag = false;
+                 //       FirstFindTag = false;
                         int t1 = DispatchBuf.IndexOf(0x1A);
-
-                        if (DispatchBuf[t1 + 1] == 0xcf && DispatchBuf[t1 + 2] == 0xfc && DispatchBuf[t1 + 3] == 0x1d)
+                        if(t1==-1)
                         {
-                            if (t1 != 0)
-                            {
-                                DispatchBuf.RemoveRange(0, t1);
-                                MyLog.Error("帧头非1ACFFC1D,偏了" + t1.ToString() + "个数！已自动同步！");
-                            }
-
+                            MyLog.Error("数据区内无帧头,偏了" + t1.ToString() + "个数！已自动同步！");
+                            DispatchBuf.RemoveRange(0, DispatchBuf.Count());
+                            DispatchLock.ExitReadLock();
+                            continue;
                         }
-                        
-
-                    }
-                    byte[] CADU = DispatchBuf.Take(1024).ToArray();
-                    DispatchBuf.RemoveRange(0, 1024);
-                    DispatchLock.ExitReadLock();
-                    if (CADU[0] == 0x1A && CADU[1] == 0xcf)
-                    {
-                        byte Tag = (byte)(CADU[9] & 0x80);//延时-80H；实时-00H
-                        byte Vcid = (byte)(CADU[5] & 0x3f);//VCID虚拟信道标识符
-
-                        byte[] data = new byte[862];//数据域-数据区
-                        Array.Copy(CADU, 34, data, 0, 862);
-
-                        if (APIDList.IndexOf(Vcid) < 0)
+                        else
                         {
-                            APIDList.Add(Vcid);
-                            String Path = Program.GetStartupPath() + @"存储数据\LVDS机箱数据\" + Name + @"\" + Convert.ToString(Vcid, 2).PadLeft(6, '0') + @"\";
-                            if (!Directory.Exists(Path)) Directory.CreateDirectory(Path);
-                            DirectoryInfo folder = new DirectoryInfo(Path);
-                            try
+                            if (DispatchBuf[t1 + 1] == 0xcf && DispatchBuf[t1 + 2] == 0xfc && DispatchBuf[t1 + 3] == 0x1d)
                             {
-                                foreach (FileInfo tempfile in folder.GetFiles("*.*"))
+                                if (t1 != 0)
                                 {
-                                    string name = tempfile.Name;
-                                    if (tempfile.Length == 0)
-                                    {
-                                        Trace.WriteLine("删除文件" + tempfile.FullName);
-                                        File.Delete(tempfile.FullName);
-                                    }
+                                    DispatchBuf.RemoveRange(0, t1);
+                                    MyLog.Error("帧头非1ACFFC1D,偏了" + t1.ToString() + "个数！已自动同步！");
                                 }
                             }
-                            catch (Exception ex)
+                            else
                             {
-                                MyLog.Error(ex.Message);
+                                MyLog.Error("数据区内找到了1A但是后面不是CFFC1D,偏了" + t1.ToString() + "个数！已自动同步！");
+                                DispatchBuf.RemoveRange(0, t1+1);
+                                DispatchLock.ExitReadLock();
+                                continue;
                             }
+                        }                        
 
-                            string timestr = string.Format("{0}-{1:D2}-{2:D2} {3:D2}：{4:D2}：{5:D2}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
-                            string filename = Path + timestr + ".dat";
-                            FileStream file = new FileStream(filename, FileMode.Create);
-                            BinaryWriter bw1 = new BinaryWriter(file);
-                            myDictionary.Add(Vcid, bw1);
+                    }
 
-                            //new Thread(() => { RealTime_ComPare(ref VCID_01); }).Start();
-
-                            switch (Vcid)
-                            {
-                                case 0x1:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_01); }).Start();
-                                    break;
-                                case 0x2:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_02); }).Start();
-                                    break;
-                                case 0x3:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_03); }).Start();
-                                    break;
-                                case 0x4:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_04); }).Start();
-                                    break;
-                                case 0x5:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_05); }).Start();
-                                    break;
-                                case 0x6:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_06); }).Start();
-                                    break;
-                                case 0x7:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_07); }).Start();
-                                    break;
-                                case 0x8:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_08); }).Start();
-                                    break;
-                                case 0x9:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_09); }).Start();
-                                    break;
-                                case 0xa:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_10); }).Start();
-                                    break;
-                                case 0xb:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_11); }).Start();
-                                    break;
-                                case 0xc:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_12); }).Start();
-                                    break;
-                                case 0xd:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_13); }).Start();
-                                    break;
-                                case 0xe:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_14); }).Start();
-                                    break;
-                                case 0xf:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_15); }).Start();
-                                    break;
-                                case 0x10:
-                                    new Thread(() => { RealTime_ComPare(ref VCID_16); }).Start();
-                                    break;
-                            }
-                        }
-
-                        if (myDictionary.ContainsKey(Vcid))
+                    if (DispatchBuf.Count >= 1024)
+                    {
+                        byte[] CADU = DispatchBuf.Take(1024).ToArray();
+                        DispatchBuf.RemoveRange(0, 1024);
+                        DispatchLock.ExitReadLock();
+                        if (CADU[0] == 0x1A && CADU[1] == 0xcf)
                         {
-                            myDictionary[Vcid].Write(CADU);
-                            myDictionary[Vcid].Flush();
+                            byte Tag = (byte)(CADU[9] & 0x80);//延时-80H；实时-00H
+                            byte Vcid = (byte)(CADU[5] & 0x3f);//VCID虚拟信道标识符
+
+                            byte[] data = new byte[862];//数据域-数据区
+                            Array.Copy(CADU, 34, data, 0, 862);
+
+                            if (APIDList.IndexOf(Vcid) < 0)
+                            {
+                                APIDList.Add(Vcid);
+                                String Path = Program.GetStartupPath() + @"存储数据\LVDS机箱数据\" + Name + @"\" + Convert.ToString(Vcid, 2).PadLeft(6, '0') + @"\";
+                                if (!Directory.Exists(Path)) Directory.CreateDirectory(Path);
+                                DirectoryInfo folder = new DirectoryInfo(Path);
+                                try
+                                {
+                                    foreach (FileInfo tempfile in folder.GetFiles("*.*"))
+                                    {
+                                        string name = tempfile.Name;
+                                        if (tempfile.Length == 0)
+                                        {
+                                            Trace.WriteLine("删除文件" + tempfile.FullName);
+                                            File.Delete(tempfile.FullName);
+                                        }
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MyLog.Error(ex.Message);
+                                }
+
+                                string timestr = string.Format("{0}-{1:D2}-{2:D2} {3:D2}：{4:D2}：{5:D2}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+                                string filename = Path + timestr + ".dat";
+                                FileStream file = new FileStream(filename, FileMode.Create);
+                                BinaryWriter bw1 = new BinaryWriter(file);
+                                myDictionary.Add(Vcid, bw1);
+
+                                //new Thread(() => { RealTime_ComPare(ref VCID_01); }).Start();
+
+                                switch (Vcid)
+                                {
+                                    case 0x1:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_01); }).Start();
+                                        break;
+                                    case 0x2:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_02); }).Start();
+                                        break;
+                                    case 0x3:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_03); }).Start();
+                                        break;
+                                    case 0x4:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_04); }).Start();
+                                        break;
+                                    case 0x5:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_05); }).Start();
+                                        break;
+                                    case 0x6:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_06); }).Start();
+                                        break;
+                                    case 0x7:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_07); }).Start();
+                                        break;
+                                    case 0x8:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_08); }).Start();
+                                        break;
+                                    case 0x9:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_09); }).Start();
+                                        break;
+                                    case 0xa:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_10); }).Start();
+                                        break;
+                                    case 0xb:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_11); }).Start();
+                                        break;
+                                    case 0xc:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_12); }).Start();
+                                        break;
+                                    case 0xd:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_13); }).Start();
+                                        break;
+                                    case 0xe:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_14); }).Start();
+                                        break;
+                                    case 0xf:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_15); }).Start();
+                                        break;
+                                    case 0x10:
+                                        new Thread(() => { RealTime_ComPare(ref VCID_16); }).Start();
+                                        break;
+                                }
+                            }
+
+                            if (myDictionary.ContainsKey(Vcid))
+                            {
+                                myDictionary[Vcid].Write(CADU);
+                                myDictionary[Vcid].Flush();
+                            }
+                            else
+                            {
+                                Trace.WriteLine("未找到APID对应的File文件!!Error!!!");
+                            }
+
+                            if (Tag == 0x00 && 0x0 < Vcid && Vcid < 0x10)
+                            {
+                                lock (myVcidDic[Vcid].RealBuf)
+                                    myVcidDic[Vcid].RealBuf.AddRange(data);
+
+                                switch (Vcid)
+                                {
+                                    case 0x1:
+                                        VCID_01.Real_RecvCounts += 1;
+                                        break;
+                                    case 0x2:
+                                        VCID_02.Real_RecvCounts += 1;
+                                        break;
+                                    case 0x3:
+                                        VCID_03.Real_RecvCounts += 1;
+                                        break;
+                                    case 0x4:
+                                        VCID_04.Real_RecvCounts += 1;
+                                        break;
+                                    case 0x5:
+                                        VCID_05.Real_RecvCounts += 1;
+                                        break;
+                                    case 0x6:
+                                        VCID_06.Real_RecvCounts += 1;
+                                        break;
+                                    case 0x7:
+                                        VCID_07.Real_RecvCounts += 1;
+                                        break;
+                                    case 0x8:
+                                        VCID_08.Real_RecvCounts += 1;
+                                        break;
+                                    case 0x9:
+                                        VCID_09.Real_RecvCounts += 1;
+                                        break;
+                                    case 0xa:
+                                        VCID_10.Real_RecvCounts += 1;
+                                        break;
+                                    case 0xb:
+                                        VCID_11.Real_RecvCounts += 1;
+                                        break;
+                                    case 0xc:
+                                        VCID_12.Real_RecvCounts += 1;
+                                        break;
+                                    case 0xd:
+                                        VCID_13.Real_RecvCounts += 1;
+                                        break;
+                                    case 0xe:
+                                        VCID_14.Real_RecvCounts += 1;
+                                        break;
+                                    case 0xf:
+                                        VCID_15.Real_RecvCounts += 1;
+                                        break;
+                                    case 0x10:
+                                        VCID_16.Real_RecvCounts += 1;
+                                        break;
+                                }
+                            }
+                            else if (Tag == 0x80 && 0x0 < Vcid && Vcid < 0x10)//回放数据--延时遥测
+                            {
+                                lock (myVcidDic[Vcid].DelayBuf)
+                                    myVcidDic[Vcid].DelayBuf.AddRange(data);
+
+                                switch (Vcid)
+                                {
+                                    case 0x1:
+                                        VCID_01.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0x2:
+                                        VCID_02.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0x3:
+                                        VCID_03.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0x4:
+                                        VCID_04.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0x5:
+                                        VCID_05.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0x6:
+                                        VCID_06.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0x7:
+                                        VCID_07.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0x8:
+                                        VCID_08.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0x9:
+                                        VCID_09.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0xa:
+                                        VCID_10.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0xb:
+                                        VCID_11.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0xc:
+                                        VCID_12.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0xd:
+                                        VCID_13.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0xe:
+                                        VCID_14.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0xf:
+                                        VCID_15.Delay_RecvCounts += 1;
+                                        break;
+                                    case 0x10:
+                                        VCID_16.Delay_RecvCounts += 1;
+                                        break;
+                                }
+                            }
+                            else
+                            {
+                                MyLog.Error("实时延时标志位或VCID出错--" + "标志位:" + Tag.ToString("x2") + "VCID:" + Vcid.ToString("x2"));
+                            }
                         }
                         else
                         {
-                            Trace.WriteLine("未找到APID对应的File文件!!Error!!!");
-                        }
-
-                        if (Tag == 0x00 && Vcid < 0x10)
-                        {
-                            lock (myVcidDic[Vcid].RealBuf)
-                                myVcidDic[Vcid].RealBuf.AddRange(data);
-
-                            switch (Vcid)
-                            {
-                                case 0x1:
-                                    VCID_01.Real_RecvCounts += 1;
-                                    break;
-                                case 0x2:
-                                    VCID_02.Real_RecvCounts += 1;
-                                    break;
-                                case 0x3:
-                                    VCID_03.Real_RecvCounts += 1;
-                                    break;
-                                case 0x4:
-                                    VCID_04.Real_RecvCounts += 1;
-                                    break;
-                                case 0x5:
-                                    VCID_05.Real_RecvCounts += 1;
-                                    break;
-                                case 0x6:
-                                    VCID_06.Real_RecvCounts += 1;
-                                    break;
-                                case 0x7:
-                                    VCID_07.Real_RecvCounts += 1;
-                                    break;
-                                case 0x8:
-                                    VCID_08.Real_RecvCounts += 1;
-                                    break;
-                                case 0x9:
-                                    VCID_09.Real_RecvCounts += 1;
-                                    break;
-                                case 0xa:
-                                    VCID_10.Real_RecvCounts += 1;
-                                    break;
-                                case 0xb:
-                                    VCID_11.Real_RecvCounts += 1;
-                                    break;
-                                case 0xc:
-                                    VCID_12.Real_RecvCounts += 1;
-                                    break;
-                                case 0xd:
-                                    VCID_13.Real_RecvCounts += 1;
-                                    break;
-                                case 0xe:
-                                    VCID_14.Real_RecvCounts += 1;
-                                    break;
-                                case 0xf:
-                                    VCID_15.Real_RecvCounts += 1;
-                                    break;
-                                case 0x10:
-                                    VCID_16.Real_RecvCounts += 1;
-                                    break;
-                            }
-                        }
-                        else if (Tag == 0x80 && Vcid < 0x10)//回放数据--延时遥测
-                        {
-                            lock (myVcidDic[Vcid].DelayBuf)
-                                myVcidDic[Vcid].DelayBuf.AddRange(data);
-
-                            switch (Vcid)
-                            {
-                                case 0x1:
-                                    VCID_01.Delay_RecvCounts += 1;
-                                    break;
-                                case 0x2:
-                                    VCID_02.Delay_RecvCounts += 1;
-                                    break;
-                                case 0x3:
-                                    VCID_03.Delay_RecvCounts += 1;
-                                    break;
-                                case 0x4:
-                                    VCID_04.Delay_RecvCounts += 1;
-                                    break;
-                                case 0x5:
-                                    VCID_05.Delay_RecvCounts += 1;
-                                    break;
-                                case 0x6:
-                                    VCID_06.Delay_RecvCounts += 1;
-                                    break;
-                                case 0x7:
-                                    VCID_07.Delay_RecvCounts += 1;
-                                    break;
-                                case 0x8:
-                                    VCID_08.Delay_RecvCounts += 1;
-                                    break;
-                                case 0x9:
-                                    VCID_09.Delay_RecvCounts += 1;
-                                    break;
-                                case 0xa:
-                                    VCID_10.Delay_RecvCounts += 1;
-                                    break;
-                                case 0xb:
-                                    VCID_11.Delay_RecvCounts += 1;
-                                    break;
-                                case 0xc:
-                                    VCID_12.Delay_RecvCounts += 1;
-                                    break;
-                                case 0xd:
-                                    VCID_13.Delay_RecvCounts += 1;
-                                    break;
-                                case 0xe:
-                                    VCID_14.Delay_RecvCounts += 1;
-                                    break;
-                                case 0xf:
-                                    VCID_15.Delay_RecvCounts += 1;
-                                    break;
-                                case 0x10:
-                                    VCID_16.Delay_RecvCounts += 1;
-                                    break;
-                            }
-                        }
-                        else
-                        {
-                            MyLog.Error("实时延时标志位或VCID出错");
+                            MyLog.Error("比对数据偏头，请重新测试");
+                            break;
                         }
                     }
                     else
                     {
-                        MyLog.Error("比对数据偏头，请重新测试");
-                        break;
+                        MyLog.Error("找到1ACFFC1D后，剩余数据少于1K");
                     }
                 }
                 else
@@ -594,6 +616,8 @@ namespace CKServer
                                     SaveFile.DataQueue_asyn_1.Enqueue(loginfo);
                                     SaveFile.Lock_asyn_1.ExitWriteLock();
                                 }
+                                Delay_CPdata[t] = TempVCID.DelayBuf[t];
+
                             }
                             Recv_Delay_Bytes += Delay_CPlen;
                             lock (TempVCID.DelayBuf)
@@ -603,10 +627,13 @@ namespace CKServer
                 }
                 else
                 {
-                    Thread.Sleep(10);
+                    Thread.Sleep(1);
                 }
             }
 
+            TempVCID.RealBuf.Clear();
+            TempVCID.DelayBuf.Clear();
+            
             Trace.WriteLine("RealTime_ComPare2 out");
         }
 

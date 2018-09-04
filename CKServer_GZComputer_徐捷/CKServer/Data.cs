@@ -47,6 +47,9 @@ namespace CKServer
 
         public static ChanStatus_Struct[] Status_List;
 
+        public static bool LVDSCPTAG = true;
+
+
         public static int DAid = 3;
         public static int OCid = 4;
         public static int SC422id = 2;

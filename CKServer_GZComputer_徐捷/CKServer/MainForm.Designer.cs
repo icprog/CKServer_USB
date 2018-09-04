@@ -309,6 +309,8 @@
             this.barButtonItem_GNSS_A = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem_GNSS_B = new DevExpress.XtraBars.BarButtonItem();
             this.CheckEnable_BoxRS422_Show = new DevExpress.XtraBars.BarCheckItem();
+            this.btn_TbUsedSelct = new DevExpress.XtraBars.BarEditItem();
+            this.ComboBox_TBUsedSelt = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -325,6 +327,7 @@
             this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup23 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage_422 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -364,6 +367,7 @@
             this.repositoryItemTextEdit24 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemTextEdit25 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemButtonEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -456,8 +460,6 @@
             this.btn_modify_save2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_modify_load2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_modify_save1 = new DevExpress.XtraEditors.SimpleButton();
-            this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel_BoxLVDS_A = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -528,6 +530,7 @@
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
@@ -536,6 +539,8 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.通道名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.控制 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -629,6 +634,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBox_baudselsct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBox_TBUsedSelt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
@@ -657,6 +663,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.hideContainerTop.SuspendLayout();
@@ -688,8 +695,6 @@
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.dockPanel_LOG.SuspendLayout();
-            this.dockPanel1_Container.SuspendLayout();
             this.dockPanel_BoxLVDS_A.SuspendLayout();
             this.dockPanel3_Container.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -723,6 +728,8 @@
             this.controlContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LVDS_01)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.dockPanel_LOG.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit17.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit18.Properties)).BeginInit();
@@ -887,9 +894,10 @@
             this.barEditItem_RS422freqset,
             this.barButtonItem_GNSS_A,
             this.barButtonItem_GNSS_B,
-            this.CheckEnable_BoxRS422_Show});
+            this.CheckEnable_BoxRS422_Show,
+            this.btn_TbUsedSelct});
             resources.ApplyResources(this.btn_Short_1D04, "btn_Short_1D04");
-            this.btn_Short_1D04.MaxItemId = 252;
+            this.btn_Short_1D04.MaxItemId = 257;
             this.btn_Short_1D04.Name = "btn_Short_1D04";
             this.btn_Short_1D04.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -958,7 +966,9 @@
             this.repositoryItemTextEdit26,
             this.repositoryItemTextEdit27,
             this.ComboBox_baudselsct,
-            this.repositoryItemComboBox1});
+            this.repositoryItemComboBox1,
+            this.repositoryItemCheckEdit2,
+            this.ComboBox_TBUsedSelt});
             this.btn_Short_1D04.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.btn_Short_1D04.StatusBar = this.ribbonStatusBar1;
             // 
@@ -2145,6 +2155,7 @@
             this.btn_OpenPath_ErrorLVDSLog.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_OpenPath_ErrorLVDSLog.ImageOptions.Image")));
             this.btn_OpenPath_ErrorLVDSLog.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_OpenPath_ErrorLVDSLog.ImageOptions.LargeImage")));
             this.btn_OpenPath_ErrorLVDSLog.Name = "btn_OpenPath_ErrorLVDSLog";
+            this.btn_OpenPath_ErrorLVDSLog.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.btn_OpenPath_ErrorLVDSLog.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_OpenPath_ErrorLVDSLog_ItemClick);
             // 
             // btn_OpenPath_Storage2
@@ -2154,6 +2165,7 @@
             this.btn_OpenPath_Storage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_OpenPath_Storage2.ImageOptions.Image")));
             this.btn_OpenPath_Storage2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_OpenPath_Storage2.ImageOptions.LargeImage")));
             this.btn_OpenPath_Storage2.Name = "btn_OpenPath_Storage2";
+            this.btn_OpenPath_Storage2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.btn_OpenPath_Storage2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_OpenPath_Storage2_ItemClick);
             // 
             // barCheckItem_SelectAll
@@ -2374,6 +2386,25 @@
             this.CheckEnable_BoxRS422_Show.Name = "CheckEnable_BoxRS422_Show";
             this.CheckEnable_BoxRS422_Show.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_LVDS_CheckedChanged);
             // 
+            // btn_TbUsedSelct
+            // 
+            resources.ApplyResources(this.btn_TbUsedSelct, "btn_TbUsedSelct");
+            this.btn_TbUsedSelct.Edit = this.ComboBox_TBUsedSelt;
+            this.btn_TbUsedSelct.EditValue = "同步模式";
+            this.btn_TbUsedSelct.Id = 256;
+            this.btn_TbUsedSelct.Name = "btn_TbUsedSelct";
+            this.btn_TbUsedSelct.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // ComboBox_TBUsedSelt
+            // 
+            resources.ApplyResources(this.ComboBox_TBUsedSelt, "ComboBox_TBUsedSelt");
+            this.ComboBox_TBUsedSelt.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("ComboBox_TBUsedSelt.Buttons"))))});
+            this.ComboBox_TBUsedSelt.Items.AddRange(new object[] {
+            resources.GetString("ComboBox_TBUsedSelt.Items"),
+            resources.GetString("ComboBox_TBUsedSelt.Items1")});
+            this.ComboBox_TBUsedSelt.Name = "ComboBox_TBUsedSelt";
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -2484,7 +2515,8 @@
             this.ribbonPageGroup12,
             this.ribbonPageGroup17,
             this.ribbonPageGroup13,
-            this.ribbonPageGroup15});
+            this.ribbonPageGroup15,
+            this.ribbonPageGroup23});
             this.ribbonPage_LVDS.Name = "ribbonPage_LVDS";
             resources.ApplyResources(this.ribbonPage_LVDS, "ribbonPage_LVDS");
             // 
@@ -2520,6 +2552,12 @@
             this.ribbonPageGroup15.ItemLinks.Add(this.btn_OpenPath_Storage2);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             resources.ApplyResources(this.ribbonPageGroup15, "ribbonPageGroup15");
+            // 
+            // ribbonPageGroup23
+            // 
+            this.ribbonPageGroup23.ItemLinks.Add(this.btn_TbUsedSelct);
+            this.ribbonPageGroup23.Name = "ribbonPageGroup23";
+            resources.ApplyResources(this.ribbonPageGroup23, "ribbonPageGroup23");
             // 
             // ribbonPage_422
             // 
@@ -2832,6 +2870,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemButtonEdit5.Buttons"))), resources.GetString("repositoryItemButtonEdit5.Buttons1"), ((int)(resources.GetObject("repositoryItemButtonEdit5.Buttons2"))), ((bool)(resources.GetObject("repositoryItemButtonEdit5.Buttons3"))), ((bool)(resources.GetObject("repositoryItemButtonEdit5.Buttons4"))), ((bool)(resources.GetObject("repositoryItemButtonEdit5.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("repositoryItemButtonEdit5.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit5.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, resources.GetString("repositoryItemButtonEdit5.Buttons8"), ((object)(resources.GetObject("repositoryItemButtonEdit5.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("repositoryItemButtonEdit5.Buttons10"))), ((bool)(resources.GetObject("repositoryItemButtonEdit5.Buttons11"))))});
             this.repositoryItemButtonEdit5.Name = "repositoryItemButtonEdit5";
             // 
+            // repositoryItemCheckEdit2
+            // 
+            resources.ApplyResources(this.repositoryItemCheckEdit2, "repositoryItemCheckEdit2");
+            this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
+            // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem1);
@@ -2969,9 +3012,9 @@
             this.dockManager1.HiddenPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.dockPanel_DAMODIFY});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanel_LOG,
             this.dockPanel_BoxLVDS_A,
-            this.dockPanel_LVDS_Compare});
+            this.dockPanel_LVDS_Compare,
+            this.dockPanel_LOG});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -3686,23 +3729,6 @@
             this.btn_modify_save1.Name = "btn_modify_save1";
             this.btn_modify_save1.Click += new System.EventHandler(this.btn_modify_save_Click);
             // 
-            // dockPanel_LOG
-            // 
-            this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
-            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
-            this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
-            this.dockPanel_LOG.FloatVertical = true;
-            this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
-            resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
-            this.dockPanel_LOG.Name = "dockPanel_LOG";
-            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(103, 153);
-            // 
-            // dockPanel1_Container
-            // 
-            this.dockPanel1_Container.Controls.Add(this.richTextBox1);
-            resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
-            this.dockPanel1_Container.Name = "dockPanel1_Container";
-            // 
             // dockPanel_BoxLVDS_A
             // 
             this.dockPanel_BoxLVDS_A.Controls.Add(this.dockPanel3_Container);
@@ -4203,10 +4229,11 @@
             this.dockPanel_LVDS_Compare.Controls.Add(this.controlContainer4);
             this.dockPanel_LVDS_Compare.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
             this.dockPanel_LVDS_Compare.FloatSize = new System.Drawing.Size(1285, 1081);
+            this.dockPanel_LVDS_Compare.FloatVertical = true;
             this.dockPanel_LVDS_Compare.ID = new System.Guid("c79193df-71d8-41f2-a9dd-1821b850b4dc");
             resources.ApplyResources(this.dockPanel_LVDS_Compare, "dockPanel_LVDS_Compare");
             this.dockPanel_LVDS_Compare.Name = "dockPanel_LVDS_Compare";
-            this.dockPanel_LVDS_Compare.OriginalSize = new System.Drawing.Size(1167, 513);
+            this.dockPanel_LVDS_Compare.OriginalSize = new System.Drawing.Size(1167, 360);
             this.dockPanel_LVDS_Compare.Click += new System.EventHandler(this.dockPanel_LVDS_Compare_Click);
             // 
             // controlContainer4
@@ -4294,6 +4321,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButton9);
             this.groupBox1.Controls.Add(this.radioButton8);
             this.groupBox1.Controls.Add(this.radioButton7);
             this.groupBox1.Controls.Add(this.radioButton6);
@@ -4305,6 +4333,14 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // radioButton9
+            // 
+            resources.ApplyResources(this.radioButton9, "radioButton9");
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.TabStop = true;
+            this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButton9.Click += new System.EventHandler(this.radioButton8_Click);
             // 
             // radioButton8
             // 
@@ -4369,6 +4405,23 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.Click += new System.EventHandler(this.radioButton8_Click);
+            // 
+            // dockPanel_LOG
+            // 
+            this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
+            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
+            this.dockPanel_LOG.FloatVertical = true;
+            this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
+            resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
+            this.dockPanel_LOG.Name = "dockPanel_LOG";
+            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(103, 153);
+            // 
+            // dockPanel1_Container
+            // 
+            this.dockPanel1_Container.Controls.Add(this.richTextBox1);
+            resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
+            this.dockPanel1_Container.Name = "dockPanel1_Container";
             // 
             // ID
             // 
@@ -4876,9 +4929,9 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dockPanel_LOG);
             this.Controls.Add(this.dockPanel_LVDS_Compare);
             this.Controls.Add(this.dockPanel_BoxLVDS_A);
-            this.Controls.Add(this.dockPanel_LOG);
             this.Controls.Add(this.hideContainerTop);
             this.Controls.Add(this.hideContainerLeft);
             this.Controls.Add(this.ribbonStatusBar1);
@@ -4922,6 +4975,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBox_baudselsct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBox_TBUsedSelt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
@@ -4950,6 +5004,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.hideContainerTop.ResumeLayout(false);
@@ -4982,8 +5037,6 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.dockPanel_LOG.ResumeLayout(false);
-            this.dockPanel1_Container.ResumeLayout(false);
             this.dockPanel_BoxLVDS_A.ResumeLayout(false);
             this.dockPanel3_Container.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -5020,6 +5073,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LVDS_01)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.dockPanel_LOG.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit17.Properties)).EndInit();
@@ -5505,6 +5560,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private DevExpress.XtraBars.BarEditItem btn_TbUsedSelct;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox ComboBox_TBUsedSelt;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup23;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
     }
 }
 

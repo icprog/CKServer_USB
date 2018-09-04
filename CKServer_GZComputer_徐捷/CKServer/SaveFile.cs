@@ -771,9 +771,9 @@ namespace CKServer
 
                         #region 分割文件，防止文件过大
                         long FileSizeMB = myfile.Length / (1024 * 1024);
-                        if (FileSizeMB > 10)
+                        if (FileSizeMB > 100)
                         {
-                            MessageBox.Show("错误日志已超过10MB，请查看错误。");
+                            MessageBox.Show("错误日志已超范围，请查看错误。");
 
                             //myFileList_txt[key].Flush();
 

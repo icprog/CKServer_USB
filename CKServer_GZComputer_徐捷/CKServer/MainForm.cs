@@ -753,11 +753,27 @@ namespace CKServer
                         CtrlEndPt = USB.MyDeviceList[i].ControlEndPt;
                         if (CtrlEndPt != null)
                         {
+                            if (i == Data.LVDSid)
+                            {
+                                String tbstr = btn_TbUsedSelct.EditValue.ToString();
+                                if (tbstr == "同步模式")
+                                {
+                                    USB.SendCMD(Data.LVDSid, 0x8e, 0x06);
+                                }
+                                else
+                                {
+                                    USB.SendCMD(Data.LVDSid, 0x8e, 0x02);
+                                }
+                            }
+
+
                             USB.SendCMD(i, 0x80, 0x01);
                             USB.SendCMD(i, 0x80, 0x00);//复位
 
                             USB.MyDeviceList[i].Reset();
+
                             Thread.Sleep(100);
+
                             USB.SendCMD(i, 0x80, 0x04);//开启接收
 
                             Register.Byte80H = 0x04;
@@ -869,8 +885,7 @@ namespace CKServer
             {
                 MyDevice04_Enable = true;
                 Func_LVDS.Run();//初始化LVDS比对各项参数
-                                 //            new Thread(() => { RealTime_ComPare2(); }).Start();
-
+                                //            new Thread(() => { RealTime_ComPare2(); }).Start();
             }
 
             byte[] Recv_MidBuf_8K_Box01 = new byte[8192];//8K中间缓存
@@ -1557,19 +1572,23 @@ namespace CKServer
             queue.Enqueue(bufsav);
             rwlock.ExitWriteLock();
 
-            try
+            if (Data.LVDSCPTAG)
             {
-                if (RdoList[ChanNo-1].Checked)
+                try
                 {
-                    Func_LVDS.DispatchLock.EnterWriteLock();
-                    Func_LVDS.NeedDispatchBuf.AddRange(bufsav);
-                    Func_LVDS.DispatchLock.ExitWriteLock();
+                    if (RdoList[ChanNo - 1].Checked)
+                    {
+                        Func_LVDS.DispatchLock.EnterWriteLock();
+                        Func_LVDS.NeedDispatchBuf.AddRange(bufsav);
+                        Func_LVDS.DispatchLock.ExitWriteLock();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Trace.WriteLine(ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                Trace.WriteLine(ex.Message);
-            }
+            
         }
 
 
@@ -1931,7 +1950,7 @@ namespace CKServer
 
         private void btn_OpenPath_Storage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            System.Diagnostics.Process.Start("Explorer", Program.GetStartupPath() + @"存储数据\");
+            System.Diagnostics.Process.Start("Explorer", Program.GetStartupPath() + @"存储数据\LVDS机箱数据\");
         }
 
         private void btn_DAOut_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -3558,39 +3577,45 @@ namespace CKServer
         }
 
         private void radioButton8_Click(object sender, EventArgs e)
-        {
-
-            
+        {            
             RadioButton rdo = (RadioButton)sender;
             string Name = rdo.Name;
             int key = int.Parse(Name.Substring(11, 1)) - 1;
 
-            Trace.WriteLine(Name + "clicked!");
-
-            Func_LVDS.LVDS_ComPare_Chan = key;
-
-            Function.SetConfigValue("LVDS_ComPareChan", key.ToString());
-
-            for (int i = 0; i < 32; i++)
+            if (rdo.Text == "不比对")
             {
-                Func_LVDS.dt_LVDS_01.Rows[i]["序号"] = (i+1).ToString();
-                Func_LVDS.dt_LVDS_01.Rows[i]["通道名称"] = Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i/2 + 1).ToString(), "name");
+                Data.LVDSCPTAG = false;
+            }
+            else
+            {
+                Data.LVDSCPTAG = true;
 
-                if (i % 2 == 0) Func_LVDS.dt_LVDS_01.Rows[i]["实时/延时"] = "实时";
-                if (i % 2 == 1) Func_LVDS.dt_LVDS_01.Rows[i]["实时/延时"] = "延时";
+                Trace.WriteLine(Name + "clicked!");
 
-                Func_LVDS.dt_LVDS_01.Rows[i]["VCID"] = Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i/2 + 1).ToString(), "vcid");
-                Func_LVDS.dt_LVDS_01.Rows[i]["帧计数"] = 0;
-                Func_LVDS.dt_LVDS_01.Rows[i]["收到数据"] = 0;
-                Func_LVDS.dt_LVDS_01.Rows[i]["比对长度"] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i/2 + 1).ToString(), "CPLen"));
-                Func_LVDS.dt_LVDS_01.Rows[i]["出错行"] = 0;
-                Func_LVDS.dt_LVDS_01.Rows[i]["出错列"] = 0;
+                Func_LVDS.LVDS_ComPare_Chan = key;
 
-                Func_LVDS.CPLenList[i] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen"));
+                Function.SetConfigValue("LVDS_ComPareChan", key.ToString());
+
+                for (int i = 0; i < 32; i++)
+                {
+                    Func_LVDS.dt_LVDS_01.Rows[i]["序号"] = (i + 1).ToString();
+                    Func_LVDS.dt_LVDS_01.Rows[i]["通道名称"] = Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "name");
+
+                    if (i % 2 == 0) Func_LVDS.dt_LVDS_01.Rows[i]["实时/延时"] = "实时";
+                    if (i % 2 == 1) Func_LVDS.dt_LVDS_01.Rows[i]["实时/延时"] = "延时";
+
+                    Func_LVDS.dt_LVDS_01.Rows[i]["VCID"] = Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "vcid");
+                    Func_LVDS.dt_LVDS_01.Rows[i]["帧计数"] = 0;
+                    Func_LVDS.dt_LVDS_01.Rows[i]["收到数据"] = 0;
+                    Func_LVDS.dt_LVDS_01.Rows[i]["比对长度"] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen"));
+                    Func_LVDS.dt_LVDS_01.Rows[i]["出错行"] = 0;
+                    Func_LVDS.dt_LVDS_01.Rows[i]["出错列"] = 0;
+
+                    Func_LVDS.CPLenList[i] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen"));
+
+                }
 
             }
-
-
 
 
         }
