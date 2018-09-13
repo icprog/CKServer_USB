@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration>
-  <add key="DAModify_Board1_A0" value="139" />
-  <add key="DAModify_Board1_B0" value="7739" />
-  <add key="DAModify_Board1_A1" value="132" />
-  <add key="DAModify_Board1_B1" value="7752" />
+  <add key="DAModify_Board1_A0" value="130" />
+  <add key="DAModify_Board1_B0" value="7800" />
+  <add key="DAModify_Board1_A1" value="130" />
+  <add key="DAModify_Board1_B1" value="7800" />
   <add key="DAModify_Board1_A2" value="138" />
   <add key="DAModify_Board1_B2" value="7752" />
   <add key="DAModify_Board1_A3" value="138" />
@@ -256,10 +256,12 @@
   <add key="DAModify_Board1_B126" value="7808" />
   <add key="DAModify_Board1_A127" value="128" />
   <add key="DAModify_Board1_B127" value="7809" />
-  <add key="DAModify_Board2_A0" value="139" />
-  <add key="DAModify_Board2_B0" value="7739" />
-  <add key="DAModify_Board2_A1" value="132" />
-  <add key="DAModify_Board2_B1" value="7752" />
+
+
+  <add key="DAModify_Board2_A0" value="131" />
+  <add key="DAModify_Board2_B0" value="7801" />
+  <add key="DAModify_Board2_A1" value="131" />
+  <add key="DAModify_Board2_B1" value="7801" />
   <add key="DAModify_Board2_A2" value="138" />
   <add key="DAModify_Board2_B2" value="7752" />
   <add key="DAModify_Board2_A3" value="138" />

@@ -11,7 +11,8 @@ namespace CKServer
 {
     class Data
     {
-        public static int OCid = 2;
+        
+        public static int OnlyID = 2;
 
         public static string Path = null;                       //程序运行目录
 
@@ -96,7 +97,7 @@ namespace CKServer
 
         }
 
-
+        public static string ADconfigPath = Program.GetStartupPath() + @"配置文件\ADconfig.xml";
         public static string DAconfigPath = Program.GetStartupPath() + @"配置文件\DAconfig.xml";
         public static string RconfigPath = Program.GetStartupPath() + @"配置文件\Rconfig.xml";
         public static string OCconfigPath = Program.GetStartupPath() + @"配置文件\OCconfig.xml";

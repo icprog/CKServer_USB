@@ -65,10 +65,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CyUSB">
-      <HintPath>..\..\..\H07_Total\H07_Total\CyUSB.dll</HintPath>
+      <HintPath>..\..\CKServer_ForHY_星间链路\CKServer\CyUSB.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.BonusSkins.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevExpress.Images.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
@@ -123,6 +127,8 @@
     </Compile>
     <Compile Include="Data.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="Func_AD.cs" />
+    <Compile Include="Func_OC.cs" />
     <Compile Include="LoadFPGAForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,7 +209,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Start_btn.png" />
+    <None Include="Resources\Stop_btn.png" />
+    <Content Include="配置文件\OCconfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="planet.ico" />
+    <Content Include="配置文件\ADconfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="配置文件\DAconfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>

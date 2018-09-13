@@ -61,7 +61,7 @@ namespace CKServer
                         byte[] buf = new byte[8];
                         CtrlEndPt.XferData(ref buf, ref len);
 
-                        MyLog.Info("向USB机箱" + id.ToString() + "发送指令0x" + ReqCode.ToString("x2") + " 0x" + Value.ToString("x2") + "成功");
+                       // MyLog.Info("向USB机箱" + id.ToString() + "发送指令0x" + ReqCode.ToString("x2") + " 0x" + Value.ToString("x2") + "成功");
                         return true;
                     }
                 }

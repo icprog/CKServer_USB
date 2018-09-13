@@ -5,6 +5,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace CKServer
 {
@@ -194,6 +196,73 @@ namespace CKServer
             {
                 MyLog.Error("设置系统时间失败！");
             }
+        }
+
+        /// <summary>
+        /// 获取配置文件中的内容
+        /// </summary>
+        /// <param name="Path">xml路径</param>
+        /// <param name="type">节点：'add'</param>
+        /// <param name="key">key</param>
+        /// <param name="name">要获取的属性名称</param>
+        /// <returns></returns>
+        public static string GetConfigStr(string Path, string type, string key, string name)
+        {
+            XDocument xDoc = XDocument.Load(Path);
+            XmlReader reader = xDoc.CreateReader();
+            string value = "Error";
+            var query = from p in xDoc.Root.Elements(type)
+                        where p.Attribute("key").Value == key
+                        select p.Attribute(name).Value;
+
+            foreach (string s in query)
+            {
+                value = s;
+            }
+            return value;
+        }
+
+        public static void SaveConfigStr(string Path, string type, string key, string name, string value)
+        {
+            XDocument xDoc = XDocument.Load(Path);
+            XmlReader reader = xDoc.CreateReader();
+
+            bool Matched = false;//是否已在XML中
+
+            foreach (var p in xDoc.Root.Elements(type))
+            {
+                if (p.Attribute("key").Value == key)
+                {
+                    p.Attribute(name).Value = value;
+                    Matched = true;
+                }
+            }
+            if (Matched == false)
+            {
+                XElement element = new XElement(type, new XAttribute("key", key), new XAttribute(name, value));
+                xDoc.Root.Add(element);
+            }
+            xDoc.Save(Path);
+        }
+
+
+        /// <summary>
+        /// 十六进制String转化为BYTE数组
+        /// </summary>
+        /// <param name="hexString">参数：输入的十六进制String</param>
+        /// <returns>BYTE数组</returns>
+        public static byte[] StrToHexByte(string hexString)
+        {
+            hexString = hexString.Replace(" ", "").Replace("\r", "").Replace("\n", "");
+            if ((hexString.Length % 2) != 0)
+                hexString += " ";
+
+            byte[] returnBytes = new byte[hexString.Length / 2];
+
+            for (int i = 0; i < returnBytes.Length; i++)
+                returnBytes[i] = Convert.ToByte(hexString.Substring(i * 2, 2), 16);
+            return returnBytes;
+
         }
     }
 }

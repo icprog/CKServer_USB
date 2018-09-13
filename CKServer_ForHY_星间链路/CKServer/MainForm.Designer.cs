@@ -41,11 +41,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel1 = new DevExpress.XtraCharts.PointSeriesLabel();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -176,6 +179,12 @@
             this.barbtn_setFrame = new DevExpress.XtraBars.BarButtonItem();
             this.barbtn_savFrame = new DevExpress.XtraBars.BarButtonItem();
             this.CheckEnable_DY = new DevExpress.XtraBars.BarCheckItem();
+            this.btn_VSet = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_ASet = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItem13 = new DevExpress.XtraBars.BarEditItem();
+            this.VsetEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.barEditItem14 = new DevExpress.XtraBars.BarEditItem();
+            this.AsetEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -184,6 +193,7 @@
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Page_Setting = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -278,12 +288,11 @@
             this.controlContainer7 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel_DY = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer6 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.button7 = new System.Windows.Forms.Button();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button6 = new System.Windows.Forms.Button();
@@ -378,6 +387,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBox_YKSelect_A)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBox_YKSelect_B)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VsetEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AsetEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
@@ -419,12 +430,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.dockPanel_LOG.SuspendLayout();
@@ -552,9 +565,13 @@
             this.barbtn_StartComP,
             this.barbtn_setFrame,
             this.barbtn_savFrame,
-            this.CheckEnable_DY});
+            this.CheckEnable_DY,
+            this.btn_VSet,
+            this.btn_ASet,
+            this.barEditItem13,
+            this.barEditItem14});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 175;
+            this.ribbonControl1.MaxItemId = 179;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -596,7 +613,9 @@
             this.ComboBox_YKSelect_A,
             this.ComboBox_YKSelect_B,
             this.repositoryItemRadioGroup1,
-            this.repositoryItemRadioGroup2});
+            this.repositoryItemRadioGroup2,
+            this.VsetEdit,
+            this.AsetEdit});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
@@ -1437,6 +1456,79 @@
             this.CheckEnable_DY.Name = "CheckEnable_DY";
             this.CheckEnable_DY.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_LVDS_CheckedChanged);
             // 
+            // btn_VSet
+            // 
+            resources.ApplyResources(this.btn_VSet, "btn_VSet");
+            this.btn_VSet.Id = 175;
+            this.btn_VSet.ImageOptions.Image = global::CKServer.Properties.Resources.download_16x16;
+            this.btn_VSet.Name = "btn_VSet";
+            this.btn_VSet.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.btn_VSet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_VSet_ItemClick);
+            // 
+            // btn_ASet
+            // 
+            resources.ApplyResources(this.btn_ASet, "btn_ASet");
+            this.btn_ASet.Id = 176;
+            this.btn_ASet.ImageOptions.Image = global::CKServer.Properties.Resources.download_16x16;
+            this.btn_ASet.Name = "btn_ASet";
+            this.btn_ASet.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.btn_ASet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ASet_ItemClick);
+            // 
+            // barEditItem13
+            // 
+            resources.ApplyResources(this.barEditItem13, "barEditItem13");
+            this.barEditItem13.Edit = this.VsetEdit;
+            this.barEditItem13.EditValue = 23D;
+            this.barEditItem13.Id = 177;
+            this.barEditItem13.Name = "barEditItem13";
+            // 
+            // VsetEdit
+            // 
+            resources.ApplyResources(this.VsetEdit, "VsetEdit");
+            this.VsetEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("VsetEdit.Buttons"))))});
+            this.VsetEdit.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.VsetEdit.MaxValue = new decimal(new int[] {
+            45,
+            0,
+            0,
+            0});
+            this.VsetEdit.MinValue = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.VsetEdit.Name = "VsetEdit";
+            // 
+            // barEditItem14
+            // 
+            resources.ApplyResources(this.barEditItem14, "barEditItem14");
+            this.barEditItem14.Edit = this.AsetEdit;
+            this.barEditItem14.EditValue = 0D;
+            this.barEditItem14.Id = 178;
+            this.barEditItem14.Name = "barEditItem14";
+            // 
+            // AsetEdit
+            // 
+            resources.ApplyResources(this.AsetEdit, "AsetEdit");
+            this.AsetEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("AsetEdit.Buttons"))))});
+            this.AsetEdit.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.AsetEdit.MaxValue = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.AsetEdit.Name = "AsetEdit";
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -1450,7 +1542,8 @@
             this.ribbonPageGroup5,
             this.ribbonPageGroup9,
             this.ribbonPageGroup10,
-            this.ribbonPageGroup12});
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup13});
             this.ribbonPage1.Name = "ribbonPage1";
             resources.ApplyResources(this.ribbonPage1, "ribbonPage1");
             // 
@@ -1496,6 +1589,15 @@
             this.ribbonPageGroup12.ItemLinks.Add(this.barbtn_savFrame);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             resources.ApplyResources(this.ribbonPageGroup12, "ribbonPageGroup12");
+            // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.ItemLinks.Add(this.btn_VSet);
+            this.ribbonPageGroup13.ItemLinks.Add(this.btn_ASet);
+            this.ribbonPageGroup13.ItemLinks.Add(this.barEditItem13);
+            this.ribbonPageGroup13.ItemLinks.Add(this.barEditItem14);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            resources.ApplyResources(this.ribbonPageGroup13, "ribbonPageGroup13");
             // 
             // Page_Setting
             // 
@@ -2298,35 +2400,49 @@
             this.controlContainer6.Controls.Add(this.chartControl2);
             this.controlContainer6.Controls.Add(this.chartControl1);
             this.controlContainer6.Controls.Add(this.label4);
-            this.controlContainer6.Controls.Add(this.label5);
             this.controlContainer6.Controls.Add(this.label3);
-            this.controlContainer6.Controls.Add(this.pictureBox1);
             this.controlContainer6.Controls.Add(this.numericUpDown2);
             this.controlContainer6.Controls.Add(this.numericUpDown1);
             this.controlContainer6.Controls.Add(this.button6);
             this.controlContainer6.Controls.Add(this.button5);
             this.controlContainer6.Controls.Add(this.button2);
+            this.controlContainer6.Controls.Add(this.button7);
             resources.ApplyResources(this.controlContainer6, "controlContainer6");
             this.controlContainer6.Name = "controlContainer6";
             // 
+            // button7
+            // 
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // chartControl2
             // 
+            resources.ApplyResources(this.chartControl2, "chartControl2");
             this.chartControl2.DataBindings = null;
             xyDiagram1.AxisX.DateTimeScaleOptions.AutoGrid = false;
             xyDiagram1.AxisX.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Second;
             xyDiagram1.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second;
+            xyDiagram1.AxisX.Tickmarks.MinorVisible = false;
+            xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl2.Diagram = xyDiagram1;
             this.chartControl2.Legend.Name = "Default Legend";
             this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            resources.ApplyResources(this.chartControl2, "chartControl2");
             this.chartControl2.Name = "chartControl2";
             series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+            pointSeriesLabel1.BackColor = System.Drawing.Color.White;
+            series1.Label = pointSeriesLabel1;
             resources.ApplyResources(series1, "series1");
+            lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
             series1.View = lineSeriesView1;
+            resources.ApplyResources(series2, "series2");
+            series2.View = lineSeriesView2;
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
+        series1,
+        series2};
             chartTitle1.Dock = DevExpress.XtraCharts.ChartTitleDockStyle.Left;
             chartTitle1.Indent = 0;
             resources.ApplyResources(chartTitle1, "chartTitle1");
@@ -2335,7 +2451,9 @@
             // 
             // chartControl1
             // 
+            resources.ApplyResources(this.chartControl1, "chartControl1");
             this.chartControl1.AppearanceNameSerializable = "Gray";
+            this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.DataBindings = null;
             xyDiagram2.AxisX.DateTimeScaleOptions.AutoGrid = false;
             xyDiagram2.AxisX.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Second;
@@ -2351,15 +2469,14 @@
             this.chartControl1.Legend.Border.Visibility = DevExpress.Utils.DefaultBoolean.True;
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            resources.ApplyResources(this.chartControl1, "chartControl1");
             this.chartControl1.Name = "chartControl1";
-            series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
-            series2.LegendName = "Default Legend";
-            resources.ApplyResources(series2, "series2");
-            lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series2.View = lineSeriesView2;
+            series3.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+            series3.LegendName = "Default Legend";
+            resources.ApplyResources(series3, "series3");
+            lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series3.View = lineSeriesView3;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
+        series3};
             chartTitle2.Dock = DevExpress.XtraCharts.ChartTitleDockStyle.Left;
             resources.ApplyResources(chartTitle2, "chartTitle2");
             chartTitle2.Indent = 0;
@@ -2373,22 +2490,10 @@
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CKServer.Properties.Resources.red;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // numericUpDown2
             // 
@@ -3086,6 +3191,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBox_YKSelect_A)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBox_YKSelect_B)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VsetEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AsetEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
@@ -3127,14 +3234,16 @@
             this.controlContainer6.ResumeLayout(false);
             this.controlContainer6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.dockPanel_LOG.ResumeLayout(false);
@@ -3464,11 +3573,17 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraBars.BarCheckItem CheckEnable_DY;
         private DevExpress.XtraCharts.ChartControl chartControl2;
         private DevExpress.XtraCharts.ChartControl chartControl1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button7;
+        private DevExpress.XtraBars.BarButtonItem btn_VSet;
+        private DevExpress.XtraBars.BarButtonItem btn_ASet;
+        private DevExpress.XtraBars.BarEditItem barEditItem13;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit VsetEdit;
+        private DevExpress.XtraBars.BarEditItem barEditItem14;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit AsetEdit;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
     }
 }
 

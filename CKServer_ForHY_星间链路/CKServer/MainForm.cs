@@ -489,16 +489,24 @@ namespace CKServer
                     FileThread.FileSaveStart();
                 }
 
+                Func_DY.start();
+
                 new Thread(() => { RecvFun(Data.OnlyID); }).Start();
+
+
+
                 ADList.Clear();
                 new Thread(() => { DealWithADFun(); }).Start();
 
                 YCList_A.Clear();
                 YCList_B.Clear();
+
                 new Thread(() => { DealWithYCFun(); }).Start();
 
                 if (radioButton1.Checked)
                     Func_LVDS.StartComPare();//开启比对
+
+                timer2_DYQuery.Enabled = true;
             }
             else
             {
@@ -511,7 +519,9 @@ namespace CKServer
 
                 Func_LVDS._StartCompare = false;
 
+                Func_DY.close();
 
+                timer2_DYQuery.Enabled = false;
             }
         }
 
@@ -539,33 +549,40 @@ namespace CKServer
 
                     if (RecvBoxLen > 0)
                     {
+                        //   Trace.WriteLine("收到数据量:" + RecvBoxLen.ToString());
+
                         byte[] tempbuf = new byte[RecvBoxLen];
                         Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);
                         //存储源码
                         SaveFile.Lock_1.EnterWriteLock();
                         SaveFile.DataQueue_SC1.Enqueue(tempbuf);
                         SaveFile.Lock_1.ExitWriteLock();
+                        lock (Recv_MidBuf_8K)
+                            Array.Copy(tempbuf, 0, Recv_MidBuf_8K, Pos_Recv_MidBuf_8K, tempbuf.Length);
 
-                        Array.Copy(tempbuf, 0, Recv_MidBuf_8K, Pos_Recv_MidBuf_8K, tempbuf.Length);
                         Pos_Recv_MidBuf_8K += tempbuf.Length;
 
                         while (Pos_Recv_MidBuf_8K >= 4096)
                         {
                             if (Recv_MidBuf_8K[0] == 0xff && (0x0 <= Recv_MidBuf_8K[1]) && (Recv_MidBuf_8K[1] < 0x11))
                             {
-                                DealWithLongFrame(ref Recv_MidBuf_8K, ref Pos_Recv_MidBuf_8K);
+                                lock (Recv_MidBuf_8K)
+                                    DealWithLongFrame(ref Recv_MidBuf_8K, ref Pos_Recv_MidBuf_8K);
                             }
                             else
                             {
                                 MyLog.Error("收到异常帧！");
-                                Array.Clear(Recv_MidBuf_8K, 0, Pos_Recv_MidBuf_8K);
+
+                                lock (Recv_MidBuf_8K)
+                                    Array.Clear(Recv_MidBuf_8K, 0, Pos_Recv_MidBuf_8K);
+
                                 Pos_Recv_MidBuf_8K = 0;
                             }
                         }
                     }
                     else if (RecvBoxLen == 0)
                     {
-                        //  Trace.WriteLine("收到0包-----0000000000");
+                        //    Trace.WriteLine("收到0包-----0000000000");
                     }
                     else
                     {
@@ -839,7 +856,7 @@ namespace CKServer
                 Thread.Sleep(200);
                 FileThread.FileClose();
                 Func_LVDS._StartCompare = false;
-
+                Func_DY.close();
             }
             catch (Exception ex)
             {
@@ -1702,6 +1719,8 @@ namespace CKServer
             }
         }
 
+        bool ShowErrMsg = true;
+
         private void timer2_DYQuery_Tick(object sender, EventArgs e)
         {
             //     double Vout = (double)numericUpDown2.Value;
@@ -1726,14 +1745,6 @@ namespace CKServer
             USB.SendCMD(Data.OnlyID, 0x82, 0x00);
             USB.SendData(Data.OnlyID, FinalSend);
 
-            if (Func_DY.LedOn)
-            {
-                this.pictureBox1.Image = Properties.Resources.green;
-            }
-            if (Func_DY.LedOff)
-            {
-                this.pictureBox1.Image = Properties.Resources.red;
-            }
 
 
             DateTime t1 = DateTime.Now;
@@ -1744,68 +1755,59 @@ namespace CKServer
                 chartControl1.Series[0].Points.RemoveAt(0);
             }
 
+
+            if (Func_DY.Real_Vvalue < 23)
+            {
+                if (ShowErrMsg)
+                {
+                    ShowErrMsg = false;
+                    MessageBox.Show("电源电压小于23V，请密切关注！！！");
+                }
+                MyLog.Error("电源电压小于23V，请密切关注！！！");
+            }
+
             DevExpress.XtraCharts.SeriesPoint point2 = new DevExpress.XtraCharts.SeriesPoint(DateTime.Now.ToLongTimeString(), Func_DY.Real_Avalue);
 
+            DevExpress.XtraCharts.SeriesPoint point3 = new DevExpress.XtraCharts.SeriesPoint(DateTime.Now.ToLongTimeString(), Func_DY.Strict_Avalue);
+
             chartControl2.Series[0].Points.Add(point2);
+            chartControl2.Series[1].Points.Add(point3);
+
             if (Data.CountA++ > 20)
             {
                 chartControl2.Series[0].Points.RemoveAt(0);
+
+                chartControl2.Series[1].Points.RemoveAt(0);
             }
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (button2.Text == "打开电源")
-            {
-                button2.Text = "关闭电源";
-                byte[] SendData = new byte[6] { 0xFA, 0xC1, 0x00, 0x00, 0xC1, 0xF5 };
-                byte[] end = new byte[16] {0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
-                byte[] FinalSend = new byte[28];
 
-                FinalSend[0] = 0x1D;
-                FinalSend[1] = 0x07;
-                FinalSend[2] = 0x00;
-                FinalSend[3] = 0x06;
-                SendData.CopyTo(FinalSend, 4);
+            byte[] SendData = new byte[6] { 0xFA, 0xC1, 0x00, 0x00, 0xC1, 0xF5 };
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+            byte[] FinalSend = new byte[28];
 
-                FinalSend[10] = 0x00;
-                FinalSend[11] = 0x00;
+            FinalSend[0] = 0x1D;
+            FinalSend[1] = 0x07;
+            FinalSend[2] = 0x00;
+            FinalSend[3] = 0x06;
+            SendData.CopyTo(FinalSend, 4);
 
-                end.CopyTo(FinalSend, 12);
+            FinalSend[10] = 0x00;
+            FinalSend[11] = 0x00;
 
-                USB.SendCMD(Data.OnlyID, 0x82, 0x01);
-                USB.SendCMD(Data.OnlyID, 0x82, 0x00);
-                USB.SendData(Data.OnlyID, FinalSend);
+            end.CopyTo(FinalSend, 12);
 
-                Data.CountA = 0;
-                Data.CountV = 0;
-                timer2_DYQuery.Enabled = true;
-            }
-            else
-            {
-                button2.Text = "打开电源";
-                byte[] SendData = new byte[6] { 0xFA, 0xC2, 0x00, 0x00, 0xC2, 0xF5 };
-                byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
-                byte[] FinalSend = new byte[28];
+            USB.SendCMD(Data.OnlyID, 0x82, 0x01);
+            USB.SendCMD(Data.OnlyID, 0x82, 0x00);
+            USB.SendData(Data.OnlyID, FinalSend);
 
-                FinalSend[0] = 0x1D;
-                FinalSend[1] = 0x07;
-                FinalSend[2] = 0x00;
-                FinalSend[3] = 0x06;
-                SendData.CopyTo(FinalSend, 4);
+            Data.CountA = 0;
+            Data.CountV = 0;
 
-                FinalSend[10] = 0x00;
-                FinalSend[11] = 0x00;
-
-                end.CopyTo(FinalSend, 12);
-
-                USB.SendCMD(Data.OnlyID, 0x82, 0x01);
-                USB.SendCMD(Data.OnlyID, 0x82, 0x00);
-
-                USB.SendData(Data.OnlyID, FinalSend);
-
-                timer2_DYQuery.Enabled = false;
-            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -1834,8 +1836,13 @@ namespace CKServer
 
             end.CopyTo(FinalSend, 12);
 
+
+            USB.SendCMD(Data.OnlyID, 0x82, 0x01);
+            USB.SendCMD(Data.OnlyID, 0x82, 0x00);
             USB.SendData(Data.OnlyID, FinalSend);
         }
+
+
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -1863,8 +1870,105 @@ namespace CKServer
 
             end.CopyTo(FinalSend, 12);
 
+
+            USB.SendCMD(Data.OnlyID, 0x82, 0x01);
+            USB.SendCMD(Data.OnlyID, 0x82, 0x00);
             USB.SendData(Data.OnlyID, FinalSend);
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            byte[] SendData = new byte[6] { 0xFA, 0xC2, 0x00, 0x00, 0xC2, 0xF5 };
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+            byte[] FinalSend = new byte[28];
+
+            FinalSend[0] = 0x1D;
+            FinalSend[1] = 0x07;
+            FinalSend[2] = 0x00;
+            FinalSend[3] = 0x06;
+            SendData.CopyTo(FinalSend, 4);
+
+            FinalSend[10] = 0x00;
+            FinalSend[11] = 0x00;
+
+            end.CopyTo(FinalSend, 12);
+
+            USB.SendCMD(Data.OnlyID, 0x82, 0x01);
+            USB.SendCMD(Data.OnlyID, 0x82, 0x00);
+
+            USB.SendData(Data.OnlyID, FinalSend);
+        }
+
+        private void barEditItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_VSet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            double Vout = double.Parse(barEditItem13.EditValue.ToString());
+
+
+            byte[] SendData = new byte[6] { 0xFA, 0xC3, 0x00, 0x00, 0x00, 0xF5 };
+
+            int a = (int)Vout;
+            int b = (int)(Vout * 100) - a * 100;
+            SendData[2] = (byte)a;
+            SendData[3] = (byte)b;
+            SendData[4] = (byte)((SendData[1] + SendData[2] + SendData[3]) & 0xff);
+
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+            byte[] FinalSend = new byte[28];
+
+            FinalSend[0] = 0x1D;
+            FinalSend[1] = 0x07;
+            FinalSend[2] = 0x00;
+            FinalSend[3] = 0x06;
+            SendData.CopyTo(FinalSend, 4);
+
+            FinalSend[10] = 0x00;
+            FinalSend[11] = 0x00;
+
+            end.CopyTo(FinalSend, 12);
+
+
+            USB.SendCMD(Data.OnlyID, 0x82, 0x01);
+            USB.SendCMD(Data.OnlyID, 0x82, 0x00);
+            USB.SendData(Data.OnlyID, FinalSend);
+        }
+
+        private void btn_ASet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            double Vout = double.Parse(barEditItem14.EditValue.ToString());
+
+            byte[] SendData = new byte[6] { 0xFA, 0xC4, 0x00, 0x00, 0x00, 0xF5 };
+
+            int a = (int)Vout;
+            int b = (int)(Vout * 100) - a * 100;
+            SendData[2] = (byte)a;
+            SendData[3] = (byte)b;
+            SendData[4] = (byte)((SendData[1] + SendData[2] + SendData[3]) & 0xff);
+
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+            byte[] FinalSend = new byte[28];
+
+            FinalSend[0] = 0x1D;
+            FinalSend[1] = 0x07;
+            FinalSend[2] = 0x00;
+            FinalSend[3] = 0x06;
+            SendData.CopyTo(FinalSend, 4);
+
+            FinalSend[10] = 0x00;
+            FinalSend[11] = 0x00;
+
+            end.CopyTo(FinalSend, 12);
+
+
+            USB.SendCMD(Data.OnlyID, 0x82, 0x01);
+            USB.SendCMD(Data.OnlyID, 0x82, 0x00);
+            USB.SendData(Data.OnlyID, FinalSend);
         }
     }
 }

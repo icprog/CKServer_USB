@@ -29,6 +29,10 @@ namespace CKServer
         private DataTable dtModifyDA1 = new DataTable();
         private DataTable dtModifyDA2 = new DataTable();
 
+        SaveFile FileThread;
+
+        bool _BoxIsStarted;
+
         void UsbDevices_DeviceAttached(object sender, EventArgs e)
         {
             SetDevice(false);
@@ -62,13 +66,20 @@ namespace CKServer
                 String strmsg;
                 strmsg = "(0x" + fxDevice.VendorID.ToString("X4") + " - 0x" + fxDevice.ProductID.ToString("X4") + ") " + fxDevice.FriendlyName;
 
-                int key = int.Parse(fxDevice.ProductID.ToString("x4").Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
-                if (USB.MyDeviceList[key] == null)
+                try
                 {
-                    USB.MyDeviceList[key] = (CyUSBDevice)fxDevice;
+                    int key = int.Parse(fxDevice.ProductID.ToString("x4").Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+                    if (USB.MyDeviceList[key] == null)
+                    {
+                        USB.MyDeviceList[key] = (CyUSBDevice)fxDevice;
 
-                    MyLog.Info(USB.MyDeviceList[key].FriendlyName + ConfigurationManager.AppSettings[USB.MyDeviceList[key].FriendlyName] + "板卡连接");
-
+                        MyLog.Info(USB.MyDeviceList[key].FriendlyName + ConfigurationManager.AppSettings[USB.MyDeviceList[key].FriendlyName] + "板卡连接");
+                        Data.OnlyID = key;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("监测到异常USB设备连接！" + ex.Message);
                 }
             }
 
@@ -108,33 +119,12 @@ namespace CKServer
         {
             try
             {
-                dt_AD.Columns.Add("序号", typeof(Int32));
-                dt_AD.Columns.Add("名称", typeof(String));
-                dt_AD.Columns.Add("测量值", typeof(double));
-                for (int i = 0; i < 6; i++)
-                {
-                    DataRow dr = dt_AD.NewRow();
-                    dr["序号"] = i + 1;
-                    dr["名称"] = ConfigurationManager.AppSettings["AD_Channel_" + i.ToString()];
-                    dr["测量值"] = 0;
-                    dt_AD.Rows.Add(dr);
-                }
-                dataGridView4.DataSource = dt_AD;
+                Func_AD.Init_Table();
+                dataGridView4.DataSource = Func_AD.dt_AD;
                 dataGridView4.AllowUserToAddRows = false;
 
-                dt_OC.Columns.Add("序号", typeof(Int32));
-                dt_OC.Columns.Add("名称", typeof(String));
-                dt_OC.Columns.Add("脉宽", typeof(int));
-
-                for (int i = 0; i < 10; i++)
-                {
-                    DataRow dr = dt_OC.NewRow();
-                    dr["序号"] = i;
-                    dr["名称"] = ConfigurationManager.AppSettings["OC_Channel_" + i.ToString()]; ;
-                    dr["脉宽"] = 0;
-                    dt_OC.Rows.Add(dr);
-                }
-                dataGridView5.DataSource = dt_OC;
+                Func_OC.Init_Table();
+                dataGridView5.DataSource = Func_OC.dt_OC_Out;
                 dataGridView5.AllowUserToAddRows = false;
 
                 dtModifyDA1.Columns.Add("ID", typeof(Int32));
@@ -222,80 +212,15 @@ namespace CKServer
                 byte b1 = (byte)(transValue & 0x7f);
                 byte b2 = (byte)((transValue & 0x3f80) >> 7);
                 byte b3 = (byte)((transValue & 0x1fC000) >> 14);
-                USB.SendCMD(Data.OCid, addr2, b1);
-                USB.SendCMD(Data.OCid, addr3, b2);
-                USB.SendCMD(Data.OCid, addr4, b3);
+                USB.SendCMD(Data.OnlyID, addr2, b1);
+                USB.SendCMD(Data.OnlyID, addr3, b2);
+                USB.SendCMD(Data.OnlyID, addr4, b3);
                 //边沿出发，发送一次脉冲
-                USB.SendCMD(Data.OCid, addr1, 0x1);
-                USB.SendCMD(Data.OCid, addr1, 0x0);
+                USB.SendCMD(Data.OnlyID, addr1, 0x1);
+                USB.SendCMD(Data.OnlyID, addr1, 0x0);
                 Thread.Sleep(10);
             }
 
-        }
-
-        private void btn_ResetDA_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            foreach (DataRow dr in dt_OC.Rows)
-            {
-                dr["脉宽"] = 0;
-            }
-            foreach (DataRow dr in dt_AD.Rows)
-            {
-                dr["测量值"] = 0;
-            }
-        }
-
-        private void btn_setall_EditValueChanged(object sender, EventArgs e)
-        {
-            foreach (DataRow dr in dt_OC.Rows)
-            {
-                dr["脉宽"] = btn_setall.EditValue;
-            }
-
-        }
-
-        private void btn_add_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            foreach (DataRow dr in dt_OC.Rows)
-            {
-                if ((int)dr["脉宽"] < 200)
-                    dr["脉宽"] = (int)dr["脉宽"] + 1;
-            }
-
-        }
-
-        private void btn_dec_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            foreach (DataRow dr in dt_OC.Rows)
-            {
-                if ((int)dr["脉宽"] >= 0)
-                    dr["脉宽"] = (int)dr["脉宽"] - 1;
-            }
-
-        }
-
-
-        private void dataGridView5_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                if (e.ColumnIndex == 2)
-                {
-                    try
-                    {
-                        double t = (double)dt_OC.Rows[e.RowIndex]["脉宽"];
-                        if (t < 0 || t > 2000000)
-                        {
-                            dt_OC.Rows[e.RowIndex]["脉宽"] = 0;
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MyLog.Error(ex.Message + "From:dataGridView5_CellEndEdit");
-                        dt_OC.Rows[e.RowIndex]["脉宽"] = 0;
-                    }
-                }
-            }
         }
 
 
@@ -314,7 +239,7 @@ namespace CKServer
             }
         }
 
-     
+
 
         private void btn_modify_reset_Click(object sender, EventArgs e)
         {
@@ -493,7 +418,7 @@ namespace CKServer
                 ts.Minutes.ToString() + "分" +
                 ts.Seconds.ToString() + "秒";
 
-            if (MySPort.Port1!=null)
+            if (MySPort.Port1 != null)
             {
                 if (MySPort.Port1.IsOpen && MySPort.ShowAngleTag)
                 {
@@ -509,6 +434,14 @@ namespace CKServer
                     if (Hangl >= 360) Hangl = Hangl - 360;
                     this.textBox_Hangle_add.Text = Hangl.ToString();
                     this.textBox_Vangle_add.Text = MySPort.Vangle.ToString();
+                }
+            }
+
+            if(_BoxIsStarted)
+            {
+                for (int i = 0; i < Func_AD.ADNums; i++)
+                {
+                    Func_AD.dt_AD.Rows[i]["测量值"] = dataRe_AD[i];
                 }
             }
         }
@@ -589,30 +522,30 @@ namespace CKServer
 
         private void btn_485_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(dockPanel6.Visibility != DevExpress.XtraBars.Docking.DockVisibility.Visible)
+            if (dockPanel_Rotator.Visibility != DevExpress.XtraBars.Docking.DockVisibility.Visible)
             {
-                dockPanel6.Show();
+                dockPanel_Rotator.Show();
                 MyLog.Info("显示转台控制界面！");
             }
             else
             {
-                dockPanel6.Hide();
+                dockPanel_Rotator.Hide();
                 MyLog.Info("隐藏转台控制界面！");
             }
-            
+
         }
 
         private void btn_Modify_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            if (dockPanel3.Visibility != DevExpress.XtraBars.Docking.DockVisibility.Visible)
+            if (dockPanel_RS422.Visibility != DevExpress.XtraBars.Docking.DockVisibility.Visible)
             {
-                dockPanel3.Show();
+                dockPanel_RS422.Show();
                 MyLog.Info("显示422界面！");
             }
             else
             {
-                dockPanel3.Hide();
+                dockPanel_RS422.Hide();
                 MyLog.Info("隐藏422界面！");
             }
 
@@ -649,16 +582,16 @@ namespace CKServer
                 string direction = comboBox1.Text;
                 new Thread(() => { RunCruise(startAngle, stopAngle, speed, direction); }).Start();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MyLog.Error(ex.Message);
             }
 
         }
 
-        public void RunCruise(double startAngle,double stopAngle,byte speed,string direction)
+        public void RunCruise(double startAngle, double stopAngle, byte speed, string direction)
         {
-            while(true)
+            while (true)
             {
                 double TempAngle = MySPort.Hangle + (360 - MySPort.AddOnAngle);
                 if (TempAngle >= 360) TempAngle = TempAngle - 360;
@@ -686,7 +619,7 @@ namespace CKServer
                 double TempAngle = MySPort.Hangle + (360 - MySPort.AddOnAngle);
                 if (TempAngle >= 360) TempAngle = TempAngle - 360;
 
-                if (TempAngle >= stopAngle && TempAngle <= (stopAngle+20))
+                if (TempAngle >= stopAngle && TempAngle <= (stopAngle + 20))
                 {
                     MyLog.Info("转到停止位置");
                     MySPort.SetCruise("00", 0x0);
@@ -711,8 +644,337 @@ namespace CKServer
             else
             {
                 button5.Text = "开启补偿";
-                MySPort.AddOnAngle =0;
+                MySPort.AddOnAngle = 0;
             }
+        }
+
+        private void CheckEnable_Log_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+
+
+
+
+
+        }
+
+        private void CheckEnable_AD_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DevExpress.XtraBars.BarCheckItem chk = (DevExpress.XtraBars.BarCheckItem)sender;
+            DevExpress.XtraBars.Docking.DockPanel panel;
+            switch (chk.Name)
+            {
+                case "CheckEnable_AD":
+                    panel = this.dockPanel_AD;
+                    break;
+                case "CheckEnable_OC":
+                    panel = this.dockPanel_OC;
+                    break;
+
+                case "CheckEnable_LOG":
+                    panel = this.dockPanel_LOG;
+                    break;
+
+                case "CheckEnable_Rotator":
+                    panel = this.dockPanel_Rotator;
+                    break;
+                case "CheckEnable_RS422":
+                    panel = this.dockPanel_RS422;
+                    break;
+                default:
+                    panel = this.dockPanel_LOG;
+                    break;
+
+
+            }
+            if (chk.Checked == true)
+            {
+                panel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+            }
+            else
+            {
+                panel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+            }
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (btn_Start.Caption == "一键开始")
+            {
+                btn_Start.Caption = "一键停止";
+                btn_Start.ImageOptions.LargeImage = CKServer.Properties.Resources.Stop_btn;
+
+                FileThread = new SaveFile();
+                FileThread.FileInit();
+                FileThread.FileSaveStart();
+
+                foreach (DataRow dr in dt_OC.Rows)
+                {
+                    dr["脉宽"] = 0;
+                }
+                foreach (DataRow dr in dt_AD.Rows)
+                {
+                    dr["测量值"] = 0;
+                }
+
+                _BoxIsStarted = true;
+
+                for (int i = 0; i < 0x0f; i++)
+                {
+                    if (USB.MyDeviceList[i] != null)
+                    {
+                        CyControlEndPoint CtrlEndPt = null;
+                        CtrlEndPt = USB.MyDeviceList[i].ControlEndPt;
+                        if (CtrlEndPt != null)
+                        {
+                            USB.SendCMD(i, 0x80, 0x01);
+                            USB.SendCMD(i, 0x80, 0x00);//复位
+
+                            USB.MyDeviceList[i].Reset();
+
+                            Thread.Sleep(100);
+
+                            USB.SendCMD(i, 0x80, 0x04);//开启接收
+
+                            Register.Byte80H = 0x04;
+
+                            Thread.Sleep(100);
+                        }
+                        else
+                        {
+                            MyLog.Error(USB.MyDeviceList[i].Name + ":初始化失败!");
+                        }
+                    }
+                }
+
+                new Thread(() => { RecvAllUSB(); }).Start();
+
+
+            }
+            else
+            {
+                for (int i = 0; i < 0x0f; i++)
+                {
+                    if (USB.MyDeviceList[i] != null)
+                    {
+                        CyControlEndPoint CtrlEndPt = null;
+                        CtrlEndPt = USB.MyDeviceList[i].ControlEndPt;
+                        if (CtrlEndPt != null)
+                        {
+                            USB.SendCMD(i, 0x80, 0x00);//关闭接收
+                        }
+                    }
+                }
+
+                btn_Start.Caption = "一键开始";
+                btn_Start.ImageOptions.LargeImage = CKServer.Properties.Resources.Start_btn;
+                _BoxIsStarted = false;
+                Thread.Sleep(200);
+
+                FileThread.FileClose();
+            }
+        }
+
+        private void RecvAllUSB()
+        {
+            CyUSBDevice MyDevice01 = USB.MyDeviceList[Data.OnlyID];
+
+            Trace.WriteLine("RecvAllUSB start!!!!");
+
+            ADList.Clear();
+            new Thread(() => { DealWithADFun(); }).Start();
+
+            byte[] Recv_MidBuf_8K_Box01 = new byte[8192];//8K中间缓存
+            int Pos_Recv_MidBuf_8K_Box01 = 0;//中间缓存数据存储到哪个位置
+
+            while (_BoxIsStarted)
+            {
+                try
+                {
+                    if (MyDevice01.BulkInEndPt != null)
+                    {
+                        byte[] RecvBoxBuf = new byte[4096];
+                        int RecvBoxLen = 4096;
+
+                        lock (MyDevice01)
+                            MyDevice01.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);//接收USB数据，不定长
+
+                        if (RecvBoxLen > 0)
+                        {
+                            byte[] tempbuf = new byte[RecvBoxLen];
+                            Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);//实际收到数据量放到1个Temp数组中
+                                                                        //存储源码
+                            //SaveFile.Lock_1.EnterWriteLock();
+                            //SaveFile.DataQueue_SC1.Enqueue(tempbuf);
+                            //SaveFile.Lock_1.ExitWriteLock();
+                            //将数据放到一个8K的数组中
+                            Array.Copy(tempbuf, 0, Recv_MidBuf_8K_Box01, Pos_Recv_MidBuf_8K_Box01, tempbuf.Length);
+                            Pos_Recv_MidBuf_8K_Box01 += tempbuf.Length;
+                            //判断数据大于4K，就处理掉4K
+                            while (Pos_Recv_MidBuf_8K_Box01 >= 4096)
+                            {
+                                if (Recv_MidBuf_8K_Box01[0] == 0xff && (0x0 <= Recv_MidBuf_8K_Box01[1]) && (Recv_MidBuf_8K_Box01[1] < 0x21))
+                                {
+                                    DealWithLongFrame(ref Recv_MidBuf_8K_Box01, ref Pos_Recv_MidBuf_8K_Box01);
+                                }
+                                else
+                                {
+                                    MyLog.Error("收到异常帧！");
+                                    Array.Clear(Recv_MidBuf_8K_Box01, 0, Pos_Recv_MidBuf_8K_Box01);
+                                    Pos_Recv_MidBuf_8K_Box01 = 0;
+                                }
+                            }
+                        }
+                        else if (RecvBoxLen == 0)
+                        {
+                            //  Trace.WriteLine("收到0包-----0000000000");
+                        }
+                        else
+                        {
+                            Trace.WriteLine("USB接收数据异常，居然收到了小于0的数！！");
+                            //MyLog.Error("USB接收数据异常，居然收到了小于0的数！！");
+                        }
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MyLog.Error(ex.Message);
+                }
+
+
+            }
+        }
+
+        List<byte> ADList = new List<byte>();
+        double[] dataRe_AD = new double[Func_AD.ADNums];
+        private void DealWithADFun()
+        {
+           // 获得AD校准参数
+            double[] md = new double[64];
+            for (int j = 0; j < 64; j++) md[j] = double.Parse(Function.GetConfigStr(Data.ADconfigPath, "add", "AD_Channel_" + j.ToString(), "value"));
+
+            while (_BoxIsStarted)
+            {
+                bool ret = Func_AD.Return_ADValue(ref ADList, ref dataRe_AD, md);
+                if (!ret) Thread.Sleep(10);
+            }
+        }
+
+
+        int ThisCount = 0;
+        int LastCount = 0;
+        void DealWithLongFrame(ref byte[] TempBuf, ref int TempTag)
+        {
+            ThisCount = TempBuf[2] * 256 + TempBuf[3];
+            if (LastCount != 0 && ThisCount != 0 && (ThisCount - LastCount != 1))
+            {
+                MyLog.Error("出现漏帧情况！！");
+                Trace.WriteLine("出现漏帧情况:" + LastCount.ToString("x4") + "--" + ThisCount.ToString("x4"));
+            }
+            LastCount = ThisCount;
+
+            byte[] buf_LongFrame = new byte[4096];
+            Array.Copy(TempBuf, 0, buf_LongFrame, 0, 4096);
+
+            Array.Copy(TempBuf, 4096, TempBuf, 0, TempTag - 4096);
+            TempTag -= 4096;
+
+            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x00)
+            {
+                byte[] bufsav = new byte[4092];
+                Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
+            }
+            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x01)
+            {
+
+                byte[] bufsav = new byte[4092];
+                Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
+            }
+            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x08)
+            {
+                //FF08为短帧通道
+                byte[] bufsav = new byte[4092];
+                Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
+                //SaveFile.Lock_2.EnterWriteLock();
+                //SaveFile.DataQueue_SC2.Enqueue(bufsav);
+                //SaveFile.Lock_2.ExitWriteLock();
+
+                for (int i = 0; i < 6; i++)
+                {
+                    if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x00)//1D00：AD数据
+                    {
+                        int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
+                        byte[] buf1D0x = new byte[num];
+                        Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
+                        //SaveFile.Lock_3.EnterWriteLock();
+                        //SaveFile.DataQueue_SC3.Enqueue(buf1D0x);
+                        //SaveFile.Lock_3.ExitWriteLock();
+
+                        lock (ADList)
+                        {//将AD数据放入ADList,在另一个线程中解析
+                            for (int j = 0; j < buf1D0x.Length; j++) ADList.Add(buf1D0x[j]);
+                        }
+                    }
+                    else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x01)//1D01:第2路422
+                    {
+                        int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
+                        byte[] buf1D0x = new byte[num];
+                        Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
+
+                    }
+                    else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x08)//1D08:AD数据
+                    {
+
+                        int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
+                        byte[] buf1D0x = new byte[num];
+                        Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
+
+                    }
+                    else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x0f)
+                    {
+                        //空闲帧
+                    }
+                    else
+                    {
+                        Trace.WriteLine("FF08通道出错!");
+                    }
+                }
+            }
+        }
+
+        private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == 0)//button列
+                {
+                    byte addr = (byte)(0x84 + e.RowIndex / 7);
+                    byte value = (byte)(e.RowIndex % 7);
+
+                    //边沿出发，发送一次脉冲
+                    USB.SendCMD(Data.OnlyID, addr, (byte)(0x1 << value));
+                    USB.SendCMD(Data.OnlyID, addr, 0x0);
+
+                    MyLog.Info("指令输出:" + Func_OC.dt_OC_Out.Rows[e.RowIndex]["名称"]);
+
+                    dataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.SelectionBackColor = Color.Lime;
+
+                }
+            }
+        }
+
+        private void dockPanel_Rotator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_HelpNeed_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MessageBox.Show(
+                "Designed by 测控通信室 2018.\r\n" +
+                "硬件支持--伊鹏&黄禹(测控通信室)\r\n" +
+                "软件支持--平佳伟(测控通信室)\r\n"                
+                );
         }
     }
 }

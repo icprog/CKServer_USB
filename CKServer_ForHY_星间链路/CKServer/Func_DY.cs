@@ -14,9 +14,21 @@ namespace CKServer
 
         public static bool LedOn = false;
         public static bool LedOff = false;
-        public static double Real_Vvalue = 0;
+        public static double Real_Vvalue = 23;
         public static double Real_Avalue = 0;
 
+        public static double Strict_Avalue = 0;//设置的限流值
+
+        public static void start()
+        {
+            RunTag = true;
+            new Thread(() => { DealWith_DYData(); }).Start();
+        }
+
+        public static void close()
+        {
+            RunTag = false;
+        }
         public static void DealWith_DYData()
         {
             while(RunTag)
@@ -66,22 +78,22 @@ namespace CKServer
                         }
                         if (DYCmdRet[0] == 0xF5 && DYCmdRet[1] == 0x3C)//电源设置电压指令反馈
                         {
-                            double Vvalue = (double)DYStatus[2] + (double)DYStatus[3] / (double)100;
+                            double b1 = DYCmdRet[2];
+                            double b2 = DYCmdRet[3];
+                            double Vvalue = b1 + (b2 / 100);
                             MyLog.Info("设置电压值：" + Vvalue.ToString() + "成功！");
                         }
                         if (DYCmdRet[0] == 0xF5 && DYCmdRet[1] == 0x4C)//电源设置过流指令反馈
                         {
-                            double Avalue = (double)DYStatus[2] + (double)DYStatus[3] / (double)100;
+                            double Avalue = (double)DYCmdRet[2] + ((double)DYCmdRet[3] / (double)100);
                             MyLog.Info("设置电流值：" + Avalue.ToString() + "成功！");
+
+                            Strict_Avalue = Avalue;
                         }
-                    }                   
-                    
-     
-                   
+                    }                                                  
 
                 }
-
-                
+                Thread.Sleep(100);
 
             }
 

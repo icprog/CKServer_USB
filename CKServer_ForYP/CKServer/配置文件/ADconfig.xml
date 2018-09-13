@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <add key="AD_Channel_0" value="1" name="热敏电阻1"/>
+  <add key="AD_Channel_1" value="1" name="热敏电阻2" />
+  <add key="AD_Channel_2" value="1" name="热敏电阻3" />
+  <add key="AD_Channel_3" value="1" name="热敏电阻4" />
+  <add key="AD_Channel_4" value="1" name="热敏电阻5"/>
+  <add key="AD_Channel_5" value="1" name="热敏电阻6"/>
+  <add key="AD_Channel_6" value="1" name="热敏电阻7"/>
+  <add key="AD_Channel_7" value="1" name="热敏电阻8"/>
+  <add key="AD_Channel_8" value="1" name="热敏电阻9"/>
+  <add key="AD_Channel_9" value="1" name="热敏电阻10"/>
+  <add key="AD_Channel_10" value="1" name="热敏电阻11"/>
+  <add key="AD_Channel_11" value="1" name="热敏电阻12"/>
+
+  <add key="AD_Channel_12" value="1" name="保留" />
+  <add key="AD_Channel_13" value="1" name="保留" />
+  <add key="AD_Channel_14" value="1" name="保留" />
+  <add key="AD_Channel_15" value="1" name="保留" />
+  <add key="AD_Channel_16" value="1" name="前级预放检波1" />
+  <add key="AD_Channel_17" value="1" name="前级预放检波2" />
+  <add key="AD_Channel_18" value="1" name="+6V1电压遥测" />
+  <add key="AD_Channel_19" value="1" name="+5V1电压遥测" />
+  <add key="AD_Channel_20" value="1" name="+6V2电压遥测" />
+  <add key="AD_Channel_21" value="1" name="+5V2电压遥测" />
+  <add key="AD_Channel_22" value="1" name="AD通道23" />
+  <add key="AD_Channel_23" value="1" name="AD通道24" />
+  <add key="AD_Channel_24" value="1" name="AD通道25" />
+  <add key="AD_Channel_25" value="1" name="AD通道26" />
+  <add key="AD_Channel_26" value="1" name="AD通道27" />
+  <add key="AD_Channel_27" value="1" name="AD通道28" />
+  <add key="AD_Channel_28" value="1" name="AD通道29" />
+  <add key="AD_Channel_29" value="1" name="AD通道30" />
+  <add key="AD_Channel_30" value="1" name="AD通道31" />
+  <add key="AD_Channel_31" value="1" name="AD通道32" />
+  <add key="AD_Channel_32" value="1" name="AD通道33" />
+  <add key="AD_Channel_33" value="1" name="AD通道34" />
+  <add key="AD_Channel_34" value="1" name="AD通道35" />
+  <add key="AD_Channel_35" value="1" name="AD通道36" />
+  <add key="AD_Channel_36" value="1" name="AD通道37" />
+  <add key="AD_Channel_37" value="1" name="AD通道38" />
+  <add key="AD_Channel_38" value="1" name="AD通道39" />
+  <add key="AD_Channel_39" value="1" name="AD通道40" />
+  <add key="AD_Channel_40" value="3" name="AD通道41" />
+  <add key="AD_Channel_41" value="3" name="AD通道42" />
+  <add key="AD_Channel_42" value="3" name="AD通道43" />
+  <add key="AD_Channel_43" value="3" name="AD通道44" />
+  <add key="AD_Channel_44" value="3" name="AD通道45" />
+  <add key="AD_Channel_45" value="3" name="AD通道46" />
+  <add key="AD_Channel_46" value="3" name="AD通道47" />
+  <add key="AD_Channel_47" value="3" name="AD通道48" />
+  <add key="AD_Channel_48" value="1" name="AD通道49" />
+  <add key="AD_Channel_49" value="1" name="AD通道50" />
+  <add key="AD_Channel_50" value="1" name="AD通道51" />
+  <add key="AD_Channel_51" value="1" name="AD通道52" />
+  <add key="AD_Channel_52" value="1" name="AD通道53" />
+  <add key="AD_Channel_53" value="1" name="AD通道54" />
+  <add key="AD_Channel_54" value="1" name="AD通道55" />
+  <add key="AD_Channel_55" value="1" name="AD通道56" />
+  <add key="AD_Channel_56" value="1" name="AD通道57" />
+  <add key="AD_Channel_57" value="1" name="AD通道58" />
+  <add key="AD_Channel_58" value="1" name="AD通道59" />
+  <add key="AD_Channel_59" value="1" name="AD通道60" />
+  <add key="AD_Channel_60" value="3" name="AD通道61" />
+  <add key="AD_Channel_61" value="3" name="AD通道62" />
+  <add key="AD_Channel_62" value="3" name="AD通道63" />
+  <add key="AD_Channel_63" value="3" name="AD通道64" />
+</configuration>
