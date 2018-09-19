@@ -112,6 +112,44 @@ namespace CKServer
 
         }
 
+        //向USB发送数据,数据区不加0
+        public static void SendData(int id, byte[] temp,bool flag)
+        {
+            int TempLength = temp.Length;
+            if (MyDeviceList[id] != null)
+            {
+                lock (MyDeviceList[id])
+                {
+                    Register.Byte80H = (byte)(Register.Byte80H | 0x02);
+                    SendCMD(id, 0x80, Register.Byte80H);
+                    Register.Byte80H = (byte)(Register.Byte80H & 0xFD);
+                    SendCMD(id, 0x80, Register.Byte80H);
+
+                    if (MyDeviceList[id].BulkOutEndPt != null)
+                    {
+                        bool tag = MyDeviceList[id].BulkOutEndPt.XferData(ref temp, ref TempLength);
+                        if (flag)
+                        {
+                            if (!tag)
+                            {
+                                MyLog.Error("传输数据到USB板卡失败");
+                            }
+                            else
+                            {
+                                MyLog.Info("传输成功:" + TempLength.ToString());
+                            }
+                        }
+
+                    }
+                }
+            }
+            else
+            {
+                MyLog.Error("USB设备未连接！");
+            }
+
+        }
+
         //向USB发送数据,数据区加3个0
         public void SendToUSB(int id, byte[] temp)
         {

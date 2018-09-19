@@ -17,13 +17,11 @@ CKServer_ForYP_有效载荷AD/CKServer/CKServer/bin/*
 CKServer_ForYP_有效载荷AD/CKServer/CKServer/Release/*
 *.xlsx
 CKServer_ForYP/CKServer/bin/
-CKServer_ForYP/CKServer/.vs/*.*
-CKServer_ForYP/CKServer/obj/*.*
-CKServer_ForYP/CKServer/obj/Release/CKServer.MainForm.resources
-CKServer_ForYP/CKServer/obj/Release/CKServer.MainForm.zh-CN.resources
+CKServer_ForYP/CKServer/.vs/
 *.pdb
 CKServer_ForYP/CKServer/obj/Debug/CKServer.application
 CKServer_ForYP/CKServer/obj/Debug/CKServer.csproj.CoreCompileInputs.cache
 CKServer_ForYP/.vs/CKServer/v15/Server/sqlite3/storage.ide
 *.exe
 CKServer_GZComputer_徐捷/CKServer/MainForm.resx
+CKServer_ForYP/CKServer/obj/

@@ -1097,7 +1097,7 @@ namespace CKServer
 
                     if (addr < 0xff && addr >= 0x80 && value < 0x80 && value >= 0x0)
                     {
-                        if (!USB.SendCMD(Data.Cardid, addr, value)) MessageBox.Show("设备未连接，请检查连接！");
+                        if (!USB.SendCMD(Data.OnlyID, addr, value)) MessageBox.Show("设备未连接，请检查连接！");
                     }
                     else
                     {
@@ -1140,7 +1140,7 @@ namespace CKServer
                         Register.RegDictionary[addr] = (byte)(Register.RegDictionary[addr] & (byte)(0x7f - (byte)(0x01 << bitpos)));
                     }
                     Trace.WriteLine(addr.ToString("x2") + ":" + Register.RegDictionary[addr].ToString("x2"));
-                    USB.SendCMD(Data.Cardid, addr, Register.RegDictionary[addr]);
+                    USB.SendCMD(Data.OnlyID, addr, Register.RegDictionary[addr]);
                 }
             }
 
@@ -1244,6 +1244,9 @@ namespace CKServer
 
             end.CopyTo(FinalSend, 12);
 
+            USB.SendCMD(Data.OnlyID, 0x81, 0x01);
+            USB.SendCMD(Data.OnlyID, 0x81, 0x00);
+
             USB.SendData(Data.OnlyID, FinalSend);
         }
 
@@ -1261,6 +1264,9 @@ namespace CKServer
 
             FinalSend[10] = 0x00;
             FinalSend[11] = 0x00;
+
+            USB.SendCMD(Data.OnlyID, 0x81, 0x02);
+            USB.SendCMD(Data.OnlyID, 0x81, 0x00);
 
             end.CopyTo(FinalSend, 12);
 
@@ -1354,7 +1360,11 @@ namespace CKServer
 
 
             if (FinalSend.Length > 10)
+            {
+                USB.SendCMD(Data.OnlyID, 0x81, 0x01);
+                USB.SendCMD(Data.OnlyID, 0x81, 0x00);
                 USB.SendData(Data.OnlyID, FinalSend);
+            }
             else
                 MyLog.Error("输入正确的遥控注数数据！");
         }
@@ -1446,7 +1456,11 @@ namespace CKServer
 
 
             if (FinalSend.Length > 10)
+            {
+                USB.SendCMD(Data.OnlyID, 0x81, 0x02);
+                USB.SendCMD(Data.OnlyID, 0x81, 0x00);
                 USB.SendData(Data.OnlyID, FinalSend);
+            }
             else
                 MyLog.Error("输入正确的遥控注数数据！");
         }
@@ -1714,7 +1728,7 @@ namespace CKServer
 
             USB.SendCMD(Data.OnlyID, 0x82, 0x01);
             USB.SendCMD(Data.OnlyID, 0x82, 0x00);
-            USB.SendData(Data.OnlyID, FinalSend);
+            USB.SendData(Data.OnlyID, FinalSend,false);
 
 
 
