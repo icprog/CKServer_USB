@@ -128,6 +128,7 @@
     <Compile Include="Data.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="Func_AD.cs" />
+    <Compile Include="Func_AD2_BIT.cs" />
     <Compile Include="Func_OC.cs" />
     <Compile Include="LoadFPGAForm.cs">
       <SubType>Form</SubType>
@@ -211,6 +212,7 @@
   <ItemGroup>
     <None Include="Resources\Start_btn.png" />
     <None Include="Resources\Stop_btn.png" />
+    <Content Include="Resources\yellow.png" />
     <Content Include="配置文件\OCconfig.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

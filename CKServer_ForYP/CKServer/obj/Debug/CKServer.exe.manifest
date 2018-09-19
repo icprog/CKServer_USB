@@ -73,14 +73,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CKServer.exe" size="479136">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CKServer.exe" size="501664">
       <assemblyIdentity name="CKServer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>d1uq/yHavvonYX+kKli8QTWm3Fo=</dsig:DigestValue>
+        <dsig:DigestValue>88KLaH4VlRkvsxl9hHpEqwYucis=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -92,7 +92,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>rhsSf+x/DlgRc4cpLA1/2AiJDDY=</dsig:DigestValue>
+        <dsig:DigestValue>PH57jEE62AuoH35Bd2N/mHH9G5g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -105,6 +105,30 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
         <dsig:DigestValue>V1W7oxhcbgZUGN6LqpNKDxLf5dc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.BonusSkins.v16.2.dll" size="11403264">
+      <assemblyIdentity name="DevExpress.BonusSkins.v16.2" version="16.2.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>BoHMJWKFC1i2RU4GvwfZuvjUX6s=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.Data.v16.2.dll" size="6052352">
+      <assemblyIdentity name="DevExpress.Data.v16.2" version="16.2.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>QopQbYj40Nvpypv/9Zkt+6Cl158=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -234,13 +258,22 @@
       <dsig:DigestValue>++DoiRSar4GJmvGRJnR5vqLA0T8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="配置文件\ADconfig.xml" size="3900" writeableType="applicationData">
+  <file name="Resources\yellow.png" size="3391">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>us534dPSva0Fxd6SgD+QrePm6mc=</dsig:DigestValue>
+      <dsig:DigestValue>o8jjGCjcidrdZhbMc1mUs8nhucc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="配置文件\ADconfig.xml" size="4065" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Q3wZ4xVzynkJiLwLi93AO6xiO6Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="配置文件\DAconfig.xml" size="25496" writeableType="applicationData">

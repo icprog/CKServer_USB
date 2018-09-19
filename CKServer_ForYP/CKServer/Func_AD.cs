@@ -16,13 +16,15 @@ namespace CKServer
         {
             dt_AD.Columns.Add("序号", typeof(Int32));
             dt_AD.Columns.Add("名称", typeof(String));
-            dt_AD.Columns.Add("测量值", typeof(double));
+            dt_AD.Columns.Add("测量值", typeof(Double));
+            dt_AD.Columns.Add("单位", typeof(String));
             for (int i = 0; i < ADNums; i++)
             {
                 DataRow dr = dt_AD.NewRow();
                 dr["序号"] = i + 1;
                 dr["名称"] = Function.GetConfigStr(Data.ADconfigPath, "add", "AD_Channel_" + i.ToString(), "name");
                 dr["测量值"] = 0;
+                dr["单位"] = Function.GetConfigStr(Data.ADconfigPath, "add", "AD_Channel_" + i.ToString(), "dw");
                 dt_AD.Rows.Add(dr);
             }
         }
@@ -59,14 +61,46 @@ namespace CKServer
                         double value = temp;
 
                         value = 10 * (value / 32767);
-
-
+                        
+                        double RealValue = 0;//最终实际电压值，有正负
                         if ((buf[4 * k+3] & 0x80) == 0x80)
-                            dataRe_AD[k] = value;
+                            RealValue = value;
                         else
-                            dataRe_AD[k] = -10 + value;
+                            RealValue = -10 + value;
 
-                        //    dataRe_AD[k] = 5.1 / (10 / dataRe_AD[k] - 1);
+                        if (k < 12)//前12路换算为温度
+                        {
+                            if (RealValue != 3.3)
+                            {
+                                double RValue = 0;//根据电压值算出电阻值
+                                RValue = 5.1 * RealValue / (3.3 - RealValue);
+
+                                if (RValue > 0)
+                                {
+                                    double XValue = 0;//用于计算温度，代入公式的x值
+                                    XValue = Math.Log10(RValue);
+
+                                    double YTemprature = 0;//最终显示的温度
+                                    YTemprature = -1.246 * XValue * XValue * XValue + 10.83 * XValue * XValue - 63.72 * XValue + 64.67;
+
+                                    dataRe_AD[k] = YTemprature;
+                                }
+                                else
+                                {
+                                    dataRe_AD[k] = double.PositiveInfinity;
+                                    MyLog.Error("当前电阻小于0，未接负载，请注意，请注意，请注意！！");
+                                }
+                            }
+                            else
+                            {
+                                dataRe_AD[k] = double.PositiveInfinity;
+                                MyLog.Error("当前电压3.3V，未接负载，请注意，请注意，请注意！！");
+                            }
+                        }
+                        else//正常显示V
+                        {
+                            dataRe_AD[k] = RealValue;
+                        }
                     }
 
 

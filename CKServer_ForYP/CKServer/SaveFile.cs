@@ -121,13 +121,13 @@ namespace CKServer
                 Directory.CreateDirectory(MaBen_path);
 
             string Save_path = Program.GetStartupPath() + @"SaveData\";
-       //    FileCreateDat(Program.GetStartupPath() + @"源码\", out file0);
+           FileCreateDat(Program.GetStartupPath() + @"源码\", out file0);
 
-            //FileCreateDat(Program.GetStartupPath() + @"存储数据\源码\", out file_SC1);
-            //FileCreateDat(Program.GetStartupPath() + @"存储数据\异步源码\", out file_SC2);
-            //FileCreateDat(Program.GetStartupPath() + @"存储数据\异步源码\1D00\", out file_SC3);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\源码\", out file_SC1);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\源码2\", out file_SC2);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\源码2\1D00\", out file_SC3);
 
-            //FileCreateDat(Program.GetStartupPath() + @"OC机箱数据\OC数据\", out file_SC4);
+            FileCreateDat(Program.GetStartupPath() + @"存储数据\源码2\1D01\", out file_SC4);
             //FileCreateDat(Program.GetStartupPath() + @"数传机箱数据\长帧接收\", out file_SC5);
 
             //FileCreateDat(Program.GetStartupPath() + @"数传机箱数据\同步422数据\通道1", out file_SC6);
@@ -235,11 +235,11 @@ namespace CKServer
             Trace.WriteLine("开启存盘线程");
             SaveOn = true;
 
-           // new Thread(() => { WriteToFileSC(0, file0, ref DataQueue_0, ref Lock); }).Start();
-            //new Thread(() => { WriteToFileSC(1, file_SC1, ref DataQueue_SC1, ref Lock_1); }).Start();
-            //new Thread(() => { WriteToFileSC(2, file_SC2, ref DataQueue_SC2, ref Lock_2); }).Start();
-            //new Thread(() => { WriteToFileSC(3, file_SC3, ref DataQueue_SC3, ref Lock_3); }).Start();
-            //new Thread(() => { WriteToFileSC(4, file_SC4, ref DataQueue_SC4, ref Lock_4); }).Start();
+            new Thread(() => { WriteToFileSC(0, file0, ref DataQueue_0, ref Lock); }).Start();
+            new Thread(() => { WriteToFileSC(1, file_SC1, ref DataQueue_SC1, ref Lock_1); }).Start();
+            new Thread(() => { WriteToFileSC(2, file_SC2, ref DataQueue_SC2, ref Lock_2); }).Start();
+            new Thread(() => { WriteToFileSC(3, file_SC3, ref DataQueue_SC3, ref Lock_3); }).Start();
+            new Thread(() => { WriteToFileSC(4, file_SC4, ref DataQueue_SC4, ref Lock_4); }).Start();
             //new Thread(() => { WriteToFileSC(5, file_SC5, ref DataQueue_SC5, ref Lock_5); }).Start();
             //new Thread(() => { WriteToFileSC(6, file_SC6, ref DataQueue_SC6, ref Lock_6); }).Start();
             //new Thread(() => { WriteToFileSC(7, file_SC7, ref DataQueue_SC7, ref Lock_7); }).Start();

@@ -33,6 +33,10 @@ namespace CKServer
 
         bool _BoxIsStarted;
 
+        Image imgRed = Properties.Resources.red;
+        Image imgGreen = Properties.Resources.green;
+        Image imgYellow = Properties.Resources.yellow;
+
         void UsbDevices_DeviceAttached(object sender, EventArgs e)
         {
             SetDevice(false);
@@ -74,7 +78,6 @@ namespace CKServer
                         USB.MyDeviceList[key] = (CyUSBDevice)fxDevice;
 
                         MyLog.Info(USB.MyDeviceList[key].FriendlyName + ConfigurationManager.AppSettings[USB.MyDeviceList[key].FriendlyName] + "板卡连接");
-                        Data.OnlyID = key;
                     }
                 }
                 catch (Exception ex)
@@ -119,6 +122,11 @@ namespace CKServer
         {
             try
             {
+                Func_AD2_BIT.Init_Table();
+                dataGridView_BIT1.DataSource = Func_AD2_BIT.dt_AD1;
+                dataGridView_BIT2.DataSource = Func_AD2_BIT.dt_AD2;
+
+
                 Func_AD.Init_Table();
                 dataGridView4.DataSource = Func_AD.dt_AD;
                 dataGridView4.AllowUserToAddRows = false;
@@ -212,17 +220,15 @@ namespace CKServer
                 byte b1 = (byte)(transValue & 0x7f);
                 byte b2 = (byte)((transValue & 0x3f80) >> 7);
                 byte b3 = (byte)((transValue & 0x1fC000) >> 14);
-                USB.SendCMD(Data.OnlyID, addr2, b1);
-                USB.SendCMD(Data.OnlyID, addr3, b2);
-                USB.SendCMD(Data.OnlyID, addr4, b3);
+                USB.SendCMD(Data.CardID1, addr2, b1);
+                USB.SendCMD(Data.CardID1, addr3, b2);
+                USB.SendCMD(Data.CardID1, addr4, b3);
                 //边沿出发，发送一次脉冲
-                USB.SendCMD(Data.OnlyID, addr1, 0x1);
-                USB.SendCMD(Data.OnlyID, addr1, 0x0);
+                USB.SendCMD(Data.CardID1, addr1, 0x1);
+                USB.SendCMD(Data.CardID1, addr1, 0x0);
                 Thread.Sleep(10);
             }
-
         }
-
 
         private void dataGridView5_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
@@ -232,13 +238,10 @@ namespace CKServer
 
                 if (e.RowIndex >= 0)
                 {
-
                     dt_OC.Rows[e.RowIndex]["脉宽"] = 0;
-
                 }
             }
         }
-
 
 
         private void btn_modify_reset_Click(object sender, EventArgs e)
@@ -310,7 +313,6 @@ namespace CKServer
                         //dataGridView1.Rows[i].Cells[1].Value = double.Parse(temp[1].Trim());
                         //dataGridView1.Rows[i].Cells[2].Value = double.Parse(temp[2].Trim());           
                     }
-
                 }
             }
         }
@@ -406,6 +408,8 @@ namespace CKServer
         #endregion
 
 
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             barStaticItem2.Caption = "剩余空间" + DiskInfo.GetFreeSpace(Data.Path[0].ToString()) + "MB";
@@ -437,14 +441,82 @@ namespace CKServer
                 }
             }
 
-            if(_BoxIsStarted)
+            if (_BoxIsStarted)
             {
                 for (int i = 0; i < Func_AD.ADNums; i++)
                 {
                     Func_AD.dt_AD.Rows[i]["测量值"] = dataRe_AD[i];
                 }
+
+                USB.SendCMD(1, 0x81, 0x1);
+                USB.SendCMD(1, 0x81, 0x0);
+
+                for(int i=0;i<Func_AD2_BIT.ADNums1;i++)
+                {
+                    if(AD_BIT1_L1[i]<1)
+                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgRed;
+                    else if(AD_BIT1_L1[i]>4)
+                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgYellow;
+
+                    if (AD_BIT1_L2[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgRed;
+                    else if (AD_BIT1_L2[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgYellow;
+
+                    if (AD_BIT1_L3[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgRed;
+                    else if (AD_BIT1_L3[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgYellow;
+
+                    if (AD_BIT1_L4[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgRed;
+                    else if (AD_BIT1_L4[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgYellow;
+                }
+
+                for (int i = 0; i < Func_AD2_BIT.ADNums2; i++)
+                {
+                    if (AD_BIT2_L1[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgRed;
+                    else if (AD_BIT2_L1[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgYellow;
+
+                    if (AD_BIT2_L2[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgRed;
+                    else if (AD_BIT2_L2[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgYellow;
+
+                    if (AD_BIT2_L3[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgRed;
+                    else if (AD_BIT2_L3[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgYellow;
+
+                    if (AD_BIT2_L4[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgRed;
+                    else if (AD_BIT2_L4[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgYellow;
+                }
+
             }
         }
+
+
 
         private void btn_SerialOpen_Click(object sender, EventArgs e)
         {
@@ -681,6 +753,9 @@ namespace CKServer
                 case "CheckEnable_RS422":
                     panel = this.dockPanel_RS422;
                     break;
+                case "CheckEnable_BIT":
+                    panel = this.dockPanel_BIT;
+                    break;
                 default:
                     panel = this.dockPanel_LOG;
                     break;
@@ -772,71 +847,140 @@ namespace CKServer
                 Thread.Sleep(200);
 
                 FileThread.FileClose();
+
+                timer1.Enabled = false;
             }
         }
 
         private void RecvAllUSB()
         {
-            CyUSBDevice MyDevice01 = USB.MyDeviceList[Data.OnlyID];
+            CyUSBDevice MyDevice01 = USB.MyDeviceList[Data.CardID1];
+
+            CyUSBDevice MyDevice02 = USB.MyDeviceList[Data.CardID2];
 
             Trace.WriteLine("RecvAllUSB start!!!!");
 
-            ADList.Clear();
-            new Thread(() => { DealWithADFun(); }).Start();
+            if (MyDevice01 != null)
+            {
+                ADList.Clear();
+                new Thread(() => { DealWithADFun(); }).Start();
+            }
+
+            if(MyDevice02!=null)
+            {
+                AD_BIT1_List.Clear();
+                AD_BIT2_List.Clear();
+                new Thread(() => { DealWithADFun_BIT(); }).Start();
+            }
+
+
 
             byte[] Recv_MidBuf_8K_Box01 = new byte[8192];//8K中间缓存
             int Pos_Recv_MidBuf_8K_Box01 = 0;//中间缓存数据存储到哪个位置
+
+            byte[] Recv_MidBuf_8K_Box02 = new byte[8192];//8K中间缓存
+            int Pos_Recv_MidBuf_8K_Box02 = 0;//中间缓存数据存储到哪个位置
 
             while (_BoxIsStarted)
             {
                 try
                 {
-                    if (MyDevice01.BulkInEndPt != null)
+                    if (MyDevice01 != null)
                     {
-                        byte[] RecvBoxBuf = new byte[4096];
-                        int RecvBoxLen = 4096;
-
-                        lock (MyDevice01)
-                            MyDevice01.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);//接收USB数据，不定长
-
-                        if (RecvBoxLen > 0)
+                        if (MyDevice01.BulkInEndPt != null)
                         {
-                            byte[] tempbuf = new byte[RecvBoxLen];
-                            Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);//实际收到数据量放到1个Temp数组中
-                                                                        //存储源码
-                            //SaveFile.Lock_1.EnterWriteLock();
-                            //SaveFile.DataQueue_SC1.Enqueue(tempbuf);
-                            //SaveFile.Lock_1.ExitWriteLock();
-                            //将数据放到一个8K的数组中
-                            Array.Copy(tempbuf, 0, Recv_MidBuf_8K_Box01, Pos_Recv_MidBuf_8K_Box01, tempbuf.Length);
-                            Pos_Recv_MidBuf_8K_Box01 += tempbuf.Length;
-                            //判断数据大于4K，就处理掉4K
-                            while (Pos_Recv_MidBuf_8K_Box01 >= 4096)
+                            byte[] RecvBoxBuf = new byte[4096];
+                            int RecvBoxLen = 4096;
+
+                            lock (MyDevice01)
+                                MyDevice01.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);//接收USB数据，不定长
+
+                            if (RecvBoxLen > 0)
                             {
-                                if (Recv_MidBuf_8K_Box01[0] == 0xff && (0x0 <= Recv_MidBuf_8K_Box01[1]) && (Recv_MidBuf_8K_Box01[1] < 0x21))
+                                byte[] tempbuf = new byte[RecvBoxLen];
+                                Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);//实际收到数据量放到1个Temp数组中
+                                                                            //存储源码
+                                                                            //SaveFile.Lock_1.EnterWriteLock();
+                                                                            //SaveFile.DataQueue_SC1.Enqueue(tempbuf);
+                                                                            //SaveFile.Lock_1.ExitWriteLock();
+                                                                            //将数据放到一个8K的数组中
+                                Array.Copy(tempbuf, 0, Recv_MidBuf_8K_Box01, Pos_Recv_MidBuf_8K_Box01, tempbuf.Length);
+                                Pos_Recv_MidBuf_8K_Box01 += tempbuf.Length;
+                                //判断数据大于4K，就处理掉4K
+                                while (Pos_Recv_MidBuf_8K_Box01 >= 4096)
                                 {
-                                    DealWithLongFrame(ref Recv_MidBuf_8K_Box01, ref Pos_Recv_MidBuf_8K_Box01);
-                                }
-                                else
-                                {
-                                    MyLog.Error("收到异常帧！");
-                                    Array.Clear(Recv_MidBuf_8K_Box01, 0, Pos_Recv_MidBuf_8K_Box01);
-                                    Pos_Recv_MidBuf_8K_Box01 = 0;
+                                    if (Recv_MidBuf_8K_Box01[0] == 0xff && (0x0 <= Recv_MidBuf_8K_Box01[1]) && (Recv_MidBuf_8K_Box01[1] < 0x21))
+                                    {
+                                        DealWithLongFrame(ref Recv_MidBuf_8K_Box01, ref Pos_Recv_MidBuf_8K_Box01);
+                                    }
+                                    else
+                                    {
+                                        MyLog.Error("收到异常帧！");
+                                        Array.Clear(Recv_MidBuf_8K_Box01, 0, Pos_Recv_MidBuf_8K_Box01);
+                                        Pos_Recv_MidBuf_8K_Box01 = 0;
+                                    }
                                 }
                             }
+                            else if (RecvBoxLen == 0)
+                            {
+                                //  Trace.WriteLine("收到0包-----0000000000");
+                            }
+                            else
+                            {
+                                Trace.WriteLine("USB接收数据异常，居然收到了小于0的数！！");
+                                //MyLog.Error("USB接收数据异常，居然收到了小于0的数！！");
+                            }
                         }
-                        else if (RecvBoxLen == 0)
+                    }
+                    if (MyDevice02 != null)
+                    {
+                        if (MyDevice02.BulkInEndPt != null)
                         {
-                            //  Trace.WriteLine("收到0包-----0000000000");
-                        }
-                        else
-                        {
-                            Trace.WriteLine("USB接收数据异常，居然收到了小于0的数！！");
-                            //MyLog.Error("USB接收数据异常，居然收到了小于0的数！！");
+                            byte[] RecvBoxBuf = new byte[4096];
+                            int RecvBoxLen = 4096;
+
+                            lock (MyDevice02)
+                                MyDevice02.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);//接收USB数据，不定长
+
+                            if (RecvBoxLen > 0)
+                            {
+                                byte[] tempbuf = new byte[RecvBoxLen];
+                                Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);//实际收到数据量放到1个Temp数组中
+                                                                            //存储源码
+                                                                            //SaveFile.Lock_1.EnterWriteLock();
+                                                                            //SaveFile.DataQueue_SC1.Enqueue(tempbuf);
+                                                                            //SaveFile.Lock_1.ExitWriteLock();
+                                                                            //将数据放到一个8K的数组中
+                                Array.Copy(tempbuf, 0, Recv_MidBuf_8K_Box02, Pos_Recv_MidBuf_8K_Box02, tempbuf.Length);
+                                Pos_Recv_MidBuf_8K_Box02 += tempbuf.Length;
+                                //判断数据大于4K，就处理掉4K
+                                while (Pos_Recv_MidBuf_8K_Box02 >= 4096)
+                                {
+                                    if (Recv_MidBuf_8K_Box02[0] == 0xff && (0x0 <= Recv_MidBuf_8K_Box02[1]) && (Recv_MidBuf_8K_Box02[1] < 0x21))
+                                    {
+                                        DealWith_BIT_Frame(ref Recv_MidBuf_8K_Box02, ref Pos_Recv_MidBuf_8K_Box02);
+                                    }
+                                    else
+                                    {
+                                        MyLog.Error("收到异常帧！");
+                                        Array.Clear(Recv_MidBuf_8K_Box02, 0, Pos_Recv_MidBuf_8K_Box02);
+                                        Pos_Recv_MidBuf_8K_Box02 = 0;
+                                    }
+                                }
+                            }
+                            else if (RecvBoxLen == 0)
+                            {
+                                //  Trace.WriteLine("收到0包-----0000000000");
+                            }
+                            else
+                            {
+                                Trace.WriteLine("USBBox22接收数据异常，居然收到了小于0的数！！");
+                                //MyLog.Error("USB接收数据异常，居然收到了小于0的数！！");
+                            }
                         }
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MyLog.Error(ex.Message);
                 }
@@ -849,7 +993,7 @@ namespace CKServer
         double[] dataRe_AD = new double[Func_AD.ADNums];
         private void DealWithADFun()
         {
-           // 获得AD校准参数
+            // 获得AD校准参数
             double[] md = new double[64];
             for (int j = 0; j < 64; j++) md[j] = double.Parse(Function.GetConfigStr(Data.ADconfigPath, "add", "AD_Channel_" + j.ToString(), "value"));
 
@@ -857,6 +1001,27 @@ namespace CKServer
             {
                 bool ret = Func_AD.Return_ADValue(ref ADList, ref dataRe_AD, md);
                 if (!ret) Thread.Sleep(10);
+            }
+        }
+
+        List<Byte> AD_BIT1_List = new List<byte>();
+        List<Byte> AD_BIT2_List = new List<byte>();
+        double[] AD_BIT1_L1 = new double[Func_AD2_BIT.ADNums1];
+        double[] AD_BIT1_L2 = new double[Func_AD2_BIT.ADNums1];
+        double[] AD_BIT1_L3 = new double[Func_AD2_BIT.ADNums1];
+        double[] AD_BIT1_L4 = new double[Func_AD2_BIT.ADNums1];
+        double[] AD_BIT2_L1 = new double[Func_AD2_BIT.ADNums1];
+        double[] AD_BIT2_L2 = new double[Func_AD2_BIT.ADNums1];
+        double[] AD_BIT2_L3 = new double[Func_AD2_BIT.ADNums1];
+        double[] AD_BIT2_L4 = new double[Func_AD2_BIT.ADNums1];
+
+        private void DealWithADFun_BIT()
+        {
+            while (_BoxIsStarted)
+            {
+                bool ret1 = Func_AD2_BIT.Return_ADValue(ref AD_BIT1_List, ref AD_BIT1_L1, ref AD_BIT1_L2, ref AD_BIT1_L3, ref AD_BIT1_L4);
+                bool ret2 = Func_AD2_BIT.Return_ADValue(ref AD_BIT2_List, ref AD_BIT2_L1, ref AD_BIT2_L2, ref AD_BIT2_L3, ref AD_BIT2_L4);
+                if (ret1==false && ret2==false) Thread.Sleep(500);
             }
         }
 
@@ -942,6 +1107,74 @@ namespace CKServer
             }
         }
 
+        int ThisCount_BIT = 0;
+        int LastCount_BIT = 0;
+        void DealWith_BIT_Frame(ref byte[] TempBuf, ref int TempTag)
+        {
+            ThisCount_BIT = TempBuf[2] * 256 + TempBuf[3];
+            if (LastCount_BIT != 0 && ThisCount_BIT != 0 && (ThisCount_BIT - LastCount_BIT != 1))
+            {
+                MyLog.Error("出现漏帧情况！！");
+                Trace.WriteLine("出现漏帧情况:" + LastCount_BIT.ToString("x4") + "--" + ThisCount_BIT.ToString("x4"));
+            }
+            LastCount_BIT = ThisCount_BIT;
+
+            byte[] buf_LongFrame = new byte[4096];
+            Array.Copy(TempBuf, 0, buf_LongFrame, 0, 4096);
+
+            Array.Copy(TempBuf, 4096, TempBuf, 0, TempTag - 4096);
+            TempTag -= 4096;
+
+            if (buf_LongFrame[0] == 0xff && buf_LongFrame[1] == 0x08)
+            {
+                //FF08为短帧通道
+                byte[] bufsav = new byte[4092];
+                Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
+                SaveFile.Lock_2.EnterWriteLock();
+                SaveFile.DataQueue_SC2.Enqueue(bufsav);
+                SaveFile.Lock_2.ExitWriteLock();
+
+                for (int i = 0; i < 6; i++)
+                {
+                    if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x00)//1D00：AD数据
+                    {
+                        int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
+                        byte[] buf1D0x = new byte[num];
+                        Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
+                        SaveFile.Lock_3.EnterWriteLock();
+                        SaveFile.DataQueue_SC3.Enqueue(buf1D0x);
+                        SaveFile.Lock_3.ExitWriteLock();
+                        lock (AD_BIT1_List)
+                            AD_BIT1_List.AddRange(buf1D0x);
+
+                    }
+                    else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x01)//1D01:第2路422
+                    {
+                        int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
+                        byte[] buf1D0x = new byte[num];
+                        Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
+                        SaveFile.Lock_4.EnterWriteLock();
+                        SaveFile.DataQueue_SC4.Enqueue(buf1D0x);
+                        SaveFile.Lock_4.ExitWriteLock();
+                        lock (AD_BIT2_List)
+                            AD_BIT2_List.AddRange(buf1D0x);
+                    }
+                    else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x0f)
+                    {
+                        //空闲帧
+                    }
+                    else
+                    {
+                        Trace.WriteLine("FF08通道出错!");
+                    }
+                }
+            }
+            else
+            {
+                //出现非预测帧
+            }
+        }
+
         private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -952,8 +1185,8 @@ namespace CKServer
                     byte value = (byte)(e.RowIndex % 7);
 
                     //边沿出发，发送一次脉冲
-                    USB.SendCMD(Data.OnlyID, addr, (byte)(0x1 << value));
-                    USB.SendCMD(Data.OnlyID, addr, 0x0);
+                    USB.SendCMD(Data.CardID1, addr, (byte)(0x1 << value));
+                    USB.SendCMD(Data.CardID1, addr, 0x0);
 
                     MyLog.Info("指令输出:" + Func_OC.dt_OC_Out.Rows[e.RowIndex]["名称"]);
 
@@ -973,8 +1206,33 @@ namespace CKServer
             MessageBox.Show(
                 "Designed by 测控通信室 2018.\r\n" +
                 "硬件支持--伊鹏&黄禹(测控通信室)\r\n" +
-                "软件支持--平佳伟(测控通信室)\r\n"                
+                "软件支持--平佳伟(测控通信室)\r\n"
                 );
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            for (int i = 0; i < 0x0f; i++)
+            {
+                if (USB.MyDeviceList[i] != null)
+                {
+                    CyControlEndPoint CtrlEndPt = null;
+                    CtrlEndPt = USB.MyDeviceList[i].ControlEndPt;
+                    if (CtrlEndPt != null)
+                    {
+                        USB.SendCMD(i, 0x80, 0x00);//关闭接收
+                    }
+                }
+            }
+
+            btn_Start.Caption = "一键开始";
+            btn_Start.ImageOptions.LargeImage = CKServer.Properties.Resources.Start_btn;
+            _BoxIsStarted = false;
+            Thread.Sleep(200);
+
+            FileThread.FileClose();
+
+            timer1.Enabled = false;
         }
     }
 }

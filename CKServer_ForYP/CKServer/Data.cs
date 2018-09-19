@@ -11,8 +11,8 @@ namespace CKServer
 {
     class Data
     {
-        
-        public static int OnlyID = 2;
+        public static int CardID1 = 0;//AD-OC卡
+        public static int CardID2 = 1;//BIT--AD功能卡
 
         public static string Path = null;                       //程序运行目录
 

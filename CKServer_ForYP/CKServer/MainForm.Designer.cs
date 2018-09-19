@@ -37,17 +37,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -96,6 +96,7 @@
             this.CheckEnable_OC = new DevExpress.XtraBars.BarCheckItem();
             this.CheckEnable_Rotator = new DevExpress.XtraBars.BarCheckItem();
             this.CheckEnable_RS422 = new DevExpress.XtraBars.BarCheckItem();
+            this.CheckEnable_BIT = new DevExpress.XtraBars.BarCheckItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
@@ -237,12 +238,14 @@
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.panelContainer1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel_AD = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dockPanel_OC = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel4_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
@@ -250,6 +253,16 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dockPanel_BIT = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridView_BIT1 = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.L1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.L2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.L3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.L4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridView_BIT2 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.通道名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.控制 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -259,6 +272,11 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.L5 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.L6 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.L7 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.L8 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
@@ -301,12 +319,18 @@
             this.dockPanel_RS422.SuspendLayout();
             this.dockPanel_LOG.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
+            this.panelContainer1.SuspendLayout();
             this.dockPanel_AD.SuspendLayout();
             this.dockPanel5_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.dockPanel_OC.SuspendLayout();
             this.dockPanel4_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.dockPanel_BIT.SuspendLayout();
+            this.controlContainer1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_BIT1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_BIT2)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -618,6 +642,7 @@
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_OC);
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_Rotator);
             this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_RS422);
+            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_BIT);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             resources.ApplyResources(this.ribbonPageGroup14, "ribbonPageGroup14");
             // 
@@ -666,6 +691,16 @@
             this.CheckEnable_RS422.Id = 149;
             this.CheckEnable_RS422.Name = "CheckEnable_RS422";
             this.CheckEnable_RS422.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_AD_CheckedChanged);
+            // 
+            // CheckEnable_BIT
+            // 
+            this.CheckEnable_BIT.BindableChecked = true;
+            resources.ApplyResources(this.CheckEnable_BIT, "CheckEnable_BIT");
+            this.CheckEnable_BIT.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.CheckEnable_BIT.Checked = true;
+            this.CheckEnable_BIT.Id = 152;
+            this.CheckEnable_BIT.Name = "CheckEnable_BIT";
+            this.CheckEnable_BIT.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_AD_CheckedChanged);
             // 
             // barButtonItem18
             // 
@@ -862,9 +897,10 @@
             this.CheckEnable_Rotator,
             this.CheckEnable_RS422,
             this.btn_Start,
-            this.btn_HelpNeed});
+            this.btn_HelpNeed,
+            this.CheckEnable_BIT});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 152;
+            this.ribbonControl1.MaxItemId = 153;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1347,8 +1383,8 @@
             this.dockPanel_RS422});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.dockPanel_LOG,
-            this.dockPanel_AD,
-            this.dockPanel_OC});
+            this.panelContainer1,
+            this.dockPanel_BIT});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -1852,12 +1888,13 @@
             // dockPanel_LOG
             // 
             this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
-            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
+            this.dockPanel_LOG.FloatVertical = true;
             this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
             resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
             this.dockPanel_LOG.Name = "dockPanel_LOG";
-            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(75, 140);
+            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(183, 140);
             // 
             // dockPanel1_Container
             // 
@@ -1865,14 +1902,24 @@
             resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             // 
+            // panelContainer1
+            // 
+            this.panelContainer1.Controls.Add(this.dockPanel_AD);
+            this.panelContainer1.Controls.Add(this.dockPanel_OC);
+            this.panelContainer1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.panelContainer1.ID = new System.Guid("534dd21f-3658-41ca-be42-6caf9af67459");
+            resources.ApplyResources(this.panelContainer1, "panelContainer1");
+            this.panelContainer1.Name = "panelContainer1";
+            this.panelContainer1.OriginalSize = new System.Drawing.Size(358, 200);
+            // 
             // dockPanel_AD
             // 
             this.dockPanel_AD.Controls.Add(this.dockPanel5_Container);
-            this.dockPanel_AD.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel_AD.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
             this.dockPanel_AD.ID = new System.Guid("277b4796-f1d3-44ac-9aab-bf8085b99d6f");
             resources.ApplyResources(this.dockPanel_AD, "dockPanel_AD");
             this.dockPanel_AD.Name = "dockPanel_AD";
-            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(461, 200);
+            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(200, 200);
             // 
             // dockPanel5_Container
             // 
@@ -1885,22 +1932,23 @@
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 9F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column6});
             resources.ApplyResources(this.dataGridView4, "dataGridView4");
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersVisible = false;
@@ -1909,8 +1957,8 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "序号";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.Column1, "Column1");
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -1920,8 +1968,8 @@
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.DataPropertyName = "名称";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.Column2, "Column2");
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -1930,24 +1978,30 @@
             // Column3
             // 
             this.Column3.DataPropertyName = "测量值";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Format = "N2";
-            dataGridViewCellStyle11.NullValue = "0";
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
             resources.ApplyResources(this.Column3, "Column3");
             this.Column3.Name = "Column3";
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "单位";
+            resources.ApplyResources(this.Column6, "Column6");
+            this.Column6.Name = "Column6";
+            // 
             // dockPanel_OC
             // 
             this.dockPanel_OC.Controls.Add(this.dockPanel4_Container);
-            this.dockPanel_OC.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.dockPanel_OC.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
             this.dockPanel_OC.FloatSize = new System.Drawing.Size(334, 322);
             this.dockPanel_OC.ID = new System.Guid("33b8ddeb-d01d-4235-9b86-4643140871e6");
             resources.ApplyResources(this.dockPanel_OC, "dockPanel_OC");
             this.dockPanel_OC.Name = "dockPanel_OC";
-            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(435, 200);
+            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(324, 200);
             // 
             // dockPanel4_Container
             // 
@@ -1960,17 +2014,17 @@
             this.dataGridView5.AllowUserToAddRows = false;
             this.dataGridView5.AllowUserToDeleteRows = false;
             this.dataGridView5.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView5.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView5.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 9F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1989,8 +2043,8 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "序号";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
             resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -2000,8 +2054,8 @@
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "名称";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle9;
             resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -2010,8 +2064,8 @@
             // Column4
             // 
             this.Column4.DataPropertyName = "脉宽";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle10;
             resources.ApplyResources(this.Column4, "Column4");
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -2019,13 +2073,100 @@
             // 
             // Column5
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.NullValue = "输出";
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.NullValue = "输出";
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle11;
             resources.ApplyResources(this.Column5, "Column5");
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Text = "输出控制";
+            // 
+            // dockPanel_BIT
+            // 
+            this.dockPanel_BIT.Controls.Add(this.controlContainer1);
+            this.dockPanel_BIT.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel_BIT.ID = new System.Guid("ccefe0b0-ccb1-4460-9fe3-452330a4d4e8");
+            resources.ApplyResources(this.dockPanel_BIT, "dockPanel_BIT");
+            this.dockPanel_BIT.Name = "dockPanel_BIT";
+            this.dockPanel_BIT.OriginalSize = new System.Drawing.Size(529, 200);
+            // 
+            // controlContainer1
+            // 
+            this.controlContainer1.Controls.Add(this.tableLayoutPanel1);
+            resources.ApplyResources(this.controlContainer1, "controlContainer1");
+            this.controlContainer1.Name = "controlContainer1";
+            // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView_BIT1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView_BIT2, 1, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // dataGridView_BIT1
+            // 
+            this.dataGridView_BIT1.AllowUserToAddRows = false;
+            this.dataGridView_BIT1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_BIT1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.L1,
+            this.L2,
+            this.L3,
+            this.L4});
+            resources.ApplyResources(this.dataGridView_BIT1, "dataGridView_BIT1");
+            this.dataGridView_BIT1.Name = "dataGridView_BIT1";
+            this.dataGridView_BIT1.RowHeadersVisible = false;
+            this.dataGridView_BIT1.RowTemplate.Height = 23;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "序号";
+            resources.ApplyResources(this.Column7, "Column7");
+            this.Column7.Name = "Column7";
+            // 
+            // L1
+            // 
+            resources.ApplyResources(this.L1, "L1");
+            this.L1.Image = global::CKServer.Properties.Resources.red;
+            this.L1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L1.Name = "L1";
+            this.L1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // L2
+            // 
+            resources.ApplyResources(this.L2, "L2");
+            this.L2.Image = global::CKServer.Properties.Resources.red;
+            this.L2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L2.Name = "L2";
+            // 
+            // L3
+            // 
+            resources.ApplyResources(this.L3, "L3");
+            this.L3.Image = global::CKServer.Properties.Resources.red;
+            this.L3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L3.Name = "L3";
+            // 
+            // L4
+            // 
+            resources.ApplyResources(this.L4, "L4");
+            this.L4.Image = global::CKServer.Properties.Resources.red;
+            this.L4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L4.Name = "L4";
+            // 
+            // dataGridView_BIT2
+            // 
+            this.dataGridView_BIT2.AllowUserToAddRows = false;
+            this.dataGridView_BIT2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_BIT2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.L5,
+            this.L6,
+            this.L7,
+            this.L8});
+            resources.ApplyResources(this.dataGridView_BIT2, "dataGridView_BIT2");
+            this.dataGridView_BIT2.Name = "dataGridView_BIT2";
+            this.dataGridView_BIT2.RowHeadersVisible = false;
+            this.dataGridView_BIT2.RowTemplate.Height = 23;
             // 
             // ID
             // 
@@ -2072,12 +2213,47 @@
             this.barStaticItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barStaticItem5.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "序号";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // L5
+            // 
+            resources.ApplyResources(this.L5, "L5");
+            this.L5.Image = global::CKServer.Properties.Resources.red;
+            this.L5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L5.Name = "L5";
+            this.L5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // L6
+            // 
+            resources.ApplyResources(this.L6, "L6");
+            this.L6.Image = global::CKServer.Properties.Resources.red;
+            this.L6.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L6.Name = "L6";
+            // 
+            // L7
+            // 
+            resources.ApplyResources(this.L7, "L7");
+            this.L7.Image = global::CKServer.Properties.Resources.red;
+            this.L7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L7.Name = "L7";
+            // 
+            // L8
+            // 
+            resources.ApplyResources(this.L8, "L8");
+            this.L8.Image = global::CKServer.Properties.Resources.red;
+            this.L8.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L8.Name = "L8";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dockPanel_OC);
-            this.Controls.Add(this.dockPanel_AD);
+            this.Controls.Add(this.dockPanel_BIT);
+            this.Controls.Add(this.panelContainer1);
             this.Controls.Add(this.dockPanel_LOG);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
@@ -2085,6 +2261,7 @@
             this.Name = "MainForm";
             this.Ribbon = this.ribbonControl1;
             this.StatusBar = this.ribbonStatusBar1;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -2132,12 +2309,18 @@
             this.dockPanel_RS422.ResumeLayout(false);
             this.dockPanel_LOG.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
+            this.panelContainer1.ResumeLayout(false);
             this.dockPanel_AD.ResumeLayout(false);
             this.dockPanel5_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.dockPanel_OC.ResumeLayout(false);
             this.dockPanel4_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.dockPanel_BIT.ResumeLayout(false);
+            this.controlContainer1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_BIT1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_BIT2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2355,6 +2538,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private DevExpress.XtraBars.BarCheckItem CheckEnable_BIT;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel_BIT;
+        private DevExpress.XtraBars.Docking.ControlContainer controlContainer1;
+        private DevExpress.XtraBars.Docking.DockPanel panelContainer1;
+        private System.Windows.Forms.DataGridView dataGridView_BIT1;
+        private System.Windows.Forms.DataGridView dataGridView_BIT2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewImageColumn L1;
+        private System.Windows.Forms.DataGridViewImageColumn L2;
+        private System.Windows.Forms.DataGridViewImageColumn L3;
+        private System.Windows.Forms.DataGridViewImageColumn L4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewImageColumn L5;
+        private System.Windows.Forms.DataGridViewImageColumn L6;
+        private System.Windows.Forms.DataGridViewImageColumn L7;
+        private System.Windows.Forms.DataGridViewImageColumn L8;
     }
 }
 

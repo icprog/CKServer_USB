@@ -41,12 +41,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel1 = new DevExpress.XtraCharts.PointSeriesLabel();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel1 = new DevExpress.XtraCharts.PointSeriesLabel();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
@@ -286,18 +286,26 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dockPanel4 = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer7 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.dockPanel_DY = new DevExpress.XtraBars.Docking.DockPanel();
-            this.controlContainer6 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.button7 = new System.Windows.Forms.Button();
-            this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.dockPanel3 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer8 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.button6 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.dockPanel_DY = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer6 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox_VShow = new System.Windows.Forms.TextBox();
+            this.textBox_AShow = new System.Windows.Forms.TextBox();
             this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.panelContainer1 = new DevExpress.XtraBars.Docking.DockPanel();
@@ -425,21 +433,25 @@
             this.controlContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).BeginInit();
             this.dockPanel4.SuspendLayout();
-            this.dockPanel_DY.SuspendLayout();
-            this.controlContainer6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
+            this.dockPanel3.SuspendLayout();
+            this.controlContainer8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.dockPanel_DY.SuspendLayout();
+            this.controlContainer6.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
             this.dockPanel_LOG.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             this.panelContainer1.SuspendLayout();
@@ -1951,7 +1963,8 @@
             this.dockPanel_RegCtl,
             this.dockPanel1,
             this.dockPanel_422_B,
-            this.dockPanel4});
+            this.dockPanel4,
+            this.dockPanel3});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.dockPanel_DY,
             this.dockPanel_LOG,
@@ -2384,106 +2397,38 @@
             resources.ApplyResources(this.controlContainer7, "controlContainer7");
             this.controlContainer7.Name = "controlContainer7";
             // 
-            // dockPanel_DY
+            // dockPanel3
             // 
-            this.dockPanel_DY.Controls.Add(this.controlContainer6);
-            this.dockPanel_DY.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
-            this.dockPanel_DY.FloatSize = new System.Drawing.Size(725, 327);
-            this.dockPanel_DY.FloatVertical = true;
-            this.dockPanel_DY.ID = new System.Guid("af875582-3434-40b9-81fd-bc05e36cee96");
-            resources.ApplyResources(this.dockPanel_DY, "dockPanel_DY");
-            this.dockPanel_DY.Name = "dockPanel_DY";
-            this.dockPanel_DY.OriginalSize = new System.Drawing.Size(273, 293);
+            this.dockPanel3.Controls.Add(this.controlContainer8);
+            this.dockPanel3.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
+            this.dockPanel3.ID = new System.Guid("70913b32-f628-4523-ba35-11ed36b308d6");
+            resources.ApplyResources(this.dockPanel3, "dockPanel3");
+            this.dockPanel3.Name = "dockPanel3";
+            this.dockPanel3.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanel3.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
+            this.dockPanel3.SavedIndex = 0;
+            this.dockPanel3.SavedParent = this.dockPanel_DY;
+            this.dockPanel3.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
             // 
-            // controlContainer6
+            // controlContainer8
             // 
-            this.controlContainer6.Controls.Add(this.chartControl2);
-            this.controlContainer6.Controls.Add(this.chartControl1);
-            this.controlContainer6.Controls.Add(this.label4);
-            this.controlContainer6.Controls.Add(this.label3);
-            this.controlContainer6.Controls.Add(this.numericUpDown2);
-            this.controlContainer6.Controls.Add(this.numericUpDown1);
-            this.controlContainer6.Controls.Add(this.button6);
-            this.controlContainer6.Controls.Add(this.button5);
-            this.controlContainer6.Controls.Add(this.button2);
-            this.controlContainer6.Controls.Add(this.button7);
-            resources.ApplyResources(this.controlContainer6, "controlContainer6");
-            this.controlContainer6.Name = "controlContainer6";
+            this.controlContainer8.Controls.Add(this.button6);
+            this.controlContainer8.Controls.Add(this.label4);
+            this.controlContainer8.Controls.Add(this.label3);
+            this.controlContainer8.Controls.Add(this.numericUpDown2);
+            this.controlContainer8.Controls.Add(this.numericUpDown1);
+            this.controlContainer8.Controls.Add(this.button5);
+            this.controlContainer8.Controls.Add(this.button7);
+            this.controlContainer8.Controls.Add(this.button2);
+            resources.ApplyResources(this.controlContainer8, "controlContainer8");
+            this.controlContainer8.Name = "controlContainer8";
             // 
-            // button7
+            // button6
             // 
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // chartControl2
-            // 
-            resources.ApplyResources(this.chartControl2, "chartControl2");
-            this.chartControl2.DataBindings = null;
-            xyDiagram1.AxisX.DateTimeScaleOptions.AutoGrid = false;
-            xyDiagram1.AxisX.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Second;
-            xyDiagram1.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second;
-            xyDiagram1.AxisX.Tickmarks.MinorVisible = false;
-            xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl2.Diagram = xyDiagram1;
-            this.chartControl2.Legend.Name = "Default Legend";
-            this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl2.Name = "chartControl2";
-            series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
-            pointSeriesLabel1.BackColor = System.Drawing.Color.White;
-            series1.Label = pointSeriesLabel1;
-            resources.ApplyResources(series1, "series1");
-            lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series1.View = lineSeriesView1;
-            resources.ApplyResources(series2, "series2");
-            series2.View = lineSeriesView2;
-            this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1,
-        series2};
-            chartTitle1.Dock = DevExpress.XtraCharts.ChartTitleDockStyle.Left;
-            chartTitle1.Indent = 0;
-            resources.ApplyResources(chartTitle1, "chartTitle1");
-            this.chartControl2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle1});
-            // 
-            // chartControl1
-            // 
-            resources.ApplyResources(this.chartControl1, "chartControl1");
-            this.chartControl1.AppearanceNameSerializable = "Gray";
-            this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.DataBindings = null;
-            xyDiagram2.AxisX.DateTimeScaleOptions.AutoGrid = false;
-            xyDiagram2.AxisX.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Second;
-            xyDiagram2.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second;
-            xyDiagram2.AxisX.MinorCount = 1;
-            xyDiagram2.AxisX.Title.Text = resources.GetString("resource.Text");
-            xyDiagram2.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisY.Title.Text = resources.GetString("resource.Text1");
-            xyDiagram2.AxisY.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram2;
-            this.chartControl1.Legend.Border.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.Name = "chartControl1";
-            series3.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
-            series3.LegendName = "Default Legend";
-            resources.ApplyResources(series3, "series3");
-            lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series3.View = lineSeriesView3;
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series3};
-            chartTitle2.Dock = DevExpress.XtraCharts.ChartTitleDockStyle.Left;
-            resources.ApplyResources(chartTitle2, "chartTitle2");
-            chartTitle2.Indent = 0;
-            chartTitle2.TextColor = System.Drawing.Color.Black;
-            chartTitle2.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle2});
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label4
             // 
@@ -2532,13 +2477,6 @@
             0,
             0});
             // 
-            // button6
-            // 
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // button5
             // 
             resources.ApplyResources(this.button5, "button5");
@@ -2546,12 +2484,143 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button7
+            // 
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // button2
             // 
             resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dockPanel_DY
+            // 
+            this.dockPanel_DY.Controls.Add(this.controlContainer6);
+            this.dockPanel_DY.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
+            this.dockPanel_DY.FloatSize = new System.Drawing.Size(725, 327);
+            this.dockPanel_DY.FloatVertical = true;
+            this.dockPanel_DY.ID = new System.Guid("af875582-3434-40b9-81fd-bc05e36cee96");
+            resources.ApplyResources(this.dockPanel_DY, "dockPanel_DY");
+            this.dockPanel_DY.Name = "dockPanel_DY";
+            this.dockPanel_DY.OriginalSize = new System.Drawing.Size(273, 163);
+            // 
+            // controlContainer6
+            // 
+            this.controlContainer6.Controls.Add(this.tableLayoutPanel5);
+            resources.ApplyResources(this.controlContainer6, "controlContainer6");
+            this.controlContainer6.Name = "controlContainer6";
+            // 
+            // tableLayoutPanel5
+            // 
+            resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
+            this.tableLayoutPanel5.Controls.Add(this.chartControl1, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.chartControl2, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.AppearanceNameSerializable = "Gray";
+            this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl1.DataBindings = null;
+            xyDiagram1.AxisX.DateTimeScaleOptions.AutoGrid = false;
+            xyDiagram1.AxisX.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Second;
+            xyDiagram1.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second;
+            xyDiagram1.AxisX.MinorCount = 1;
+            xyDiagram1.AxisX.Title.Text = resources.GetString("resource.Text");
+            xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.Title.Text = resources.GetString("resource.Text1");
+            xyDiagram1.AxisY.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram1;
+            resources.ApplyResources(this.chartControl1, "chartControl1");
+            this.chartControl1.Legend.Border.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl1.Name = "chartControl1";
+            series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+            series1.LegendName = "Default Legend";
+            resources.ApplyResources(series1, "series1");
+            lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.View = lineSeriesView1;
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            chartTitle1.Dock = DevExpress.XtraCharts.ChartTitleDockStyle.Left;
+            resources.ApplyResources(chartTitle1, "chartTitle1");
+            chartTitle1.Indent = 0;
+            chartTitle1.TextColor = System.Drawing.Color.Black;
+            chartTitle1.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle1});
+            // 
+            // chartControl2
+            // 
+            this.chartControl2.DataBindings = null;
+            xyDiagram2.AxisX.DateTimeScaleOptions.AutoGrid = false;
+            xyDiagram2.AxisX.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Second;
+            xyDiagram2.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second;
+            xyDiagram2.AxisX.Tickmarks.MinorVisible = false;
+            xyDiagram2.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl2.Diagram = xyDiagram2;
+            resources.ApplyResources(this.chartControl2, "chartControl2");
+            this.chartControl2.Legend.Name = "Default Legend";
+            this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl2.Name = "chartControl2";
+            series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+            pointSeriesLabel1.BackColor = System.Drawing.Color.White;
+            series2.Label = pointSeriesLabel1;
+            resources.ApplyResources(series2, "series2");
+            lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series2.View = lineSeriesView2;
+            resources.ApplyResources(series3, "series3");
+            series3.View = lineSeriesView3;
+            this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series2,
+        series3};
+            chartTitle2.Dock = DevExpress.XtraCharts.ChartTitleDockStyle.Left;
+            chartTitle2.Indent = 0;
+            resources.ApplyResources(chartTitle2, "chartTitle2");
+            this.chartControl2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle2});
+            // 
+            // tableLayoutPanel6
+            // 
+            resources.ApplyResources(this.tableLayoutPanel6, "tableLayoutPanel6");
+            this.tableLayoutPanel6.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label6, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.textBox_VShow, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.textBox_AShow, 0, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // textBox_VShow
+            // 
+            resources.ApplyResources(this.textBox_VShow, "textBox_VShow");
+            this.textBox_VShow.ForeColor = System.Drawing.Color.Red;
+            this.textBox_VShow.Name = "textBox_VShow";
+            // 
+            // textBox_AShow
+            // 
+            resources.ApplyResources(this.textBox_AShow, "textBox_AShow");
+            this.textBox_AShow.ForeColor = System.Drawing.Color.Red;
+            this.textBox_AShow.Name = "textBox_AShow";
             // 
             // dockPanel_LOG
             // 
@@ -2589,7 +2658,7 @@
             this.dockPanel_422_A.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
             resources.ApplyResources(this.dockPanel_422_A, "dockPanel_422_A");
             this.dockPanel_422_A.Name = "dockPanel_422_A";
-            this.dockPanel_422_A.OriginalSize = new System.Drawing.Size(470, 197);
+            this.dockPanel_422_A.OriginalSize = new System.Drawing.Size(470, 106);
             // 
             // dockPanel3_Container
             // 
@@ -2651,7 +2720,7 @@
             this.dockPanel_AD.ID = new System.Guid("277b4796-f1d3-44ac-9aab-bf8085b99d6f");
             resources.ApplyResources(this.dockPanel_AD, "dockPanel_AD");
             this.dockPanel_AD.Name = "dockPanel_AD";
-            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(470, 171);
+            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(470, 92);
             // 
             // dockPanel5_Container
             // 
@@ -2723,7 +2792,7 @@
             this.dockPanel_OC.ID = new System.Guid("33b8ddeb-d01d-4235-9b86-4643140871e6");
             resources.ApplyResources(this.dockPanel_OC, "dockPanel_OC");
             this.dockPanel_OC.Name = "dockPanel_OC";
-            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(470, 223);
+            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(470, 120);
             // 
             // dockPanel4_Container
             // 
@@ -3230,22 +3299,27 @@
             this.controlContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_YC2)).EndInit();
             this.dockPanel4.ResumeLayout(false);
-            this.dockPanel_DY.ResumeLayout(false);
-            this.controlContainer6.ResumeLayout(false);
-            this.controlContainer6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            this.dockPanel3.ResumeLayout(false);
+            this.controlContainer8.ResumeLayout(false);
+            this.controlContainer8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.dockPanel_DY.ResumeLayout(false);
+            this.controlContainer6.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.dockPanel_LOG.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             this.panelContainer1.ResumeLayout(false);
@@ -3584,6 +3658,14 @@
         private DevExpress.XtraBars.BarEditItem barEditItem14;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit AsetEdit;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel3;
+        private DevExpress.XtraBars.Docking.ControlContainer controlContainer8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox_VShow;
+        private System.Windows.Forms.TextBox textBox_AShow;
     }
 }
 

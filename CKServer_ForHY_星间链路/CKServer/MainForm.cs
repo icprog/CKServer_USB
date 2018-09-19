@@ -423,18 +423,21 @@ namespace CKServer
                 ts.Minutes.ToString() + "分" +
                 ts.Seconds.ToString() + "秒";
 
-            for (int i = 0; i < 4; i++)
+            if (_BoxIsStarted)
             {
-                Func_AD.dt_ADShow.Rows[i]["测量值"] = dataRe_AD[i + 38];
+                for (int i = 0; i < 4; i++)
+                {
+                    Func_AD.dt_ADShow.Rows[i]["测量值"] = dataRe_AD[i + 38];
+                }
+
+                Func_LVDS.dt_LVDS_Result.Rows[0]["总字节数"] = Func_LVDS.TotalNums1;
+                Func_LVDS.dt_LVDS_Result.Rows[0]["错误字节"] = Func_LVDS.ErrorNums1;
+                Func_LVDS.dt_LVDS_Result.Rows[0]["误码率"] = Func_LVDS.ErPert1;
+
+                Func_LVDS.dt_LVDS_Result.Rows[1]["总字节数"] = Func_LVDS.TotalNums2;
+                Func_LVDS.dt_LVDS_Result.Rows[1]["错误字节"] = Func_LVDS.ErrorNums2;
+                Func_LVDS.dt_LVDS_Result.Rows[1]["误码率"] = Func_LVDS.ErPert2;
             }
-
-            Func_LVDS.dt_LVDS_Result.Rows[0]["总字节数"] = Func_LVDS.TotalNums1;
-            Func_LVDS.dt_LVDS_Result.Rows[0]["错误字节"] = Func_LVDS.ErrorNums1;
-            Func_LVDS.dt_LVDS_Result.Rows[0]["误码率"] = Func_LVDS.ErPert1;
-
-            Func_LVDS.dt_LVDS_Result.Rows[1]["总字节数"] = Func_LVDS.TotalNums2;
-            Func_LVDS.dt_LVDS_Result.Rows[1]["错误字节"] = Func_LVDS.ErrorNums2;
-            Func_LVDS.dt_LVDS_Result.Rows[1]["误码率"] = Func_LVDS.ErPert2;
         }
 
         private void btn_Modify_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -545,7 +548,8 @@ namespace CKServer
                 {
                     byte[] RecvBoxBuf = new byte[4096];
                     int RecvBoxLen = 4096;
-                    MyDevice.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);
+                    lock(MyDevice)
+                        MyDevice.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);
 
                     if (RecvBoxLen > 0)
                     {
@@ -554,11 +558,12 @@ namespace CKServer
                         byte[] tempbuf = new byte[RecvBoxLen];
                         Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);
                         //存储源码
-                        SaveFile.Lock_1.EnterWriteLock();
-                        SaveFile.DataQueue_SC1.Enqueue(tempbuf);
-                        SaveFile.Lock_1.ExitWriteLock();
-                        lock (Recv_MidBuf_8K)
-                            Array.Copy(tempbuf, 0, Recv_MidBuf_8K, Pos_Recv_MidBuf_8K, tempbuf.Length);
+                        //SaveFile.Lock_1.EnterWriteLock();
+                        //SaveFile.DataQueue_SC1.Enqueue(tempbuf);
+                        //SaveFile.Lock_1.ExitWriteLock();
+
+
+                        Array.Copy(tempbuf, 0, Recv_MidBuf_8K, Pos_Recv_MidBuf_8K, tempbuf.Length);
 
                         Pos_Recv_MidBuf_8K += tempbuf.Length;
 
@@ -566,16 +571,14 @@ namespace CKServer
                         {
                             if (Recv_MidBuf_8K[0] == 0xff && (0x0 <= Recv_MidBuf_8K[1]) && (Recv_MidBuf_8K[1] < 0x11))
                             {
-                                lock (Recv_MidBuf_8K)
-                                    DealWithLongFrame(ref Recv_MidBuf_8K, ref Pos_Recv_MidBuf_8K);
+
+                                DealWithLongFrame(ref Recv_MidBuf_8K, ref Pos_Recv_MidBuf_8K);
                             }
                             else
                             {
                                 MyLog.Error("收到异常帧！");
 
-                                lock (Recv_MidBuf_8K)
-                                    Array.Clear(Recv_MidBuf_8K, 0, Pos_Recv_MidBuf_8K);
-
+                                Array.Clear(Recv_MidBuf_8K, 0, Pos_Recv_MidBuf_8K);
                                 Pos_Recv_MidBuf_8K = 0;
                             }
                         }
@@ -658,9 +661,9 @@ namespace CKServer
                 //FF08为短帧通道
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
-                SaveFile.Lock_6.EnterWriteLock();
-                SaveFile.DataQueue_SC6.Enqueue(bufsav);
-                SaveFile.Lock_6.ExitWriteLock();
+                //SaveFile.Lock_6.EnterWriteLock();
+                //SaveFile.DataQueue_SC6.Enqueue(bufsav);
+                //SaveFile.Lock_6.ExitWriteLock();
 
                 for (int i = 0; i < 6; i++)
                 {
@@ -674,7 +677,8 @@ namespace CKServer
                         SaveFile.Lock_7.ExitWriteLock();
                         lock (YCList_A)
                         {//将422的A遥测数据放入YCList_A,在另一个线程中解析
-                            for (int j = 0; j < buf1D0x.Length; j++) YCList_A.Add(buf1D0x[j]);
+                          //  for (int j = 0; j < buf1D0x.Length; j++) YCList_A.Add(buf1D0x[j]);
+                            YCList_A.AddRange(buf1D0x);
                         }
                     }
                     else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x01)//1D01:第2路422
@@ -687,7 +691,8 @@ namespace CKServer
                         SaveFile.Lock_8.ExitWriteLock();
                         lock (YCList_B)
                         {//将422的A遥测数据放入YCList_A,在另一个线程中解析
-                            for (int j = 0; j < buf1D0x.Length; j++) YCList_B.Add(buf1D0x[j]);
+                         //   for (int j = 0; j < buf1D0x.Length; j++) YCList_B.Add(buf1D0x[j]);
+                            YCList_B.AddRange(buf1D0x);
                         }
                     }
                     else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x08)//1D08:AD数据
@@ -695,62 +700,27 @@ namespace CKServer
                         int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
                         byte[] buf1D0x = new byte[num];
                         Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                        SaveFile.Lock_9.EnterWriteLock();
-                        SaveFile.DataQueue_SC9.Enqueue(buf1D0x);
-                        SaveFile.Lock_9.ExitWriteLock();
+                        //SaveFile.Lock_9.EnterWriteLock();
+                        //SaveFile.DataQueue_SC9.Enqueue(buf1D0x);
+                        //SaveFile.Lock_9.ExitWriteLock();
                         lock (ADList)
                         {//将AD数据放入ADList,在另一个线程中解析
-                            for (int j = 0; j < buf1D0x.Length; j++) ADList.Add(buf1D0x[j]);
+                            ADList.AddRange(buf1D0x);
                         }
                     }
-                    else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x07)
+                    else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x07)//电源数据
                     {
                         int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
                         byte[] buf1D0x = new byte[num];
                         Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                        SaveFile.Lock_10.EnterWriteLock();
-                        SaveFile.DataQueue_SC10.Enqueue(buf1D0x);
-                        SaveFile.Lock_10.ExitWriteLock();
+                        //SaveFile.Lock_10.EnterWriteLock();
+                        //SaveFile.DataQueue_SC10.Enqueue(buf1D0x);
+                        //SaveFile.Lock_10.ExitWriteLock();
 
                         lock (Func_DY.DYListBytes)
                             Func_DY.DYListBytes.AddRange(buf1D0x);
                     }
-                    //else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x04)
-                    //{
-                    //    int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
-                    //    byte[] buf1D0x = new byte[num];
-                    //    Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                    //    SaveFile.Lock_11.EnterWriteLock();
-                    //    SaveFile.DataQueue_SC11.Enqueue(buf1D0x);
-                    //    SaveFile.Lock_11.ExitWriteLock();
-                    //}
-                    //else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x05)
-                    //{
-                    //    int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
-                    //    byte[] buf1D0x = new byte[num];
-                    //    Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                    //    SaveFile.Lock_12.EnterWriteLock();
-                    //    SaveFile.DataQueue_SC12.Enqueue(buf1D0x);
-                    //    SaveFile.Lock_12.ExitWriteLock();
-                    //}
-                    //else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x06)
-                    //{
-                    //    int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
-                    //    byte[] buf1D0x = new byte[num];
-                    //    Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                    //    SaveFile.Lock_13.EnterWriteLock();
-                    //    SaveFile.DataQueue_SC13.Enqueue(buf1D0x);
-                    //    SaveFile.Lock_13.ExitWriteLock();
-                    //}
-                    //else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x07)
-                    //{
-                    //    int num = bufsav[i * 682 + 2] * 256 + bufsav[i * 682 + 3];//有效位
-                    //    byte[] buf1D0x = new byte[num];
-                    //    Array.Copy(bufsav, i * 682 + 4, buf1D0x, 0, num);
-                    //    SaveFile.Lock_14.EnterWriteLock();
-                    //    SaveFile.DataQueue_SC14.Enqueue(buf1D0x);
-                    //    SaveFile.Lock_14.ExitWriteLock();
-                    //}
+
                     else if (bufsav[i * 682 + 0] == 0x1D && bufsav[i * 682 + 1] == 0x0f)
                     {
                         //空闲帧
@@ -1258,7 +1228,8 @@ namespace CKServer
 
         private void barButton_AStart_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            byte[] SendData = new byte[6] { 0xeb, 0x90, 0x05, 0x02, 0x01, 0x82 };
+            byte[] SendData = new byte[6] { 0xeb, 0x90, 0x05, 0x02, 0xee, 0x92 };
+
             byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
             byte[] FinalSend = new byte[28];
 
@@ -1278,7 +1249,7 @@ namespace CKServer
 
         private void barButton_BStart_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            byte[] SendData = new byte[6] { 0xeb, 0x90, 0x05, 0x02, 0x01, 0x82 };
+            byte[] SendData = new byte[6] { 0xeb, 0x90, 0x05, 0x02, 0xee, 0x92 };
             byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
             byte[] FinalSend = new byte[28];
 
@@ -1780,6 +1751,8 @@ namespace CKServer
                 chartControl2.Series[1].Points.RemoveAt(0);
             }
 
+            this.textBox_VShow.Text = Func_DY.Real_Vvalue.ToString("f2");
+            this.textBox_AShow.Text = Func_DY.Real_Avalue.ToString("f2");
 
         }
 
@@ -1912,6 +1885,7 @@ namespace CKServer
 
             byte[] SendData = new byte[6] { 0xFA, 0xC3, 0x00, 0x00, 0x00, 0xF5 };
 
+            Vout = Vout - 0.1;
             int a = (int)Vout;
             int b = (int)(Vout * 100) - a * 100;
             SendData[2] = (byte)a;

@@ -73,14 +73,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CKServer.exe" size="474528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CKServer.exe" size="482720">
       <assemblyIdentity name="CKServer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>e90NcMFExZ/jIgKCmtRHsmn5A1E=</dsig:DigestValue>
+        <dsig:DigestValue>FEhUZC0V8ixNMPGL9dyrivqfJMc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -92,7 +92,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>dC+OtJkwLGPD4Cv4+gC5TmWAxfY=</dsig:DigestValue>
+        <dsig:DigestValue>pSlR+h+5vbZVkCAm9kfwSXLifac=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -258,13 +258,13 @@
       <dsig:DigestValue>++DoiRSar4GJmvGRJnR5vqLA0T8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="配置文件\ADconfig.xml" size="3900" writeableType="applicationData">
+  <file name="配置文件\ADconfig.xml" size="4065" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>us534dPSva0Fxd6SgD+QrePm6mc=</dsig:DigestValue>
+      <dsig:DigestValue>Q3wZ4xVzynkJiLwLi93AO6xiO6Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="配置文件\DAconfig.xml" size="25496" writeableType="applicationData">

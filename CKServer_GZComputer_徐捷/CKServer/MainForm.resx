@@ -6750,7 +6750,7 @@
     <value>True</value>
   </data>
   <data name="textBox_RS422_Show.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 638</value>
+    <value>307, 486</value>
   </data>
   <data name="textBox_RS422_Show.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6771,7 +6771,7 @@
     <value>4, 23</value>
   </data>
   <data name="controlContainer5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 638</value>
+    <value>307, 486</value>
   </data>
   <data name="controlContainer5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6789,10 +6789,10 @@
     <value>0</value>
   </data>
   <data name="dockPanel_BoxRS422_Show.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>-316, 0</value>
   </data>
   <data name="dockPanel_BoxRS422_Show.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 665</value>
+    <value>316, 513</value>
   </data>
   <data name="dockPanel_BoxRS422_Show.Text" xml:space="preserve">
     <value>RS422异步接收显示</value>
