@@ -448,8 +448,8 @@ namespace CKServer
                     Func_AD.dt_AD.Rows[i]["测量值"] = dataRe_AD[i];
                 }
 
-                USB.SendCMD(1, 0x81, 0x1);
-                USB.SendCMD(1, 0x81, 0x0);              
+                USB.SendCMD(1, 0x81, 0x1,true);
+                USB.SendCMD(1, 0x81, 0x0,true);              
 
             }
         }

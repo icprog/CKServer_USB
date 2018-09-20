@@ -21,4 +21,5 @@
   <add key="最近一次遥控包的检验结果" len="4"/>
   <add key="最近一次遥控包APID符合性检查结果" len="4"/>
   <add key="已接收遥控包计数" len="8"/>
+  <add key="保留" len="8"/>
 </configuration>

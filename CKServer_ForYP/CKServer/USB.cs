@@ -71,6 +71,36 @@ namespace CKServer
             }
         }
 
+        public static void SendCMD(int id, byte ReqCode, byte Value,bool tag)
+        {
+            if (MyDeviceList[id] != null)
+            {
+                CyControlEndPoint CtrlEndPt = null;
+                CtrlEndPt = MyDeviceList[id].ControlEndPt;
+                if (CtrlEndPt != null)
+                {
+                    lock (MyDeviceList[id])
+                    {
+                        CtrlEndPt.Target = CyConst.TGT_DEVICE;
+                        CtrlEndPt.ReqType = CyConst.REQ_VENDOR;
+                        CtrlEndPt.Direction = CyConst.DIR_TO_DEVICE;
+                        CtrlEndPt.Index = 0;
+                        CtrlEndPt.ReqCode = ReqCode;
+                        CtrlEndPt.Value = (ushort)Value;
+                        int len = 8;
+                        byte[] buf = new byte[8];
+                        CtrlEndPt.XferData(ref buf, ref len);
+
+                        if(tag)MyLog.Info("向USB机箱" + id.ToString() + "发送指令0x" + ReqCode.ToString("x2") + " 0x" + Value.ToString("x2") + "成功");
+                    }
+                }
+            }
+            else
+            {
+                MyLog.Error("USB设备未连接！");
+            }
+        }
+
         //向USB发送数据,数据区不加0
         public static void SendData(int id, byte[] temp)
         {

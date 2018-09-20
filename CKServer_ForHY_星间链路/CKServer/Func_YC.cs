@@ -52,6 +52,7 @@ namespace CKServer
 
         public static bool Return_YCValue(ref List<byte> YCList_A,int ChanNo, ref string[] dataRe_YCA1,ref string[] dataRe_YCA2)
         {
+
             DataTable mydt_YC;
             switch(ChanNo)
             {
@@ -66,16 +67,16 @@ namespace CKServer
                     break;
             }
 
-            int YCFrame = 15;//15Byte 头2Byte 长度1Byte 10byte数据 2Byte累加和
+            int YCFrame = 16;//16Byte 头2Byte 长度1Byte 11byte数据 2Byte累加和
 
             int _StartPos = YCList_A.IndexOf(0x14);
 
             if (_StartPos >= 0 && YCList_A.Count >= (_StartPos + YCFrame))
             {
-                if (YCList_A[_StartPos + 1] == 0x6f && YCList_A[_StartPos + 2]==0x0C)
+                if (YCList_A[_StartPos + 1] == 0x6f && YCList_A[_StartPos + 2]==0x0D)
                 {
                     string tempstr = "";//将YC数据转化为二进制string
-                    for (int t = 0; t < 10; t++)
+                    for (int t = 0; t < 11; t++)
                     {
                         tempstr += Convert.ToString(YCList_A[_StartPos + 3 + t], 2).PadLeft(8, '0');
                     }                   
