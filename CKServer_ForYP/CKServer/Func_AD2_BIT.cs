@@ -70,9 +70,9 @@ namespace CKServer
                 Array.Copy(buf, 2, RealData, 0, 96);
                 for (int k = 0; k < NChans; k++)
                 {
-                    int temp = (buf[2 * k] & 0x7f) * 256 + buf[2 * k + 1];
+                    int temp = (RealData[2 * k] & 0x7f) * 256 + RealData[2 * k + 1];
                     double t = (double)(5 * temp) / (double)32767;
-                    if ((buf[2 * k] & 0x80) == 0x80)
+                    if ((RealData[2 * k] & 0x80) == 0x80)
                         dataRe_AD[k] = -t;
                     else
                         dataRe_AD[k] = t;

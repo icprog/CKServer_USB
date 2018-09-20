@@ -19,9 +19,8 @@ CKServer_ForYP_有效载荷AD/CKServer/CKServer/Release/*
 CKServer_ForYP/CKServer/bin/
 CKServer_ForYP/CKServer/.vs/
 *.pdb
-CKServer_ForYP/CKServer/obj/Debug/CKServer.application
-CKServer_ForYP/CKServer/obj/Debug/CKServer.csproj.CoreCompileInputs.cache
-CKServer_ForYP/.vs/CKServer/v15/Server/sqlite3/storage.ide
+CKServer_ForYP/CKServer/obj/
+CKServer_ForYP/.vs/
 *.exe
 CKServer_GZComputer_徐捷/CKServer/MainForm.resx
 CKServer_ForYP/CKServer/obj/

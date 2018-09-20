@@ -263,6 +263,11 @@
             this.L3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.L4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridView_BIT2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.L5 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.L6 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.L7 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.L8 = new System.Windows.Forms.DataGridViewImageColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.通道名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.控制 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -272,11 +277,7 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.L5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.L6 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.L7 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.L8 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
@@ -2168,6 +2169,41 @@
             this.dataGridView_BIT2.RowHeadersVisible = false;
             this.dataGridView_BIT2.RowTemplate.Height = 23;
             // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "序号";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // L5
+            // 
+            resources.ApplyResources(this.L5, "L5");
+            this.L5.Image = global::CKServer.Properties.Resources.red;
+            this.L5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L5.Name = "L5";
+            this.L5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // L6
+            // 
+            resources.ApplyResources(this.L6, "L6");
+            this.L6.Image = global::CKServer.Properties.Resources.red;
+            this.L6.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L6.Name = "L6";
+            // 
+            // L7
+            // 
+            resources.ApplyResources(this.L7, "L7");
+            this.L7.Image = global::CKServer.Properties.Resources.red;
+            this.L7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L7.Name = "L7";
+            // 
+            // L8
+            // 
+            resources.ApplyResources(this.L8, "L8");
+            this.L8.Image = global::CKServer.Properties.Resources.red;
+            this.L8.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.L8.Name = "L8";
+            // 
             // ID
             // 
             resources.ApplyResources(this.ID, "ID");
@@ -2213,40 +2249,10 @@
             this.barStaticItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barStaticItem5.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // dataGridViewTextBoxColumn9
+            // timer2
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "序号";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // L5
-            // 
-            resources.ApplyResources(this.L5, "L5");
-            this.L5.Image = global::CKServer.Properties.Resources.red;
-            this.L5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L5.Name = "L5";
-            this.L5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // L6
-            // 
-            resources.ApplyResources(this.L6, "L6");
-            this.L6.Image = global::CKServer.Properties.Resources.red;
-            this.L6.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L6.Name = "L6";
-            // 
-            // L7
-            // 
-            resources.ApplyResources(this.L7, "L7");
-            this.L7.Image = global::CKServer.Properties.Resources.red;
-            this.L7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L7.Name = "L7";
-            // 
-            // L8
-            // 
-            resources.ApplyResources(this.L8, "L8");
-            this.L8.Image = global::CKServer.Properties.Resources.red;
-            this.L8.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L8.Name = "L8";
+            this.timer2.Interval = 500;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // MainForm
             // 
@@ -2556,6 +2562,7 @@
         private System.Windows.Forms.DataGridViewImageColumn L6;
         private System.Windows.Forms.DataGridViewImageColumn L7;
         private System.Windows.Forms.DataGridViewImageColumn L8;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

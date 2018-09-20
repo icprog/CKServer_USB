@@ -33,9 +33,9 @@ namespace CKServer
 
         bool _BoxIsStarted;
 
-        Image imgRed = Properties.Resources.red;
+        Image imgError = Properties.Resources.error;
         Image imgGreen = Properties.Resources.green;
-        Image imgYellow = Properties.Resources.yellow;
+        Image imgGray = Properties.Resources.gray;
 
         void UsbDevices_DeviceAttached(object sender, EventArgs e)
         {
@@ -449,69 +449,7 @@ namespace CKServer
                 }
 
                 USB.SendCMD(1, 0x81, 0x1);
-                USB.SendCMD(1, 0x81, 0x0);
-
-                for(int i=0;i<Func_AD2_BIT.ADNums1;i++)
-                {
-                    if(AD_BIT1_L1[i]<1)
-                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgRed;
-                    else if(AD_BIT1_L1[i]>4)
-                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgGreen;
-                    else
-                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgYellow;
-
-                    if (AD_BIT1_L2[i] < 1)
-                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgRed;
-                    else if (AD_BIT1_L2[i] > 4)
-                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgGreen;
-                    else
-                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgYellow;
-
-                    if (AD_BIT1_L3[i] < 1)
-                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgRed;
-                    else if (AD_BIT1_L3[i] > 4)
-                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgGreen;
-                    else
-                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgYellow;
-
-                    if (AD_BIT1_L4[i] < 1)
-                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgRed;
-                    else if (AD_BIT1_L4[i] > 4)
-                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgGreen;
-                    else
-                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgYellow;
-                }
-
-                for (int i = 0; i < Func_AD2_BIT.ADNums2; i++)
-                {
-                    if (AD_BIT2_L1[i] < 1)
-                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgRed;
-                    else if (AD_BIT2_L1[i] > 4)
-                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgGreen;
-                    else
-                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgYellow;
-
-                    if (AD_BIT2_L2[i] < 1)
-                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgRed;
-                    else if (AD_BIT2_L2[i] > 4)
-                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgGreen;
-                    else
-                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgYellow;
-
-                    if (AD_BIT2_L3[i] < 1)
-                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgRed;
-                    else if (AD_BIT2_L3[i] > 4)
-                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgGreen;
-                    else
-                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgYellow;
-
-                    if (AD_BIT2_L4[i] < 1)
-                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgRed;
-                    else if (AD_BIT2_L4[i] > 4)
-                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgGreen;
-                    else
-                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgYellow;
-                }
+                USB.SendCMD(1, 0x81, 0x0);              
 
             }
         }
@@ -793,6 +731,8 @@ namespace CKServer
                 }
 
                 _BoxIsStarted = true;
+                timer1.Enabled = true;
+                timer2.Enabled = true;
 
                 for (int i = 0; i < 0x0f; i++)
                 {
@@ -849,6 +789,7 @@ namespace CKServer
                 FileThread.FileClose();
 
                 timer1.Enabled = false;
+                timer2.Enabled = false;
             }
         }
 
@@ -1130,9 +1071,9 @@ namespace CKServer
                 //FF08为短帧通道
                 byte[] bufsav = new byte[4092];
                 Array.Copy(buf_LongFrame, 4, bufsav, 0, 4092);
-                SaveFile.Lock_2.EnterWriteLock();
-                SaveFile.DataQueue_SC2.Enqueue(bufsav);
-                SaveFile.Lock_2.ExitWriteLock();
+                //SaveFile.Lock_2.EnterWriteLock();
+                //SaveFile.DataQueue_SC2.Enqueue(bufsav);
+                //SaveFile.Lock_2.ExitWriteLock();
 
                 for (int i = 0; i < 6; i++)
                 {
@@ -1233,6 +1174,75 @@ namespace CKServer
             FileThread.FileClose();
 
             timer1.Enabled = false;
+            timer2.Enabled = false;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (_BoxIsStarted)
+            {
+                for (int i = 0; i < Func_AD2_BIT.ADNums1; i++)
+                {
+                    if (AD_BIT1_L1[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgGray;
+                    else if (AD_BIT1_L1[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgError;
+
+                    if (AD_BIT1_L2[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgGray;
+                    else if (AD_BIT1_L2[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgError;
+
+                    if (AD_BIT1_L3[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgGray;
+                    else if (AD_BIT1_L3[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgError;
+
+                    if (AD_BIT1_L4[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgGray;
+                    else if (AD_BIT1_L4[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgError;
+                }
+
+                for (int i = 0; i < Func_AD2_BIT.ADNums2; i++)
+                {
+                    if (AD_BIT2_L1[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgGray;
+                    else if (AD_BIT2_L1[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgError;
+
+                    if (AD_BIT2_L2[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgGray;
+                    else if (AD_BIT2_L2[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgError;
+
+                    if (AD_BIT2_L3[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgGray;
+                    else if (AD_BIT2_L3[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgError;
+
+                    if (AD_BIT2_L4[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgGray;
+                    else if (AD_BIT2_L4[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgError;
+                }
+            }
         }
     }
 }
