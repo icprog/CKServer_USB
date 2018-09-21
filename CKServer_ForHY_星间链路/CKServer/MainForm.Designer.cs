@@ -2652,7 +2652,7 @@
             this.dockPanel_422_A.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
             resources.ApplyResources(this.dockPanel_422_A, "dockPanel_422_A");
             this.dockPanel_422_A.Name = "dockPanel_422_A";
-            this.dockPanel_422_A.OriginalSize = new System.Drawing.Size(470, 149);
+            this.dockPanel_422_A.OriginalSize = new System.Drawing.Size(379, 146);
             // 
             // dockPanel3_Container
             // 
@@ -2714,7 +2714,7 @@
             this.dockPanel_AD.ID = new System.Guid("277b4796-f1d3-44ac-9aab-bf8085b99d6f");
             resources.ApplyResources(this.dockPanel_AD, "dockPanel_AD");
             this.dockPanel_AD.Name = "dockPanel_AD";
-            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(470, 130);
+            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(379, 127);
             // 
             // dockPanel5_Container
             // 
@@ -2786,7 +2786,7 @@
             this.dockPanel_OC.ID = new System.Guid("33b8ddeb-d01d-4235-9b86-4643140871e6");
             resources.ApplyResources(this.dockPanel_OC, "dockPanel_OC");
             this.dockPanel_OC.Name = "dockPanel_OC";
-            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(470, 169);
+            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(379, 166);
             // 
             // dockPanel4_Container
             // 
@@ -3225,11 +3225,11 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dockPanel_LOG);
+            this.Controls.Add(this.dockPanel_DY);
             this.Controls.Add(this.dockPanel_LVDS_Recv);
             this.Controls.Add(this.dockPanel_LVDS_Send);
             this.Controls.Add(this.panelContainer1);
-            this.Controls.Add(this.dockPanel_LOG);
-            this.Controls.Add(this.dockPanel_DY);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
