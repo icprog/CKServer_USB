@@ -50,22 +50,10 @@ namespace CKServer
 
         }
 
-        public static bool Return_YCValue(ref List<byte> YCList_A,int ChanNo, ref string[] dataRe_YCA1,ref string[] dataRe_YCA2)
+        public static bool Return_YCValue(ref DataTable dt,ref List<byte> YCList_A,int ChanNo, ref string[] dataRe_YCA1,ref string[] dataRe_YCA2)
         {
 
-            DataTable mydt_YC;
-            switch(ChanNo)
-            {
-                case 1:
-                    mydt_YC = dt_YC1;
-                    break;
-                case 2:
-                    mydt_YC = dt_YC2;
-                    break;
-                default:
-                    mydt_YC = dt_YC1;
-                    break;
-            }
+            DataTable mydt_YC = dt;
 
             int YCFrame = 16;//16Byte 头2Byte 长度1Byte 11byte数据 2Byte累加和
 
@@ -84,11 +72,12 @@ namespace CKServer
                     {
                         YCList_A.RemoveRange(0, _StartPos + YCFrame);
                     }
-
+                    MyLog.Info(tempstr);
+                    
                     try
                     {                       
                         for (int j = 0; j < mydt_YC.Rows.Count; j++)
-                        {
+                        {                            
                             int len = int.Parse((string)mydt_YC.Rows[j]["占位"]);
 
                             long t = Convert.ToInt64(tempstr.Substring(0, len), 2);
@@ -109,7 +98,7 @@ namespace CKServer
 
                             //dataRe_YCA1[j] = "0x" + t.ToString("x").PadLeft(padleft, '0');
                             //dataRe_YCA1[j] = "0x" + t.ToString("x").PadLeft(padleft, '0');
-                            return true;
+                         
                         }
 
                     }
@@ -128,10 +117,12 @@ namespace CKServer
                     {
                         YCList_A.Clear();
                     }
+
                 }
+                return false;
             }
 
-            return false;
+            return true;
 
         }         
 

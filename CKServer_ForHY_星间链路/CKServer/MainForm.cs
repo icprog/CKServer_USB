@@ -745,8 +745,8 @@ namespace CKServer
         {
             while (_BoxIsStarted)
             {
-                bool ret1 = Func_YC.Return_YCValue(ref YCList_A, 1, ref dataRe_YCA1, ref dataRe_YCA2);
-                bool ret2 = Func_YC.Return_YCValue(ref YCList_B, 2, ref dataRe_YCB1, ref dataRe_YCB2);
+                bool ret1 = Func_YC.Return_YCValue(ref Func_YC.dt_YC1,ref YCList_A, 1, ref dataRe_YCA1, ref dataRe_YCA2);
+                bool ret2 = Func_YC.Return_YCValue(ref Func_YC.dt_YC2, ref YCList_B, 2, ref dataRe_YCB1, ref dataRe_YCB2);
                 if (ret1 == false && ret2 == false) Thread.Sleep(500);
             }
         }
