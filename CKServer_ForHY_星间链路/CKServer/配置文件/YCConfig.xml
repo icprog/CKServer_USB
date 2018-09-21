@@ -18,8 +18,8 @@
   <add key="发射本振锁定" len="1"   fmul="锁定/失锁"/>
   <add key="发射工作状态" len="1"   fmul="工作/不工作"/>
   <add key="预留1" len="5"          fmul="orignal"/>
-  <add key="最近一次遥控包的检验结果" len="4"   fmul="正确/错误"/>
-  <add key="最近一次遥控包APID符合性检查结果" len="4"    fmul="正确/错误"/>
+  <add key="最近一次遥控包的检验结果" len="4"   fmul="符合/错误"/>
+  <add key="最近一次遥控包APID符合性检查结果" len="4"    fmul="符合/错误"/>
   <add key="已接收遥控包计数" len="8"    fmul="orignal"/>
   <add key="保留" len="8"  fmul="orignal"/>
 </configuration>

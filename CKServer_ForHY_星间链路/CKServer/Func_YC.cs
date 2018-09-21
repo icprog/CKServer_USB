@@ -83,8 +83,8 @@ namespace CKServer
                         {
                             int len = int.Parse((string)mydt_YC.Rows[j]["占位"]);
 
-                            long t = Convert.ToInt64(tempstr.Substring(0, len), 2);
-
+                            int t = Convert.ToInt32(tempstr.Substring(0, len), 2);
+                            tempstr = tempstr.Substring(len);
                             int padleft = int.Parse((string)mydt_YC.Rows[j]["占位"]);
 
                             if (padleft == 8 || padleft == 16 || padleft == 32 || padleft == 48)
@@ -126,24 +126,39 @@ namespace CKServer
                                         mydt_YC.Rows[j]["解析值"] = "出现异常值";
                                     }
                                     break;
+                                case "符合/错误":
+                                    if (t == 0x0a)
+                                    {
+                                        mydt_YC.Rows[j]["解析值"] = "正确";
+                                    }
+                                    else if (t == 0x00)
+                                    {
+                                        mydt_YC.Rows[j]["解析值"] = "错误";
+                                        
+                                    }
+                                    else
+                                    {
+                                        mydt_YC.Rows[j]["解析值"] = "出现异常值";
+                                    }
+                                    break;
                                 case "码速率状态":
-                                    if (t == 0x100)
+                                    if (t == 4)
                                     {
                                         mydt_YC.Rows[j]["解析值"] = "30Mbps";
                                     }
-                                    else if (t == 0x011)
+                                    else if (t == 3)
                                     {
                                         mydt_YC.Rows[j]["解析值"] = "15Mbps";
                                     }
-                                    else if (t == 0x010)
+                                    else if (t == 2)
                                     {
                                         mydt_YC.Rows[j]["解析值"] = "10Mbps";
                                     }
-                                    else if (t == 0x001)
+                                    else if (t == 1)
                                     {
                                         mydt_YC.Rows[j]["解析值"] = "2Mbps";
                                     }
-                                    else if (t == 0x000)
+                                    else if (t == 0)
                                     {
                                         mydt_YC.Rows[j]["解析值"] = "1Mbps";
                                     }
@@ -198,10 +213,10 @@ namespace CKServer
                                         mydt_YC.Rows[j]["解析值"] = "+" + show_data2.ToString("f2") + "kHz";
                                     }
                                     break;
-                                case "orignal*0.5Hz":
+                                case "orignal*0.5db":
                                     float show_data3 = t;
                                     show_data3 = show_data3 / 2;
-                                    mydt_YC.Rows[j]["解析值"] = "+" + show_data3.ToString("f1") + "dB";
+                                    mydt_YC.Rows[j]["解析值"] = "+" + show_data3.ToString("f2") + "dB";
                                     break;
                                 case "orignal":
                                     mydt_YC.Rows[j]["解析值"] = "0x" + t.ToString("x").PadLeft(padleft, '0');
