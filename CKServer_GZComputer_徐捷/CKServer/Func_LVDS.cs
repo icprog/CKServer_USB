@@ -126,7 +126,8 @@ namespace CKServer
                     dr["VCID"] = Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_0", "VCID_Channel_" + (i / 2 + 1).ToString(), "vcid");
                     dr["帧计数"] = 0;
                     dr["收到数据"] = 0;
-                    dr["比对长度"] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_0", "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen"));
+                    if(i%2==0)dr["比对长度"] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_0", "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen1"));
+                    if(i%2==1)dr["比对长度"] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_0", "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen2"));
                     dr["出错行"] = 0;
                     dr["出错列"] = 0;
                     dt_LVDS_01.Rows.Add(dr);

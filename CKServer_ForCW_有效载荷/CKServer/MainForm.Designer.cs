@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,6 +48,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -79,26 +84,22 @@
             this.barButtonItem50 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem53 = new DevExpress.XtraBars.BarButtonItem();
             this.Page_Setting = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.CheckEnable_Net = new DevExpress.XtraBars.BarCheckItem();
+            this.CheckEnable_Log = new DevExpress.XtraBars.BarCheckItem();
+            this.CheckEnable_Sav = new DevExpress.XtraBars.BarCheckItem();
+            this.CheckEnable_PWD = new DevExpress.XtraBars.BarCheckItem();
             this.ribbonPageGroup27 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.CheckEnable_LocalTime = new DevExpress.XtraBars.BarCheckItem();
             this.CheckEnable_RunTime = new DevExpress.XtraBars.BarCheckItem();
             this.CheckEnable_Path = new DevExpress.XtraBars.BarCheckItem();
             this.CheckEnable_DiskSpace = new DevExpress.XtraBars.BarCheckItem();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btn_HelpNeed = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btn_Enable_BitTimer2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.CheckEnable_Log = new DevExpress.XtraBars.BarCheckItem();
-            this.CheckEnable_AD = new DevExpress.XtraBars.BarCheckItem();
-            this.CheckEnable_OC = new DevExpress.XtraBars.BarCheckItem();
-            this.CheckEnable_Rotator = new DevExpress.XtraBars.BarCheckItem();
-            this.CheckEnable_RS422 = new DevExpress.XtraBars.BarCheckItem();
-            this.CheckEnable_BIT = new DevExpress.XtraBars.BarCheckItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
@@ -149,11 +150,28 @@
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
+            this.btn_da_save = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_ResetDA = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_da_load = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_VOut = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Modify = new DevExpress.XtraBars.BarButtonItem();
             this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
-            this.btn_Start = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_setall = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemSpinEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.btn_add = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_dec = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem6 = new DevExpress.XtraBars.BarStaticItem();
+            this.btn_VOut2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem7 = new DevExpress.XtraBars.BarStaticItem();
+            this.barEditItem12 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemSpinEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.btn_add2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_dec2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -163,7 +181,6 @@
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             this.repositoryItemTextEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
-            this.repositoryItemSpinEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.repositoryItemSpinEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.repositoryItemSpinEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.repositoryItemNumberingAlignment1 = new DevExpress.XtraRichEdit.Design.RepositoryItemNumberingAlignment();
@@ -193,83 +210,26 @@
             this.btn_modify_save2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_modify_load2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_modify_save1 = new DevExpress.XtraEditors.SimpleButton();
-            this.dockPanel_Rotator = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel6_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox_Hangle = new System.Windows.Forms.TextBox();
-            this.textBox_Hangle_add = new System.Windows.Forms.TextBox();
-            this.textBox_Vangle = new System.Windows.Forms.TextBox();
-            this.textBox_Vangle_add = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox_addAngle = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox_startAngle = new System.Windows.Forms.TextBox();
-            this.textBox_stopAngle = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_SerialOpen = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox_SerialPortNum = new System.Windows.Forms.ComboBox();
-            this.comboBox_SerialBaudrate = new System.Windows.Forms.ComboBox();
-            this.comboBox_SerialDatabit = new System.Windows.Forms.ComboBox();
-            this.comboBox_SerialStopbit = new System.Windows.Forms.ComboBox();
-            this.comboBox_SerialParity = new System.Windows.Forms.ComboBox();
-            this.dockPanel_RS422 = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.panelContainer1 = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel_AD = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dockPanel_OC = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel4_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dockPanel_BIT = new DevExpress.XtraBars.Docking.DockPanel();
-            this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView_BIT1 = new System.Windows.Forms.DataGridView();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.L1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.L2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.L3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.L4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridView_BIT2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView_Fudu1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.L5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.L6 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.L7 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.L8 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView_Fudu2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.通道名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.控制 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -279,7 +239,6 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
@@ -292,6 +251,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
@@ -301,7 +262,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemNumberingAlignment1)).BeginInit();
@@ -313,27 +273,14 @@
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.dockPanel_Rotator.SuspendLayout();
-            this.dockPanel6_Container.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.dockPanel_RS422.SuspendLayout();
-            this.dockPanel_LOG.SuspendLayout();
+            this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
-            this.panelContainer1.SuspendLayout();
-            this.dockPanel_AD.SuspendLayout();
-            this.dockPanel5_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            this.dockPanel_OC.SuspendLayout();
-            this.dockPanel4_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            this.dockPanel_BIT.SuspendLayout();
-            this.controlContainer1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_BIT1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_BIT2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fudu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fudu2)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -536,11 +483,57 @@
             // Page_Setting
             // 
             this.Page_Setting.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup14,
             this.ribbonPageGroup27,
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup8});
             this.Page_Setting.Name = "Page_Setting";
             resources.ApplyResources(this.Page_Setting, "Page_Setting");
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_Net);
+            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_Log);
+            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_Sav);
+            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_PWD);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            resources.ApplyResources(this.ribbonPageGroup14, "ribbonPageGroup14");
+            this.ribbonPageGroup14.Visible = false;
+            // 
+            // CheckEnable_Net
+            // 
+            this.CheckEnable_Net.BindableChecked = true;
+            resources.ApplyResources(this.CheckEnable_Net, "CheckEnable_Net");
+            this.CheckEnable_Net.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.CheckEnable_Net.Checked = true;
+            this.CheckEnable_Net.Id = 25;
+            this.CheckEnable_Net.Name = "CheckEnable_Net";
+            // 
+            // CheckEnable_Log
+            // 
+            this.CheckEnable_Log.BindableChecked = true;
+            resources.ApplyResources(this.CheckEnable_Log, "CheckEnable_Log");
+            this.CheckEnable_Log.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.CheckEnable_Log.Checked = true;
+            this.CheckEnable_Log.Id = 47;
+            this.CheckEnable_Log.Name = "CheckEnable_Log";
+            // 
+            // CheckEnable_Sav
+            // 
+            this.CheckEnable_Sav.BindableChecked = true;
+            resources.ApplyResources(this.CheckEnable_Sav, "CheckEnable_Sav");
+            this.CheckEnable_Sav.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.CheckEnable_Sav.Checked = true;
+            this.CheckEnable_Sav.Id = 26;
+            this.CheckEnable_Sav.Name = "CheckEnable_Sav";
+            // 
+            // CheckEnable_PWD
+            // 
+            this.CheckEnable_PWD.BindableChecked = true;
+            resources.ApplyResources(this.CheckEnable_PWD, "CheckEnable_PWD");
+            this.CheckEnable_PWD.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.CheckEnable_PWD.Checked = true;
+            this.CheckEnable_PWD.Id = 55;
+            this.CheckEnable_PWD.Name = "CheckEnable_PWD";
             // 
             // ribbonPageGroup27
             // 
@@ -592,35 +585,20 @@
             this.CheckEnable_DiskSpace.Name = "CheckEnable_DiskSpace";
             this.CheckEnable_DiskSpace.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.Status_CheckedChanged);
             // 
-            // ribbonPageGroup2
+            // ribbonPageGroup8
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btn_HelpNeed);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            resources.ApplyResources(this.ribbonPageGroup2, "ribbonPageGroup2");
+            this.ribbonPageGroup8.ItemLinks.Add(this.btn_HelpNeed);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            resources.ApplyResources(this.ribbonPageGroup8, "ribbonPageGroup8");
             // 
             // btn_HelpNeed
             // 
             resources.ApplyResources(this.btn_HelpNeed, "btn_HelpNeed");
-            this.btn_HelpNeed.Id = 151;
+            this.btn_HelpNeed.Id = 144;
             this.btn_HelpNeed.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_HelpNeed.ImageOptions.Image")));
             this.btn_HelpNeed.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_HelpNeed.ImageOptions.LargeImage")));
             this.btn_HelpNeed.Name = "btn_HelpNeed";
             this.btn_HelpNeed.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_HelpNeed_ItemClick);
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btn_Enable_BitTimer2);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            resources.ApplyResources(this.ribbonPageGroup3, "ribbonPageGroup3");
-            // 
-            // btn_Enable_BitTimer2
-            // 
-            resources.ApplyResources(this.btn_Enable_BitTimer2, "btn_Enable_BitTimer2");
-            this.btn_Enable_BitTimer2.Id = 153;
-            this.btn_Enable_BitTimer2.ImageOptions.Image = global::CKServer.Properties.Resources.refresh_16x16;
-            this.btn_Enable_BitTimer2.ImageOptions.LargeImage = global::CKServer.Properties.Resources.refresh_32x32;
-            this.btn_Enable_BitTimer2.Name = "btn_Enable_BitTimer2";
-            this.btn_Enable_BitTimer2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Enable_BitTimer2_ItemClick);
             // 
             // barButtonItem13
             // 
@@ -653,73 +631,6 @@
             this.barButtonItem16.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.ImageOptions.Image")));
             this.barButtonItem16.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.ImageOptions.LargeImage")));
             this.barButtonItem16.Name = "barButtonItem16";
-            // 
-            // ribbonPageGroup14
-            // 
-            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_Log);
-            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_AD);
-            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_OC);
-            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_Rotator);
-            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_RS422);
-            this.ribbonPageGroup14.ItemLinks.Add(this.CheckEnable_BIT);
-            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
-            resources.ApplyResources(this.ribbonPageGroup14, "ribbonPageGroup14");
-            // 
-            // CheckEnable_Log
-            // 
-            this.CheckEnable_Log.BindableChecked = true;
-            resources.ApplyResources(this.CheckEnable_Log, "CheckEnable_Log");
-            this.CheckEnable_Log.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.CheckEnable_Log.Checked = true;
-            this.CheckEnable_Log.Id = 47;
-            this.CheckEnable_Log.Name = "CheckEnable_Log";
-            this.CheckEnable_Log.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_AD_CheckedChanged);
-            // 
-            // CheckEnable_AD
-            // 
-            this.CheckEnable_AD.BindableChecked = true;
-            resources.ApplyResources(this.CheckEnable_AD, "CheckEnable_AD");
-            this.CheckEnable_AD.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.CheckEnable_AD.Checked = true;
-            this.CheckEnable_AD.Id = 146;
-            this.CheckEnable_AD.Name = "CheckEnable_AD";
-            this.CheckEnable_AD.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_AD_CheckedChanged);
-            // 
-            // CheckEnable_OC
-            // 
-            this.CheckEnable_OC.BindableChecked = true;
-            resources.ApplyResources(this.CheckEnable_OC, "CheckEnable_OC");
-            this.CheckEnable_OC.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.CheckEnable_OC.Checked = true;
-            this.CheckEnable_OC.Id = 147;
-            this.CheckEnable_OC.Name = "CheckEnable_OC";
-            this.CheckEnable_OC.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_AD_CheckedChanged);
-            // 
-            // CheckEnable_Rotator
-            // 
-            resources.ApplyResources(this.CheckEnable_Rotator, "CheckEnable_Rotator");
-            this.CheckEnable_Rotator.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.CheckEnable_Rotator.Id = 148;
-            this.CheckEnable_Rotator.Name = "CheckEnable_Rotator";
-            this.CheckEnable_Rotator.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_AD_CheckedChanged);
-            // 
-            // CheckEnable_RS422
-            // 
-            resources.ApplyResources(this.CheckEnable_RS422, "CheckEnable_RS422");
-            this.CheckEnable_RS422.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.CheckEnable_RS422.Id = 149;
-            this.CheckEnable_RS422.Name = "CheckEnable_RS422";
-            this.CheckEnable_RS422.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_AD_CheckedChanged);
-            // 
-            // CheckEnable_BIT
-            // 
-            this.CheckEnable_BIT.BindableChecked = true;
-            resources.ApplyResources(this.CheckEnable_BIT, "CheckEnable_BIT");
-            this.CheckEnable_BIT.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.CheckEnable_BIT.Checked = true;
-            this.CheckEnable_BIT.Id = 152;
-            this.CheckEnable_BIT.Name = "CheckEnable_BIT";
-            this.CheckEnable_BIT.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.CheckEnable_AD_CheckedChanged);
             // 
             // barButtonItem18
             // 
@@ -854,6 +765,8 @@
             this.barEditItem6,
             this.barEditItem7,
             this.barEditItem8,
+            this.CheckEnable_Net,
+            this.CheckEnable_Sav,
             this.barCheckItem3,
             this.barButtonGroup1,
             this.barButtonItem2,
@@ -867,6 +780,7 @@
             this.barButtonItem14,
             this.barButtonItem3,
             this.barButtonItem16,
+            this.CheckEnable_PWD,
             this.barEditItem9,
             this.barButtonItem17,
             this.barButtonItem18,
@@ -910,17 +824,24 @@
             this.barStaticItem2,
             this.barStaticItem3,
             this.barStaticItem4,
+            this.btn_da_save,
+            this.btn_ResetDA,
+            this.btn_da_load,
+            this.btn_VOut,
+            this.btn_Modify,
             this.barEditItem2,
-            this.CheckEnable_AD,
-            this.CheckEnable_OC,
-            this.CheckEnable_Rotator,
-            this.CheckEnable_RS422,
-            this.btn_Start,
+            this.btn_setall,
+            this.btn_add,
+            this.btn_dec,
+            this.barStaticItem6,
             this.btn_HelpNeed,
-            this.CheckEnable_BIT,
-            this.btn_Enable_BitTimer2});
+            this.btn_VOut2,
+            this.barStaticItem7,
+            this.barEditItem12,
+            this.btn_add2,
+            this.btn_dec2});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 154;
+            this.ribbonControl1.MaxItemId = 150;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -951,7 +872,8 @@
             this.repositoryItemSpinEdit4,
             this.repositoryItemSpinEdit5,
             this.repositoryItemNumberingAlignment1,
-            this.repositoryItemButtonEdit1});
+            this.repositoryItemButtonEdit1,
+            this.repositoryItemSpinEdit6});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
@@ -1173,6 +1095,53 @@
             this.barStaticItem4.Name = "barStaticItem4";
             this.barStaticItem4.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
+            // btn_da_save
+            // 
+            resources.ApplyResources(this.btn_da_save, "btn_da_save");
+            this.btn_da_save.Id = 121;
+            this.btn_da_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_da_save.ImageOptions.Image")));
+            this.btn_da_save.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_da_save.ImageOptions.LargeImage")));
+            this.btn_da_save.Name = "btn_da_save";
+            this.btn_da_save.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_da_save_ItemClick);
+            // 
+            // btn_ResetDA
+            // 
+            resources.ApplyResources(this.btn_ResetDA, "btn_ResetDA");
+            this.btn_ResetDA.Id = 122;
+            this.btn_ResetDA.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_ResetDA.ImageOptions.Image")));
+            this.btn_ResetDA.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_ResetDA.ImageOptions.LargeImage")));
+            this.btn_ResetDA.Name = "btn_ResetDA";
+            this.btn_ResetDA.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.btn_ResetDA.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ResetDA_ItemClick);
+            // 
+            // btn_da_load
+            // 
+            resources.ApplyResources(this.btn_da_load, "btn_da_load");
+            this.btn_da_load.Id = 124;
+            this.btn_da_load.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_da_load.ImageOptions.Image")));
+            this.btn_da_load.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_da_load.ImageOptions.LargeImage")));
+            this.btn_da_load.Name = "btn_da_load";
+            this.btn_da_load.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_da_load_ItemClick);
+            // 
+            // btn_VOut
+            // 
+            resources.ApplyResources(this.btn_VOut, "btn_VOut");
+            this.btn_VOut.Id = 127;
+            this.btn_VOut.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_VOut.ImageOptions.Image")));
+            this.btn_VOut.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_VOut.ImageOptions.LargeImage")));
+            this.btn_VOut.Name = "btn_VOut";
+            this.btn_VOut.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_VOut_ItemClick);
+            // 
+            // btn_Modify
+            // 
+            resources.ApplyResources(this.btn_Modify, "btn_Modify");
+            this.btn_Modify.Id = 128;
+            this.btn_Modify.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modify.ImageOptions.Image")));
+            this.btn_Modify.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_Modify.ImageOptions.LargeImage")));
+            this.btn_Modify.Name = "btn_Modify";
+            this.btn_Modify.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.btn_Modify.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Modify_ItemClick);
+            // 
             // barEditItem2
             // 
             resources.ApplyResources(this.barEditItem2, "barEditItem2");
@@ -1202,29 +1171,158 @@
             65536});
             this.repositoryItemSpinEdit2.Name = "repositoryItemSpinEdit2";
             // 
-            // btn_Start
+            // btn_setall
             // 
-            resources.ApplyResources(this.btn_Start, "btn_Start");
-            this.btn_Start.Id = 150;
-            this.btn_Start.ImageOptions.Image = global::CKServer.Properties.Resources.Start_btn;
-            this.btn_Start.ImageOptions.LargeImage = global::CKServer.Properties.Resources.Start_btn;
-            this.btn_Start.Name = "btn_Start";
-            this.btn_Start.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            resources.ApplyResources(this.btn_setall, "btn_setall");
+            this.btn_setall.Edit = this.repositoryItemSpinEdit3;
+            this.btn_setall.EditValue = 0D;
+            this.btn_setall.Id = 131;
+            this.btn_setall.Name = "btn_setall";
+            this.btn_setall.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
+            this.btn_setall.EditValueChanged += new System.EventHandler(this.btn_setall_EditValueChanged);
+            // 
+            // repositoryItemSpinEdit3
+            // 
+            resources.ApplyResources(this.repositoryItemSpinEdit3, "repositoryItemSpinEdit3");
+            this.repositoryItemSpinEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemSpinEdit3.Buttons"))))});
+            this.repositoryItemSpinEdit3.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.repositoryItemSpinEdit3.MaxValue = new decimal(new int[] {
+            315,
+            0,
+            0,
+            65536});
+            this.repositoryItemSpinEdit3.Name = "repositoryItemSpinEdit3";
+            // 
+            // btn_add
+            // 
+            resources.ApplyResources(this.btn_add, "btn_add");
+            this.btn_add.Id = 140;
+            this.btn_add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.ImageOptions.Image")));
+            this.btn_add.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_add.ImageOptions.LargeImage")));
+            this.btn_add.Name = "btn_add";
+            this.btn_add.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.btn_add.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_add_ItemClick);
+            // 
+            // btn_dec
+            // 
+            resources.ApplyResources(this.btn_dec, "btn_dec");
+            this.btn_dec.Id = 141;
+            this.btn_dec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_dec.ImageOptions.Image")));
+            this.btn_dec.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_dec.ImageOptions.LargeImage")));
+            this.btn_dec.Name = "btn_dec";
+            this.btn_dec.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.btn_dec.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_dec_ItemClick);
+            // 
+            // barStaticItem6
+            // 
+            resources.ApplyResources(this.barStaticItem6, "barStaticItem6");
+            this.barStaticItem6.Id = 143;
+            this.barStaticItem6.Name = "barStaticItem6";
+            this.barStaticItem6.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // btn_VOut2
+            // 
+            resources.ApplyResources(this.btn_VOut2, "btn_VOut2");
+            this.btn_VOut2.Id = 145;
+            this.btn_VOut2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_VOut2.ImageOptions.Image")));
+            this.btn_VOut2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_VOut2.ImageOptions.LargeImage")));
+            this.btn_VOut2.Name = "btn_VOut2";
+            this.btn_VOut2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_VOut2_ItemClick);
+            // 
+            // barStaticItem7
+            // 
+            resources.ApplyResources(this.barStaticItem7, "barStaticItem7");
+            this.barStaticItem7.Id = 146;
+            this.barStaticItem7.Name = "barStaticItem7";
+            this.barStaticItem7.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barEditItem12
+            // 
+            resources.ApplyResources(this.barEditItem12, "barEditItem12");
+            this.barEditItem12.Edit = this.repositoryItemSpinEdit6;
+            this.barEditItem12.EditValue = 0;
+            this.barEditItem12.Id = 147;
+            this.barEditItem12.Name = "barEditItem12";
+            this.barEditItem12.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
+            this.barEditItem12.EditValueChanged += new System.EventHandler(this.barEditItem12_EditValueChanged);
+            // 
+            // repositoryItemSpinEdit6
+            // 
+            resources.ApplyResources(this.repositoryItemSpinEdit6, "repositoryItemSpinEdit6");
+            this.repositoryItemSpinEdit6.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemSpinEdit6.Buttons"))))});
+            this.repositoryItemSpinEdit6.Increment = new decimal(new int[] {
+            5625,
+            0,
+            0,
+            196608});
+            this.repositoryItemSpinEdit6.MaxValue = new decimal(new int[] {
+            354375,
+            0,
+            0,
+            196608});
+            this.repositoryItemSpinEdit6.Name = "repositoryItemSpinEdit6";
+            // 
+            // btn_add2
+            // 
+            resources.ApplyResources(this.btn_add2, "btn_add2");
+            this.btn_add2.Id = 148;
+            this.btn_add2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_add2.ImageOptions.Image")));
+            this.btn_add2.Name = "btn_add2";
+            this.btn_add2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.btn_add2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_add2_ItemClick);
+            // 
+            // btn_dec2
+            // 
+            resources.ApplyResources(this.btn_dec2, "btn_dec2");
+            this.btn_dec2.Id = 149;
+            this.btn_dec2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_dec2.ImageOptions.Image")));
+            this.btn_dec2.Name = "btn_dec2";
+            this.btn_dec2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_dec2_ItemClick);
             // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5,
-            this.ribbonPageGroup14});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup5});
             this.ribbonPage1.Name = "ribbonPage1";
             resources.ApplyResources(this.ribbonPage1, "ribbonPage1");
             // 
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.Glyph = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup5.Glyph")));
-            this.ribbonPageGroup5.ItemLinks.Add(this.btn_Start);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btn_da_save);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btn_da_load);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btn_Modify);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btn_ResetDA);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             resources.ApplyResources(this.ribbonPageGroup5, "ribbonPageGroup5");
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btn_VOut);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barStaticItem6);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btn_setall);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btn_add);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btn_dec);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            resources.ApplyResources(this.ribbonPageGroup4, "ribbonPageGroup4");
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_VOut2);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barStaticItem7);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barEditItem12);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_add2);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_dec2);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            resources.ApplyResources(this.ribbonPageGroup3, "ribbonPageGroup3");
             // 
             // repositoryItemTextEdit1
             // 
@@ -1285,18 +1383,6 @@
             0,
             65536});
             this.repositoryItemSpinEdit1.Name = "repositoryItemSpinEdit1";
-            // 
-            // repositoryItemSpinEdit3
-            // 
-            resources.ApplyResources(this.repositoryItemSpinEdit3, "repositoryItemSpinEdit3");
-            this.repositoryItemSpinEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemSpinEdit3.Buttons"))))});
-            this.repositoryItemSpinEdit3.MaxValue = new decimal(new int[] {
-            2000000,
-            0,
-            0,
-            0});
-            this.repositoryItemSpinEdit3.Name = "repositoryItemSpinEdit3";
             // 
             // repositoryItemSpinEdit4
             // 
@@ -1398,13 +1484,9 @@
             // 
             this.dockManager1.Form = this;
             this.dockManager1.HiddenPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanel2,
-            this.dockPanel_Rotator,
-            this.dockPanel_RS422});
+            this.dockPanel2});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanel_LOG,
-            this.panelContainer1,
-            this.dockPanel_BIT});
+            this.dockPanel1});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -1468,8 +1550,8 @@
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "ID";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle17;
             resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -1478,8 +1560,8 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "a";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle18;
             resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1487,8 +1569,8 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "b";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle19;
             resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1528,8 +1610,8 @@
             // 
             this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn6.DataPropertyName = "ID";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle20;
             resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -1538,8 +1620,8 @@
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "a";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle21;
             resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1547,8 +1629,8 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "b";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle22;
             resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1583,338 +1665,15 @@
             this.btn_modify_save1.Name = "btn_modify_save1";
             this.btn_modify_save1.Click += new System.EventHandler(this.btn_modify_save_Click);
             // 
-            // dockPanel_Rotator
-            // 
-            resources.ApplyResources(this.dockPanel_Rotator, "dockPanel_Rotator");
-            this.dockPanel_Rotator.Controls.Add(this.dockPanel6_Container);
-            this.dockPanel_Rotator.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.dockPanel_Rotator.FloatSize = new System.Drawing.Size(174, 137);
-            this.dockPanel_Rotator.ID = new System.Guid("4563d561-1151-4e46-ae1e-a8f65c999690");
-            this.dockPanel_Rotator.Name = "dockPanel_Rotator";
-            this.dockPanel_Rotator.OriginalSize = new System.Drawing.Size(893, 199);
-            this.dockPanel_Rotator.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.dockPanel_Rotator.SavedIndex = 0;
-            this.dockPanel_Rotator.SavedParent = this.dockPanel_RS422;
-            this.dockPanel_Rotator.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-            this.dockPanel_Rotator.ClosingPanel += new DevExpress.XtraBars.Docking.DockPanelCancelEventHandler(this.dockPanel6_ClosingPanel);
-            this.dockPanel_Rotator.Click += new System.EventHandler(this.dockPanel_Rotator_Click);
-            // 
-            // dockPanel6_Container
-            // 
-            this.dockPanel6_Container.Controls.Add(this.groupBox4);
-            this.dockPanel6_Container.Controls.Add(this.groupBox3);
-            this.dockPanel6_Container.Controls.Add(this.groupBox2);
-            this.dockPanel6_Container.Controls.Add(this.groupBox1);
-            resources.ApplyResources(this.dockPanel6_Container, "dockPanel6_Container");
-            this.dockPanel6_Container.Name = "dockPanel6_Container";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.textBox_Hangle);
-            this.groupBox4.Controls.Add(this.textBox_Hangle_add);
-            this.groupBox4.Controls.Add(this.textBox_Vangle);
-            this.groupBox4.Controls.Add(this.textBox_Vangle_add);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.label15);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // textBox_Hangle
-            // 
-            resources.ApplyResources(this.textBox_Hangle, "textBox_Hangle");
-            this.textBox_Hangle.Name = "textBox_Hangle";
-            // 
-            // textBox_Hangle_add
-            // 
-            resources.ApplyResources(this.textBox_Hangle_add, "textBox_Hangle_add");
-            this.textBox_Hangle_add.Name = "textBox_Hangle_add";
-            // 
-            // textBox_Vangle
-            // 
-            resources.ApplyResources(this.textBox_Vangle, "textBox_Vangle");
-            this.textBox_Vangle.Name = "textBox_Vangle";
-            // 
-            // textBox_Vangle_add
-            // 
-            resources.ApplyResources(this.textBox_Vangle_add, "textBox_Vangle_add");
-            this.textBox_Vangle_add.Name = "textBox_Vangle_add";
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.textBox_addAngle);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // button5
-            // 
-            resources.ApplyResources(this.button5, "button5");
-            this.button5.Name = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // textBox1
-            // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            // 
-            // textBox2
-            // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // textBox_addAngle
-            // 
-            resources.ApplyResources(this.textBox_addAngle, "textBox_addAngle");
-            this.textBox_addAngle.Name = "textBox_addAngle";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.textBox_startAngle);
-            this.groupBox2.Controls.Add(this.textBox_stopAngle);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // button4
-            // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label10
-            // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            resources.GetString("comboBox2.Items"),
-            resources.GetString("comboBox2.Items1"),
-            resources.GetString("comboBox2.Items2")});
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.Name = "comboBox2";
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1")});
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
-            // 
-            // textBox_startAngle
-            // 
-            resources.ApplyResources(this.textBox_startAngle, "textBox_startAngle");
-            this.textBox_startAngle.Name = "textBox_startAngle";
-            // 
-            // textBox_stopAngle
-            // 
-            resources.ApplyResources(this.textBox_stopAngle, "textBox_stopAngle");
-            this.textBox_stopAngle.Name = "textBox_stopAngle";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btn_SerialOpen);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox_SerialPortNum);
-            this.groupBox1.Controls.Add(this.comboBox_SerialBaudrate);
-            this.groupBox1.Controls.Add(this.comboBox_SerialDatabit);
-            this.groupBox1.Controls.Add(this.comboBox_SerialStopbit);
-            this.groupBox1.Controls.Add(this.comboBox_SerialParity);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
-            // btn_SerialOpen
-            // 
-            resources.ApplyResources(this.btn_SerialOpen, "btn_SerialOpen");
-            this.btn_SerialOpen.Name = "btn_SerialOpen";
-            this.btn_SerialOpen.UseVisualStyleBackColor = true;
-            this.btn_SerialOpen.Click += new System.EventHandler(this.btn_SerialOpen_Click);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // comboBox_SerialPortNum
-            // 
-            this.comboBox_SerialPortNum.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_SerialPortNum, "comboBox_SerialPortNum");
-            this.comboBox_SerialPortNum.Name = "comboBox_SerialPortNum";
-            this.comboBox_SerialPortNum.DropDown += new System.EventHandler(this.comboBox_SerialPortNum_DropDown);
-            // 
-            // comboBox_SerialBaudrate
-            // 
-            this.comboBox_SerialBaudrate.FormattingEnabled = true;
-            this.comboBox_SerialBaudrate.Items.AddRange(new object[] {
-            resources.GetString("comboBox_SerialBaudrate.Items"),
-            resources.GetString("comboBox_SerialBaudrate.Items1"),
-            resources.GetString("comboBox_SerialBaudrate.Items2")});
-            resources.ApplyResources(this.comboBox_SerialBaudrate, "comboBox_SerialBaudrate");
-            this.comboBox_SerialBaudrate.Name = "comboBox_SerialBaudrate";
-            // 
-            // comboBox_SerialDatabit
-            // 
-            this.comboBox_SerialDatabit.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_SerialDatabit, "comboBox_SerialDatabit");
-            this.comboBox_SerialDatabit.Name = "comboBox_SerialDatabit";
-            // 
-            // comboBox_SerialStopbit
-            // 
-            this.comboBox_SerialStopbit.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_SerialStopbit, "comboBox_SerialStopbit");
-            this.comboBox_SerialStopbit.Name = "comboBox_SerialStopbit";
-            // 
-            // comboBox_SerialParity
-            // 
-            this.comboBox_SerialParity.FormattingEnabled = true;
-            this.comboBox_SerialParity.Items.AddRange(new object[] {
-            resources.GetString("comboBox_SerialParity.Items"),
-            resources.GetString("comboBox_SerialParity.Items1"),
-            resources.GetString("comboBox_SerialParity.Items2")});
-            resources.ApplyResources(this.comboBox_SerialParity, "comboBox_SerialParity");
-            this.comboBox_SerialParity.Name = "comboBox_SerialParity";
-            // 
-            // dockPanel_RS422
-            // 
-            this.dockPanel_RS422.Controls.Add(this.dockPanel3_Container);
-            this.dockPanel_RS422.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
-            this.dockPanel_RS422.FloatVertical = true;
-            this.dockPanel_RS422.ID = new System.Guid("1dfa0603-2a6d-42b0-9063-1d58a3292c28");
-            resources.ApplyResources(this.dockPanel_RS422, "dockPanel_RS422");
-            this.dockPanel_RS422.Name = "dockPanel_RS422";
-            this.dockPanel_RS422.OriginalSize = new System.Drawing.Size(75, 255);
-            this.dockPanel_RS422.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Top;
-            this.dockPanel_RS422.SavedIndex = 1;
-            this.dockPanel_RS422.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-            // 
-            // dockPanel3_Container
-            // 
-            resources.ApplyResources(this.dockPanel3_Container, "dockPanel3_Container");
-            this.dockPanel3_Container.Name = "dockPanel3_Container";
-            // 
-            // dockPanel_LOG
-            // 
-            this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
-            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
-            this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
-            this.dockPanel_LOG.FloatVertical = true;
-            this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
-            resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
-            this.dockPanel_LOG.Name = "dockPanel_LOG";
-            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(183, 140);
+            // dockPanel1
+            // 
+            this.dockPanel1.Controls.Add(this.dockPanel1_Container);
+            this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel1.FloatSize = new System.Drawing.Size(174, 137);
+            this.dockPanel1.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
+            resources.ApplyResources(this.dockPanel1, "dockPanel1");
+            this.dockPanel1.Name = "dockPanel1";
+            this.dockPanel1.OriginalSize = new System.Drawing.Size(328, 200);
             // 
             // dockPanel1_Container
             // 
@@ -1922,306 +1681,236 @@
             resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             // 
-            // panelContainer1
+            // panel1
             // 
-            this.panelContainer1.Controls.Add(this.dockPanel_AD);
-            this.panelContainer1.Controls.Add(this.dockPanel_OC);
-            this.panelContainer1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.panelContainer1.ID = new System.Guid("534dd21f-3658-41ca-be42-6caf9af67459");
-            resources.ApplyResources(this.panelContainer1, "panelContainer1");
-            this.panelContainer1.Name = "panelContainer1";
-            this.panelContainer1.OriginalSize = new System.Drawing.Size(358, 200);
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
             // 
-            // dockPanel_AD
+            // tableLayoutPanel1
             // 
-            this.dockPanel_AD.Controls.Add(this.dockPanel5_Container);
-            this.dockPanel_AD.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.dockPanel_AD.ID = new System.Guid("277b4796-f1d3-44ac-9aab-bf8085b99d6f");
-            resources.ApplyResources(this.dockPanel_AD, "dockPanel_AD");
-            this.dockPanel_AD.Name = "dockPanel_AD";
-            this.dockPanel_AD.OriginalSize = new System.Drawing.Size(200, 200);
-            // 
-            // dockPanel5_Container
-            // 
-            this.dockPanel5_Container.Controls.Add(this.dataGridView4);
-            resources.ApplyResources(this.dockPanel5_Container, "dockPanel5_Container");
-            this.dockPanel5_Container.Name = "dockPanel5_Container";
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView4, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView5, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView_Fudu1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView_Fudu2, 3, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // dataGridView4
             // 
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3,
-            this.Column6});
+            this.Column3});
             resources.ApplyResources(this.dataGridView4, "dataGridView4");
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersVisible = false;
             this.dataGridView4.RowTemplate.Height = 23;
+            this.dataGridView4.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellEndEdit);
+            this.dataGridView4.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView4_DataError);
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "序号";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.Column1, "Column1");
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.DataPropertyName = "名称";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.Column2, "Column2");
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "测量值";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column3.DataPropertyName = "衰减控制";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.Column3, "Column3");
             this.Column3.Name = "Column3";
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "单位";
-            resources.ApplyResources(this.Column6, "Column6");
-            this.Column6.Name = "Column6";
-            // 
-            // dockPanel_OC
-            // 
-            this.dockPanel_OC.Controls.Add(this.dockPanel4_Container);
-            this.dockPanel_OC.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.dockPanel_OC.FloatSize = new System.Drawing.Size(334, 322);
-            this.dockPanel_OC.ID = new System.Guid("33b8ddeb-d01d-4235-9b86-4643140871e6");
-            resources.ApplyResources(this.dockPanel_OC, "dockPanel_OC");
-            this.dockPanel_OC.Name = "dockPanel_OC";
-            this.dockPanel_OC.OriginalSize = new System.Drawing.Size(324, 200);
-            // 
-            // dockPanel4_Container
-            // 
-            this.dockPanel4_Container.Controls.Add(this.dataGridView5);
-            resources.ApplyResources(this.dockPanel4_Container, "dockPanel4_Container");
-            this.dockPanel4_Container.Name = "dockPanel4_Container";
             // 
             // dataGridView5
             // 
             this.dataGridView5.AllowUserToAddRows = false;
             this.dataGridView5.AllowUserToDeleteRows = false;
             this.dataGridView5.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView5.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 9F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.Column4,
-            this.Column5});
+            this.dataGridViewComboBoxColumn1});
             resources.ApplyResources(this.dataGridView5, "dataGridView5");
             this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.ReadOnly = true;
             this.dataGridView5.RowHeadersVisible = false;
             this.dataGridView5.RowTemplate.Height = 23;
-            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
-            this.dataGridView5.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
+            this.dataGridView5.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellEndEdit);
             this.dataGridView5.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView5_DataError);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "序号";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
             resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "名称";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle7;
             resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column4
+            // dataGridViewComboBoxColumn1
             // 
-            this.Column4.DataPropertyName = "脉宽";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle10;
-            resources.ApplyResources(this.Column4, "Column4");
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewComboBoxColumn1.DataPropertyName = "衰减控制";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewComboBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            resources.ApplyResources(this.dataGridViewComboBoxColumn1, "dataGridViewComboBoxColumn1");
+            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // Column5
+            // dataGridView_Fudu1
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.NullValue = "输出";
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle11;
-            resources.ApplyResources(this.Column5, "Column5");
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Text = "输出控制";
-            // 
-            // dockPanel_BIT
-            // 
-            this.dockPanel_BIT.Controls.Add(this.controlContainer1);
-            this.dockPanel_BIT.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.dockPanel_BIT.ID = new System.Guid("ccefe0b0-ccb1-4460-9fe3-452330a4d4e8");
-            resources.ApplyResources(this.dockPanel_BIT, "dockPanel_BIT");
-            this.dockPanel_BIT.Name = "dockPanel_BIT";
-            this.dockPanel_BIT.OriginalSize = new System.Drawing.Size(529, 200);
-            // 
-            // controlContainer1
-            // 
-            this.controlContainer1.Controls.Add(this.tableLayoutPanel1);
-            resources.ApplyResources(this.controlContainer1, "controlContainer1");
-            this.controlContainer1.Name = "controlContainer1";
-            // 
-            // tableLayoutPanel1
-            // 
-            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView_BIT1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView_BIT2, 1, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // dataGridView_BIT1
-            // 
-            this.dataGridView_BIT1.AllowUserToAddRows = false;
-            this.dataGridView_BIT1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_BIT1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
-            this.L1,
-            this.L2,
-            this.L3,
-            this.L4});
-            resources.ApplyResources(this.dataGridView_BIT1, "dataGridView_BIT1");
-            this.dataGridView_BIT1.Name = "dataGridView_BIT1";
-            this.dataGridView_BIT1.RowHeadersVisible = false;
-            this.dataGridView_BIT1.RowTemplate.Height = 23;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "序号";
-            resources.ApplyResources(this.Column7, "Column7");
-            this.Column7.Name = "Column7";
-            // 
-            // L1
-            // 
-            resources.ApplyResources(this.L1, "L1");
-            this.L1.Image = global::CKServer.Properties.Resources.red;
-            this.L1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L1.Name = "L1";
-            this.L1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // L2
-            // 
-            resources.ApplyResources(this.L2, "L2");
-            this.L2.Image = global::CKServer.Properties.Resources.red;
-            this.L2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L2.Name = "L2";
-            // 
-            // L3
-            // 
-            resources.ApplyResources(this.L3, "L3");
-            this.L3.Image = global::CKServer.Properties.Resources.red;
-            this.L3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L3.Name = "L3";
-            // 
-            // L4
-            // 
-            resources.ApplyResources(this.L4, "L4");
-            this.L4.Image = global::CKServer.Properties.Resources.red;
-            this.L4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L4.Name = "L4";
-            // 
-            // dataGridView_BIT2
-            // 
-            this.dataGridView_BIT2.AllowUserToAddRows = false;
-            this.dataGridView_BIT2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_BIT2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_Fudu1.AllowUserToAddRows = false;
+            this.dataGridView_Fudu1.AllowUserToDeleteRows = false;
+            this.dataGridView_Fudu1.AllowUserToResizeRows = false;
+            this.dataGridView_Fudu1.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 9F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Fudu1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView_Fudu1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Fudu1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn9,
-            this.L5,
-            this.L6,
-            this.L7,
-            this.L8});
-            resources.ApplyResources(this.dataGridView_BIT2, "dataGridView_BIT2");
-            this.dataGridView_BIT2.Name = "dataGridView_BIT2";
-            this.dataGridView_BIT2.RowHeadersVisible = false;
-            this.dataGridView_BIT2.RowTemplate.Height = 23;
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11});
+            resources.ApplyResources(this.dataGridView_Fudu1, "dataGridView_Fudu1");
+            this.dataGridView_Fudu1.Name = "dataGridView_Fudu1";
+            this.dataGridView_Fudu1.RowHeadersVisible = false;
+            this.dataGridView_Fudu1.RowTemplate.Height = 23;
+            this.dataGridView_Fudu1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Fudu1_CellEndEdit);
+            this.dataGridView_Fudu1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_Fudu1_DataError);
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "序号";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle10;
             resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
-            // L5
+            // dataGridViewTextBoxColumn10
             // 
-            resources.ApplyResources(this.L5, "L5");
-            this.L5.Image = global::CKServer.Properties.Resources.red;
-            this.L5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L5.Name = "L5";
-            this.L5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "名称";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle11;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
-            // L6
+            // dataGridViewTextBoxColumn11
             // 
-            resources.ApplyResources(this.L6, "L6");
-            this.L6.Image = global::CKServer.Properties.Resources.red;
-            this.L6.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L6.Name = "L6";
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "相位控制";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle12;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // L7
+            // dataGridView_Fudu2
             // 
-            resources.ApplyResources(this.L7, "L7");
-            this.L7.Image = global::CKServer.Properties.Resources.red;
-            this.L7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L7.Name = "L7";
+            this.dataGridView_Fudu2.AllowUserToAddRows = false;
+            this.dataGridView_Fudu2.AllowUserToDeleteRows = false;
+            this.dataGridView_Fudu2.AllowUserToResizeRows = false;
+            this.dataGridView_Fudu2.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Tahoma", 9F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Fudu2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridView_Fudu2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Fudu2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14});
+            resources.ApplyResources(this.dataGridView_Fudu2, "dataGridView_Fudu2");
+            this.dataGridView_Fudu2.Name = "dataGridView_Fudu2";
+            this.dataGridView_Fudu2.RowHeadersVisible = false;
+            this.dataGridView_Fudu2.RowTemplate.Height = 23;
+            this.dataGridView_Fudu2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Fudu2_CellEndEdit);
+            this.dataGridView_Fudu2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_Fudu2_DataError);
             // 
-            // L8
+            // dataGridViewTextBoxColumn12
             // 
-            resources.ApplyResources(this.L8, "L8");
-            this.L8.Image = global::CKServer.Properties.Resources.red;
-            this.L8.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.L8.Name = "L8";
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "序号";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle14;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "名称";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle15;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "相位控制";
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn14.DefaultCellStyle = dataGridViewCellStyle16;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // ID
             // 
@@ -2268,25 +1957,18 @@
             this.barStaticItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barStaticItem5.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // timer2
-            // 
-            this.timer2.Interval = 500;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dockPanel_BIT);
-            this.Controls.Add(this.panelContainer1);
-            this.Controls.Add(this.dockPanel_LOG);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.Name = "MainForm";
             this.Ribbon = this.ribbonControl1;
             this.StatusBar = this.ribbonStatusBar1;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -2300,6 +1982,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
@@ -2309,7 +1993,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemNumberingAlignment1)).EndInit();
@@ -2321,31 +2004,14 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.dockPanel_Rotator.ResumeLayout(false);
-            this.dockPanel6_Container.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.dockPanel_RS422.ResumeLayout(false);
-            this.dockPanel_LOG.ResumeLayout(false);
+            this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
-            this.panelContainer1.ResumeLayout(false);
-            this.dockPanel_AD.ResumeLayout(false);
-            this.dockPanel5_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            this.dockPanel_OC.ResumeLayout(false);
-            this.dockPanel4_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            this.dockPanel_BIT.ResumeLayout(false);
-            this.controlContainer1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_BIT1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_BIT2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fudu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fudu2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2381,6 +2047,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit7;
         private DevExpress.XtraBars.BarEditItem barEditItem8;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit8;
+        private DevExpress.XtraBars.BarCheckItem CheckEnable_Net;
+        private DevExpress.XtraBars.BarCheckItem CheckEnable_Sav;
         private DevExpress.XtraBars.BarCheckItem barCheckItem3;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
@@ -2394,6 +2062,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
+        private DevExpress.XtraBars.BarCheckItem CheckEnable_PWD;
         private DevExpress.XtraBars.BarEditItem barEditItem9;
         private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar2;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
@@ -2457,8 +2126,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem53;
         private DevExpress.XtraBars.BarButtonItem barButtonItem37;
         private DevExpress.XtraBars.Docking.DockManager dockManager1;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel_LOG;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
+        private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
@@ -2471,17 +2141,34 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn 控制;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridView dataGridView5;
+        private DevExpress.XtraBars.BarButtonItem btn_da_save;
+        private DevExpress.XtraBars.BarButtonItem btn_ResetDA;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem btn_da_load;
+        private DevExpress.XtraBars.BarButtonItem btn_VOut;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private DevExpress.XtraBars.BarButtonItem btn_Modify;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit1;
         private DevExpress.XtraBars.BarEditItem barEditItem2;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit2;
+        private DevExpress.XtraBars.BarEditItem btn_setall;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit3;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit5;
         private DevExpress.XtraRichEdit.Design.RepositoryItemNumberingAlignment repositoryItemNumberingAlignment1;
+        private DevExpress.XtraBars.BarButtonItem btn_add;
+        private DevExpress.XtraBars.BarButtonItem btn_dec;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem6;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn1;
         private DevExpress.XtraBars.Docking.DockPanel dockPanel2;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel2_Container;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -2500,90 +2187,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel_RS422;
-        private DevExpress.XtraBars.Docking.ControlContainer dockPanel3_Container;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel_OC;
-        private DevExpress.XtraBars.Docking.ControlContainer dockPanel4_Container;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel_AD;
-        private DevExpress.XtraBars.Docking.ControlContainer dockPanel5_Container;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel_Rotator;
-        private DevExpress.XtraBars.Docking.ControlContainer dockPanel6_Container;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_SerialOpen;
-        private System.Windows.Forms.ComboBox comboBox_SerialParity;
-        private System.Windows.Forms.ComboBox comboBox_SerialStopbit;
-        private System.Windows.Forms.ComboBox comboBox_SerialDatabit;
-        private System.Windows.Forms.ComboBox comboBox_SerialBaudrate;
-        private System.Windows.Forms.ComboBox comboBox_SerialPortNum;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox_Vangle;
-        private System.Windows.Forms.TextBox textBox_Hangle;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox_addAngle;
-        private System.Windows.Forms.TextBox textBox_stopAngle;
-        private System.Windows.Forms.TextBox textBox_startAngle;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox_Vangle_add;
-        private System.Windows.Forms.TextBox textBox_Hangle_add;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private DevExpress.XtraBars.BarCheckItem CheckEnable_AD;
-        private DevExpress.XtraBars.BarCheckItem CheckEnable_OC;
-        private DevExpress.XtraBars.BarCheckItem CheckEnable_Rotator;
-        private DevExpress.XtraBars.BarCheckItem CheckEnable_RS422;
-        private DevExpress.XtraBars.BarButtonItem btn_Start;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraBars.BarButtonItem btn_HelpNeed;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewButtonColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private DevExpress.XtraBars.BarCheckItem CheckEnable_BIT;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel_BIT;
-        private DevExpress.XtraBars.Docking.ControlContainer controlContainer1;
-        private DevExpress.XtraBars.Docking.DockPanel panelContainer1;
-        private System.Windows.Forms.DataGridView dataGridView_BIT1;
-        private System.Windows.Forms.DataGridView dataGridView_BIT2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewImageColumn L1;
-        private System.Windows.Forms.DataGridViewImageColumn L2;
-        private System.Windows.Forms.DataGridViewImageColumn L3;
-        private System.Windows.Forms.DataGridViewImageColumn L4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewImageColumn L5;
-        private System.Windows.Forms.DataGridViewImageColumn L6;
-        private System.Windows.Forms.DataGridViewImageColumn L7;
-        private System.Windows.Forms.DataGridViewImageColumn L8;
-        private System.Windows.Forms.Timer timer2;
-        private DevExpress.XtraBars.BarButtonItem btn_Enable_BitTimer2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem btn_VOut2;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem7;
+        private DevExpress.XtraBars.BarEditItem barEditItem12;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit6;
+        private DevExpress.XtraBars.BarButtonItem btn_add2;
+        private DevExpress.XtraBars.BarButtonItem btn_dec2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private System.Windows.Forms.DataGridView dataGridView_Fudu1;
+        private System.Windows.Forms.DataGridView dataGridView_Fudu2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
     }
 }
 

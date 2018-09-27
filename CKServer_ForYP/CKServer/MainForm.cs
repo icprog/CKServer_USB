@@ -443,15 +443,77 @@ namespace CKServer
 
             if (_BoxIsStarted)
             {
+                //显示机箱00的AD数据
                 for (int i = 0; i < Func_AD.ADNums; i++)
                 {
                     Func_AD.dt_AD.Rows[i]["测量值"] = dataRe_AD[i];
                 }
 
-                USB.SendCMD(1, 0x81, 0x1,true);
-                USB.SendCMD(1, 0x81, 0x0,true);              
+                //显示机箱01的AD数据
+                for (int i = 0; i < Func_AD2_BIT.ADNums1; i++)
+                {
+                    if (AD_BIT1_L1[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgGray;
+                    else if (AD_BIT1_L1[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgError;
 
+                    if (AD_BIT1_L2[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgGray;
+                    else if (AD_BIT1_L2[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgError;
+
+                    if (AD_BIT1_L3[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgGray;
+                    else if (AD_BIT1_L3[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgError;
+
+                    if (AD_BIT1_L4[i] < 1)
+                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgGray;
+                    else if (AD_BIT1_L4[i] > 4)
+                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgGreen;
+                    else
+                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgError;
+                }
+
+                for (int i = 0; i < Func_AD2_BIT.ADNums2; i++)
+                {
+                    if (AD_BIT2_L1[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgGray;
+                    else if (AD_BIT2_L1[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgError;
+
+                    if (AD_BIT2_L2[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgGray;
+                    else if (AD_BIT2_L2[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgError;
+
+                    if (AD_BIT2_L3[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgGray;
+                    else if (AD_BIT2_L3[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgError;
+
+                    if (AD_BIT2_L4[i] < 1)
+                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgGray;
+                    else if (AD_BIT2_L4[i] > 4)
+                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgGreen;
+                    else
+                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgError;
+                }
             }
+
+
         }
 
 
@@ -732,7 +794,6 @@ namespace CKServer
 
                 _BoxIsStarted = true;
                 timer1.Enabled = true;
-                timer2.Enabled = true;
 
                 for (int i = 0; i < 0x0f; i++)
                 {
@@ -786,10 +847,11 @@ namespace CKServer
                 _BoxIsStarted = false;
                 Thread.Sleep(200);
 
+                if(FileThread!=null)
                 FileThread.FileClose();
 
                 timer1.Enabled = false;
-                timer2.Enabled = false;
+
             }
         }
 
@@ -805,6 +867,11 @@ namespace CKServer
             {
                 ADList.Clear();
                 new Thread(() => { DealWithADFun(); }).Start();
+                MyLog.Info("CKUSB_CardID1 Runing... ...");
+            }
+            else
+            {
+                MyLog.Info("CKUSB_CardID1 Not Using... ...");
             }
 
             if(MyDevice02!=null)
@@ -812,8 +879,12 @@ namespace CKServer
                 AD_BIT1_List.Clear();
                 AD_BIT2_List.Clear();
                 new Thread(() => { DealWithADFun_BIT(); }).Start();
+                MyLog.Info("CKUSB_CardID2 Runing... ...");
             }
-
+            else
+            {
+                MyLog.Info("CKUSB_CardID2 Not Using... ...");
+            }
 
 
             byte[] Recv_MidBuf_8K_Box01 = new byte[8192];//8K中间缓存
@@ -1171,6 +1242,7 @@ namespace CKServer
             _BoxIsStarted = false;
             Thread.Sleep(200);
 
+            if(FileThread!=null)
             FileThread.FileClose();
 
             timer1.Enabled = false;
@@ -1181,67 +1253,31 @@ namespace CKServer
         {
             if (_BoxIsStarted)
             {
-                for (int i = 0; i < Func_AD2_BIT.ADNums1; i++)
-                {
-                    if (AD_BIT1_L1[i] < 1)
-                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgGray;
-                    else if (AD_BIT1_L1[i] > 4)
-                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgGreen;
-                    else
-                        dataGridView_BIT1.Rows[i].Cells["L1"].Value = imgError;
 
-                    if (AD_BIT1_L2[i] < 1)
-                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgGray;
-                    else if (AD_BIT1_L2[i] > 4)
-                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgGreen;
-                    else
-                        dataGridView_BIT1.Rows[i].Cells["L2"].Value = imgError;
+                USB.SendCMD(1, 0x81, 0x1, true);
+                USB.SendCMD(1, 0x81, 0x0, true);
 
-                    if (AD_BIT1_L3[i] < 1)
-                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgGray;
-                    else if (AD_BIT1_L3[i] > 4)
-                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgGreen;
-                    else
-                        dataGridView_BIT1.Rows[i].Cells["L3"].Value = imgError;
+                Trace.WriteLine("进入Timer2_Tick自测  USB.SendCMD(1, 0x81, 0x1, true);USB.SendCMD(1, 0x81, 0x0, true)");
+            }
+            else
+            {
+                Trace.WriteLine("进入Timer2_Tick自测 but _BoxIsStarted==false");
+            }
+        }
 
-                    if (AD_BIT1_L4[i] < 1)
-                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgGray;
-                    else if (AD_BIT1_L4[i] > 4)
-                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgGreen;
-                    else
-                        dataGridView_BIT1.Rows[i].Cells["L4"].Value = imgError;
-                }
-
-                for (int i = 0; i < Func_AD2_BIT.ADNums2; i++)
-                {
-                    if (AD_BIT2_L1[i] < 1)
-                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgGray;
-                    else if (AD_BIT2_L1[i] > 4)
-                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgGreen;
-                    else
-                        dataGridView_BIT2.Rows[i].Cells["L5"].Value = imgError;
-
-                    if (AD_BIT2_L2[i] < 1)
-                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgGray;
-                    else if (AD_BIT2_L2[i] > 4)
-                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgGreen;
-                    else
-                        dataGridView_BIT2.Rows[i].Cells["L6"].Value = imgError;
-
-                    if (AD_BIT2_L3[i] < 1)
-                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgGray;
-                    else if (AD_BIT2_L3[i] > 4)
-                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgGreen;
-                    else
-                        dataGridView_BIT2.Rows[i].Cells["L7"].Value = imgError;
-
-                    if (AD_BIT2_L4[i] < 1)
-                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgGray;
-                    else if (AD_BIT2_L4[i] > 4)
-                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgGreen;
-                    else
-                        dataGridView_BIT2.Rows[i].Cells["L8"].Value = imgError;
-                }
+        private void btn_Enable_BitTimer2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(btn_Enable_BitTimer2.Caption == "开始自测")
+            {
+                btn_Enable_BitTimer2.Caption = "停止自测";
+                btn_Enable_BitTimer2.ImageOptions.LargeImage = Properties.Resources.remove_32x32;
+                timer2.Enabled = true;
+            }
+            else
+            {
+                btn_Enable_BitTimer2.Caption = "开始自测";
+                btn_Enable_BitTimer2.ImageOptions.LargeImage = Properties.Resources.refresh_32x32;
+                timer2.Enabled = false;
             }
         }
     }

@@ -517,6 +517,8 @@
             this.checkBox_422_select8 = new System.Windows.Forms.CheckBox();
             this.checkBox_422_select1 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel_LVDS_Compare = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer4 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dataGridView_LVDS_01 = new System.Windows.Forms.DataGridView();
@@ -539,8 +541,6 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.dockPanel_LOG = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.通道名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.控制 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -724,12 +724,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_422_5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_422_7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_422_6.Properties)).BeginInit();
+            this.dockPanel_LOG.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
             this.dockPanel_LVDS_Compare.SuspendLayout();
             this.controlContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LVDS_01)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.dockPanel_LOG.SuspendLayout();
-            this.dockPanel1_Container.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit17.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit18.Properties)).BeginInit();
@@ -3013,8 +3013,8 @@
             this.dockPanel_DAMODIFY});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.dockPanel_BoxLVDS_A,
-            this.dockPanel_LVDS_Compare,
-            this.dockPanel_LOG});
+            this.dockPanel_LOG,
+            this.dockPanel_LVDS_Compare});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -4224,16 +4224,33 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckStateChanged += new System.EventHandler(this.checkBox1_CheckStateChanged);
             // 
+            // dockPanel_LOG
+            // 
+            this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
+            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
+            this.dockPanel_LOG.FloatVertical = true;
+            this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
+            resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
+            this.dockPanel_LOG.Name = "dockPanel_LOG";
+            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(103, 153);
+            // 
+            // dockPanel1_Container
+            // 
+            this.dockPanel1_Container.Controls.Add(this.richTextBox1);
+            resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
+            this.dockPanel1_Container.Name = "dockPanel1_Container";
+            // 
             // dockPanel_LVDS_Compare
             // 
             this.dockPanel_LVDS_Compare.Controls.Add(this.controlContainer4);
-            this.dockPanel_LVDS_Compare.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
+            this.dockPanel_LVDS_Compare.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanel_LVDS_Compare.FloatSize = new System.Drawing.Size(1285, 1081);
             this.dockPanel_LVDS_Compare.FloatVertical = true;
             this.dockPanel_LVDS_Compare.ID = new System.Guid("c79193df-71d8-41f2-a9dd-1821b850b4dc");
             resources.ApplyResources(this.dockPanel_LVDS_Compare, "dockPanel_LVDS_Compare");
             this.dockPanel_LVDS_Compare.Name = "dockPanel_LVDS_Compare";
-            this.dockPanel_LVDS_Compare.OriginalSize = new System.Drawing.Size(1167, 360);
+            this.dockPanel_LVDS_Compare.OriginalSize = new System.Drawing.Size(848, 360);
             this.dockPanel_LVDS_Compare.Click += new System.EventHandler(this.dockPanel_LVDS_Compare_Click);
             // 
             // controlContainer4
@@ -4405,23 +4422,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.Click += new System.EventHandler(this.radioButton8_Click);
-            // 
-            // dockPanel_LOG
-            // 
-            this.dockPanel_LOG.Controls.Add(this.dockPanel1_Container);
-            this.dockPanel_LOG.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
-            this.dockPanel_LOG.FloatSize = new System.Drawing.Size(174, 137);
-            this.dockPanel_LOG.FloatVertical = true;
-            this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
-            resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
-            this.dockPanel_LOG.Name = "dockPanel_LOG";
-            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(103, 153);
-            // 
-            // dockPanel1_Container
-            // 
-            this.dockPanel1_Container.Controls.Add(this.richTextBox1);
-            resources.ApplyResources(this.dockPanel1_Container, "dockPanel1_Container");
-            this.dockPanel1_Container.Name = "dockPanel1_Container";
             // 
             // ID
             // 
@@ -4929,8 +4929,8 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dockPanel_LOG);
             this.Controls.Add(this.dockPanel_LVDS_Compare);
+            this.Controls.Add(this.dockPanel_LOG);
             this.Controls.Add(this.dockPanel_BoxLVDS_A);
             this.Controls.Add(this.hideContainerTop);
             this.Controls.Add(this.hideContainerLeft);
@@ -5068,13 +5068,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_422_5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_422_7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_422_6.Properties)).EndInit();
+            this.dockPanel_LOG.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
             this.dockPanel_LVDS_Compare.ResumeLayout(false);
             this.controlContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LVDS_01)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.dockPanel_LOG.ResumeLayout(false);
-            this.dockPanel1_Container.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit17.Properties)).EndInit();

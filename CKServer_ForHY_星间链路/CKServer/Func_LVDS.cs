@@ -75,6 +75,8 @@ namespace CKServer
             TotalNums1 = 0;
             ErrorNums2 = 0;
             TotalNums2 = 0;
+            ErPert1 = 0;
+            ErPert2 = 0;
 
             while (_StartCompare)
             {

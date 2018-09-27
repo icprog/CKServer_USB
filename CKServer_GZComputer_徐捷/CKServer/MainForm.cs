@@ -368,6 +368,7 @@ namespace CKServer
             }
             catch (Exception ex)
             {
+                MyLog.Error(ex.ToString());
                 Trace.WriteLine("Main InitDataTable：" + ex.Message);
             }
 
@@ -3607,11 +3608,22 @@ namespace CKServer
                     Func_LVDS.dt_LVDS_01.Rows[i]["VCID"] = Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "vcid");
                     Func_LVDS.dt_LVDS_01.Rows[i]["帧计数"] = 0;
                     Func_LVDS.dt_LVDS_01.Rows[i]["收到数据"] = 0;
-                    Func_LVDS.dt_LVDS_01.Rows[i]["比对长度"] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen"));
+                    if(i%2==0)Func_LVDS.dt_LVDS_01.Rows[i]["比对长度"] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen1"));
+                    if (i % 2 == 1) Func_LVDS.dt_LVDS_01.Rows[i]["比对长度"] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen2"));
                     Func_LVDS.dt_LVDS_01.Rows[i]["出错行"] = 0;
                     Func_LVDS.dt_LVDS_01.Rows[i]["出错列"] = 0;
 
-                    Func_LVDS.CPLenList[i] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen"));
+             //       Func_LVDS.CPLenList[i] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen"));
+
+                    if(i%2==0)
+                    {
+                        Func_LVDS.CPLenList[i] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen1"));
+                    }
+                    else
+                    {
+                        Func_LVDS.CPLenList[i] = int.Parse(Function.GetConfigStr(Data.LVDSconfigPath, "LVDS_Channel_" + key.ToString(), "VCID_Channel_" + (i / 2 + 1).ToString(), "CPLen2"));
+
+                    }
 
                 }
 
@@ -3629,10 +3641,21 @@ namespace CKServer
                     Func_LVDS.CPLenList[e.RowIndex] = (int)Func_LVDS.dt_LVDS_01.Rows[e.RowIndex]["比对长度"];
 
                     String add = "LVDS_Channel_" + Func_LVDS.LVDS_ComPare_Chan.ToString();
-                    String key = "VCID_Channel_" + (e.RowIndex + 1).ToString();
-                    String name = "CPLen";
-                    String value = Func_LVDS.dt_LVDS_01.Rows[e.RowIndex]["比对长度"].ToString();
-                    Function.SaveConfigStr(Data.LVDSconfigPath, add,key, name, value);
+                    String key = "VCID_Channel_" + (e.RowIndex/2 + 1).ToString();
+
+                    if(e.RowIndex%2==0)
+                    {
+                        String name = "CPLen1";
+                        String value = Func_LVDS.dt_LVDS_01.Rows[e.RowIndex]["比对长度"].ToString();
+                        Function.SaveConfigStr(Data.LVDSconfigPath, add, key, name, value);
+                    }
+                    else
+                    {
+                        String name = "CPLen2";
+                        String value = Func_LVDS.dt_LVDS_01.Rows[e.RowIndex]["比对长度"].ToString();
+                        Function.SaveConfigStr(Data.LVDSconfigPath, add, key, name, value);
+
+                    }
 
                 }
             }
