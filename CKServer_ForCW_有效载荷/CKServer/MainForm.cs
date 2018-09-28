@@ -647,7 +647,7 @@ namespace CKServer
 
         private void btn_da_load_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            String Path = Program.GetStartupPath() + @"码本文件\";
+            String Path = Program.GetStartupPath() + @"码本文件\衰减器码本\";
             openFileDialog1.InitialDirectory = Path;
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -657,7 +657,7 @@ namespace CKServer
                 string[] content = File.ReadAllLines(openFileDialog1.FileName);
                 string[] temp = new string[3];
 
-                if (content.Length >= 64)
+                if (content.Length >= 32)
                 {
                     for (int i = 0; i < 16; i++)
                     {
@@ -669,16 +669,6 @@ namespace CKServer
                         temp = content[i].Split(',');
                         dtDA2.Rows[i-16][2] = double.Parse(temp[2].Trim());
                     }
-                    for (int i = 32; i < 48; i++)
-                    {
-                        temp = content[i].Split(',');
-                        dtDA3.Rows[i-32][2] = double.Parse(temp[2].Trim());
-                    }
-                    for (int i = 48; i < 64; i++)
-                    {
-                        temp = content[i].Split(',');
-                        dtDA4.Rows[i - 48][2] = double.Parse(temp[2].Trim());
-                    }
                 }
             }
         }
@@ -686,7 +676,7 @@ namespace CKServer
         private void btn_da_save_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            String Path = Program.GetStartupPath() + @"码本文件\";
+            String Path = Program.GetStartupPath() + @"码本文件\衰减器码本\";
             if (!Directory.Exists(Path))
                 Directory.CreateDirectory(Path);
 
@@ -707,14 +697,6 @@ namespace CKServer
                 for (int i = 0; i < 16; i++)
                 {
                     ModifyStr += dtDA2.Rows[i][0] + "," + dtDA2.Rows[i][1] + "," + dtDA2.Rows[i][2] + "\r\n";
-                }
-                for (int i = 0; i < 16; i++)
-                {
-                    ModifyStr += dtDA3.Rows[i][0] + "," + dtDA3.Rows[i][1] + "," + dtDA3.Rows[i][2] + "\r\n";
-                }
-                for (int i = 0; i < 16; i++)
-                {
-                    ModifyStr += dtDA4.Rows[i][0] + "," + dtDA4.Rows[i][1] + "," + dtDA4.Rows[i][2] + "\r\n";
                 }
 
 
@@ -1051,6 +1033,73 @@ namespace CKServer
                     {
                         dtDA4.Rows[e.RowIndex]["相位控制"] = 0;
                     }
+                }
+            }
+        }
+
+        private void btn_da_save2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            String Path = Program.GetStartupPath() + @"码本文件\移相器码本\";
+            if (!Directory.Exists(Path))
+                Directory.CreateDirectory(Path);
+
+            saveFileDialog1.InitialDirectory = Path;
+
+            saveFileDialog1.Filter = "文本文件(*.txt)|*.txt|All files(*.*)|*.*";
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.RestoreDirectory = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                String ModifyStr = "";
+
+                for (int i = 0; i < 16; i++)
+                {
+                    ModifyStr += dtDA3.Rows[i][0] + "," + dtDA3.Rows[i][1] + "," + dtDA3.Rows[i][2] + "\r\n";
+                }
+                for (int i = 0; i < 16; i++)
+                {
+                    ModifyStr += dtDA4.Rows[i][0] + "," + dtDA4.Rows[i][1] + "," + dtDA4.Rows[i][2] + "\r\n";
+                }
+
+
+                string localFilePath = saveFileDialog1.FileName.ToString(); //获得文件路径 
+
+                FileStream file0 = new FileStream(localFilePath, FileMode.Create);
+                StreamWriter sw = new StreamWriter(file0);
+                sw.WriteLine(ModifyStr);
+                sw.Flush();
+                sw.Close();
+                file0.Close();
+                MessageBox.Show("存储文件成功！", "保存文件");
+            }
+        }
+
+        private void btn_da_load2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            String Path = Program.GetStartupPath() + @"码本文件\移相器码本\";
+            openFileDialog1.InitialDirectory = Path;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                MyLog.Info("载入码本成功！");
+
+                string[] content = File.ReadAllLines(openFileDialog1.FileName);
+                string[] temp = new string[3];
+
+                if (content.Length >= 32)
+                {
+                    for (int i = 0; i < 16; i++)
+                    {
+                        temp = content[i].Split(',');
+                        dtDA3.Rows[i][2] = double.Parse(temp[2].Trim());
+                    }
+                    for (int i = 16; i < 32; i++)
+                    {
+                        temp = content[i].Split(',');
+                        dtDA4.Rows[i - 16][2] = double.Parse(temp[2].Trim());
+                    }
+                  
                 }
             }
         }

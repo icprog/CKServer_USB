@@ -168,9 +168,11 @@
             this.repositoryItemSpinEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.btn_add2 = new DevExpress.XtraBars.BarButtonItem();
             this.btn_dec2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_da_save2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_da_load2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -839,9 +841,11 @@
             this.barStaticItem7,
             this.barEditItem12,
             this.btn_add2,
-            this.btn_dec2});
+            this.btn_dec2,
+            this.btn_da_save2,
+            this.btn_da_load2});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 150;
+            this.ribbonControl1.MaxItemId = 152;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -1285,24 +1289,32 @@
             this.btn_dec2.Name = "btn_dec2";
             this.btn_dec2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_dec2_ItemClick);
             // 
+            // btn_da_save2
+            // 
+            resources.ApplyResources(this.btn_da_save2, "btn_da_save2");
+            this.btn_da_save2.Id = 150;
+            this.btn_da_save2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_da_save2.ImageOptions.Image")));
+            this.btn_da_save2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_da_save2.ImageOptions.LargeImage")));
+            this.btn_da_save2.Name = "btn_da_save2";
+            this.btn_da_save2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_da_save2_ItemClick);
+            // 
+            // btn_da_load2
+            // 
+            resources.ApplyResources(this.btn_da_load2, "btn_da_load2");
+            this.btn_da_load2.Id = 151;
+            this.btn_da_load2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_da_load2.ImageOptions.Image")));
+            this.btn_da_load2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_da_load2.ImageOptions.LargeImage")));
+            this.btn_da_load2.Name = "btn_da_load2";
+            this.btn_da_load2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_da_load2_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
-            this.ribbonPageGroup3,
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup3});
             this.ribbonPage1.Name = "ribbonPage1";
             resources.ApplyResources(this.ribbonPage1, "ribbonPage1");
-            // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.Glyph = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup5.Glyph")));
-            this.ribbonPageGroup5.ItemLinks.Add(this.btn_da_save);
-            this.ribbonPageGroup5.ItemLinks.Add(this.btn_da_load);
-            this.ribbonPageGroup5.ItemLinks.Add(this.btn_Modify);
-            this.ribbonPageGroup5.ItemLinks.Add(this.btn_ResetDA);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            resources.ApplyResources(this.ribbonPageGroup5, "ribbonPageGroup5");
             // 
             // ribbonPageGroup4
             // 
@@ -1311,8 +1323,19 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.btn_setall);
             this.ribbonPageGroup4.ItemLinks.Add(this.btn_add);
             this.ribbonPageGroup4.ItemLinks.Add(this.btn_dec);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btn_da_save);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btn_da_load);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             resources.ApplyResources(this.ribbonPageGroup4, "ribbonPageGroup4");
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.Glyph = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup5.Glyph")));
+            this.ribbonPageGroup5.ItemLinks.Add(this.btn_Modify);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btn_ResetDA);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            resources.ApplyResources(this.ribbonPageGroup5, "ribbonPageGroup5");
+            this.ribbonPageGroup5.Visible = false;
             // 
             // ribbonPageGroup3
             // 
@@ -1321,6 +1344,8 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.barEditItem12);
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_add2);
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_dec2);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_da_save2);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_da_load2);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             resources.ApplyResources(this.ribbonPageGroup3, "ribbonPageGroup3");
             // 
@@ -1692,8 +1717,8 @@
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.dataGridView4, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView5, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView_Fudu1, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView_Fudu2, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView_Fudu1, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView_Fudu2, 4, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // dataGridView4
@@ -2204,6 +2229,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private DevExpress.XtraBars.BarButtonItem btn_da_save2;
+        private DevExpress.XtraBars.BarButtonItem btn_da_load2;
     }
 }
 
