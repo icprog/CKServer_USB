@@ -36,19 +36,6 @@ namespace CKServer
         public static object synObj_sc1 = new object();
 
 
-        public static Queue<byte[]> DataQueue1 = new Queue<byte[]>();   //For FrameEPDU deal with 同步下行1
-        public static Queue<byte[]> DataQueue2 = new Queue<byte[]>();   //For FrameEPDU deal with 同步下行2
-        public static Queue<byte[]> DataQueue3 = new Queue<byte[]>();   //For FrameEPDU deal with 串口下行
-        public static int Channel = 1;                                      //表明从哪里调用的FrameEPDU
-
-        public static Dictionary<string, BinaryWriter> myDictionary1 = new Dictionary<string, BinaryWriter>();
-        public static Dictionary<string, BinaryWriter> myDictionary2 = new Dictionary<string, BinaryWriter>();
-        public static Dictionary<string, BinaryWriter> myDictionary3 = new Dictionary<string, BinaryWriter>();
-
-        public static List<string> APIDList = new List<string>();
-        public static List<string> APIDList2 = new List<string>();
-        public static List<string> APIDList3 = new List<string>();
-
         public static Dictionary<string, Queue<byte[]>> Apid_EPDU_Dictionary = new Dictionary<string, Queue<byte[]>>();
         public static Dictionary<string, Queue<byte[]>> Apid_EPDU_Dictionary2 = new Dictionary<string, Queue<byte[]>>();
         public static Dictionary<string, Queue<byte[]>> Apid_EPDU_Dictionary3 = new Dictionary<string, Queue<byte[]>>();
@@ -62,42 +49,6 @@ namespace CKServer
         public static bool MOXAChanUsed = false;
 
         public static int SCRecvCounts = 0;
-        public static void init(int channel)
-        {
-            switch (channel) {
-                case 1:
-                    AlreadyOnApid.Clear();
-                    APIDList.Clear();
-
-                    foreach (var item in Apid_EPDU_Dictionary)
-                    {
-                        item.Value.Clear();
-                    }
-                    Apid_EPDU_Dictionary.Clear();
-                    break;
-                case 2:
-                    AlreadyOnApid2.Clear();
-                    APIDList2.Clear();
-
-                    foreach (var item in Apid_EPDU_Dictionary2)
-                    {
-                        item.Value.Clear();
-                    }
-                    Apid_EPDU_Dictionary2.Clear();
-                    break;
-                case 3:
-                    AlreadyOnApid3.Clear();
-                    APIDList3.Clear();
-
-                    foreach (var item in Apid_EPDU_Dictionary3)
-                    {
-                        item.Value.Clear();
-                    }
-                    Apid_EPDU_Dictionary3.Clear();
-                    break;
-            }
-
-        }
 
 
         public static string DAconfigPath = Program.GetStartupPath() + @"配置文件\DAconfig.xml";

@@ -15,6 +15,7 @@ namespace CKServer
             dt_AD.Columns.Add("序号", typeof(Int32));
             dt_AD.Columns.Add("名称", typeof(String));
             dt_AD.Columns.Add("测量值", typeof(double));
+
             for (int i = 0; i < 64; i++)
             {
                 DataRow dr = dt_AD.NewRow();
@@ -27,12 +28,14 @@ namespace CKServer
             dt_ADShow.Columns.Add("序号", typeof(Int32));
             dt_ADShow.Columns.Add("名称", typeof(String));
             dt_ADShow.Columns.Add("测量值", typeof(double));
+            dt_ADShow.Columns.Add("温度值", typeof(double));
             for (int i = 0; i < 4; i++)
             {
                 DataRow dr = dt_ADShow.NewRow();
                 dr["序号"] = i + 1;
                 dr["名称"] = Function.GetConfigStr(Data.ADconfigPath, "add", "AD_Channel_" + (i+38).ToString(), "name");
                 dr["测量值"] = 0;
+                dr["温度值"] = 0;
                 dt_ADShow.Rows.Add(dr);
             }
 
@@ -68,6 +71,38 @@ namespace CKServer
                             dataRe_AD[k] = -t;
                         else
                             dataRe_AD[k] = t;
+
+                        if (k >= 38 && k < 42)
+                        {
+                            if (dataRe_AD[k] != 5)
+                            {
+                                double RealValue = 0;//最终实际电压值，有正负
+                                double RValue = 0;//根据电压值算出电阻值
+                                RealValue = dataRe_AD[k];
+                                RValue = 5.1 * RealValue / (5 - RealValue);
+                                if (RValue > 0)
+                                {
+                                    double XValue = 0;//用于计算温度，代入公式的x值
+                                    XValue = Math.Log10(RValue);
+
+                                    double YTemprature = 0;//最终显示的温度
+                                    YTemprature = -1.246 * XValue * XValue * XValue + 10.83 * XValue * XValue - 63.72 * XValue + 64.67;
+
+                                    dataRe_AD[k] = YTemprature;
+                                }
+                                else
+                                {
+                                    dataRe_AD[k] = double.PositiveInfinity;
+                                    MyLog.Error("当前电阻小于0，未接负载，请注意，请注意，请注意！！");
+                                }
+                            }
+                            else
+                            {
+                                dataRe_AD[k] = double.PositiveInfinity;
+                                MyLog.Error("当前电压5V，未接负载，请注意，请注意，请注意！！");
+                            }
+                        }
+
                     }
                     lock (ADList)
                     {

@@ -34,17 +34,6 @@ namespace CKServer
         private DataTable dtModifyDA1 = new DataTable();
         private DataTable dtModifyDA2 = new DataTable();
 
-        //应用数据的字节1和字节2--A机
-        String A_Byte1_b76 = "10";
-        String A_Byte1_b543 = "100";
-        String A_Byte1_b210 = "100";
-        String A_Byte2_b76 = "10";
-
-        //应用数据的字节1和字节2--B机
-        String B_Byte1_b76 = "10";
-        String B_Byte1_b543 = "100";
-        String B_Byte1_b210 = "100";
-        String B_Byte2_b76 = "10";
 
         void UsbDevices_DeviceAttached(object sender, EventArgs e)
         {
@@ -138,6 +127,9 @@ namespace CKServer
 
                 dataGridView_LvdsResult.DataSource = Func_LVDS.dt_LVDS_Result;
                 dataGridView_LvdsResult.AllowUserToAddRows = false;
+
+
+                textBox_lvdsFrame_Data.Text = Function.GetConfigStr(Data.LVDSconfigPath, "add", "LVDS_Config_DataContent", "value");
 
 
                 Register.Init();
@@ -430,9 +422,19 @@ namespace CKServer
                     Func_AD.dt_ADShow.Rows[i]["测量值"] = dataRe_AD[i + 38];
                 }
 
+                Func_LVDS.dt_LVDS_Result.Rows[0]["VCID"] = Func_LVDS.vcid1;
+                Func_LVDS.dt_LVDS_Result.Rows[0]["起始帧计数"] = Func_LVDS.startFrameCt1;
+                Func_LVDS.dt_LVDS_Result.Rows[0]["实时帧计数"] = Func_LVDS.endFramCt1;
+                Func_LVDS.dt_LVDS_Result.Rows[0]["VCDU计数"] = Func_LVDS.FrameCtNums1;
+
                 Func_LVDS.dt_LVDS_Result.Rows[0]["总字节数"] = Func_LVDS.TotalNums1;
                 Func_LVDS.dt_LVDS_Result.Rows[0]["错误字节"] = Func_LVDS.ErrorNums1;
                 Func_LVDS.dt_LVDS_Result.Rows[0]["误码率"] = Func_LVDS.ErPert1;
+
+                Func_LVDS.dt_LVDS_Result.Rows[1]["VCID"] = Func_LVDS.vcid2;
+                Func_LVDS.dt_LVDS_Result.Rows[1]["起始帧计数"] = Func_LVDS.startFrameCt2;
+                Func_LVDS.dt_LVDS_Result.Rows[1]["实时帧计数"] = Func_LVDS.endFramCt2;
+                Func_LVDS.dt_LVDS_Result.Rows[1]["VCDU计数"] = Func_LVDS.FrameCtNums2;
 
                 Func_LVDS.dt_LVDS_Result.Rows[1]["总字节数"] = Func_LVDS.TotalNums2;
                 Func_LVDS.dt_LVDS_Result.Rows[1]["错误字节"] = Func_LVDS.ErrorNums2;
@@ -496,8 +498,6 @@ namespace CKServer
 
                 new Thread(() => { RecvFun(Data.OnlyID); }).Start();
 
-
-
                 ADList.Clear();
                 new Thread(() => { DealWithADFun(); }).Start();
 
@@ -505,9 +505,6 @@ namespace CKServer
                 YCList_B.Clear();
 
                 new Thread(() => { DealWithYCFun(); }).Start();
-
-                if (radioButton1.Checked)
-                    Func_LVDS.StartComPare();//开启比对
 
                 timer2_DYQuery.Enabled = true;
             }
@@ -519,8 +516,6 @@ namespace CKServer
                 Thread.Sleep(200);
 
                 FileThread.FileClose();
-
-                Func_LVDS._StartCompare = false;
 
                 Func_DY.close();
 
@@ -548,7 +543,7 @@ namespace CKServer
                 {
                     byte[] RecvBoxBuf = new byte[4096];
                     int RecvBoxLen = 4096;
-                    lock(MyDevice)
+                    lock (MyDevice)
                         MyDevice.BulkInEndPt.XferData(ref RecvBoxBuf, ref RecvBoxLen);
 
                     if (RecvBoxLen > 0)
@@ -557,7 +552,7 @@ namespace CKServer
 
                         byte[] tempbuf = new byte[RecvBoxLen];
                         Array.Copy(RecvBoxBuf, tempbuf, RecvBoxLen);
-                        //存储源码
+                        ////存储源码
                         //SaveFile.Lock_1.EnterWriteLock();
                         //SaveFile.DataQueue_SC1.Enqueue(tempbuf);
                         //SaveFile.Lock_1.ExitWriteLock();
@@ -677,7 +672,7 @@ namespace CKServer
                         SaveFile.Lock_7.ExitWriteLock();
                         lock (YCList_A)
                         {//将422的A遥测数据放入YCList_A,在另一个线程中解析
-                          //  for (int j = 0; j < buf1D0x.Length; j++) YCList_A.Add(buf1D0x[j]);
+                         //  for (int j = 0; j < buf1D0x.Length; j++) YCList_A.Add(buf1D0x[j]);
                             YCList_A.AddRange(buf1D0x);
                         }
                     }
@@ -745,7 +740,7 @@ namespace CKServer
         {
             while (_BoxIsStarted)
             {
-                bool ret1 = Func_YC.Return_YCValue(ref Func_YC.dt_YC1,ref YCList_A, 1, ref dataRe_YCA1, ref dataRe_YCA2);
+                bool ret1 = Func_YC.Return_YCValue(ref Func_YC.dt_YC1, ref YCList_A, 1, ref dataRe_YCA1, ref dataRe_YCA2);
                 bool ret2 = Func_YC.Return_YCValue(ref Func_YC.dt_YC2, ref YCList_B, 2, ref dataRe_YCB1, ref dataRe_YCB2);
                 if (ret1 == false && ret2 == false) Thread.Sleep(500);
             }
@@ -830,7 +825,7 @@ namespace CKServer
             }
             catch (Exception ex)
             {
-
+                MyLog.Error(ex.ToString());
             }
         }
 
@@ -1568,11 +1563,22 @@ namespace CKServer
             {
                 barbtn_StartComP.Caption = "停止比对";
                 barbtn_StartComP.ImageOptions.LargeImage = CKServer.Properties.Resources.stop_32x32;
+
+                if (radioButton1.Checked)
+                {
+                    Func_LVDS.StartComPare();//开启比对
+                }
+                else
+                {
+                    MessageBox.Show("请选择实时比对按钮");
+                }
             }
             else
             {
                 barbtn_StartComP.Caption = "开始比对";
                 barbtn_StartComP.ImageOptions.LargeImage = CKServer.Properties.Resources.play_32x32;
+
+                Func_LVDS._StartCompare = false;
             }
         }
 
@@ -1583,6 +1589,7 @@ namespace CKServer
             Func_LVDS.ComPareBuf[1] = (byte)((head & 0xff0000) >> 16);
             Func_LVDS.ComPareBuf[2] = (byte)((head & 0xff00) >> 8);
             Func_LVDS.ComPareBuf[3] = (byte)(head & 0xff);
+
 
             //版本号，源飞行器
             byte b1 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[1]["设定值"], 16);
@@ -1610,11 +1617,11 @@ namespace CKServer
                 Func_LVDS.ComPareBuf[10 + i] = Convert.ToByte(key.Substring(2 * i, 2), 16);
             }
 
-            //目标飞行器
-            Func_LVDS.ComPareBuf[22] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[7]["设定值"], 16);
-
-            //备用
-            Func_LVDS.ComPareBuf[23] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[8]["设定值"], 16);
+            //备用/导头
+            String temp = (string)Func_LVDS.dt_LVDS_CP.Rows[7]["设定值"];
+            temp = temp.PadLeft(4, '0');
+            Func_LVDS.ComPareBuf[22] = Convert.ToByte(temp.Substring(0, 2), 16);
+            Func_LVDS.ComPareBuf[23] = Convert.ToByte(temp.Substring(2, 2), 16);
 
 
             //数据域
@@ -1624,6 +1631,12 @@ namespace CKServer
             {
                 data.CopyTo(Func_LVDS.ComPareBuf, 24 + i);
             }
+
+            for (int i = 0; i < 8; i++)
+            {
+                Function.SaveConfigStr(Data.LVDSconfigPath, "add", "LVDS_Config_" + i.ToString(), "value", (string)Func_LVDS.dt_LVDS_CP.Rows[i]["设定值"]);
+            }
+            Function.SaveConfigStr(Data.LVDSconfigPath, "add", "LVDS_Config_DataContent", "value", textBox_lvdsFrame_Data.Text);
 
         }
 
@@ -1640,7 +1653,7 @@ namespace CKServer
             //版本号，源飞行器
             byte b1 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[1]["设定值"], 16);
             byte b2 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[2]["设定值"], 16);
-            SvaeBuf[4] = (byte)(((b1 << 6) & 0xc0) | (b2 >> 2));
+            SvaeBuf[4] = (byte)((b1 << 6) | (b2 >> 2));
 
             //VCID
             byte b3 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[3]["设定值"], 16);
@@ -1663,11 +1676,12 @@ namespace CKServer
                 SvaeBuf[10 + i] = Convert.ToByte(key.Substring(2 * i, 2), 16);
             }
 
-            //目标飞行器
-            SvaeBuf[22] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[7]["设定值"], 16);
 
-            //备用
-            SvaeBuf[23] = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[8]["设定值"], 16);
+            //备用/导头
+            String temp = (string)Func_LVDS.dt_LVDS_CP.Rows[7]["设定值"];
+            temp = temp.PadLeft(4, '0');
+            SvaeBuf[22] = Convert.ToByte(temp.Substring(0, 2), 16);
+            SvaeBuf[23] = Convert.ToByte(temp.Substring(2, 2), 16);
 
 
             //数据域
@@ -1728,7 +1742,7 @@ namespace CKServer
 
             USB.SendCMD(Data.OnlyID, 0x82, 0x01);
             USB.SendCMD(Data.OnlyID, 0x82, 0x00);
-            USB.SendData(Data.OnlyID, FinalSend,false);
+            USB.SendData(Data.OnlyID, FinalSend, false);
 
 
 
@@ -1957,6 +1971,60 @@ namespace CKServer
             USB.SendCMD(Data.OnlyID, 0x82, 0x01);
             USB.SendCMD(Data.OnlyID, 0x82, 0x00);
             USB.SendData(Data.OnlyID, FinalSend);
+        }
+
+        private void barbtn_loadFrame_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            String Path = Data.Path + @"码本文件\";
+            if (!Directory.Exists(Path))
+                Directory.CreateDirectory(Path);
+            openFileDialog1.InitialDirectory = Path;
+            string tmpFilter = openFileDialog1.Filter;
+            string title = openFileDialog1.Title;
+            openFileDialog1.Title = "选择要注入的码本文件";
+            openFileDialog1.Filter = "dat files (*.dat)|*.dat|All files (*.*) | *.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) //selecting bitstream
+            {
+                FileStream file = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+
+                int fileBytes = (int)file.Length;
+                byte[] read_file_buf = new byte[fileBytes];
+
+                file.Read(read_file_buf, 0, fileBytes);
+
+                file.Close();
+
+                if (fileBytes > 24 && fileBytes <= 896)
+                {
+                    Func_LVDS.dt_LVDS_CP.Rows[0]["设定值"] = read_file_buf[0].ToString("x2") + read_file_buf[1].ToString("x2") + read_file_buf[2].ToString("x2") + read_file_buf[3].ToString("x2");
+                    Func_LVDS.dt_LVDS_CP.Rows[1]["设定值"] = (read_file_buf[4] >> 6).ToString("x2");
+                    //byte b1 = (byte)(read_file_buf[4] << 2);
+                    //byte b2 = (byte)(read_file_buf[5] >> 6);
+                    //byte b3 = (byte)(b1 + b2);
+                    Func_LVDS.dt_LVDS_CP.Rows[2]["设定值"] = ((byte)(read_file_buf[4] << 2) + (byte)(read_file_buf[5] >> 6)).ToString("x2");
+                    Func_LVDS.dt_LVDS_CP.Rows[3]["设定值"] = (read_file_buf[5] & 0x3f).ToString("x2");
+                    Func_LVDS.dt_LVDS_CP.Rows[4]["设定值"] = read_file_buf[6].ToString("x2") + read_file_buf[7].ToString("x2") + read_file_buf[8].ToString("x2");
+                    Func_LVDS.dt_LVDS_CP.Rows[5]["设定值"] = read_file_buf[9].ToString("x2");
+                    Func_LVDS.dt_LVDS_CP.Rows[6]["设定值"] = read_file_buf[10].ToString("x2") + read_file_buf[11].ToString("x2") + read_file_buf[12].ToString("x2") + read_file_buf[13].ToString("x2") +
+                        read_file_buf[14].ToString("x2") + read_file_buf[15].ToString("x2") + read_file_buf[16].ToString("x2") + read_file_buf[17].ToString("x2") +
+                        read_file_buf[18].ToString("x2") + read_file_buf[19].ToString("x2") + read_file_buf[20].ToString("x2") + read_file_buf[21].ToString("x2");
+                    Func_LVDS.dt_LVDS_CP.Rows[7]["设定值"] = read_file_buf[22].ToString("x2") + read_file_buf[23].ToString("x2");
+
+                    string str = null;
+                    for (int j = 24; j < fileBytes; j++)
+                    {
+                        str += read_file_buf[j].ToString("x2");
+                    }
+
+                    textBox_lvdsFrame_Data.Text = str;
+                }
+                else
+                {
+                    MessageBox.Show("载入码本格式不正确，请检查码本!");
+                }
+            }
+
         }
     }
 }

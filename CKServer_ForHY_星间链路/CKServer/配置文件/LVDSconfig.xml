@@ -2,14 +2,15 @@
 <configuration>
   <add key="LVDS_Config_0" value="1ACFFC1D" name="同步帧头(32bits)" />
   <add key="LVDS_Config_1" value="01" name="版本号(2bits)" />
-  <add key="LVDS_Config_2" value="E2" name="源飞行器(8bits)" />
+  <add key="LVDS_Config_2" value="02" name="源飞行器(8bits)" />
   <add key="LVDS_Config_3" value="00" name="VCID(6bits)" />
   <add key="LVDS_Config_4" value="000000" name="VCDU计数(24bits)" />
-  <add key="LVDS_Config_5" value="00" name="信号域(8bits)" />
-  <add key="LVDS_Config_6" value="000000000000000000000000" name="密钥区(96bits)" />
-  <add key="LVDS_Config_7" value="B2" name="目标飞行器(8bits)" />
-  <add key="LVDS_Config_8" value="00" name="备用(8bits)" />
+  <add key="LVDS_Config_5" value="70" name="信号域(8bits)" />
+  <add key="LVDS_Config_6" value="123456787912345678912345" name="密钥区(96bits)" />
+  <add key="LVDS_Config_7" value="4040" name="备用(16bits)" />
 
+  <add key="LVDS_Config_DataContent" value="ABCD" name="数据域" />
+  
   <add key="LVDS_RecvChan_0" value="00" name="主机通道" />
   <add key="LVDS_RecvChan_1" value="00" name="备机通道" />
 </configuration>

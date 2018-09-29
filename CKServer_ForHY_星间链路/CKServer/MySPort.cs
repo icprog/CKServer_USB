@@ -128,7 +128,7 @@ namespace CKServer
             }
         }
 
-        public static void close()
+        public static void Close()
         {
             if (Port1 != null)
             {
@@ -216,7 +216,6 @@ namespace CKServer
         public static void SetCruise(string direction,byte speed)
         {
             byte[] SendData = new byte[7];
-            short compassDeg = 0;
 
             try
             {

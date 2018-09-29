@@ -54,9 +54,8 @@ namespace CKServer
         public static ReaderWriterLockSlim Lock_asyn_10 = new ReaderWriterLockSlim();
         public static ReaderWriterLockSlim Lock_asyn_11 = new ReaderWriterLockSlim();
         public static ReaderWriterLockSlim Lock_asyn_12 = new ReaderWriterLockSlim();
-
-
         public static List<ReaderWriterLockSlim> myLockforAsync = new List<ReaderWriterLockSlim>();
+
         //在网络收发线程中给DataQueue赋值
 
         public static Queue<byte[]> DataQueue_0 = new Queue<byte[]>();
@@ -83,29 +82,16 @@ namespace CKServer
 
         public static bool SaveOn = true;
 
-        FileStream file0, file_async;
         FileStream file_SC1, file_SC2, file_SC3, file_SC4,
             file_SC5, file_SC6, file_SC7, file_SC8,
-            file_SC9, file_SC10, file_SC11, file_SC12,
-            file_SC13, file_SC14, file_SC15, file_SC16;
+            file_SC9, file_SC10;
         List<FileStream> myFileList_dat = new List<FileStream>();
 
-        FileStream file_asyn1, file_asyn2, file_asyn3, file_asyn4, file_asyn5, file_asyn6,
-            file_asyn7, file_asyn8, file_asyn9, file_asyn10, file_asyn11, file_asyn12;
+        FileStream file_asyn1, file_asyn2;
         List<FileStream> myFileList_txt = new List<FileStream>();
 
         public static Queue<string> DataQueue_asyn_1 = new Queue<string>();
         public static Queue<string> DataQueue_asyn_2 = new Queue<string>();
-        public static Queue<string> DataQueue_asyn_3 = new Queue<string>();
-        public static Queue<string> DataQueue_asyn_4 = new Queue<string>();
-        public static Queue<string> DataQueue_asyn_5 = new Queue<string>();
-        public static Queue<string> DataQueue_asyn_6 = new Queue<string>();
-        public static Queue<string> DataQueue_asyn_7 = new Queue<string>();
-        public static Queue<string> DataQueue_asyn_8 = new Queue<string>();
-        public static Queue<string> DataQueue_asyn_9 = new Queue<string>();
-        public static Queue<string> DataQueue_asyn_10 = new Queue<string>();
-        public static Queue<string> DataQueue_asyn_GNC1 = new Queue<string>();
-        public static Queue<string> DataQueue_asyn_GNC2 = new Queue<string>();
         public static List<Queue<string>> DataQueue_asynList = new List<Queue<string>>();
         //在主页面初始化时，调用FileInit()和FileSaveStart(),分别初始化文件夹和开始存储
 
@@ -133,14 +119,7 @@ namespace CKServer
 
             FileCreateDat(Program.GetStartupPath() + @"接收机箱数据\FF08\电源数据\", out file_SC10);
 
-            //FileCreateDat(Program.GetStartupPath() + @"数传机箱数据\同步422数据\通道2", out file_SC11);
-            //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道12\", out file_SC12);
-            //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道13\", out file_SC13);
-            //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道14\", out file_SC14);
-            //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道15\", out file_SC15);
-            //FileCreateDat(Program.GetStartupPath() + @"数传数据\通道16\", out file_SC16);
 
-            FileCreateDat(Program.GetStartupPath() + @"异步422\", out file_async);
             DataQueueList.Add(DataQueue_SC1);
             DataQueueList.Add(DataQueue_SC2);
             DataQueueList.Add(DataQueue_SC3);
@@ -175,37 +154,17 @@ namespace CKServer
             myLock.Add(Lock_15);
             myLock.Add(Lock_16);
 
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道1\", out file_asyn1);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道2\", out file_asyn2);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道3\", out file_asyn3);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道4\", out file_asyn4);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道5\", out file_asyn5);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道6\", out file_asyn6);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道7\", out file_asyn7);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道8\", out file_asyn8);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道9\", out file_asyn9);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道10\", out file_asyn10);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道GNC1\", out file_asyn11);
-            //FileCreateTxt(Program.GetStartupPath() + @"异步422\通道GNC2\", out file_asyn12);
-
-            //DataQueue_asynList.Add(DataQueue_asyn_1);
-            //DataQueue_asynList.Add(DataQueue_asyn_2);
-            //DataQueue_asynList.Add(DataQueue_asyn_3);
-            //DataQueue_asynList.Add(DataQueue_asyn_4);
-            //DataQueue_asynList.Add(DataQueue_asyn_5);
-            //DataQueue_asynList.Add(DataQueue_asyn_6);
-            //DataQueue_asynList.Add(DataQueue_asyn_7);
-            //DataQueue_asynList.Add(DataQueue_asyn_8);
-            //DataQueue_asynList.Add(DataQueue_asyn_9);
-            //DataQueue_asynList.Add(DataQueue_asyn_10);
-            //DataQueue_asynList.Add(DataQueue_asyn_GNC1);
-            //DataQueue_asynList.Add(DataQueue_asyn_GNC2);
+            FileCreateTxt(Program.GetStartupPath() + @"LogData\LVDS比对错误日志\主通道", out file_asyn1);
+            FileCreateTxt(Program.GetStartupPath() + @"LogData\LVDS比对错误日志\副通道", out file_asyn2);
 
 
+            DataQueue_asynList.Add(DataQueue_asyn_1);
+            DataQueue_asynList.Add(DataQueue_asyn_2);
 
-        //          WriteFileThread = new Thread(WriteToFile);
-        //           WriteFileThread.Start(file1);
-    }
+            myLockforAsync.Add(Lock_asyn_1);
+            myLockforAsync.Add(Lock_asyn_2);
+
+        }
 
         public void FileCreateDat(string Path, out FileStream file)
         {
@@ -270,8 +229,8 @@ namespace CKServer
             //new Thread(() => { WriteToFileSC(13, file_SC14, ref DataQueue_SC14, ref Lock_14); }).Start();
 
 
-            //new Thread(() => { WriteToFileAsynC(1, file_asyn1, ref DataQueue_asyn_1, ref Lock_asyn_1); }).Start();
-            //new Thread(() => { WriteToFileAsynC(2, file_asyn2, ref DataQueue_asyn_2, ref Lock_asyn_2); }).Start();
+            new Thread(() => { WriteToFileAsynC(0, file_asyn1, ref DataQueue_asyn_1, ref Lock_asyn_1); }).Start();
+            new Thread(() => { WriteToFileAsynC(1, file_asyn2, ref DataQueue_asyn_2, ref Lock_asyn_2); }).Start();
             //new Thread(() => { WriteToFileAsynC(3, file_asyn3, ref DataQueue_asyn_3, ref Lock_asyn_3); }).Start();
             //new Thread(() => { WriteToFileAsynC(4, file_asyn4, ref DataQueue_asyn_4, ref Lock_asyn_4); }).Start();
             //new Thread(() => { WriteToFileAsynC(5, file_asyn5, ref DataQueue_asyn_5, ref Lock_asyn_5); }).Start();
@@ -353,7 +312,6 @@ namespace CKServer
                     }
                     catch (Exception e)
                     {
-                        bw.Close();
                         Trace.WriteLine(myQueue.Count());
                         Trace.WriteLine(e.Message);
                         break;
@@ -417,7 +375,6 @@ namespace CKServer
                     }
                     catch (Exception e)
                     {
-                        bw.Close();
                         Trace.WriteLine(myQueue.Count());
                         Trace.WriteLine(e.Message);
                         break;
@@ -426,7 +383,6 @@ namespace CKServer
                 else
                 {
                     Thread.Sleep(200);
-                    //                  Trace.WriteLine("Queue0 is empty!!");
                 }
             }
             bw.Close();
