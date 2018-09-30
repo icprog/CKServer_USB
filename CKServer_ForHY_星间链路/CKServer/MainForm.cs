@@ -420,6 +420,35 @@ namespace CKServer
                 for (int i = 0; i < 4; i++)
                 {
                     Func_AD.dt_ADShow.Rows[i]["测量值"] = dataRe_AD[i + 38];
+
+                    double RealValue = dataRe_AD[i + 38];//最终实际电压值，有正负
+                    if (RealValue != 5)
+                    {
+                        double RValue = 5.1 * RealValue / (5 - RealValue); ;//根据电压值算出电阻值         
+
+                        if (RValue > 0)
+                        {
+                            double XValue = 0;//用于计算温度，代入公式的x值
+                            XValue = Math.Log10(RValue);
+
+                            double YTemprature = 0;//最终显示的温度
+                            YTemprature = -1.246 * XValue * XValue * XValue + 10.83 * XValue * XValue - 63.72 * XValue + 64.67;
+
+                            Func_AD.dt_ADShow.Rows[i]["温度值"] = YTemprature;
+                        }
+                        else
+                        {
+                            Func_AD.dt_ADShow.Rows[i]["温度值"] = double.PositiveInfinity;
+                            MyLog.Error("当前电阻小于0，未接负载，请注意，请注意，请注意！！");
+                        }
+
+                    }
+                    else
+                    {
+                        Func_AD.dt_ADShow.Rows[i]["温度值"] = double.PositiveInfinity;
+                        MyLog.Error("当前电压5V，未接负载，请注意，请注意，请注意！！");
+                    }                                   
+                    
                 }
 
                 Func_LVDS.dt_LVDS_Result.Rows[0]["VCID"] = Func_LVDS.vcid1;

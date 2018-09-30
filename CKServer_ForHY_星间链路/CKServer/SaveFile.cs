@@ -200,6 +200,24 @@ namespace CKServer
             if (!Directory.Exists(Path))
                 Directory.CreateDirectory(Path);
 
+            DirectoryInfo folder = new DirectoryInfo(Path);
+            try
+            {
+                foreach (FileInfo tempfile in folder.GetFiles("*.*"))
+                {
+                    string name = tempfile.Name;
+                    if (tempfile.Length == 0)
+                    {
+                        Trace.WriteLine("删除文件" + tempfile.FullName);
+                        File.Delete(tempfile.FullName);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MyLog.Error(ex.Message);
+            }
+
             string timestr = string.Format("{0}-{1:D2}-{2:D2} {3:D2}：{4:D2}：{5:D2}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
             string filename = Path + timestr + ".txt";
             file = new FileStream(filename, FileMode.Create);
