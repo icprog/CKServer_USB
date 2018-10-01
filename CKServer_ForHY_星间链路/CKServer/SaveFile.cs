@@ -154,8 +154,8 @@ namespace CKServer
             myLock.Add(Lock_15);
             myLock.Add(Lock_16);
 
-            FileCreateTxt(Program.GetStartupPath() + @"LogData\LVDS比对错误日志\主通道", out file_asyn1);
-            FileCreateTxt(Program.GetStartupPath() + @"LogData\LVDS比对错误日志\副通道", out file_asyn2);
+            FileCreateTxt(Program.GetStartupPath() + @"LogData\LVDS比对错误日志\主通道\", out file_asyn1);
+            FileCreateTxt(Program.GetStartupPath() + @"LogData\LVDS比对错误日志\副通道\", out file_asyn2);
 
 
             DataQueue_asynList.Add(DataQueue_asyn_1);
@@ -366,9 +366,10 @@ namespace CKServer
                         bw.Flush();
                         myLock.ExitReadLock();
 
+
                         #region 分割文件，防止文件过大
                         long FileSizeMB = myfile.Length / (1024 * 1024);
-                        if (FileSizeMB > 10)
+                        if (FileSizeMB > 100)
                         {
                             myFileList_txt[key].Flush();
 
@@ -387,14 +388,12 @@ namespace CKServer
                             myFileList_txt.Insert(key, newFile);
 
                             break;
-                            //break跳出循环会执行新线程
                         }
                         #endregion
                     }
                     catch (Exception e)
                     {
-                        Trace.WriteLine(myQueue.Count());
-                        Trace.WriteLine(e.Message);
+                        MyLog.Error(e.ToString());
                         break;
                     }
                 }

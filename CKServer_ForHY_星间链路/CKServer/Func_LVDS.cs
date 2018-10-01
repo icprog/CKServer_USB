@@ -171,10 +171,10 @@ namespace CKServer
                                         }
                                     }
 
-                                    String loginfo = "出错位置----VCDU计数：" + endFramCt1.ToString() + "字节所在位置：" + i.ToString();
-                                    SaveFile.Lock_asyn_1.EnterWriteLock();
-                                    SaveFile.DataQueue_asyn_1.Enqueue(loginfo);
-                                    SaveFile.Lock_asyn_1.ExitWriteLock();
+                                    //String loginfo = "出错位置----VCDU计数：" + endFramCt1.ToString() + "字节所在位置：" + i.ToString();
+                                    //SaveFile.Lock_asyn_1.EnterWriteLock();
+                                    //SaveFile.DataQueue_asyn_1.Enqueue(loginfo);
+                                    //SaveFile.Lock_asyn_1.ExitWriteLock();
                                 }
                             }
                         }
@@ -235,10 +235,10 @@ namespace CKServer
                                             ErrorNums2 += 1;//增加一个bit计数
                                         }
                                     }
-                                    String loginfo = "出错位置----VCDU计数：" + endFramCt1.ToString() + "字节所在位置：" + i.ToString();
-                                    SaveFile.Lock_asyn_2.EnterWriteLock();
-                                    SaveFile.DataQueue_asyn_2.Enqueue(loginfo);
-                                    SaveFile.Lock_asyn_2.ExitWriteLock();
+                                    //String loginfo = "出错位置----VCDU计数：" + endFramCt1.ToString() + "字节所在位置：" + i.ToString();
+                                    //SaveFile.Lock_asyn_2.EnterWriteLock();
+                                    //SaveFile.DataQueue_asyn_2.Enqueue(loginfo);
+                                    //SaveFile.Lock_asyn_2.ExitWriteLock();
                                 }
 
                                
