@@ -135,6 +135,10 @@ namespace CKServer
                 dataGridView5.DataSource = Func_OC.dt_OC_Out;
                 dataGridView5.AllowUserToAddRows = false;
 
+
+                dataGridView5.Rows[4].Visible = false;
+                dataGridView5.Rows[9].Visible = false;
+
                 dtModifyDA1.Columns.Add("ID", typeof(Int32));
                 dtModifyDA1.Columns.Add("a", typeof(Int32));
                 dtModifyDA1.Columns.Add("b", typeof(Int32));

@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration>
-  <add key="OC_Channel_0" value="80" name="正负5V配电开"/>
-  <add key="OC_Channel_1" value="80" name="正负5V配电关"/>
-  <add key="OC_Channel_2" value="80" name="正负6V配电主开备关"/>
-  <add key="OC_Channel_3" value="80" name="正负6V配电备开主关"/>
-  <add key="OC_Channel_4" value="80" name="正6V配电全关"/>
+  <add key="OC_Channel_0" value="80" name="左旋5V开"/>
+  <add key="OC_Channel_1" value="80" name="左旋5V关"/>
+  <add key="OC_Channel_2" value="80" name="左旋6.3V开"/>
+  <add key="OC_Channel_3" value="80" name="左旋6.3V关"/>
+  <add key="OC_Channel_4" value="80" name="保留未使用"/>
   
-  <add key="OC_Channel_5" value="80" name="（备）正负5V配电开"/>
-  <add key="OC_Channel_6" value="80" name="（备）正负5V配电关"/>
-  <add key="OC_Channel_7" value="80" name="（备）正负6V配电主开备关"/>
-  <add key="OC_Channel_8" value="80" name="（备）正负6V配电备开主关"/>
-  <add key="OC_Channel_9" value="80" name="（备）正6V配电全关"/>
+  <add key="OC_Channel_5" value="80" name="右旋5V开"/>
+  <add key="OC_Channel_6" value="80" name="右旋5V关"/>
+  <add key="OC_Channel_7" value="80" name="右旋6.3V开"/>
+  <add key="OC_Channel_8" value="80" name="右旋6.3V关"/>
+  <add key="OC_Channel_9" value="80" name="保留未使用"/>
   
   <add key="OC_Channel_10" value="80" name="数管计算机禁EEPROM在轨编程"/>
   <add key="OC_Channel_11" value="80" name="数管计算机开A开B"/>
