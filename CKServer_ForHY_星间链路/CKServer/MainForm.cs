@@ -1625,9 +1625,11 @@ namespace CKServer
             byte b2 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[2]["设定值"], 16);
             Func_LVDS.ComPareBuf[4] = (byte)(((b1 << 6) & 0xc0) | (b2 >> 2));
 
-            //VCID
+            //VCID,取低6bits
             byte b3 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[3]["设定值"], 16);
-            Func_LVDS.ComPareBuf[5] = (byte)(((b2 << 6) & 0xc0) | (b3 >> 2));
+            b3 = (byte)(b3 & 0x3f);
+            
+            Func_LVDS.ComPareBuf[5] = (byte)(((b2 << 6) & 0xc0) | b3 );
 
             //VCDU计数
             int VCDUCounts = Convert.ToInt32((string)Func_LVDS.dt_LVDS_CP.Rows[4]["设定值"], 16);
@@ -1686,7 +1688,8 @@ namespace CKServer
 
             //VCID
             byte b3 = Convert.ToByte((string)Func_LVDS.dt_LVDS_CP.Rows[3]["设定值"], 16);
-            SvaeBuf[5] = (byte)(((b2 << 6) & 0xc0) | (b3 >> 2));
+            b3 = (byte)(b3 & 0x3f);
+            SvaeBuf[5] = (byte)(((b2 << 6) & 0xc0) | b3);
 
             //VCDU计数
             int VCDUCounts = Convert.ToInt32((string)Func_LVDS.dt_LVDS_CP.Rows[4]["设定值"], 16);

@@ -2661,7 +2661,7 @@
             this.dockPanel_LVDS_Recv.ID = new System.Guid("d0a692ca-17d9-4279-9a5c-0979cde98445");
             resources.ApplyResources(this.dockPanel_LVDS_Recv, "dockPanel_LVDS_Recv");
             this.dockPanel_LVDS_Recv.Name = "dockPanel_LVDS_Recv";
-            this.dockPanel_LVDS_Recv.OriginalSize = new System.Drawing.Size(1116, 687);
+            this.dockPanel_LVDS_Recv.OriginalSize = new System.Drawing.Size(547, 377);
             // 
             // controlContainer5
             // 
@@ -2833,7 +2833,7 @@
             this.dockPanel_LOG.ID = new System.Guid("1c83a59b-cb69-411d-a024-e2285c8d54e9");
             resources.ApplyResources(this.dockPanel_LOG, "dockPanel_LOG");
             this.dockPanel_LOG.Name = "dockPanel_LOG";
-            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(1116, 303);
+            this.dockPanel_LOG.OriginalSize = new System.Drawing.Size(547, 166);
             // 
             // dockPanel1_Container
             // 
