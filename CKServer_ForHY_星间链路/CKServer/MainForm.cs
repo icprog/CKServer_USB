@@ -113,7 +113,6 @@ namespace CKServer
             myComPareFrame = new SetComPareFrame(this);
 
             dockPanel_RegCtl.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-
         }
 
 
@@ -1574,17 +1573,7 @@ namespace CKServer
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton2.Checked)
-            {
-                buttonEdit3.Enabled = true;
-            }
-            else
-            {
-                buttonEdit3.Enabled = false;
-            }
-        }
+
 
         private void barbtn_StartComP_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -2055,6 +2044,182 @@ namespace CKServer
                 {
                     MessageBox.Show("载入码本格式不正确，请检查码本!");
                 }
+            }
+
+        }
+
+        private void barButton_BContinue_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barButton_BContinue.Caption == "B机-连续采集")
+            {
+                barButton_BContinue.Caption = "B机-停止采集";
+                barButton_BContinue.ImageOptions.LargeImage = CKServer.Properties.Resources.stop_32x32;
+                timer_YC_Bcontinue.Enabled = true;
+            }
+            else
+            {
+                barButton_BContinue.Caption = "B机-连续采集";
+                barButton_BContinue.ImageOptions.LargeImage = CKServer.Properties.Resources.play_32x32;
+
+                timer_YC_Bcontinue.Enabled = false;
+            }
+        }
+
+        private void barButton_AContinue_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barButton_AContinue.Caption == "A机-连续采集")
+            {
+                barButton_AContinue.Caption = "A机-停止采集";
+                barButton_AContinue.ImageOptions.LargeImage = CKServer.Properties.Resources.stop_32x32;
+                timer_YC_Acontinue.Enabled = true;
+            }
+            else
+            {
+                barButton_AContinue.Caption = "A机-连续采集";
+                barButton_AContinue.ImageOptions.LargeImage = CKServer.Properties.Resources.play_32x32;
+
+                timer_YC_Acontinue.Enabled = false;
+            }
+        }
+
+        private void timer_YC_Bcontinue_Tick(object sender, EventArgs e)
+        {
+            byte[] SendData = new byte[6] { 0xeb, 0x90, 0x05, 0x02, 0xee, 0x92 };
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+            byte[] FinalSend = new byte[28];
+
+            FinalSend[0] = 0x1D;
+            FinalSend[1] = 0x01;
+            FinalSend[2] = 0x00;
+            FinalSend[3] = 0x06;
+            SendData.CopyTo(FinalSend, 4);
+
+            FinalSend[10] = 0x00;
+            FinalSend[11] = 0x00;
+
+            USB.SendCMD(Data.OnlyID, 0x81, 0x02);
+            USB.SendCMD(Data.OnlyID, 0x81, 0x00);
+
+            end.CopyTo(FinalSend, 12);
+
+            USB.SendData(Data.OnlyID, FinalSend);
+        }
+
+        private void timer_YC_Acontinue_Tick(object sender, EventArgs e)
+        {
+            byte[] SendData = new byte[6] { 0xeb, 0x90, 0x05, 0x02, 0xee, 0x92 };
+
+            byte[] end = new byte[16] { 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE, 0xC0, 0xDE };
+            byte[] FinalSend = new byte[28];
+
+            FinalSend[0] = 0x1D;
+            FinalSend[1] = 0x00;
+            FinalSend[2] = 0x00;
+            FinalSend[3] = 0x06;
+            SendData.CopyTo(FinalSend, 4);
+
+            FinalSend[10] = 0x00;
+            FinalSend[11] = 0x00;
+
+            end.CopyTo(FinalSend, 12);
+
+            USB.SendCMD(Data.OnlyID, 0x81, 0x01);
+            USB.SendCMD(Data.OnlyID, 0x81, 0x00);
+
+            USB.SendData(Data.OnlyID, FinalSend);
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            //  dataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.SelectionBackColor = Color.Lime;
+
+            for (int i = 0; i < dataGridView_YC2.RowCount; i++)
+            {
+                if (Func_YC.dt_YC2.Rows[i]["解析值"].ToString() == "禁止" ||
+                    Func_YC.dt_YC2.Rows[i]["解析值"].ToString() == "错误" ||
+                    Func_YC.dt_YC2.Rows[i]["解析值"].ToString() == "出现异常值" ||
+                    Func_YC.dt_YC2.Rows[i]["解析值"].ToString() == "未捕获" ||
+                    Func_YC.dt_YC2.Rows[i]["解析值"].ToString() == "失锁" ||
+                    Func_YC.dt_YC2.Rows[i]["解析值"].ToString() == "不工作")
+                {
+                    dataGridView_YC2.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else
+                {
+                    dataGridView_YC2.Rows[i].DefaultCellStyle.BackColor = Color.White;
+                }
+            }
+
+            for (int i = 0; i < dataGridView_YC1.RowCount; i++)
+            {
+                if (Func_YC.dt_YC1.Rows[i]["解析值"].ToString() == "禁止" ||
+                    Func_YC.dt_YC1.Rows[i]["解析值"].ToString() == "错误" ||
+                    Func_YC.dt_YC1.Rows[i]["解析值"].ToString() == "出现异常值" ||
+                    Func_YC.dt_YC1.Rows[i]["解析值"].ToString() == "未捕获" ||
+                    Func_YC.dt_YC1.Rows[i]["解析值"].ToString() == "失锁" ||
+                    Func_YC.dt_YC1.Rows[i]["解析值"].ToString() == "不工作")
+                {
+                    dataGridView_YC1.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else
+                {
+                    dataGridView_YC1.Rows[i].DefaultCellStyle.BackColor = Color.White;
+                }
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                buttonEdit3.Enabled = true;
+            }
+            else
+            {
+                buttonEdit3.Enabled = false;
+            }
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton3.Checked)
+            {
+                buttonEdit4.Enabled = true;
+            }
+            else
+            {
+                buttonEdit4.Enabled = false;
+            }
+        }
+
+        private void buttonEdit4_ButtonClick(object sender, ButtonPressedEventArgs e)
+        {
+            String Path = Data.Path;
+            if (!Directory.Exists(Path))
+                Directory.CreateDirectory(Path);
+            openFileDialog1.InitialDirectory = Path;
+            string tmpFilter = openFileDialog1.Filter;
+            string title = openFileDialog1.Title;
+            openFileDialog1.Title = "选择PRB15码表文件";
+            openFileDialog1.Filter = "dat files (*.dat)|*.dat|All files (*.*) | *.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) //selecting bitstream
+            {
+                buttonEdit3.Text = openFileDialog1.FileName;
+                FileStream file = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                                
+                //int fileBytes = (int)file.Length + 8;//为何要+8??
+                int fileBytes = (int)file.Length;
+                byte[] read_file_buf = new byte[fileBytes];
+                for (int i = 0; i < fileBytes; i++) read_file_buf[i] = 0xff;
+                file.Read(read_file_buf, 0, fileBytes);
+
+                file.Close();
+
+            }
+            else
+            {
+    
             }
 
         }

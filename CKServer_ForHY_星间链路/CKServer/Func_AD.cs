@@ -11,7 +11,7 @@ namespace CKServer
         public static DataTable dt_AD = new DataTable();
         public static DataTable dt_ADShow = new DataTable();
         public static void Init_Table()
-        {
+        {            
             dt_AD.Columns.Add("序号", typeof(Int32));
             dt_AD.Columns.Add("名称", typeof(String));
             dt_AD.Columns.Add("测量值", typeof(double));

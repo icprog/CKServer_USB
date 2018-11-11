@@ -204,6 +204,7 @@
     <Compile Include="SetComPareFrame.Designer.cs">
       <DependentUpon>SetComPareFrame.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestUnit.cs" />
     <Compile Include="USB.cs" />
     <EmbeddedResource Include="DAmodify.resx">
       <DependentUpon>DAmodify.cs</DependentUpon>
@@ -307,6 +308,8 @@
     <None Include="Resources\play_16x161.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Resources\bold_32x32.png" />
+    <None Include="Resources\bold_16x16.png" />
     <Content Include="配置文件\LVDSconfig.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
