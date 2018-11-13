@@ -27,7 +27,7 @@ namespace CKServer
 
             byte[] FinalByte = temp;
 
-            string filename = Program.GetStartupPath() + "Final.dat";
+            string filename = Program.GetStartupPath() + "Final1.dat";
             FileStream file = new FileStream(filename, FileMode.Create);
             BinaryWriter bw = new BinaryWriter(file);
 
