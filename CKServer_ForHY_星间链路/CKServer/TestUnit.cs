@@ -7,8 +7,10 @@ using System.Text;
 namespace CKServer
 {
     class TestUnit
-    {        public static void test1()
+    {
+        public static void test1()
         {
+
             string firstRead = File.ReadAllText(Program.GetStartupPath() + @"PRBS-15.txt");
             int firstLen = firstRead.Count();
 
@@ -21,7 +23,7 @@ namespace CKServer
             byte[] temp = new byte[32767];
             for (int i = 0; i < 32767; i++)
             {
-                temp[i] = Convert.ToByte(fullstr.Substring(0,8),2);
+                temp[i] = Convert.ToByte(fullstr.Substring(0, 8), 2);
                 fullstr = fullstr.Substring(8);
             }
 

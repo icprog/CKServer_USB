@@ -40,6 +40,10 @@ namespace CKServer
         public static int FrameCtNums2 = 0;
         public static int ErrFramCtNums2 = 0;
 
+        public static string Recvd_Orign_Str2 = null;
+        public static string cpstr2 = "11111111111111100000000000000100";//FFFE
+        public static bool findhead2 = false;
+
         public static DataTable dt_LVDS_Result = new DataTable();
 
         public static bool _StartCompare = false;
@@ -142,10 +146,8 @@ namespace CKServer
                                     if (cadu[j] != cpbuf[j])
                                     {
                                         ErrorNums1 += 1;//增加一个bit计数
-
                                     }
                                 }
-
                                 //String loginfo = "出错位置----VCDU计数：" + endFramCt1.ToString() + "字节所在位置：" + i.ToString();
                                 //SaveFile.Lock_asyn_1.EnterWriteLock();
                                 //SaveFile.DataQueue_asyn_1.Enqueue(loginfo);
@@ -172,6 +174,7 @@ namespace CKServer
                             }
                             else
                             {
+                                MyLog.Error("跳过"+headplace.ToString()+"bits找到了同步头FFFE0004");
                                 Recvd_Orign_Str1.Substring(headplace);
                                 findhead1 = true;
                             }
@@ -180,28 +183,127 @@ namespace CKServer
                         {
                             string RecvPNFrame = Recvd_Orign_Str1.Substring(0, 32767);//取出32767个bit对应的string来比较
                             Recvd_Orign_Str1 = Recvd_Orign_Str1.Substring(32767);//删除取出的数据
-   
-
-                        }
-                        
-
+                            
+                            //32767加个bit转换成byte再来算
+                            for(int i=0;i<32767;i++)
+                            {
+                                if(RecvPNFrame[i]!=Data.PRS15STR[i])
+                                {
+                                    ErrorNums1 += 1;//增加一个bit计数
+                                }
+                            }
+                        }                     
                     }
 
-
-
                     ErPert1 = (double)ErrorNums1 / (double)TotalNums1;
-
                 }
                 catch (Exception ex1)
                 {
                     MyLog.Error(ex1.ToString());
                 }
             }
-
-
         }
 
-        public static void ComPareFunc()
+        public static void CompareChan2(ref bool FirstInFlag2, ref int LastFrameCt2)
+        {
+            if (DataQueue2.Count() >= 896)
+            {
+                try
+                {
+                    Lock2.EnterReadLock();
+                    byte[] CADU = new byte[896];
+                    for (int i = 0; i < 896; i++) CADU[i] = DataQueue2.Dequeue();
+                    Lock2.ExitReadLock();
+
+                    vcid2 = Convert.ToString(CADU[5] & 0x3f, 2).PadLeft(6, '0');
+                    FrameCtNums2 += 1;//计数+1
+
+                    endFramCt2 = CADU[6] * 65536 + CADU[7] * 256 + CADU[8];
+
+                    if (FirstInFlag2)
+                    {
+                        FirstInFlag2 = false;
+                        startFrameCt2 = endFramCt2;
+                    }
+                    else
+                    {
+                        if (endFramCt2 - LastFrameCt2 != 1 && endFramCt2 != 0)
+                        {
+                            ErrFramCtNums2 += 1;
+                        }
+                    }
+
+                    LastFrameCt2 = endFramCt2;
+
+                    TotalNums2 += 896 * 8;
+
+                    for (int i = 0; i < 24; i++)
+                    {
+                        if (i != 6 && i != 7 && i != 8)
+                        {
+                            if (CADU[i] != ComPareBuf[i])
+                            {
+                                string cadu = Convert.ToString(CADU[i], 2).PadLeft(8, '0');
+                                string cpbuf = Convert.ToString(ComPareBuf[i], 2).PadLeft(8, '0');
+                                for (int j = 0; j < 8; j++)
+                                {
+                                    if (cadu[j] != cpbuf[j])
+                                    {
+                                        ErrorNums2 += 1;//增加一个bit计数
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    //处理24--895共872Byte的内容
+                    for (int i = 24; i < 896; i++)
+                    {
+                        Recvd_Orign_Str2 += Convert.ToString(CADU[i], 2).PadLeft(8, '0');
+                    }
+
+                    if (Recvd_Orign_Str2.Length > 32767)
+                    {
+                        if (findhead2 != true)
+                        {
+                            int headplace = Recvd_Orign_Str2.IndexOf(cpstr1);
+                            if (headplace < 0)
+                            {// 如果未在此实例中找到该字符或字符串，则此方法返回 -1
+                                MyLog.Error("Chan2未匹配到设置的比对帧中的任何一处");
+                                findhead2 = false;
+                            }
+                            else
+                            {
+                                MyLog.Error("Chan2跳过" + headplace.ToString() + "bits找到了同步头FFFE0004");
+                                Recvd_Orign_Str2.Substring(headplace);
+                                findhead2 = true;
+                            }
+                        }
+                        else
+                        {
+                            string RecvPNFrame = Recvd_Orign_Str2.Substring(0, 32767);//取出32767个bit对应的string来比较
+                            Recvd_Orign_Str2 = Recvd_Orign_Str2.Substring(32767);//删除取出的数据
+
+                            //32767加个bit转换成byte再来算
+                            for (int i = 0; i < 32767; i++)
+                            {
+                                if (RecvPNFrame[i] != Data.PRS15STR[i])
+                                {
+                                    ErrorNums2 += 1;//增加一个bit计数
+                                }
+                            }
+                        }
+                    }
+                    ErPert2 = (double)ErrorNums2 / (double)TotalNums2;
+                }
+                catch (Exception ex2)
+                {
+                    MyLog.Error(ex2.ToString());
+                }
+            }
+        }
+
+            public static void ComPareFunc()
         {
             ErrorNums1 = 0;
             TotalNums1 = 0;
@@ -232,72 +334,8 @@ namespace CKServer
             while (_StartCompare)
             {
                 CompareChan1(ref FirstInFlag1,ref LastFrameCt1);
-
-                if (DataQueue2.Count() >= 896)
-                {
-                    try
-                    {
-                        Lock2.EnterReadLock();
-                        byte[] CADU = new byte[896];
-                        for (int i = 0; i < 896; i++) CADU[i] = DataQueue2.Dequeue();
-                        Lock2.ExitReadLock();
-
-                        vcid2 = Convert.ToString(CADU[5] & 0x3f, 2).PadLeft(6, '0');
-                        FrameCtNums2 += 1;//计数+1
-
-                        endFramCt2 = CADU[6] * 65536 + CADU[7] * 256 + CADU[8];
-
-                        if (FirstInFlag2)
-                        {
-                            FirstInFlag2 = false;
-                            startFrameCt2 = endFramCt2;
-                        }
-                        else
-                        {
-                            if (endFramCt2 - LastFrameCt2 != 1 && endFramCt2 != 0)
-                            {
-                                ErrFramCtNums2 += 1;
-                            }
-                        }
-
-                        LastFrameCt2 = endFramCt2;
-
-                        TotalNums2 += 896 * 8;
-
-                        for (int i = 0; i < 896; i++)
-                        {
-                            if (i != 6 && i != 7 && i != 8)
-                            {
-                                if (CADU[i] != ComPareBuf[i])
-                                {
-                                    string cadu = Convert.ToString(CADU[i], 2).PadLeft(8, '0');
-                                    string cpbuf = Convert.ToString(ComPareBuf[i], 2).PadLeft(8, '0');
-                                    for (int j = 0; j < 8; j++)
-                                    {
-                                        if (cadu[j] != cpbuf[j])
-                                        {
-                                            ErrorNums2 += 1;//增加一个bit计数
-                                        }
-                                    }
-                                    //String loginfo = "出错位置----VCDU计数：" + endFramCt1.ToString() + "字节所在位置：" + i.ToString();
-                                    //SaveFile.Lock_asyn_2.EnterWriteLock();
-                                    //SaveFile.DataQueue_asyn_2.Enqueue(loginfo);
-                                    //SaveFile.Lock_asyn_2.ExitWriteLock();
-                                }
-
-                               
-
-                            }
-                        }
-
-                        ErPert2 = (double)ErrorNums2 / (double)TotalNums2;
-
-                    }
-                    catch (Exception ex2)
-                    {
-                        MyLog.Error(ex2.ToString());
-                    }
-                }
+                CompareChan2(ref FirstInFlag2, ref LastFrameCt2);
+              
             }
 
 

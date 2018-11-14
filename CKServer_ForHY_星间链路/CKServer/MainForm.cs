@@ -104,7 +104,7 @@ namespace CKServer
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-      //      TestUnit.test1();
+          //  TestUnit.test1();
             SetDevice(false);
             barStaticItem1.Caption = "存储路径" + Data.Path;
             InitDataTable();//初始化datadable
