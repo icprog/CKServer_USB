@@ -68,13 +68,13 @@
   <LVDS_Channel_3 key="VCID_Channel_15" CPLen1 = "20" CPLen2 = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="001111"/>
   <LVDS_Channel_3 key="VCID_Channel_16" CPLen1 = "20" CPLen2 = "20" name="A机LVDS发送4" vcidName ="undefined" vcid ="010000"/>
 
-  <LVDS_Channel_4 key="VCID_Channel_1" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000001"/>
-  <LVDS_Channel_4 key="VCID_Channel_2" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000010"/>
-  <LVDS_Channel_4 key="VCID_Channel_3" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000011"/>
-  <LVDS_Channel_4 key="VCID_Channel_4" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000100"/>
-  <LVDS_Channel_4 key="VCID_Channel_5" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000101"/>
-  <LVDS_Channel_4 key="VCID_Channel_6" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000110"/>
-  <LVDS_Channel_4 key="VCID_Channel_7" CPLen = "24" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000111"/>
+  <LVDS_Channel_4 key="VCID_Channel_1" CPLen1 = "20" CPLen2 = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000001"/>
+  <LVDS_Channel_4 key="VCID_Channel_2" CPLen1 = "20" CPLen2 = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000010"/>
+  <LVDS_Channel_4 key="VCID_Channel_3" CPLen1 = "20" CPLen2 = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000011"/>
+  <LVDS_Channel_4 key="VCID_Channel_4" CPLen1 = "20" CPLen2 = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000100"/>
+  <LVDS_Channel_4 key="VCID_Channel_5" CPLen1 = "20" CPLen2 = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000101"/>
+  <LVDS_Channel_4 key="VCID_Channel_6" CPLen1 = "20" CPLen2 = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000110"/>
+  <LVDS_Channel_4 key="VCID_Channel_7" CPLen1 = "20" CPLen2 = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="000111"/>
   <LVDS_Channel_4 key="VCID_Channel_8" CPLen1 = "20" CPLen2 = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001000"/>
   <LVDS_Channel_4 key="VCID_Channel_9" CPLen1 = "20" CPLen2 = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001001"/>
   <LVDS_Channel_4 key="VCID_Channel_10" CPLen1 = "20" CPLen2 = "20" name="数管B机发送数传终端机A" vcidName ="undefined" vcid ="001010"/>
